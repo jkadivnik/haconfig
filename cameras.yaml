@@ -1,0 +1,10 @@
+#  - platform: ffmpeg
+#    ffmpeg_bin: /usr/bin/ffmpeg
+#    name: Test
+#    input: -rtsp_transport tcp -i rtsp://192.168.1.10:10554/tcp/av0_0
+#    extra_arguments: -pred 1 -q:v 2
+#  - platform: onvif
+#    host: 192.168.1.182
+#    profile: 8
+#    username: admin
+#    password: 123
