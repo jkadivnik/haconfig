@@ -1,0 +1,69 @@
+  # Change volume depending on rotation
+  - alias: Gameroom Cube Volume
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d000118421f_2
+        action_type: rotate
+    action:
+      service: remote.send_command
+      data_template:
+        entity_id: remote.game_room_hub
+        device: 54116032
+        command: >
+          {% if trigger.event.data.action_value | float > 0 %}
+            VolumeDown
+          {% elif trigger.event.data.action_value | float < 0 %}
+            VolumeUp
+          {% endif %}
+  - alias: Gameroom Cube Pause
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d000118421f_2
+        action_type: shake_air
+    action:
+      service: remote.send_command
+      data:
+        entity_id: remote.game_room_hub
+        device: 54116032
+        command: Mute
+  - alias: Gameroom NightLight Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+      from: 'off'
+      to: 'on'
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.illumination_7811dcded4dc
+        below: 100
+      - condition: time
+        after: '22:00:00'
+        before: '07:00:00'
+    action:
+      - service: light.turn_on
+        entity_id: light.gateway_light_7811dcded4dc
+        data:
+          brightness: 5
+      - service: automation.turn_on
+        data:
+          entity_id: automation.MOTION_OFF
+  - alias: Gameroom No Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 5
+    action:
+      - service: light.turn_off
+        entity_id: light.gateway_light_7811dcded4dc
+      - service: automation.turn_off
+        data:
+          entity_id: automation.Motion_off

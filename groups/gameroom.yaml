@@ -1,0 +1,20 @@
+Game Room:
+  control: hidden
+  entities:
+    - sensor.gameroom_harmony_activity
+    - input_select.gameroom_mode
+    - switch.kodi_gameroom
+    - media_player.kodibureau
+    - remote.game_room_hub
+    - light.gameroom_rgb_light
+    - input_select.gameroom_watch
+    - input_select.gameroom_play
+    - scripts.gameroom_volume_up
+    - scripts.gameroom_volume_down
+    - scripts.gameroom_volume_mute
+    - binary_sensor.motion_sensor_158d0001f9cdfe
+    - sensor.temperature_158d000236744c
+    - sensor.humidity_158d000236744c
+    - sensor.illumination_7811dcded4dc
+    - sensor.illumination_158d0001f9cdfe
+    - binary_sensor.cube_158d000118421f_2

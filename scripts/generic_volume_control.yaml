@@ -1,0 +1,58 @@
+  #Generic volume buttons
+  generic_volume_up:
+    alias: Generic Volume Up
+    sequence:
+      - service: remote.send_command
+        data_template:
+          entity_id: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              remote.living_room_hub
+            {% else %}
+              remote.game_room_hub
+            {% endif %}
+          command:
+            - VolumeUp
+          device: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              44060125
+            {% else %}
+              54116032
+            {% endif %}
+  generic_volume_down:
+    alias: Generic Volume Down
+    sequence:
+      - service: remote.send_command
+        data_template:
+          entity_id: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              remote.living_room_hub
+            {% else %}
+              remote.game_room_hub
+            {% endif %}
+          command:
+            - VolumeDown
+          device: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              44060125
+            {% else %}
+              54116032
+            {% endif %}
+  generic_volume_mute:
+    alias: Generic Volume Mute
+    sequence:
+      - service: remote.send_command
+        data_template:
+          entity_id: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              remote.living_room_hub
+            {% else %}
+              remote.game_room_hub
+            {% endif %}
+          command:
+            - Mute
+          device: >
+            {% if is_state( 'input_select.remote_selection', 'Living Room') %}
+              44060125
+            {% else %}
+              54116032
+            {% endif %}

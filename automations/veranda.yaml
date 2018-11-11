@@ -1,0 +1,25 @@
+  - alias: Veranda Heater On
+    hide_entity: true
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.temperature_158d00020f4dd3
+      below: 6
+    condition:
+      condition: or
+      conditions:
+        - condition: template
+          value_template: '{{ now().month >= 10 and now().month <= 3 }}'
+        - condition: time
+          before: '20:00:00'
+    action:
+      service: switch.turn_on
+      entity_id: switch.plug_158d0002368a0e
+  - alias: Veranda Heater Off
+    hide_entity: true
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.temperature_158d00020f4dd3
+      above: 16
+    action:
+      service: switch.turn_off
+      entity_id: switch.plug_158d0002368a0e

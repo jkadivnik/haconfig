@@ -1,0 +1,28 @@
+  #Gameroom volume buttons
+  gameroom_volume_up:
+    alias: Gameroom Volume Up
+    sequence:
+      - service: remote.send_command
+        data:
+          entity_id: remote.game_room_hub
+          command:
+            - VolumeUp
+          device: 54116032
+  gameroom_volume_down:
+    alias: Gameroom Volume Down
+    sequence:
+      - service: remote.send_command
+        data:
+          entity_id: remote.game_room_hub
+          command:
+            - VolumeDown
+          device: 54116032
+  gameroom_volume_mute:
+    alias: Gameroom Volume Mute
+    sequence:
+      - service: remote.send_command
+        data:
+          entity_id: remote.game_room_hub
+          command:
+            - Mute
+          device: 54116032

@@ -1,0 +1,67 @@
+  # Gameroom Mode
+  - alias: Gameroom Gaming
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "Gaming" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_gaming
+  - alias: Gameroom Watch Movie Kodi
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Movie Kodi" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_kodi
+  - alias: Gameroom Playstation 3
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "PS3" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_ps3
+  - alias: Gameroom Playstation 4
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "PS4" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_ps4
+  - alias: Gameroom Lights On
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "Lights On" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_lights_on
+  - alias: Fun Is Over
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.gameroom_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "Fun Is Over" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.gameroom_fun_is_over

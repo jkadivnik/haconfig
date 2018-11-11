@@ -1,0 +1,14 @@
+  platform: mqtt
+  name: Gameroom RGB light
+  command_topic: "bureau/switch"
+  state_topic: "bureau/switch/state"
+  rgb_command_topic: "bureau/rgb"
+  rgb_state_topic: "bureau/rgb/state"
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: true
+
+  platform: flux_led
+  devices:
+    192.168.1.199:
+      name: Test RGB light

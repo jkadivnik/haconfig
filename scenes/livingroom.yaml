@@ -1,0 +1,82 @@
+  - name: Livingroom Morning
+    entities:
+      light.livingroom_dressoir_rgb_light: off
+      light.livingroom_bookcase_rgb_light: off
+      input_select.livingroom_music:
+        option: Radio - 33452774
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f29250: off
+  - name: Livingroom Telenet
+    entities:
+      light.livingroom_dressoir_rgb_light: off
+      light.livingroom_bookcase_rgb_light: off
+      input_select.livingroom_watch:
+        option: Telenet - 33452772
+      switch.plug_158d0001f292c0: on
+      switch.plug_158d0001f29250: on
+  - name: Livingroom To Bed
+    entities:
+      light.livingroom_dressoir_rgb_light: off
+      light.livingroom_bookcase_rgb_light: off
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f29250: off
+      input_select.livingroom_watch:
+        option: None - 1
+  - name: Livingroom Kodi
+    entities:
+      light.livingroom_dressoir_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      light.livingroom_bookcase_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      input_select.livingroom_watch:
+        option: HTPC - 33452776
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f29250: off
+  - name: Livingroom Audiocast
+    entities:
+      input_select.livingroom_music:
+        option: Chromecast Audio - 33452775
+  - name: Livingroom Chromecast
+    entities:
+      input_select.livingroom_watch:
+        option: Chromecast - 33452778
+  - name: Livingroom BD
+    entities:
+      light.livingroom_dressoir_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      light.livingroom_bookcase_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      input_select.livingroom_watch:
+        option: BD_DVD - 33452773
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f29250: off
+  - name: Livingroom Netflix
+    entities:
+      light.livingroom_dressoir_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      light.livingroom_bookcase_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      input_select.livingroom_play:
+        option: PS4 - 33530080
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f29250: off
+  - name: Livingroom Lights On
+    entities:
+      light.livingroom_dressoir_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      light.livingroom_bookcase_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      switch.plug_158d0001f292c0: on
+      switch.plug_158d0001f29250: on
+  - name: Livingroom Hub Off
+    entities:
+      input_select.livingroom_watch:
+        option: None - 1

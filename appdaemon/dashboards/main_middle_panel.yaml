@@ -1,0 +1,61 @@
+veranda_temperature:
+    widget_type: sensor
+    title: Veranda Temperature
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d00020f4dd3
+
+veranda_humidity:
+    widget_type: sensor
+    title: Veranda Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.humidity_158d00020f4dd3
+
+livingroom_temperature:
+    widget_type: sensor
+    title: Livingroom Temperature
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d0002379148
+
+livingroom_humidity:
+    widget_type: sensor
+    title: Livingroom Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.humidity_158d0002379148
+
+livingroom_harmony:
+    widget_type: sensor
+    title: Livingroom Harmony
+    entity: sensor.livingroom_harmony_activity
+
+gameroom_harmony:
+    widget_type: sensor
+    title: Gameroom Harmony
+    entity: sensor.gameroom_harmony_activity
+
+gameroom_temperature:
+    widget_type: sensor
+    title: Gameroom Temperature
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d000236744c
+
+house_mode:
+    widget_type: sensor
+    title: House Mode
+    entity: input_select.house_mode
+
+home_turn_all_off:
+    widget_type: scene
+    title: All Off
+    icon_on: fa-stop-circle-o
+    icon_off: fa-stop-circle-o
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.house_all_off
+
+layout:
+    - house_mode, livingroom_temperature, livingroom_harmony, gameroom_temperature, gameroom_harmony, veranda_temperature, home_turn_all_off

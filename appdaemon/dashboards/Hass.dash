@@ -1,0 +1,26 @@
+#
+# Main arguments, all optional
+#
+title: Home Assistant
+widget_dimensions: [122, 120]
+widget_margins: [5, 5]
+columns: 6
+
+ha_frame:
+    widget_type: iframe
+    title: Home Assistant
+    #refresh: 60
+    url_list: 
+      - http://localhost:8123
+
+#
+# Includes (Optional)
+#
+layout:
+    - include: top_panel
+    - ha_frame(6x5)
+    - 
+    -
+    -
+    -
+    - include: bottom_panel

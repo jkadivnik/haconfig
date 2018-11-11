@@ -1,0 +1,17 @@
+livingroom_kodi:
+  widget_type: media_player
+  title: Kodi
+  entity: media_player.kodiliving
+
+livingroom_audiocast:
+  widget_type: media_player
+  title: KadivniAudio
+  entity: media_player.kadivniaudio
+
+livingroom_chromecast:
+  widget_type: media_player
+  title: KadivniAudio
+  entity: media_player.living_room_tv
+
+layout:
+  - livingroom_chromecast(2x2), livingroom_kodi(3x2), livingroom_audiocast(2x2)

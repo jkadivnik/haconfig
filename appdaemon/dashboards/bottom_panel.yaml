@@ -1,0 +1,55 @@
+load_main_panel:
+    widget_type: navigate
+    title: Main Page
+    icon_active: fa-home
+    icon_inactive: fa-home
+    dashboard: Home
+
+load_livingroom_panel:
+    widget_type: navigate
+    title: Livingroom Panel
+    icon_active: mdi-seat-legroom-extra
+    icon_inactive: mdi-seat-legroom-extra
+    dashboard: Livingroom
+
+load_gameroom_panel:
+    widget_type: navigate
+    title: Gameroom Panel
+    icon_active: fa-gamepad
+    icon_inactive: fa-gamepad
+    dashboard: Gameroom
+
+load_veranda_panel:
+    widget_type: navigate
+    title: Veranda Panel
+    icon_active: fa-book
+    icon_inactive: fa-book
+    dashboard: Veranda
+
+load_settings:
+    widget_type: navigate
+    title: Settings
+    icon_active : fa-cogs
+    icon_inactive: fa-cogs
+    dashboard: Settings
+
+load_lights:
+    widget_type: navigate
+    title: Lights
+    icon_active : fa-lightbulb-o
+    icon_inactive: fa-lightbulb-o
+    dashboard: Lights
+
+load_status:
+    widget_type: navigate
+    title: Status
+    icon_active : fa-dashboard
+    icon_inactive: fa-dashboard
+    dashboard: Status
+
+reload:
+    widget_type: reload
+    title: Reload
+
+layout:
+    - load_main_panel, load_livingroom_panel, load_gameroom_panel, load_veranda_panel, load_status, load_settings, reload

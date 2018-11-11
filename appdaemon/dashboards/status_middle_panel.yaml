@@ -1,0 +1,115 @@
+livingroom_rgb:
+  widget_type: light_with_colorpicker
+  title: Livingroom
+  title2: RGB
+  entity: light.livingroom_rgb_light
+livingroom_gateway:
+  widget_type: light_with_colorpicker
+  title: Livingroom
+  title2: Gateway RGB
+  entity: light.gateway_light_7811dcb35389
+livingroom_dressoir:
+  widget_type: switch
+  title: Dressoir Light
+  entity: switch.plug_158d0001f292c0
+livingroom_sofa:
+  widget_type: switch
+  title: Sofa Light
+  entity: switch.plug_158d0001f29250
+livingroom_dressoir_power_usage:
+  widget_type: gauge
+  title: Livingroom Dressoir Light Load
+  entity: sensor.livingroom_dressoir_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+livingroom_sofa_power_usage:
+  widget_type: gauge
+  title: Livingroom Sofa Light Load
+  entity: sensor.livingroom_sofa_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+livingroom_harmony_status:
+  widget_type: sensor
+  title: Livingroom Harmony
+  entity: sensor.livingroom_harmony_activity
+livingroom_gateway_illumination:
+  widget_type: sensor
+  title: Livingroom GW
+  title2: Illumination
+  entity: sensor.illumination_7811dcb35389
+livingroom_movement_sensor_illumination:
+  widget_type: sensor
+  title: Livingroom
+  title2: Motion Illum.
+  entity: sensor.illumination_158d0001de7134
+
+gameroom_rgb:
+  widget_type: light_with_colorpicker
+  title: Gameroom
+  title2: RGB Lights
+  entity: group.game_room_rgb_lights
+gameroom_gateway:
+  widget_type: light_with_colorpicker
+  title: Livingroom
+  title2: Gateway RGB
+  entity: light.gateway_light_7811dcded4dc
+gameroom_harmony_status:
+  widget_type: sensor
+  title: Gameroom Harmony
+  entity: sensor.gameroom_harmony_activity
+gameroom_gateway_illumination:
+  widget_type: sensor
+  title: Gameroom GW
+  title2: Illumination
+  entity: sensor.illumination_7811dcded4dc
+gameroom_movement_sensor_illumination:
+  widget_type: sensor
+  title: Gameroom
+  title2: Motion Illum.
+  entity: sensor.illumination_158d0001f9cdfe
+
+veranda_rgb:
+  widget_type: light_with_colorpicker
+  title: Veranda
+  title2: RGB Lights
+  entity: group.veranda_rgb_lights
+veranda_heater_power_usage:
+  widget_type: gauge
+  title: Veranda Heater Load
+  entity: sensor.veranda_heater_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+
+system_memory_usage:
+  widget_type: gauge
+  title: System Memory Usage
+  entity: sensor.memory_use_percent
+  min: 0
+  max: 100
+  units: '%'
+system_processor_usage:
+  widget_type: gauge
+  title: System Processor Use
+  entity: sensor.processor_use
+  min: 0
+  max: 100
+  units: '%'
+system_disk_usage:
+  widget_type: gauge
+  title: System Disk Usage
+  entity: sensor.disk_use_percent_
+  min: 0
+  max: 100
+  units: '%'
+system_ip_address:
+  widget_type: sensor
+  title: IP Address
+  entity: sensor.ipv4_address_eth0
+
+layout:
+    - livingroom_rgb, livingroom_dressoir, livingroom_gateway_illumination, livingroom_harmony_status(1x2), gameroom_rgb, gameroom_gateway_illumination, gameroom_harmony_status
+    - livingroom_gateway, livingroom_sofa, livingroom_movement_sensor_illumination, gameroom_gateway, gameroom_movement_sensor_illumination, veranda_rgb
+    - system_processor_usage, system_memory_usage, system_disk_usage, system_ip_address, livingroom_dressoir_power_usage, livingroom_sofa_power_usage, veranda_heater_power_usage

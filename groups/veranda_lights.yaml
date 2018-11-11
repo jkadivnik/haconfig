@@ -1,0 +1,4 @@
+Veranda RGB Lights:
+  control: hidden
+  entities:
+    - light.veranda_rgb_light

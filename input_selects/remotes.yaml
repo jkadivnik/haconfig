@@ -1,0 +1,8 @@
+  # Remotes
+  remote_selection:
+    name: Remote Selection
+    options:
+      - Living Room
+      - Game Room
+    initial: "Living Room"
+    icon: mdi:remote

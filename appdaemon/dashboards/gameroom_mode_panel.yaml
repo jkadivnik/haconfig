@@ -1,0 +1,70 @@
+gameroom_mode:
+    widget_type: sensor
+    title: Gameroom Mode
+    entity: input_select.gameroom_mode
+
+gameroom_gaming:
+    widget_type: scene
+    title: Gaming
+    icon_on: fa-gamepad
+    icon_off: fa-gamepad
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_gaming
+
+gameroom_watch_movie_kodi:
+    widget_type: scene
+    title: Kodi
+    icon_on: fa-film
+    icon_off: fa-film
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_kodi
+
+gameroom_ps3:
+    widget_type: scene
+    title: Playstation 3
+    icon_on: fa-gamepad
+    icon_off: fa-gamepad
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_ps3
+
+gameroom_ps4:
+    widget_type: scene
+    title: Playstation 4
+    icon_on: fa-gamepad
+    icon_off: fa-gamepad
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_ps4
+
+gameroom_lights:
+    widget_type: scene
+    title: Lights
+    icon_on: fa-lightbulb-o
+    icon_off: fa-lightbulb-o
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_lights_on
+
+gameroom_all_off:
+  widget_type: script
+  title: Sleep
+  icon_on: fa-stop-circle-o
+  icon_off: fa-stop-circle-o
+  icon_style_inactive: "color:grey"
+  icon_style_active: "color:darkgrey"
+  entity: script.gameroom_all_off
+
+gameroom_fun_is_over:
+    widget_type: scene
+    title: Sleep
+    icon_on: fa-stop-circle-o
+    icon_off: fa-stop-circle-o
+    icon_style_inactive: "color:grey"
+    icon_style_active: "color:darkgrey"
+    entity: scene.gameroom_fun_is_over
+
+layout:
+    - gameroom_mode, gameroom_gaming, gameroom_watch_movie_kodi, gameroom_ps3, gameroom_ps4, gameroom_lights, gameroom_all_off

@@ -1,0 +1,114 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret home_time_zone
+  # Customization file
+  customize: !include customize.yaml
+
+
+# Enables the frontend
+frontend:
+
+# Enables the recorder
+recorder:
+
+# Enables configuration UI
+config:
+
+http:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+logger:
+  default: debug
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include_dir_merge_named groups/
+automation: !include_dir_merge_list automations/
+script: !include_dir_merge_named scripts/
+sensor: !include_dir_list sensors/
+light: !include_dir_list lights/
+remote: !include remotes.yaml
+switch: !include_dir_list switches/
+input_select: !include_dir_merge_named input_selects/
+#camera: !include cameras.yaml
+scene: !include_dir_merge_list scenes/
+
+# Mqtt
+mqtt:
+  broker : !secret mqtt_broker_ip
+  client_id: mqttbroker
+
+# Devices
+media_player:
+  - platform: kodi
+    host: !secret livingroom_kodi_ip
+    name: kodiliving
+  - platform: kodi
+    host: !secret gameroom_kodi_ip
+    name: kodibureau
+
+# Xiaomi
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - key: !secret gameroom_gateway_key
+      mac: !secret gameroom_gateway_mac
+    - key: !secret livingroom_gateway_key
+      mac: !secret livingroom_gateway_mac
+
+ffmpeg:
+
+ifttt:
+  key: !secret ifttt_key
+
+device_tracker:
+  - platform: luci
+    host: !secret livingroom_router_ip
+    username: root
+    password: !secret livingroom_router_password
+    track_new_devices: false
+  - platform: luci
+    host: !secret gameroom_router_ip
+    username: root
+    password: !secret gameroom_router_password
+    track_new_devices: false

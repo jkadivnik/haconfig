@@ -1,0 +1,13 @@
+# Modes
+  # House Mode
+  - alias: House All Off
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.house_mode
+    condition:
+      condition: template
+      value_template: '{{ trigger.to_state.attributes.current_activity == "Turn All Off" }}'
+    action:
+      service: scene.turn_on
+      entity_id: scene.house_all_off

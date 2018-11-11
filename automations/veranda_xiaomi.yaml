@@ -1,0 +1,33 @@
+  # Change volume depending on rotation
+  - alias: Veranda NightLight Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001f2a00f
+      from: 'off'
+      to: 'on'
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.illumination_7811dcb35389
+        below: 100
+    action:
+      - service: light.turn_on
+        entity_id: light.veranda_rgb_light
+        data:
+          rgb_color: [255, 255, 255]
+      - service: automation.turn_on
+        data:
+          entity_id: automation.MOTION_OFF
+  - alias: Veranda No Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 2
+    action:
+      - service: light.turn_off
+        entity_id: light.veranda_rgb_light
+      - service: automation.turn_off
+        data:
+          entity_id: automation.Motion_off

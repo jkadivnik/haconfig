@@ -1,0 +1,7 @@
+people:
+  control: hidden
+  entities:
+    - device_tracker.papa_phone
+    - device_tracker.mama_phone
+    - device_tracker.maxim_phone
+    - device_tracker.thibo_phone

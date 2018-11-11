@@ -1,0 +1,4 @@
+  platform: flux_led
+  devices:
+    192.168.1.152:
+      name: Veranda RGB light

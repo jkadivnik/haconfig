@@ -1,0 +1,18 @@
+  gameroom_kodi_toggle:
+    alias: Gameroom Kodi Toggle
+    sequence:
+      - service: media_player.media_play_pause
+        data:
+          entity_id: media_player.kodibureau
+  gameroom_all_off:
+    alias: Gameroom All Off
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: group.game_room_rgb_lights
+      - service: remote.turn_off
+        data:
+          entity_id: remote.game_room_hub
+      - service: switch.turn_off
+        data:
+          entity_id: group.game_room_plugs

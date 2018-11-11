@@ -1,0 +1,35 @@
+  - name: Gameroom Gaming
+    entities:
+      light.gameroom_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+  - name: Gameroom Kodi
+    entities:
+      light.gameroom_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+      input_select.gameroom_watch:
+        option: HTPC - 33210805
+  - name: Gameroom PS3
+    entities:
+      light.gameroom_rgb_light:
+        state: on
+        rgb_color: [0,0,255]
+      input_select.gameroom_play:
+        option: PS3 - 33266495
+  - name: Gameroom PS4
+    entities:
+      light.gameroom_rgb_light:
+        state: on
+        rgb_color: [0,0,255]
+      input_select.gameroom_play:
+        option: PS4 - 35282221
+  - name: Gameroom Lights On
+    entities:
+      light.gameroom_rgb_light:
+        state: on
+        rgb_color: [255,0,0]
+  - name: Gameroom Fun Is Over
+    entities:
+      group.game_room_rgb_lights: off
+      remote.game_room_hub: off

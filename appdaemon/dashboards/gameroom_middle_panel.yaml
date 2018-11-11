@@ -1,0 +1,71 @@
+gameroom_temperature:
+  widget_type: sensor
+  title: Temperature
+  units: "&deg;C"
+  precision: 0
+  entity: sensor.temperature_158d000236744c
+
+gameroom_humidity:
+  widget_type: sensor
+  title: Humidity
+  units: "%"
+  precision: 0
+  entity: sensor.humidity_158d000236744c
+
+gameroom_harmony_status:
+  widget_type: sensor
+  title: Harmony
+  entity: sensor.gameroom_harmony_activity
+
+gameroom_rgb:
+  widget_type: light_with_colorpicker
+  title: Gameroom
+  title2: RGB Lights
+  entity: group.game_room_rgb_lights
+  on_attributes:
+    rgb_color: 255, 0, 0
+
+gameroom_harmony_watch:
+  widget_type: input_select
+  title: Watch TV
+  entity: input_select.gameroom_watch
+
+gameroom_harmony_play:
+  widget_type: input_select
+  title: Play Games
+  entity: input_select.gameroom_play
+
+gameroom_kodi:
+  widget_type: media_player
+  title: Kodi
+  entity: media_player.kodibureau
+
+gameroom_volup:
+  widget_type: script
+  title: Volume Up
+  entity: script.gameroom_volume_up
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+
+gameroom_voldown:
+  widget_type: script
+  title: Volume Down
+  entity: script.gameroom_volume_down
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+
+gameroom_mute:
+  widget_type: script
+  title: Mute
+  entity: script.gameroom_volume_mute
+  icon_on: fa-volume-off
+  icon_off: fa-volume-off
+
+gameroom_mode:
+    widget_type: sensor
+    title: Gameroom Mode
+    entity: input_select.gameroom_mode
+
+layout:
+    - gameroom_temperature, gameroom_humidity, gameroom_harmony_status, gameroom_kodi(2x2), gameroom_voldown ,gameroom_volup
+    - gameroom_rgb(3x1), gameroom_mute(2x1)

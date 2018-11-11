@@ -1,0 +1,36 @@
+clock:
+    widget_type: clock
+    time_format: 24hr
+    date_format_country: nl-BE
+    time_style: "color:lightblue"
+
+johnny_presence:
+    widget_type: device_tracker
+    title: Johnny
+    device: papa_phone
+    icon_on: fa-male
+    icon_off: fa-male
+
+charlotte_presence:
+    widget_type: device_tracker
+    title: Charlotte
+    device: mama_phone
+    icon_on: fa-female
+    icon_off: fa-female
+
+thibo_presence:
+    widget_type: device_tracker
+    title: Thibo
+    device: thibo_phone
+    icon_on: fa-male
+    icon_off: fa-male
+
+maxim_presence:
+    widget_type: device_tracker
+    title: Maxim
+    device: maxim_phone
+    icon_on: fa-male
+    icon_off: fa-male
+
+layout:
+    - johnny_presence, charlotte_presence, clock(3x1), thibo_presence, maxim_presence

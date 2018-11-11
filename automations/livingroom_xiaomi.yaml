@@ -1,0 +1,71 @@
+  # Change volume depending on rotation
+  - alias: Livingroom Cube Volume
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151_2
+        action_type: rotate
+    action:
+      service: remote.send_command
+      data_template:
+        entity_id: remote.living_room_hub
+        device: 54449333
+        command: >
+          {% if trigger.event.data.action_value | float > 0 %}
+            VolumeDown
+          {% elif trigger.event.data.action_value | float < 0 %}
+            VolumeUp
+          {% endif %}
+  - alias: Livingroom Cube Pause
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151_2
+        action_type: shake_air
+    action:
+      service: remote.send_command
+      data:
+        entity_id: remote.living_room_hub
+        device: 54449333
+        command: Mute
+  - alias: Livingroom NightLight Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      from: 'off'
+      to: 'on'
+    condition:
+      - condition: numeric_state
+        entity_id: sensor.illumination_7811dcb35389
+        below: 100
+      - condition: time
+        after: '22:00:00'
+        before: '07:00:00'
+      - condition: template
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+    action:
+      - service: light.turn_on
+        entity_id: group.living_room_rgb_lights
+        data:
+          brightness: 5
+      - service: automation.turn_on
+        data:
+          entity_id: automation.MOTION_OFF
+  - alias: Livingroom No Motion
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 5
+    action:
+      - service: light.turn_off
+        entity_id: group.living_room_rgb_lights
+      - service: automation.turn_off
+        data:
+          entity_id: automation.Motion_off

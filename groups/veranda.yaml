@@ -1,0 +1,11 @@
+Veranda Room:
+  control: hidden
+  entities:
+    - light.veranda_rgb_light
+    - sensor.veranda_temperature
+    - sensor.veranda_humidity
+    - binary_sensor.motion_sensor_158d0001f2a00f
+    - sensor.humidity_158d00020f4dd3
+    - sensor.temperature_158d00020f4dd3
+    - switch.plug_158d0002368a0e
+

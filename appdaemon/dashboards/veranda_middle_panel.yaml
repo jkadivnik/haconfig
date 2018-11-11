@@ -1,0 +1,36 @@
+veranda_temperature:
+    widget_type: sensor
+    title: Veranda Temperature
+    units: "&deg;C"
+    precision: 0
+    entity: sensor.temperature_158d00020f4dd3
+
+veranda_humidity:
+    widget_type: sensor
+    title: Veranda Humidity
+    units: "%"
+    precision: 0
+    entity: sensor.humidity_158d00020f4dd3
+
+veranda_rgb:
+  widget_type: light_with_colorpicker
+  title: Veranda
+  title2: RGB Lights
+  entity: group.veranda_rgb_lights
+  on_attributes:
+    rgb_color: 255, 0, 0
+
+veranda_heater:
+  widget_type: switch
+  title: Heater
+  entity: switch.plug_158d0002368a0e
+
+veranda_all_off:
+  widget_type: script
+  title: All Off
+  icon_on: fa-stop-circle-o
+  icon_off: fa-stop-circle-o
+  entity: script.livingroom_all_off
+
+layout:
+    - veranda_temperature, veranda_humidity, veranda_rgb(2x1), veranda_heater(2x1), veranda_all_off

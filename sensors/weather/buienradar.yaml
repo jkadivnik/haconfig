@@ -1,0 +1,5 @@
+  platform: buienradar
+  name: 'Thuis'
+  latitude: 51.05
+  longitude: 4.2
+  forecast: True

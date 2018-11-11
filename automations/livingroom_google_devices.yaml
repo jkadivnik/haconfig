@@ -1,0 +1,53 @@
+  - alias: Livingroom Audiocast stopped
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: media_player.kadivniaudio
+      from: 'playing'
+      to: 'off'
+    condition:
+    - condition: template
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'Music' }}"
+    action:
+      service: scene.turn_on
+      entity_id: scene.livingroom_hub_off
+  - alias: Livingroom Audiocast playing
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: media_player.kadivniaudio
+      from: 'off'
+      to: 'playing'
+    condition:
+    - condition: template
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+    action:
+      service: scene.turn_on
+      entity_id: scene.livingroom_audiocast
+
+  - alias: Livingroom Chromecast stopped
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: media_player.living_room_tv
+      from: 'playing'
+      to: 'off'
+    condition:
+    - condition: template
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'Chromecast' }}"
+    action:
+      service: scene.turn_on
+      entity_id: scene.livingroom_hub_off
+  - alias: Livingroom Chromecast playing
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: media_player.living_room_tv
+      from: 'off'
+      to: 'playing'
+    condition:
+    - condition: template
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+    action:
+      service: scene.turn_on
+      entity_id: scene.livingroom_chromecast

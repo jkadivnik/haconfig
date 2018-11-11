@@ -1,0 +1,8 @@
+  # Home
+  house_mode:
+    name: Home Mode
+    options:
+      - No Mode
+      - Turn All Off
+    initial: "No Mode"
+    icon: mdi:home
