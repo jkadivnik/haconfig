@@ -6,8 +6,8 @@ livingroom_mode:
 livingroom_morning:
   widget_type: scene
   title: Morning
-  icon_on: fa-clock-o
-  icon_off: fa-clock-o
+  icon_on: mdi-coffee
+  icon_off: mdi-coffee
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_morning
