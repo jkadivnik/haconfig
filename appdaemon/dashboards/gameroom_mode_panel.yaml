@@ -8,8 +8,6 @@ gameroom_gaming:
     title: Gaming
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_gaming
 
 gameroom_watch_movie_kodi:
@@ -17,8 +15,6 @@ gameroom_watch_movie_kodi:
     title: Kodi
     icon_on: mdi-movie
     icon_off: mdi-movie
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_kodi
 
 gameroom_ps3:
@@ -26,8 +22,6 @@ gameroom_ps3:
     title: Playstation 3
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_ps3
 
 gameroom_ps4:
@@ -35,8 +29,6 @@ gameroom_ps4:
     title: Playstation 4
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_ps4
 
 gameroom_lights:
@@ -44,8 +36,6 @@ gameroom_lights:
     title: Lights
     icon_on: mdi-lightbulb
     icon_off: mdi-lightbulb
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_lights_on
 
 gameroom_all_off:
@@ -53,8 +43,6 @@ gameroom_all_off:
   title: Sleep
   icon_on: toggle-switch
   icon_off: toggle-switch-off
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: script.gameroom_all_off
 
 gameroom_fun_is_over:
@@ -62,8 +50,6 @@ gameroom_fun_is_over:
     title: Sleep
     icon_on: toggle-switch
     icon_off: toggle-switch-off
-    icon_style_inactive: "color:grey"
-    icon_style_active: "color:darkgrey"
     entity: scene.gameroom_fun_is_over
 
 layout:

@@ -8,8 +8,6 @@ livingroom_morning:
   title: Morning
   icon_on: mdi-coffee
   icon_off: mdi-coffee
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_morning
 
 livingroom_watch_movie_kodi:
@@ -17,8 +15,6 @@ livingroom_watch_movie_kodi:
   title: Kodi
   icon_on: mdi-movie
   icon_off: mdi-movie
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_kodi
 
 livingroom_watch_movie_bd:
@@ -26,8 +22,6 @@ livingroom_watch_movie_bd:
   title: BluRay
   icon_on: mdi-movie
   icon_off: mdi-movie
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_bd
 
 livingroom_ps4:
@@ -35,8 +29,6 @@ livingroom_ps4:
   title: Playstation
   icon_on: mdi-youtube-gaming
   icon_off: mdi-youtube-gaming
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_netflix
 
 livingroom_watch_television:
@@ -44,8 +36,6 @@ livingroom_watch_television:
   title: Telenet
   icon_on: mdi-television
   icon_off: mdi-television
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_telenet
 
 livingroom_lights:
@@ -53,8 +43,6 @@ livingroom_lights:
   title: Lights
   icon_on: mdi-lightbulb
   icon_off: mdi-lightbulb
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_lights_on
 
 livingroom_all_off:
@@ -62,8 +50,6 @@ livingroom_all_off:
   title: All Off
   icon_on: mdi-hotel
   icon_off: mdi-hotel
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: script.livingroom_all_off
 
 livingroom_chrome_audiocast:
@@ -71,8 +57,6 @@ livingroom_chrome_audiocast:
   title: Music
   icon_on: mdi-music
   icon_off: mdi-music
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: scene.livingroom_audiocast
 
 livingroom_kitchen_radio:
@@ -80,8 +64,6 @@ livingroom_kitchen_radio:
   title: Keuken Radio
   icon_on: mdi-radio
   icon_off: mdi-radio
-  icon_style_inactive: "color:grey"
-  icon_style_active: "color:darkgrey"
   entity: script.livingroom_kitchen_radio_toggle
 
 layout:
