@@ -13,3 +13,5 @@ appdaemon:
 hadashboard:
   dash_url: http://127.0.0.1:5050
   dash_dir: /config/appdaemon/dashboards
+  dash_force_compile: 1
+  dash_compile_on_start: 1
