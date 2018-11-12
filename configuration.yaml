@@ -25,8 +25,8 @@ config:
 
 http:
 #  base_url: https://kadivnik.duckdns.org
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
   trusted_networks:
     - 192.168.1.0/24
 
