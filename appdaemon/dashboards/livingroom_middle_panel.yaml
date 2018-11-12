@@ -89,5 +89,5 @@ livingroom_media_players:
   dashboard: MediaPlayers
 
 layout:
-  - livingroom_temperature, livingroom_humidity, livingroom_harmony_status, livingroom_kodi(2x2), livingroom_voldown, livingroom_volup
+  - livingroom_temperature, livingroom_humidity, livingroom_harmony_status, livingroom_audiocast(2x2), livingroom_voldown, livingroom_volup
   - livingroom_dressoir_light, livingroom_sofa_light, livingroom_rgb, livingroom_mute, livingroom_media_players
