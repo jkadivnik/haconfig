@@ -6,8 +6,8 @@ house_mode:
 home_turn_all_off:
     widget_type: scene
     title: All Off
-    icon_on: fa-stop
-    icon_off: fa-stop
+    icon_on: mdi-stop
+    icon_off: mdi-stop
     icon_style_inactive: "color:grey"
     icon_style_active: "color:darkgrey"
     entity: scene.house_all_off
@@ -21,8 +21,8 @@ livingroom_volup:
   widget_type: script
   title: Volume Up
   entity: script.livingroom_volume_up
-  icon_on: fa-volume-up
-  icon_off: fa-volume-up
+  icon_on: mdi-volume-high
+  icon_off: mdi-volume-high
 
 livingroom_voldown:
   widget_type: script
@@ -35,8 +35,8 @@ livingroom_mute:
   widget_type: script
   title: Mute
   entity: script.livingroom_volume_mute
-  icon_on: fa-volume-off
-  icon_off: fa-volume-off
+  icon_on: mdi-volume-off
+  icon_off: mdi-volume-off
 
 layout:
     - house_mode, home_select_remote, livingroom_voldown, livingroom_mute, livingroom_volup, home_turn_all_off

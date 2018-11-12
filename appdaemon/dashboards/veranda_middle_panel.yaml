@@ -28,8 +28,8 @@ veranda_heater:
 veranda_all_off:
   widget_type: script
   title: All Off
-  icon_on: fa-stop-circle-o
-  icon_off: fa-stop-circle-o
+  icon_on: mdi-stop
+  icon_off: mdi-stop
   entity: script.livingroom_all_off
 
 layout:

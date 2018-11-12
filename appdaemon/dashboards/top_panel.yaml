@@ -8,29 +8,29 @@ johnny_presence:
     widget_type: device_tracker
     title: Johnny
     device: papa_phone
-    icon_on: fa-male
-    icon_off: fa-male
+    icon_on: mdi-human-handsup
+    icon_off: mdi-human-handsdown
 
 charlotte_presence:
     widget_type: device_tracker
     title: Charlotte
     device: mama_phone
-    icon_on: fa-female
-    icon_off: fa-female
+    icon_on: mdi-human-handsup
+    icon_off: mdi-human-handsdown
 
 thibo_presence:
     widget_type: device_tracker
     title: Thibo
     device: thibo_phone
-    icon_on: fa-male
-    icon_off: fa-male
+    icon_on: mdi-human-handsup
+    icon_off: mdi-human-handsdown
 
 maxim_presence:
     widget_type: device_tracker
     title: Maxim
     device: maxim_phone
-    icon_on: fa-male
-    icon_off: fa-male
+    icon_on: mdi-human-handsup
+    icon_off: mdi-human-handsdown
 
 layout:
     - johnny_presence, charlotte_presence, clock(3x1), thibo_presence, maxim_presence

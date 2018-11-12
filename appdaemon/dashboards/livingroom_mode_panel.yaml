@@ -15,8 +15,8 @@ livingroom_morning:
 livingroom_watch_movie_kodi:
   widget_type: scene
   title: Kodi
-  icon_on: fa-film
-  icon_off: fa-film
+  icon_on: mdi-movie
+  icon_off: mdi-movie
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_kodi
@@ -24,8 +24,8 @@ livingroom_watch_movie_kodi:
 livingroom_watch_movie_bd:
   widget_type: scene
   title: BluRay
-  icon_on: fa-film
-  icon_off: fa-film
+  icon_on: mdi-movie
+  icon_off: mdi-movie
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_bd
@@ -33,8 +33,8 @@ livingroom_watch_movie_bd:
 livingroom_ps4:
   widget_type: scene
   title: Playstation
-  icon_on: fa-film
-  icon_off: fa-film
+  icon_on: mdi-youtube-gaming
+  icon_off: mdi-youtube-gaming
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_netflix
@@ -42,8 +42,8 @@ livingroom_ps4:
 livingroom_watch_television:
   widget_type: scene
   title: Telenet
-  icon_on: fa-tv
-  icon_off: fa-tv
+  icon_on: mdi-television
+  icon_off: mdi-television
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_telenet
@@ -51,8 +51,8 @@ livingroom_watch_television:
 livingroom_lights:
   widget_type: scene
   title: Lights
-  icon_on: fa-lightbulb-o
-  icon_off: fa-lightbulb-o
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_lights_on
@@ -60,8 +60,8 @@ livingroom_lights:
 livingroom_all_off:
   widget_type: script
   title: All Off
-  icon_on: fa-bed
-  icon_off: fa-bed
+  icon_on: mdi-hotel
+  icon_off: mdi-hotel
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: script.livingroom_all_off
@@ -69,8 +69,8 @@ livingroom_all_off:
 livingroom_chrome_audiocast:
   widget_type: scene
   title: Music
-  icon_on: fa-music
-  icon_off: fa-music
+  icon_on: mdi-music
+  icon_off: mdi-music
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: scene.livingroom_audiocast
@@ -78,8 +78,8 @@ livingroom_chrome_audiocast:
 livingroom_kitchen_radio:
   widget_type: script
   title: Keuken Radio
-  icon_on: fa-music
-  icon_off: fa-music
+  icon_on: mdi-radio
+  icon_off: mdi-radio
   icon_style_inactive: "color:grey"
   icon_style_active: "color:darkgrey"
   entity: script.livingroom_kitchen_radio_toggle

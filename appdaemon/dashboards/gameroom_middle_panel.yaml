@@ -44,22 +44,22 @@ gameroom_volup:
   widget_type: script
   title: Volume Up
   entity: script.gameroom_volume_up
-  icon_on: fa-volume-up
-  icon_off: fa-volume-up
+  icon_on: mdi-volume-high
+  icon_off: mdi-volume-high
 
 gameroom_voldown:
   widget_type: script
   title: Volume Down
   entity: script.gameroom_volume_down
-  icon_on: fa-volume-down
-  icon_off: fa-volume-down
+  icon_on: mdi-volume-low
+  icon_off: mdi-volume-low
 
 gameroom_mute:
   widget_type: script
   title: Mute
   entity: script.gameroom_volume_mute
-  icon_on: fa-volume-off
-  icon_off: fa-volume-off
+  icon_on: mdi-volume-off
+  icon_off: mdi-volume-off
 
 gameroom_mode:
     widget_type: sensor

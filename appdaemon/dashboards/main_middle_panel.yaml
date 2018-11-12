@@ -51,8 +51,8 @@ house_mode:
 home_turn_all_off:
     widget_type: scene
     title: All Off
-    icon_on: fa-stop-circle-o
-    icon_off: fa-stop-circle-o
+    icon_on: mdi-stop
+    icon_off: mdi-stop
     icon_style_inactive: "color:grey"
     icon_style_active: "color:darkgrey"
     entity: scene.house_all_off

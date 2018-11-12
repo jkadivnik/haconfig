@@ -64,28 +64,28 @@ livingroom_volup:
   widget_type: script
   title: Volume Up
   entity: script.livingroom_volume_up
-  icon_on: fa-volume-up
-  icon_off: fa-volume-up
+  icon_on: mdi-volume-high
+  icon_off: mdi-volume-high
 
 livingroom_voldown:
   widget_type: script
   title: Volume Down
   entity: script.livingroom_volume_down
-  icon_on: fa-volume-down
-  icon_off: fa-volume-down
+  icon_on: mdi-volume-low
+  icon_off: mdi-volume-low
 
 livingroom_mute:
   widget_type: script
   title: Mute
   entity: script.livingroom_volume_mute
-  icon_on: fa-volume-off
-  icon_off: fa-volume-off
+  icon_on: mdi-volume-off
+  icon_off: mdi-volume-off
 
 livingroom_media_players:
   widget_type: navigate
   title: Media Players
-  icon_active : fa-play-circle-o
-  icon_inactive: fa-play-circle-o
+  icon_active : mdi-play-circle-outline
+  icon_inactive: mdi-play-circle-outline
   dashboard: MediaPlayers
 
 layout:
