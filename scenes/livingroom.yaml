@@ -79,3 +79,6 @@
   - name: Livingroom Hub Off
     entities:
       remote.living_room_hub: off
+  - name: Livingroom Kitchen Radio Power
+    entities:
+        remote.living_room_hub:

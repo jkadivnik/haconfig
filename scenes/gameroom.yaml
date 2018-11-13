@@ -31,5 +31,5 @@
         rgb_color: [255,0,0]
   - name: Gameroom Fun Is Over
     entities:
-      group.game_room_rgb_lights: off
+      group.game_room_lights: off
       remote.game_room_hub: off

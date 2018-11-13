@@ -1,5 +1,5 @@
   - alias: Livingroom Audiocast stopped
-    hide_entity: false
+    hide_entity: true
     trigger:
       - platform: state
         entity_id: media_player.kadivniaudio
@@ -11,7 +11,7 @@
       service: scene.turn_on
       entity_id: scene.livingroom_hub_off
   - alias: Livingroom Audiocast playing
-    hide_entity: false
+    hide_entity: true
     trigger:
       - platform: state
         entity_id: media_player.kadivniaudio
