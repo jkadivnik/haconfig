@@ -3,8 +3,8 @@ widget_dimensions: [122, 120]
 widget_margins: [5, 5]
 columns: 7
 global_parameters:
-    icon_style_inactive: "color:lightred"
-    icon_style_active: "color:lightblue"
+    icon_style_inactive: "color: lightred"
+    icon_style_active: "color: lightblue"
 
 layout:
     - include: top_panel
