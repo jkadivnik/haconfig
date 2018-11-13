@@ -39,6 +39,23 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
+notify:
+  - name: kadivnik_at_home_mail
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: homeassistant@kadivnik.be
+    encryption: starttls
+    username: johnny.kadivnik@gmail.com
+    password: !secret google_app_key
+    recipient:
+    - johnny.kadivnik@gmail.com
+    - charlotte.vandewiele@gmail.com
+    - thibo.kadivnik@gmail.com
+    - kadivnik.maxim@gmail.com
+    sender_name: My Home Assistant
+
 # Discover some devices automatically
 discovery:
 
