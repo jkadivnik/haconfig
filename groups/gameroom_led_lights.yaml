@@ -1,0 +1,4 @@
+Game Room Led Lights:
+  control: hidden
+  entities:
+    - light.gameroom_rgb_light
