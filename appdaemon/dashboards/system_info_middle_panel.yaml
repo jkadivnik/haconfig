@@ -69,5 +69,5 @@ kitchen_radio_power_usage:
   units: 'W'
 
 layout:
-- livingroom_dressoir_power_usage, livingroom_sofa_power_usage, system_ip_address(1x2), system_processor_usage, system_memory_usage
+- livingroom_dressoir_power_usage, livingroom_sofa_power_usage, system_ip_address(3x2), system_processor_usage, system_memory_usage
 - kitchen_radio_power_usage, veranda_heater_power_usage, system_disk_usage, system_last_boot
