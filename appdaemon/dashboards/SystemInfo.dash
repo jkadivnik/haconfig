@@ -8,5 +8,5 @@ global_parameters:
 
 layout:
     - include: top_panel
-    - include: system_resources_middle_panel
+    - include: system_info_middle_panel
     - include: bottom_panel
