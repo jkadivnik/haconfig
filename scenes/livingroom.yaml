@@ -78,5 +78,4 @@
       switch.plug_158d0001f29250: on
   - name: Livingroom Hub Off
     entities:
-      input_select.livingroom_watch:
-        option: None - 1
+      remote.living_room_hub: off

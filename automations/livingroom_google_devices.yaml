@@ -31,7 +31,6 @@
     trigger:
       platform: state
       entity_id: media_player.living_room_tv
-      from: 'playing'
       to: 'off'
     condition:
     - condition: template
@@ -42,10 +41,12 @@
   - alias: Livingroom Chromecast playing
     hide_entity: true
     trigger:
-      platform: state
-      entity_id: media_player.living_room_tv
-      from: 'off'
-      to: 'playing'
+      - platform: state
+        entity_id: media_player.living_room_tv
+        to: 'playing'
+      - platform: state
+        entity_id: media_player.living_room_tv
+        to: 'paused'
     condition:
     - condition: template
       value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
