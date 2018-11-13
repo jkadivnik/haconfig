@@ -1,0 +1,23 @@
+  # Smoke detected
+  - alias: Smoke Detected
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: binary_sensor.smoke_sensor_158d000279ddbc
+      from: 'off'
+      to: 'on'
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Vuur en/of rook ontdekt!"
+          message: "Er is thuis rool en/of vuur ontdekt!"
+      - service: xiaomi_aqara.play_ringtone
+        data:
+          gw_mac: !secret livingroom_gateway_mac
+          ringtone_id: 2
+          ringtone_vol: 85
+      - service: xiaomi_aqara.play_ringtone
+        data:
+          gw_mac: !secret gameroom_gateway_mac
+          ringtone_id: 2
+          ringtone_vol: 85
