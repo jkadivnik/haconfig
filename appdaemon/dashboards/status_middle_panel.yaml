@@ -88,6 +88,5 @@ weather_windspeed:
   entity: sensor.yr_wind_speed
 
 layout:
-    - livingroom_harmony_status(2x1), weather_temperature(3x1), gameroom_rgb, gameroom_harmony_status
-    - livingroom_gateway_illumination, livingroom_rgb, weather_humidity(3x1), gameroom_gateway, veranda_rgb
-    - livingroom_movement_sensor_illumination, livingroom_gateway, weather_windspeed(3x1), gameroom_gateway_illumination, veranda_movement_sensor_illumination
+    - livingroom_harmony_status, livingroom_rgb, weather_temperature, weather_humidity, weather_windspeed, gameroom_rgb, gameroom_harmony_status
+    - livingroom_gateway_illumination, livingroom_movement_sensor_illumination, livingroom_gateway, veranda_rgb(2x1), gameroom_gateway, gameroom_gateway_illumination
