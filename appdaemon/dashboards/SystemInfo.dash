@@ -1,4 +1,4 @@
-title: Kadivnik Home
+title: System Resources
 widget_dimensions: [122, 120]
 widget_margins: [5, 5]
 columns: 7
@@ -8,5 +8,5 @@ global_parameters:
 
 layout:
     - include: top_panel
-    - include: settings_middle_panel
+    - include: system_resources_middle_panel
     - include: bottom_panel

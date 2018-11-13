@@ -1,0 +1,73 @@
+# System resources
+system_memory_usage:
+  widget_type: gauge
+  title: System Memory Usage
+  entity: sensor.memory_use_percent
+  min: 0
+  max: 100
+  units: '%'
+
+system_processor_usage:
+  widget_type: gauge
+  title: System Processor Use
+  entity: sensor.processor_use
+  min: 0
+  max: 100
+  units: '%'
+
+system_disk_usage:
+  widget_type: gauge
+  title: System Disk Usage
+  entity: sensor.disk_use_percent_
+  min: 0
+  max: 100
+  units: '%'
+
+system_last_boot:
+  widget_type: sensor
+  title: Last Boot
+  entity: sensor.last_boot
+
+system_ip_address:
+  widget_type: sensor
+  title: IP Address
+  entity: sensor.ipv4_address_eth0
+
+
+# Power usage
+livingroom_dressoir_power_usage:
+  widget_type: gauge
+  title: Livingroom Dressoir Light Load
+  entity: sensor.livingroom_dressoir_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+
+livingroom_sofa_power_usage:
+  widget_type: gauge
+  title: Livingroom Sofa Light Load
+  entity: sensor.livingroom_sofa_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+
+veranda_heater_power_usage:
+  widget_type: gauge
+  title: Veranda Heater Load
+  entity: sensor.veranda_heater_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+
+kitchen_radio_power_usage:
+  widget_type: gauge
+  title: Kitchen Radio
+  title2: Load
+  entity: sensor.veranda_heater_plug_load
+  min: 0
+  max: 2500
+  units: 'W'
+
+layout:
+- livingroom_dressoir_power_usage, livingroom_sofa_power_usage, system_ip_address(1x2), system_processor_usage, system_memory_usage
+- kitchen_radio_power_usage, veranda_heater_power_usage, system_disk_usage, system_last_boot

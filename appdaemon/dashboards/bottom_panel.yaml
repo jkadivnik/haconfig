@@ -26,12 +26,12 @@ load_veranda_panel:
     icon_inactive: mdi-book
     dashboard: Veranda
 
-load_settings:
+load_system_info:
     widget_type: navigate
-    title: Settings
+    title: SystemInfo
     icon_active : mdi-cogs
     icon_inactive: mdi-cogs
-    dashboard: Settings
+    dashboard: System Info
 
 load_lights:
     widget_type: navigate
@@ -52,4 +52,4 @@ reload:
     title: Reload
 
 layout:
-    - load_main_panel, load_livingroom_panel, load_gameroom_panel, load_veranda_panel, load_status, load_settings, reload
+    - load_main_panel, load_livingroom_panel, load_gameroom_panel, load_veranda_panel, load_status, load_system_info, reload

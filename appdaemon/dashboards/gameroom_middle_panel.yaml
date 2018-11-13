@@ -21,9 +21,9 @@ gameroom_rgb:
   widget_type: light_with_colorpicker
   title: Gameroom
   title2: RGB Lights
-  entity: group.game_room_lights
+  entity: lights.gameroom_rgb_light
   on_attributes:
-    rgb_color: 255, 0, 0
+    rgb_color: 0, 0, 255
 
 gameroom_harmony_watch:
   widget_type: input_select
@@ -67,5 +67,5 @@ gameroom_mode:
     entity: input_select.gameroom_mode
 
 layout:
-    - gameroom_temperature, gameroom_humidity, gameroom_harmony_status, gameroom_kodi(2x2), gameroom_voldown ,gameroom_volup
-    - gameroom_rgb(3x1), gameroom_mute(2x1)
+    - gameroom_temperature, gameroom_humidity, gameroom_harmony_status(1x2), gameroom_kodi(2x2), gameroom_voldown ,gameroom_volup
+    - gameroom_rgb(2x1), gameroom_mute(2x1)

@@ -7,8 +7,3 @@
   payload_on: "on"
   payload_off: "off"
   optimistic: true
-
-  platform: flux_led
-  devices:
-    192.168.1.199:
-      name: Test RGB light
