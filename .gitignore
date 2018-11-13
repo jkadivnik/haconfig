@@ -8,3 +8,9 @@
 ip_bans.yaml
 secrets.yaml
 known_devices.yaml
+*.db
+tts/
+deps/
+appdaemon/compiled
+.uuid
+.HA_VERSION
