@@ -41,15 +41,15 @@ gameroom_lights:
 gameroom_all_off:
   widget_type: script
   title: Sleep
-  icon_on: mdi_hotel
-  icon_off: mdi_hotel
+  icon_on: mdi-hotel
+  icon_off: mdi-hotel
   entity: script.gameroom_all_off
 
 gameroom_fun_is_over:
     widget_type: scene
     title: Sleep
-    icon_on: mdi_hotel
-    icon_off: mdi_hotel
+    icon_on: mdi-hotel
+    icon_off: mdi-hotel
     entity: scene.gameroom_fun_is_over
 
 layout:

@@ -85,9 +85,9 @@ weather_humidity:
 weather_windspeed:
   widget_type: sensor
   title: Outside Windspeed
-  entity: sensor.yr_windspeed
+  entity: sensor.yr_wind_speed
 
 layout:
-    - livingroom_harmony_status, weather_humidity, weather_temperature, weather_windspeed, gameroom_harmony_status
-    - livingroom_rgb, livingroom_gateway, gameroom_rgb, gameroom_gateway, veranda_rgb
-    - livingroom_gateway_illumination, livingroom_movement_sensor_illumination, veranda_movement_sensor_illumination, gameroom_gateway_illumination, gameroom_movement_sensor_illumination
+    - livingroom_harmony_status(2x1), weather_temperature(3x1), gameroom_rgb, gameroom_harmony_status
+    - livingroom_gateway_illumination, livingroom_rgb, weather_humidity(3x1), gameroom_gateway, veranda_rgb
+    - livingroom_movement_sensor_illumination, livingroom_gateway, weather_windspeed(3x1), gameroom_gateway_illumination, veranda_movement_sensor_illumination

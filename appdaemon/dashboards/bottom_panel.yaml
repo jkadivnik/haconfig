@@ -28,10 +28,10 @@ load_veranda_panel:
 
 load_system_info:
     widget_type: navigate
-    title: SystemInfo
+    title: System Info
     icon_active : mdi-cogs
     icon_inactive: mdi-cogs
-    dashboard: System Info
+    dashboard: SystemInfo
 
 load_lights:
     widget_type: navigate
