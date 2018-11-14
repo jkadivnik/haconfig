@@ -20,8 +20,8 @@
         entity_id: media_player.kadivniaudio
         to: 'paused'
     condition:
-    - condition: template
-      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+      - condition: template
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_audiocast
@@ -48,8 +48,8 @@
         entity_id: media_player.living_room_tv
         to: 'paused'
     condition:
-    - condition: template
-      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+      - condition: template
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_chromecast

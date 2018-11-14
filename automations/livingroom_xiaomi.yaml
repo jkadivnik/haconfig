@@ -51,7 +51,7 @@
       - service: light.turn_on
         entity_id: group.living_room_rgb_lights
         data:
-          brightness: 5
+          rgb_color: 255, 255, 255
       - service: automation.turn_on
         data:
           entity_id: automation.MOTION_OFF

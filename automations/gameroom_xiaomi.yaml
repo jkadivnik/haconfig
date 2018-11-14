@@ -47,7 +47,7 @@
         before: '07:00:00'
     action:
       - service: light.turn_on
-        entity_id: light.gateway_light_7811dcded4dc
+        entity_id: group.living_room_led_lights
         data:
           brightness: 5
       - service: automation.turn_on

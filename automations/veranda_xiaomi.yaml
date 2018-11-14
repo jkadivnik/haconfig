@@ -7,7 +7,7 @@
       to: 'on'
     condition:
       - condition: numeric_state
-        entity_id: sensor.illumination_7811dcb35389
+        entity_id: sensor.illumination_158d0001f2a00f
         below: 100
     action:
       - service: light.turn_on
@@ -20,7 +20,7 @@
   - alias: Veranda No Motion
     trigger:
       platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      entity_id: binary_sensor.motion_sensor_158d0001f2a00f
       from: 'on'
       to: 'off'
       for:
