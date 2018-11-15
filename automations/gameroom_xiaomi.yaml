@@ -36,7 +36,6 @@
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
-      from: 'off'
       to: 'on'
     condition:
       - condition: numeric_state
@@ -47,23 +46,16 @@
         before: '07:00:00'
     action:
       - service: light.turn_on
-        entity_id: group.living_room_led_lights
+        entity_id: group.game_room_led_lights
         data:
-          brightness: 5
-      - service: automation.turn_on
-        data:
-          entity_id: automation.MOTION_OFF
+          rgb_color: 255, 255, 255
   - alias: Gameroom No Motion
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
-      from: 'on'
       to: 'off'
       for:
         minutes: 5
     action:
       - service: light.turn_off
-        entity_id: light.gateway_light_7811dcded4dc
-      - service: automation.turn_off
-        data:
-          entity_id: automation.Motion_off
+        entity_id: group.game_room_led_lights

@@ -36,7 +36,6 @@
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001de7134
-      from: 'off'
       to: 'on'
     condition:
       - condition: numeric_state
@@ -49,23 +48,16 @@
         value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
     action:
       - service: light.turn_on
-        entity_id: group.living_room_rgb_lights
+        entity_id: group.living_room_led_lights
         data:
           rgb_color: 255, 255, 255
-      - service: automation.turn_on
-        data:
-          entity_id: automation.MOTION_OFF
   - alias: Livingroom No Motion
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001de7134
-      from: 'on'
       to: 'off'
       for:
         minutes: 5
     action:
       - service: light.turn_off
-        entity_id: group.living_room_rgb_lights
-      - service: automation.turn_off
-        data:
-          entity_id: automation.Motion_off
+        entity_id: group.living_room_led_lights

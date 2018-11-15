@@ -1,0 +1,12 @@
+Battery Check Automations:
+  control: hidden
+  entities:
+    - automation.hallway_smoke_sensor_battery
+    - automation.gameroom_cube_sensor_battery
+    - automation.livingroom_cube_sensor_battery
+    - automation.veranda_temperature_sensor_battery
+    - automation.gameroom_temperature_sensor_battery
+    - automation.livingroom_temperature_sensor_battery
+    - automation.veranda_motion_sensor_battery
+    - automation.livingroom_motion_sensor_battery
+    - automation.gameroom_motion_sensor_battery

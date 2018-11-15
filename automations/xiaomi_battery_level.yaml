@@ -1,0 +1,135 @@
+  # Check battery level and send mail in case of low battery.
+
+  # Temperature sensor battery checks
+  - alias: Veranda Temperature Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.temperature_158d00020f4dd3
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi veranda temperatuur sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.veranda_temperature_sensor_battery
+  - alias: Gameroom Temperature Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.temperature_158d000236744c
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi gameroom temperatuur sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.gameroom_temperature_sensor_battery
+  - alias: Livingroom Temperature Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.temperature_158d0002379148
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi livingroom temperatuur sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.livingroom_temperature_sensor_battery
+
+  # Motion sensor battery checks
+  - alias: Veranda Motion Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.motion_sensor_158d0001f2a00f
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi veranda bewegingssensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.veranda_motion_sensor_battery
+  - alias: Gameroom Motion Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+    - service: notify.kadivnik_at_home_mail
+      data:
+        title: "Xiaomi gameroom bewegingssensor : batterij leeg!"
+        message: "Vervang de batterij zo snel mogelijk!"
+    - service: automation.turn_off
+        entity_id: automation.gameroom_motion_sensor_battery
+  - alias: Livingroom Motion Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi livingroom bewegingssensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.livingroom_motion_sensor_battery
+
+  # Cube sensor battery checks
+  - alias: Gameroom Cube Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.cube_158d000118421f_2
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi gameroom cube sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.gameroom_cube_sensor_battery
+  - alias: Livingroom Cube Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.cube_158d00010fd151_2
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi livingroom cube sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.livingroom_cube_sensor_battery
+
+  # Smoke sensor battery check
+  - alias: Hallway Smoke Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.smoke_sensor_158d000279ddbc
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: notify.kadivnik_at_home_mail
+        data:
+          title: "Xiaomi hallway smoke sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+          entity_id: automation.hallway_smoke_sensor_battery
+
+  # Turn on all automations
+  - alias: Battery Automation Turn On
+    trigger:
+      platform: time
+      at: '20:00:00'
+    action:
+    - service: automation.turn_on
+        entity_id: group.battery_check_automations
