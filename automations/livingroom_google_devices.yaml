@@ -6,7 +6,7 @@
         to: 'off'
     condition:
     - condition: template
-      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'Music' }}"
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string == 'Music' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_hub_off
@@ -21,7 +21,7 @@
         to: 'paused'
     condition:
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string == 'PowerOff' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_audiocast
@@ -34,7 +34,7 @@
       to: 'off'
     condition:
     - condition: template
-      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'Chromecast' }}"
+      value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string == 'Chromecast' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_hub_off
@@ -49,7 +49,7 @@
         to: 'paused'
     condition:
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string == 'PowerOff' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_chromecast

@@ -1,5 +1,5 @@
   - alias: Kitchen Music Playing
-    hide_entity: true
+    hide_entity: false
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
@@ -7,9 +7,9 @@
       above: 1.5
     condition:
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') != 'Keuken muziek luisteren' }}"
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string  != 'Keuken muziek luisteren' }}"
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') != 'PowerOff' }}"
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string != 'PowerOff' }}"
     action:
       service: script.turn_on
       entity_id: script.livingroom_kitchen_radio_toggle
