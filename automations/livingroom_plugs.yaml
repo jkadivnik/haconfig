@@ -11,5 +11,17 @@
       - condition: template
         value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string != 'PowerOff' }}"
     action:
-      service: script.turn_on
-      entity_id: script.livingroom_kitchen_radio_toggle
+      - service: script.turn_on
+        entity_id: script.livingroom_kitchen_radio_toggle
+      - service: automation.turn_off
+        entity_id: automation.kitchen_music_playing
+  - alias: Kitchen Music Turned Off
+    hide_entity: false
+    trigger:
+      platform: numeric_state
+      entity_id: switch.plug_158d0002368861
+      value_template: '{{ state.power_load }}'
+      below: 1.5
+    action:
+    - service: automation.turn_on
+      entity_id: automation.kitchen_music_playing
