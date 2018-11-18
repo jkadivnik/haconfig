@@ -35,21 +35,6 @@ livingroom_sofa_light:
   title: Sofa Light
   entity: switch.plug_158d0001f29250
 
-livingroom_harmony_watch:
-  widget_type: input_select
-  title: Watch TV
-  entity: input_select.livingroom_watch
-
-livingroom_harmony_play:
-  widget_type: input_select
-  title: Play Games
-  entity: input_select.livingroom_play
-
-livingroom_harmony_music:
-  widget_type: input_select
-  title: Listen To Music
-  entity: input_select.livingroom_music
-
 livingroom_kodi:
   widget_type: media_player
   title: Kodi

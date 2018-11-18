@@ -3,12 +3,11 @@ Game Room:
   entities:
     - sensor.gameroom_harmony_activity
     - input_select.gameroom_mode
+    - input_select.gameroom_harmony
     - switch.kodi_gameroom
     - media_player.kodibureau
     - remote.game_room_hub
     - light.gameroom_rgb_light
-    - input_select.gameroom_watch
-    - input_select.gameroom_play
     - scripts.gameroom_volume_up
     - scripts.gameroom_volume_down
     - scripts.gameroom_volume_mute

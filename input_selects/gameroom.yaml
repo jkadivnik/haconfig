@@ -1,4 +1,14 @@
   # Game Room
+  gameroom_harmony:
+    name: Gameroom Harmony
+    options:
+      - HTPC - 33210805
+      - No Screen Gaming - 33210808
+      - Big Screen Gaming - 33210807
+      - PS3 - 33266495
+      - PS4 - 35282221
+      - None - 1
+    initial: None - 1
   gameroom_mode:
     name: Gameroom Mode
     options:

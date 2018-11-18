@@ -2,7 +2,7 @@
     entities:
       light.livingroom_dressoir_rgb_light: off
       light.livingroom_bookcase_rgb_light: off
-      input_select.livingroom_music:
+      input_select.livingroom_harmony:
         option: Radio - 33452774
       switch.plug_158d0001f292c0: off
       switch.plug_158d0001f29250: off
@@ -10,7 +10,7 @@
     entities:
       light.livingroom_dressoir_rgb_light: off
       light.livingroom_bookcase_rgb_light: off
-      input_select.livingroom_watch:
+      input_select.livingroom_harmony:
         option: Telenet - 33452772
       switch.plug_158d0001f292c0: on
       switch.plug_158d0001f29250: on
@@ -20,7 +20,7 @@
       light.livingroom_bookcase_rgb_light: off
       switch.plug_158d0001f292c0: off
       switch.plug_158d0001f29250: off
-      input_select.livingroom_watch:
+      input_select.livingroom_harmony:
         option: None - 1
   - name: Livingroom Kodi
     entities:
@@ -30,17 +30,17 @@
       light.livingroom_bookcase_rgb_light:
         state: on
         rgb_color: [255,0,0]
-      input_select.livingroom_watch:
+      input_select.livingroom_harmony:
         option: HTPC - 33452776
       switch.plug_158d0001f292c0: off
       switch.plug_158d0001f29250: off
   - name: Livingroom Audiocast
     entities:
-      input_select.livingroom_music:
+      input_select.livingroom_harmony:
         option: Chromecast Audio - 33452775
   - name: Livingroom Chromecast
     entities:
-      input_select.livingroom_watch:
+      input_select.livingroom_harmony:
         option: Chromecast - 33452778
   - name: Livingroom BD
     entities:
@@ -50,7 +50,7 @@
       light.livingroom_bookcase_rgb_light:
         state: on
         rgb_color: [255,0,0]
-      input_select.livingroom_watch:
+      input_select.livingroom_harmony:
         option: BD_DVD - 33452773
       switch.plug_158d0001f292c0: off
       switch.plug_158d0001f29250: off
@@ -62,7 +62,7 @@
       light.livingroom_bookcase_rgb_light:
         state: on
         rgb_color: [255,0,0]
-      input_select.livingroom_play:
+      input_select.livingroom_harmony:
         option: PS4 - 33530080
       switch.plug_158d0001f292c0: off
       switch.plug_158d0001f29250: off

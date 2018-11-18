@@ -1,24 +1,8 @@
-  - alias: Gameroom TV
+  - alias: Gameroom Harmony
     hide_entity: true
     trigger:
       platform: state
-      entity_id: input_select.gameroom_watch
-    action:
-      service: remote.turn_on
-      entity_id: remote.game_room_hub
-      data_template:
-        activity: >
-          {% set trigger_state = trigger.to_state.state.split(' - ')[1] %}
-          {% if trigger_state == "1" %}
-            -1
-          {% else %}
-            {{ trigger_state }}
-          {% endif %}
-  - alias: Gameroom Play
-    hide_entity: true
-    trigger:
-      platform: state
-      entity_id: input_select.gameroom_play
+      entity_id: input_select.gameroom_harmony
     action:
       service: remote.turn_on
       entity_id: remote.game_room_hub

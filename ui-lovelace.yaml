@@ -14,10 +14,8 @@ views:
         entities:
           - sensor.livingroom_harmony_activity
           - input_select.livingroom_mode
+          - input_select.livingroom_harmony
           - remote.living_room_hub
-          - input_select.livingroom_watch
-          - input_select.livingroom_play
-          - input_select.livingroom_music
           - sensor.humidity_158d0002379148
           - sensor.temperature_158d0002379148
           - sensor.illumination_7811dcb35389

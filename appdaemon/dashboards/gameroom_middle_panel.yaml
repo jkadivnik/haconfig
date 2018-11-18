@@ -25,16 +25,6 @@ gameroom_rgb:
   on_attributes:
     rgb_color: 0, 0, 255
 
-gameroom_harmony_watch:
-  widget_type: input_select
-  title: Watch TV
-  entity: input_select.gameroom_watch
-
-gameroom_harmony_play:
-  widget_type: input_select
-  title: Play Games
-  entity: input_select.gameroom_play
-
 gameroom_kodi:
   widget_type: media_player
   title: Kodi

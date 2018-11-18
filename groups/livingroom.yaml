@@ -2,12 +2,10 @@ Living Room:
   control: hidden
   entities:
     - sensor.livingroom_harmony_activity
+    - input_select.livingroom_harmony
     - input_select.livingroom_mode
     - remote.living_room_hub
     - media_player.kodi
-    - input_select.livingroom_watch
-    - input_select.livingroom_play
-    - input_select.livingroom_music
     - scripts.livingroom_volume_up
     - scripts.livingroom_volume_down
     - scripts.livingroom_volume_mute
