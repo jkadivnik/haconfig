@@ -3,8 +3,8 @@
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
-      value_template: '{{ state.power_load }}'
-      above: 1.5
+      value_template: '{{ states.switch.plug_158d0002368861.attributes.power_load | float }}'
+      above: '1.5'
     condition:
       - condition: template
         value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string  != 'Keuken muziek luisteren' }}"
@@ -20,8 +20,8 @@
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
-      value_template: '{{ state.power_load }}'
-      below: 1.5
+      value_template: '{{ states.switch.plug_158d0002368861.attributes.power_load | float }}'
+      below: '1.5'
     action:
     - service: automation.turn_on
       entity_id: automation.kitchen_music_playing
