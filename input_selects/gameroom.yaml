@@ -2,13 +2,13 @@
   gameroom_harmony:
     name: Gameroom Harmony
     options:
-      - HTPC - 33210805
-      - No Screen Gaming - 33210808
-      - Big Screen Gaming - 33210807
-      - PS3 - 33266495
-      - PS4 - 35282221
-      - None - 1
-    initial: None - 1
+      - "HTPC : 33210805"
+      - "No Screen Gaming : 33210808"
+      - "Big Screen Gaming : 33210807"
+      - "PS3 : 33266495"
+      - "PS4 : 35282221"
+      - "None : -1"
+    initial: "None : -1"
   gameroom_mode:
     name: Gameroom Mode
     options:
@@ -24,17 +24,17 @@
   gameroom_watch:
     name: Watch TV
     options:
-      - HTPC - 33210805
-      - None - 1
-    initial: None - 1
+      - "HTPC : 33210805"
+      - "None : -1"
+    initial: "None : -1"
     icon: mdi:television
   gameroom_play:
     name: Play games
     options:
-      - No Screen Gaming - 33210808
-      - Big Screen Gaming - 33210807
-      - PS3 - 33266495
-      - PS4 - 35282221
-      - None - 1
-    initial: None - 1
+      - "No Screen Gaming : 33210808"
+      - "Big Screen Gaming : 33210807"
+      - "PS3 : 33266495"
+      - "PS4 : 35282221"
+      - "None : -1"
+    initial: "None : -1"
     icon: mdi:gamepad

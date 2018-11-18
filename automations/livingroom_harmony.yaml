@@ -7,10 +7,4 @@
       service: remote.turn_on
       entity_id: remote.living_room_hub
       data_template:
-        activity: >
-          {% set trigger_state = trigger.to_state.state.split(' - ')[1] %}
-          {% if trigger_state == "1" %}
-            -1
-          {% else %}
-            {{ trigger_state }}
-          {% endif %}
+        activity: "{{ trigger.to_state.state.split(' : ')[1] }}"
