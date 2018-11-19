@@ -4,9 +4,8 @@
       entity_id: binary_sensor.motion_sensor_158d0001f2a00f
       to: 'on'
     condition:
-      - condition: numeric_state
-        entity_id: sensor.illumination_158d0001f2a00f
-        below: 100
+      - condition: sun
+        after: sunset
     action:
       - service: light.turn_on
         data:
