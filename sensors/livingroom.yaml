@@ -12,7 +12,7 @@
       friendly_name: "Livingroom Dressoir Power Load"
       value_template: >-
         {% if is_state("switch.plug_158d0001f292c0", 'on') %}
-          {{ states.switch.plug_158d0001f292c0.attributes.load_power|int }}
+          {{ states.switch.plug_158d0001f292c0.attributes.power_load|int }}
         {% else %}
           0
         {% endif %}
@@ -20,7 +20,7 @@
       friendly_name: "Livingroom Sofa Power Load"
       value_template: >-
         {% if is_state("switch.plug_158d0001f29250", 'on') %}
-          {{ states.switch.plug_158d0001f29250.attributes.load_power|int }}
+          {{ states.switch.plug_158d0001f29250.attributes.power_load|int }}
         {% else %}
           0
         {% endif %}
@@ -28,7 +28,7 @@
       friendly_name: "Kitchen Radio Power Load"
       value_template: >-
         {% if is_state("switch.plug_158d0002368861", 'on') %}
-          {{ states.switch.plug_158d0002368861.attributes.load_power|int }}
+          {{ states.switch.plug_158d0002368861.attributes.power_load|int }}
         {% else %}
           0
         {% endif %}

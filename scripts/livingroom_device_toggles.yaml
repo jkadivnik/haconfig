@@ -24,4 +24,4 @@
           entity_id: remote.living_room_hub
       - service: switch.turn_off
         data:
-          entity_id: group.living_room_plugs
+          entity_id: group.living_room_switchable_plugs

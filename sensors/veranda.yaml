@@ -4,7 +4,7 @@
       friendly_name: "Veranda Heater Power Load"
       value_template: >-
         {% if is_state("switch.plug_158d0002368a0e", 'on') %}
-          {{ states.switch.plug_158d0002368a0e.attributes.load_power|int }}
+          {{ states.switch.plug_158d0002368a0e.attributes.power_load|int }}
         {% else %}
           0
         {% endif %}
