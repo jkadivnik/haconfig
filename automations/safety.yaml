@@ -34,7 +34,7 @@
     - service: notify.kadivnik_at_home_mail
       data:
         title: "Gaslek ontdekt!"
-        message: "Er is in de bureau een gaslek. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
+        message: "Er is een gaslek in de bureau. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
     - service: xiaomi_aqara.play_ringtone
       data:
         gw_mac: !secret livingroom_gateway_mac

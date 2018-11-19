@@ -1,0 +1,10 @@
+  - alias: 'SSL expiry notification'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.ssl_cert_expiry
+      below: 10
+    action:
+      service: notify.kadivnik_at_home_mail
+      data:
+        title: "SSL certificate expiration warning"
+        message: 'Warning - SSL certificate expires in 10 days and has not been automatically renewed'
