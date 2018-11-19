@@ -11,7 +11,7 @@
       service: remote.send_command
       data_template:
         entity_id: remote.living_room_hub
-        device: 54449333
+        device: 54449333, 54449337
         command: >
           {% if trigger.event.data.action_value | float > 0 %}
             VolumeDown
@@ -30,5 +30,5 @@
       service: remote.send_command
       data:
         entity_id: remote.living_room_hub
-        device: 54449333
+        device: 54449333, 54449337
         command: Mute
