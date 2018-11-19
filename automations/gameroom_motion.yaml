@@ -12,6 +12,7 @@
     before: '07:00:00'
   action:
   - service: light.turn_on
+    entity_id: group.game_room_led_lights
     data:
       entity_id: group.game_room_led_lights
       rgb_color: [255, 255, 255]
@@ -24,5 +25,4 @@
       minutes: 5
   action:
   - service: light.turn_off
-    data:
-      entity_id: group.game_room_led_lights
+    entity_id: group.game_room_led_lights

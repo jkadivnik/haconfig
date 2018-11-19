@@ -8,6 +8,7 @@
         after: sunset
     action:
       - service: light.turn_on
+        entity_id: light.veranda_rgb_light
         data:
           entity_id: light.veranda_rgb_light
           rgb_color: [255, 255, 255]
@@ -20,5 +21,4 @@
         minutes: 2
     action:
       - service: light.turn_off
-        data:
-          entity_id: light.veranda_rgb_light
+        entity_id: light.veranda_rgb_light
