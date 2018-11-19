@@ -1,6 +1,5 @@
 Living Room Lights:
   control: hidden
   entities:
-    - light.livingroom_bookcase_rgb_light
-    - light.livingroom_dressoir_rgb_light
+    - group.living_room_led_lights
     - light.gateway_light_7811dcb35389
