@@ -1,0 +1,34 @@
+  # Change volume depending on rotation
+  - alias: Livingroom Cube Volume
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151_2
+        action_type: rotate
+    action:
+      service: remote.send_command
+      data_template:
+        entity_id: remote.living_room_hub
+        device: 54449333, 54449337
+        command: >
+          {% if trigger.event.data.action_value | float > 0 %}
+            VolumeDown
+          {% elif trigger.event.data.action_value | float < 0 %}
+            VolumeUp
+          {% endif %}
+  - alias: Livingroom Cube Pause
+    hide_entity: true
+    trigger:
+      platform: event
+      event_type: cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151_2
+        action_type: shake_air
+    action:
+      service: remote.send_command
+      data:
+        entity_id: remote.living_room_hub
+        device: 54449333, 54449337
+        command: Mute

@@ -32,30 +32,3 @@
         entity_id: remote.living_room_hub
         device: 54449333
         command: Mute
-  - alias: Livingroom NightLight Motion
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
-      to: 'on'
-    condition:
-      - condition: numeric_state
-        entity_id: sensor.illumination_7811dcb35389
-        below: 100
-      - condition: template
-        value_template: "{{ is_state_attr('remote.living_room_hub', 'current_activity', 'PowerOff') }}"
-    action:
-      - service: light.turn_on
-        data:
-          entity_id: group.living_room_led_lights
-          rgb_color: 255, 255, 255
-  - alias: Livingroom No Motion
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
-      to: 'off'
-      for:
-        minutes: 5
-    action:
-      - service: light.turn_off
-        data:
-          entity_id: group.living_room_led_lights

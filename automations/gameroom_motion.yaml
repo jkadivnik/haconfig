@@ -1,0 +1,28 @@
+- alias: Gameroom NightLight Motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+    to: 'on'
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.illumination_7811dcded4dc
+    below: 100
+  - condition: time
+    after: '22:00:00'
+    before: '07:00:00'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: group.game_room_led_lights
+      rgb_color: [255, 255, 255]
+- alias: Gameroom No Motion
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+    to: 'off'
+    for:
+      minutes: 5
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: group.game_room_led_lights
