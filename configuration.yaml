@@ -24,7 +24,7 @@ recorder:
 config:
 
 http:
-#  base_url: https://kadivnik.duckdns.org
+  base_url: !secret http_base_url
 #  ssl_certificate: /ssl/fullchain.pem
 #  ssl_key: /ssl/privkey.pem
   api_password: !secret api_password
