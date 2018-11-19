@@ -41,11 +41,8 @@
       - condition: numeric_state
         entity_id: sensor.illumination_7811dcb35389
         below: 100
-      - condition: time
-        after: '22:00:00'
-        before: '07:00:00'
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') == 'PowerOff' }}"
+        value_template: "{{ is_state_attr('remote.living_room_hub', 'current_activity', 'PowerOff') }}"
     action:
       - service: light.turn_on
         data:
