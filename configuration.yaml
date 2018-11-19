@@ -27,7 +27,7 @@ http:
 #  base_url: https://kadivnik.duckdns.org
 #  ssl_certificate: /ssl/fullchain.pem
 #  ssl_key: /ssl/privkey.pem
-  api_password: !
+  api_password: !secret api_password
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -108,8 +108,8 @@ media_player:
     host: !secret gameroom_kodi_ip
     name: kodibureau
   - platform: ps4
-    host: !http_ps4_host
-    ps4_ip: !ps4_ip
+    host: !secret http_ps4_host
+    ps4_ip: !secret ps4_ip
 
 # Xiaomi
 xiaomi_aqara:
