@@ -55,6 +55,12 @@ notify:
     - kadivnik.maxim@gmail.com
     sender_name: My Home Assistant
 
+sabnzbd:
+  api_key: !secret sabnzbd_api_key
+  host: !secret sabnzbd_host
+  port: !secret sabnzbd_port
+  name: Sabnzbd Downloader
+
 # Discover some devices automatically
 discovery:
 
