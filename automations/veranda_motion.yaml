@@ -6,6 +6,7 @@
     condition:
       - condition: sun
         after: sunset
+        before: sunrise
     action:
       - service: light.turn_on
         entity_id: light.veranda_rgb_light
