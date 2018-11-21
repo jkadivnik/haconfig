@@ -18,39 +18,39 @@ views:
     cards:
     - type: horizontal-stack
       cards:
-        - type: custom:picture-status-card
-          entity: device_tracker.papa_phone
-          image: /local/lovelace/Johnny.jpg
-          font_color: white
-          card_height: 90px
-          state_image:
-            Home: /local/lovelace/Johnny.jpg
-            Just arrived: /local/lovelace/Johnny.jpg
-        - type: custom:picture-status-card
-          entity: device_tracker.thibo_phone
-          image: /local/lovelace/Thibo.jpg
-          font_color: white
-          card_height: 90px
-          state_image:
-            Home: /local/lovelace/Thibo.jpg
-            Just arrived: /local/lovelace/Thibo.jpg
-        - type: custom:picture-status-card
-          entity: device_tracker.maxim_phone
-          image: /local/lovelace/Maxim.jpg
-          font_color: white
-          card_height: 90px
-          state_image:
-            Home: /local/lovelace/Maxim.jpg
-            Just arrived: /local/lovelace/Maxim.jpg
-        - type: custom:picture-status-card
-          entity: device_tracker.mama_phone
-          image: /local/lovelace/Charlotte.jpg
-          font_color: white
-          card_height: 90px
-          state_image:
-            Home: /local/lovelace/Charlotte.jpg
-            Just arrived: /local/lovelace/Charlotte.jpg
-          name: ' '
+      - type: custom:picture-status-card
+        entity: device_tracker.papa_phone
+        image: /local/lovelace/Johnny.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Johnny.jpg
+          Just arrived: /local/lovelace/Johnny.jpg
+      - type: custom:picture-status-card
+        entity: device_tracker.thibo_phone
+        image: /local/lovelace/Thibo.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Thibo.jpg
+          Just arrived: /local/lovelace/Thibo.jpg
+      - type: custom:picture-status-card
+        entity: device_tracker.maxim_phone
+        image: /local/lovelace/Maxim.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Maxim.jpg
+          Just arrived: /local/lovelace/Maxim.jpg
+      - type: custom:picture-status-card
+        entity: device_tracker.mama_phone
+        image: /local/lovelace/Charlotte.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Charlotte.jpg
+          Just arrived: /local/lovelace/Charlotte.jpg
+        name: ' '
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -251,109 +251,106 @@ views:
           artwork_border: true
 - title: Gameroom
   cards:
-  - type: horizontal-stack:
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            report_size: 5
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-glance
-              title: Gameroom
-              entities:
-              - light.gameroom_rgb_light
-              - entity: scene.gameroom_gaming
-                icon: mdi:flash
-                state_label: Telenet
-                tap_action: call-service
-                service: scene.gameroom_gaming
-              - entity: scene.gameroom_kodi
-                icon: mdi:movie
-                name: HTPC
-                tap_action: call-service
-                service: scene.gameroom_kodi
-              - entity: scene.gameroom_ps3
-                icon: mdi:gamepad
-                name: PS3
-                tap_action: call-service
-                service: scene.gameroom_ps3
-              - entity: scene.gameroom_ps4
-                icon: mdi:gamepad
-                name: PS4
-                tap_action: call-service
-                service: scene.gameroom_ps4
-              - entity: scene.gameroom_lights_on
-                icon: mdi:lightbulb
-                name: Lights
-                tap_action: call-service
-                service: scene.gameroom_lights_on
-              image: /local/lovelace/gameroom.jpeg
-              aspect_ratio: 16:9
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              show_name: false
-              entities:
-              - entity: sensor.temperature_158d000236744c
-                name: Temperature
-              - entity: sensor.humidity_158d000236744c
-                name: Humidity
-              - entity: sensor.illumination_158d0001f9cdfe
-                name: Light Strength
-      - type: vertical-stack
-        cards:
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: picture-glance
-            title: TV
-            entities:
-            - entity: script.gameroom_volume_down
-              icon: mdi:volume-low
-            - entity: script.gameroom_volume_mute
-              icon: mdi:volume-off
-            - entity: script.gameroom_volume_high
-              icon: mdi:volume-up
-            image: /local/lovelace/cinema.jpeg
-            aspect_ratio: 16:9
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            show_name: false
-            entities:
-            - entity: sensor.gameroom_harmony_activity
-              icon: mdi:remote
-            - entity: input_select.gameroom_harmony
-              icon: mdi:arrow-down-drop-circle
-        - type: conditional
-          conditions:
-          - entity: media_player.kodibureau
-            state_not: "idle"
-          card:
-            type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: custom:mini-media-player
-              entity: media_player.kodibureau
-              name: HTPC
-              artwork: cover
-              show_progress: true
-              show_source: true
-              artwork_border: true
-              icon: mdi:movie
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: Gameroom
+        entities:
+        - light.gameroom_rgb_light
+        - entity: scene.gameroom_gaming
+          icon: mdi:flash
+          state_label: Telenet
+          tap_action: call-service
+          service: scene.gameroom_gaming
+        - entity: scene.gameroom_kodi
+          icon: mdi:movie
+          name: HTPC
+          tap_action: call-service
+          service: scene.gameroom_kodi
+        - entity: scene.gameroom_ps3
+          icon: mdi:gamepad
+          name: PS3
+          tap_action: call-service
+          service: scene.gameroom_ps3
+        - entity: scene.gameroom_ps4
+          icon: mdi:gamepad
+          name: PS4
+          tap_action: call-service
+          service: scene.gameroom_ps4
+        - entity: scene.gameroom_lights_on
+          icon: mdi:lightbulb
+          name: Lights
+          tap_action: call-service
+          service: scene.gameroom_lights_on
+        image: /local/lovelace/gameroom.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: sensor.gameroom_harmony_activity
+          icon: mdi:remote
+        - entity: input_select.gameroom_harmony
+          icon: mdi:arrow-down-drop-circle
+    - type: conditional
+      conditions:
+      - entity: media_player.kodibureau
+        state_not: "idle"
+      card:
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.kodibureau
+          name: HTPC
+          artwork: cover
+          show_progress: true
+          show_source: true
+          artwork_border: true
+          icon: mdi:movie
+  - type: vertical-stack
+    cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: TV
+        entities:
+        - entity: script.gameroom_volume_down
+          icon: mdi:volume-low
+        - entity: script.gameroom_volume_mute
+          icon: mdi:volume-off
+        - entity: script.gameroom_volume_high
+          icon: mdi:volume-up
+        image: /local/lovelace/cinema.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: sensor.temperature_158d000236744c
+          name: Temperature
+        - entity: sensor.humidity_158d000236744c
+          name: Humidity
+        - entity: sensor.illumination_158d0001f9cdfe
+          name: Light Strength
 - title: Veranda
   cards:
   - type: custom:card-modder
