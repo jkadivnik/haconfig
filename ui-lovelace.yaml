@@ -378,7 +378,7 @@ views:
               image: /local/lovelace/system_settings.jpeg
               elements:
                 - type: icon
-                  entity: mdi:cogs
+                  icon: mdi:cogs
                   style: {color: white, left: 25%, top: 85%}
                 - type: state-label
                   entity: sensor.processor_use
