@@ -7,237 +7,106 @@ resources:
   type: module
 - url: /local/custom_ui/dark-sky-weather-card.js
   type: js
+- url: /local/custom_cards/custom-cards.js?v=1.055
+  type: module
 
 title: Kadivnik@Home
 views:
-  - title: Living Room
+- title: General
+  cards:
+  - type: vertical-stack
     cards:
-    - type: vertical-stack
+    - type: horizontal-stack
       cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: TV
-          entities:
-          - switch.plug_158d0001f29250
-          - entity: scene.livingroom_telenet
-            icon: mdi:television-box
-            state_label: telenet
-            tap_action: call-service
-            service: scene.livingroom_telenet
-          - entity: scene.livingroom_kodi
-            icon: mdi:movie
-            name: HTPC
-            tap_action: call-service
-            service: scene.livingroom_kodi
-          - entity: scene.livingroom_audiocast
-            icon: mdi:library-music
-            name: Audiocast
-            tap_action: call-service
-            service: scene.livingroom_audiocast
-          - entity: scene.livingroom_chromecast
-            icon: mdi:cast
-            name: Chromecast
-            tap_action: call-service
-            service: scene.livingroom_chromecast
-          - entity: scene.livingroom_bd
-            icon: mdi:filmstrip
-            name: Bluray
-            tap_action: call-service
-            service: scene.livingroom_bd
-          image: /local/lovelace/livingroom_tv_corner.jpeg
-          aspect_ratio: 16:9
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Diner Table
-          entities:
-          - switch.plug_158d0001f292c0
-          - light.livingroom_bookcase_rgb_light
-          - light.livingroom_dressoir_rgb_light
-          image: /local/lovelace/livingroom_diner_table.jpeg
-          aspect_ratio: 16:9
-      - type: conditional
-        conditions:
-        - entity: media_player.kodiliving
-          state_not: "idle"
-        card:
-          type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: custom:mini-media-player
-            entity: media_player.kodiliving
-            name: HTPC
-            artwork: cover
-            show_progress: true
-            show_source: true
-            artwork_border: true
-            icon: mdi:movie
-    - type: vertical-stack
-      cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:dark-sky-weather-card
-          entity_sun: sun.sun
-          entity_daily_summary: sensor.dark_sky_daily_summary
-          entity_current_conditions: sensor.dark_sky_icon
-          entity_humidity: sensor.dark_sky_humidity
-          entity_pressure: sensor.dark_sky_pressure
-          entity_temperature: sensor.dark_sky_temperature
-          entity_visibility: sensor.dark_sky_visibility
-          entity_wind_bearing: sensor.dark_sky_wind_bearing
-          entity_wind_speed: sensor.dark_sky_wind_speed
-          entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
-          entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
-          entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
-          entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
-          entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
-          entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature
-          entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1
-          entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2
-          entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3
-          entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4
-          entity_forecast_icon_1: sensor.dark_sky_icon_1
-          entity_forecast_icon_2: sensor.dark_sky_icon_2
-          entity_forecast_icon_3: sensor.dark_sky_icon_3
-          entity_forecast_icon_4: sensor.dark_sky_icon_4
-          entity_forecast_icon_5: sensor.dark_sky_icon_5
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: sensor.temperature_158d0002379148
-            name: Temperature
-          - entity: sensor.humidity_158d0002379148
-            name: Humidity
-          - entity: sensor.illumination_158d0001de7134
-            name: Light Strength
-      - type: conditional
-        conditions:
-        - entity: media_player.living_room_tv
-          state_not: "off"
-        card:
-          type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: custom:mini-media-player
-            entity: media_player.living_room_tv
-            name: Chromecast
-            show_progress: true
-            show_cover: true
-            artwork_border: true
-    - type: vertical-stack
-      cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Kitchen
-          entities:
-          - switch.plug_158d0001f292c0
-          - entity: script.livingroom_kitchen_radio_toggle
-            icon: mdi:radio
-          image: /local/lovelace/livingroom_kitchen.jpeg
-          aspect_ratio: 16:9
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: sensor.livingroom_harmony_activity
-            icon: mdi:remote
-          - entity: input_select.livingroom_harmony
-            icon: mdi:arrow-down-drop-circle
-      - type: conditional
-        conditions:
-        - entity: media_player.living_room_speaker
-          state_not: "off"
-        card:
-          type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: custom:mini-media-player
-            entity: media_player.living_room_speaker
-            name: Google Mini
-            show_progress: true
-            show_cover: true
-            artwork_border: true
-
-
-  #      - type: "custom:mini-graph-card"
-  #        entity: sensor.temperature_158d0002379148
-  #        name: Temperature
-  #        line_color: '#3498db'
-  #        line_width: 2
-  #        font_size: 40
-  #        height: 80
-
-  - title: Gameroom
+      - type: custom:picture-status-card
+        entity: device_tracker.mama_phone
+        image: /local/lovelace/Charlotte.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Charlotte.jpg
+          Just arrived: /local/lovelace/Charlotte.jpg
+        name: ' '
+      - type: custom:picture-status-card
+        entity: device_tracker.maxim_phone
+        image: /local/lovelace/Maxim.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Maxim.jpg
+          Just arrived: /local/lovelace/Maxim.jpg
+      - type: custom:picture-status-card
+        entity: device_tracker.thibo_phone
+        image: /local/lovelace/Thibo.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Thibo.jpg
+          Just arrived: /local/lovelace/Thibo.jpg
+      - type: custom:picture-status-card
+        entity: device_tracker.papa_phone
+        image: /local/lovelace/Johnny.jpg
+        font_color: white
+        card_height: 90px
+        state_image:
+          Home: /local/lovelace/Johnny.jpg
+          Just arrived: /local/lovelace/Johnny.jpg
+- title: Living Room
+  cards:
+  - type: vertical-stack
     cards:
     - type: custom:card-modder
-      report_size: 5
       style:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Gameroom
+        title: TV
         entities:
-        - light.gameroom_rgb_light
-        - entity: scene.gameroom_gaming
-          icon: mdi:flash
-          state_label: Telenet
+        - switch.plug_158d0001f29250
+        - entity: scene.livingroom_telenet
+          icon: mdi:television-box
+          state_label: telenet
           tap_action: call-service
-          service: scene.gameroom_gaming
-        - entity: scene.gameroom_kodi
+          service: scene.livingroom_telenet
+        - entity: scene.livingroom_kodi
           icon: mdi:movie
           name: HTPC
           tap_action: call-service
-          service: scene.gameroom_kodi
-        - entity: scene.gameroom_ps3
-          icon: mdi:gamepad
-          name: PS3
+          service: scene.livingroom_kodi
+        - entity: scene.livingroom_audiocast
+          icon: mdi:library-music
+          name: Audiocast
           tap_action: call-service
-          service: scene.gameroom_ps3
-        - entity: scene.gameroom_ps4
-          icon: mdi:gamepad
-          name: PS4
+          service: scene.livingroom_audiocast
+        - entity: scene.livingroom_chromecast
+          icon: mdi:cast
+          name: Chromecast
           tap_action: call-service
-          service: scene.gameroom_ps4
-        - entity: scene.gameroom_lights_on
-          icon: mdi:lightbulb
-          name: Lights
+          service: scene.livingroom_chromecast
+        - entity: scene.livingroom_bd
+          icon: mdi:filmstrip
+          name: Bluray
           tap_action: call-service
-          service: scene.gameroom_lights_on
-        image: /local/lovelace/gameroom.jpeg
+          service: scene.livingroom_bd
+        image: /local/lovelace/livingroom_tv_corner.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: Diner Table
+        entities:
+        - switch.plug_158d0001f292c0
+        - light.livingroom_bookcase_rgb_light
+        - light.livingroom_dressoir_rgb_light
+        image: /local/lovelace/livingroom_diner_table.jpeg
         aspect_ratio: 16:9
     - type: conditional
       conditions:
-      - entity: media_player.kodibureau
+      - entity: media_player.kodiliving
         state_not: "idle"
       card:
         type: custom:card-modder
@@ -246,42 +115,76 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: custom:mini-media-player
-          entity: media_player.kodibureau
+          entity: media_player.kodiliving
           name: HTPC
           artwork: cover
           show_progress: true
           show_source: true
           artwork_border: true
           icon: mdi:movie
-    - type: vertical-stack
-      cards:
-      - type: custom:card-modder
+  - type: vertical-stack
+    cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: custom:dark-sky-weather-card
+        entity_sun: sun.sun
+        entity_daily_summary: sensor.dark_sky_daily_summary
+        entity_current_conditions: sensor.dark_sky_icon
+        entity_humidity: sensor.dark_sky_humidity
+        entity_pressure: sensor.dark_sky_pressure
+        entity_temperature: sensor.dark_sky_temperature
+        entity_visibility: sensor.dark_sky_visibility
+        entity_wind_bearing: sensor.dark_sky_wind_bearing
+        entity_wind_speed: sensor.dark_sky_wind_speed
+        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature
+        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1
+        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2
+        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3
+        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4
+        entity_forecast_icon_1: sensor.dark_sky_icon_1
+        entity_forecast_icon_2: sensor.dark_sky_icon_2
+        entity_forecast_icon_3: sensor.dark_sky_icon_3
+        entity_forecast_icon_4: sensor.dark_sky_icon_4
+        entity_forecast_icon_5: sensor.dark_sky_icon_5
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: sensor.temperature_158d0002379148
+          name: Temperature
+        - entity: sensor.humidity_158d0002379148
+          name: Humidity
+        - entity: sensor.illumination_158d0001de7134
+          name: Light Strength
+    - type: conditional
+      conditions:
+      - entity: media_player.living_room_tv
+        state_not: "off"
+      card:
+        type: custom:card-modder
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: sensor.temperature_158d000236744c
-            name: Temperature
-          - entity: sensor.humidity_158d000236744c
-            name: Humidity
-          - entity: sensor.illumination_158d0001f9cdfe
-            name: Light Strength
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: sensor.gameroom_harmony_activity
-            icon: mdi:remote
-          - entity: input_select.gameroom_harmony
-            icon: mdi:arrow-down-drop-circle
-  - title: Veranda
+          type: custom:mini-media-player
+          entity: media_player.living_room_tv
+          name: Chromecast
+          show_progress: true
+          show_cover: true
+          artwork_border: true
+  - type: vertical-stack
     cards:
     - type: custom:card-modder
       style:
@@ -289,11 +192,12 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Gameroom
+        title: Kitchen
         entities:
-        - light.veranda_rgb_light
-        - switch.plug_158d0002368a0e
-        image: /local/lovelace/veranda.jpeg
+        - switch.plug_158d0001f292c0
+        - entity: script.livingroom_kitchen_radio_toggle
+          icon: mdi:radio
+        image: /local/lovelace/livingroom_kitchen.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -303,132 +207,269 @@ views:
         type: glance
         show_name: false
         entities:
-        - entity: sensor.temperature_158d00020f4dd3
+        - entity: sensor.livingroom_harmony_activity
+          icon: mdi:remote
+        - entity: input_select.livingroom_harmony
+          icon: mdi:arrow-down-drop-circle
+    - type: conditional
+      conditions:
+      - entity: media_player.living_room_speaker
+        state_not: "off"
+      card:
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.living_room_speaker
+          name: Google Mini
+          show_progress: true
+          show_cover: true
+          artwork_border: true
+
+
+#      - type: "custom:mini-graph-card"
+#        entity: sensor.temperature_158d0002379148
+#        name: Temperature
+#        line_color: '#3498db'
+#        line_width: 2
+#        font_size: 40
+#        height: 80
+
+- title: Gameroom
+  cards:
+  - type: custom:card-modder
+    report_size: 5
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: picture-glance
+      title: Gameroom
+      entities:
+      - light.gameroom_rgb_light
+      - entity: scene.gameroom_gaming
+        icon: mdi:flash
+        state_label: Telenet
+        tap_action: call-service
+        service: scene.gameroom_gaming
+      - entity: scene.gameroom_kodi
+        icon: mdi:movie
+        name: HTPC
+        tap_action: call-service
+        service: scene.gameroom_kodi
+      - entity: scene.gameroom_ps3
+        icon: mdi:gamepad
+        name: PS3
+        tap_action: call-service
+        service: scene.gameroom_ps3
+      - entity: scene.gameroom_ps4
+        icon: mdi:gamepad
+        name: PS4
+        tap_action: call-service
+        service: scene.gameroom_ps4
+      - entity: scene.gameroom_lights_on
+        icon: mdi:lightbulb
+        name: Lights
+        tap_action: call-service
+        service: scene.gameroom_lights_on
+      image: /local/lovelace/gameroom.jpeg
+      aspect_ratio: 16:9
+  - type: conditional
+    conditions:
+    - entity: media_player.kodibureau
+      state_not: "idle"
+    card:
+      type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: custom:mini-media-player
+        entity: media_player.kodibureau
+        name: HTPC
+        artwork: cover
+        show_progress: true
+        show_source: true
+        artwork_border: true
+        icon: mdi:movie
+  - type: vertical-stack
+    cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: sensor.temperature_158d000236744c
           name: Temperature
-        - entity: sensor.humidity_158d00020f4dd3
+        - entity: sensor.humidity_158d000236744c
           name: Humidity
-  - title: Hallway
+        - entity: sensor.illumination_158d0001f9cdfe
+          name: Light Strength
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: sensor.gameroom_harmony_activity
+          icon: mdi:remote
+        - entity: input_select.gameroom_harmony
+          icon: mdi:arrow-down-drop-circle
+- title: Veranda
+  cards:
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: picture-glance
+      title: Gameroom
+      entities:
+      - light.veranda_rgb_light
+      - switch.plug_158d0002368a0e
+      image: /local/lovelace/veranda.jpeg
+      aspect_ratio: 16:9
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: glance
+      show_name: false
+      entities:
+      - entity: sensor.temperature_158d00020f4dd3
+        name: Temperature
+      - entity: sensor.humidity_158d00020f4dd3
+        name: Humidity
+- title: Hallway
+  cards:
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: picture-glance
+      title: Entrance
+      entities:
+      - light.veranda_rgb_light
+      - switch.plug_158d0002368a0e
+      image: /local/lovelace/entrance.jpeg
+      aspect_ratio: 16:9
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: glance
+      show_name: false
+      entities:
+      - entity: binary_sensor.smoke_sensor_158d000279ddbc
+        name: Smoke
+        icon: mdi:smoke-detector
+      - entity: binary_sensor.natgas_sensor_158d000204ae2a
+        name: Gas
+        icon: mdi:gas-station
+- title: System
+  cards:
+  - type: vertical-stack
     cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Entrance
-          entities:
-          - light.veranda_rgb_light
-          - switch.plug_158d0002368a0e
-          image: /local/lovelace/entrance.jpeg
-          aspect_ratio: 16:9
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: binary_sensor.smoke_sensor_158d000279ddbc
-            name: Smoke
-            icon: mdi:smoke-detector
-          - entity: binary_sensor.natgas_sensor_158d000204ae2a
-            name: Gas
-            icon: mdi:gas-station
-  - title: System
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-elements
+        image: /local/lovelace/isp.jpeg
+        elements:
+        - type: icon
+          icon: mdi:pulse
+          style: {color: white, left: 25%, top: 85%}
+        - type: state-label
+          entity: sensor.speedtest_ping
+          prefix: 'Internet : '
+          style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+
+        - type: icon
+          icon: mdi:arrow-down-bold
+          style: {color: white, left: 50%, top: 85%}
+        - type: state-label
+          entity: sensor.speedtest_download
+          style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+
+        - type: icon
+          icon: mdi:arrow-up-bold
+          style: {color: white, left: 75%, top: 85%}
+        - type: state-label
+          entity: sensor.speedtest_upload
+          style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+    - type: horizontal-stack
+      cards:
+      - type: gauge
+        entity: sensor.livingroom_motion_sensor_battery_state
+        title: Livingroom Motion Sensor Battery
+      - type: gauge
+        entity: sensor.livingroom_temperature_sensor_battery_state
+        title: Livingroom Temperature Sensor Battery
+      - type: gauge
+        entity: sensor.livingroom_cube_battery_state
+        title: Livingroom Cube Battery
+  - type: vertical-stack
     cards:
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-elements
-              image: /local/lovelace/isp.png
-              elements:
-              - type: icon
-                icon: mdi:pulse
-                style: {color: white, left: 25%, top: 85%}
-              - type: state-label
-                entity: sensor.speedtest_ping
-                prefix: 'Internet : '
-                style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-elements
+        image: /local/lovelace/system_settings.jpeg
+        elements:
+        - type: icon
+          icon: mdi:cogs
+          style: {color: white, left: 25%, top: 85%}
+        - type: state-label
+          entity: sensor.processor_use
+          prefix: 'CPU : '
+          style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
 
-              - type: icon
-                icon: mdi:arrow-down-bold
-                style: {color: white, left: 50%, top: 85%}
-              - type: state-label
-                entity: sensor.speedtest_download
-                style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+        - type: icon
+          icon: mdi:memory
+          style: {color: white, left: 50%, top: 85%}
+        - type: state-label
+          entity: sensor.memory_use_percent
+          style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
 
-              - type: icon
-                icon: mdi:arrow-up-bold
-                style: {color: white, left: 75%, top: 85%}
-              - type: state-label
-                entity: sensor.speedtest_upload
-                style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-          - type: horizontal-stack
-            cards:
-            - type: gauge
-              entity: sensor.livingroom_motion_sensor_battery_state
-              title: Livingroom Motion Sensor Battery
-            - type: gauge
-              entity: sensor.livingroom_temperature_sensor_battery_state
-              title: Livingroom Temperature Sensor Battery
-            - type: gauge
-              entity: sensor.livingroom_cube_battery_state
-              title: Livingroom Cube Battery
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-elements
-              image: /local/lovelace/system_settings.jpeg
-              elements:
-                - type: icon
-                  icon: mdi:cogs
-                  style: {color: white, left: 25%, top: 85%}
-                - type: state-label
-                  entity: sensor.processor_use
-                  prefix: 'CPU : '
-                  style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
-
-                - type: icon
-                  icon: mdi:memory
-                  style: {color: white, left: 50%, top: 85%}
-                - type: state-label
-                  entity: sensor.memory_use_percent
-                  style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
-
-                - type: icon
-                  icon: mdi:disc-alert
-                  style: {color: white, left: 75%, top: 85%}
-                - type: state-label
-                  entity: sensor.disk_use_percent_
-                  style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-          - type: horizontal-stack
-            cards:
-            - type: gauge
-              entity: sensor.gameroom_motion_sensor_battery_state
-              title: Gameroom Motion Sensor Battery
-            - type: gauge
-              entity: sensor.gameroom_temperature_sensor_battery_state
-              title: Gameroom Temperature Sensor Battery
-            - type: gauge
-              entity: sensor.gameroom_cube_battery_state
-              title: Gameroom Cube Battery
-      - type: vertical-stack
-        cards:
-        - type: gauge
-          entity: sensor.veranda_motion_sensor_battery_state
-          title: Veranda Motion Sensor Battery
-        - type: gauge
-          entity: sensor.veranda_temperature_sensor_battery_state
-          title: Veranda Temperature Sensor Battery
-        - type: gauge
-          entity: sensor.hallway_smoke_detector_battery_state
-          title: Hallway Smoke Detector Battery
+        - type: icon
+          icon: mdi:disc-alert
+          style: {color: white, left: 75%, top: 85%}
+        - type: state-label
+          entity: sensor.disk_use_percent_
+          style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+    - type: horizontal-stack
+      cards:
+      - type: gauge
+        entity: sensor.gameroom_motion_sensor_battery_state
+        title: Gameroom Motion Sensor Battery
+      - type: gauge
+        entity: sensor.gameroom_temperature_sensor_battery_state
+        title: Gameroom Temperature Sensor Battery
+      - type: gauge
+        entity: sensor.gameroom_cube_battery_state
+        title: Gameroom Cube Battery
+  - type: vertical-stack
+    cards:
+    - type: gauge
+      entity: sensor.veranda_motion_sensor_battery_state
+      title: Veranda Motion Sensor Battery
+    - type: gauge
+      entity: sensor.veranda_temperature_sensor_battery_state
+      title: Veranda Temperature Sensor Battery
+    - type: gauge
+      entity: sensor.hallway_smoke_detector_battery_state
+      title: Hallway Smoke Detector Battery
