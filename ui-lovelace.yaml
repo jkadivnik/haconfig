@@ -337,8 +337,7 @@ views:
             icon: mdi:gas-station
   - title: System
     cards:
-    - type: custom:card-modder
-        type: vertical-stack
+      - type: vertical-stack
         cards:
         - type: custom:card-modder
           card:
