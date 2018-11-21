@@ -1,71 +1,35 @@
   - name: Livingroom Morning
     entities:
-      light.livingroom_dressoir_rgb_light: off
-      light.livingroom_bookcase_rgb_light: off
       input_select.livingroom_harmony:
-        option: Radio - 33452774
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f29250: off
+        option: "Radio : 33452774"
   - name: Livingroom Telenet
     entities:
-      light.livingroom_dressoir_rgb_light: off
-      light.livingroom_bookcase_rgb_light: off
       input_select.livingroom_harmony:
-        option: Telenet - 33452772
-      switch.plug_158d0001f292c0: on
-      switch.plug_158d0001f29250: on
+        option: "Telenet : 33452772"
   - name: Livingroom To Bed
     entities:
-      light.livingroom_dressoir_rgb_light: off
-      light.livingroom_bookcase_rgb_light: off
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f29250: off
       input_select.livingroom_harmony:
-        option: None - 1
+        option: "None : -1"
   - name: Livingroom Kodi
     entities:
-      light.livingroom_dressoir_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
-      light.livingroom_bookcase_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
       input_select.livingroom_harmony:
-        option: HTPC - 33452776
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f29250: off
+        option: "HTPC : 33452776"
   - name: Livingroom Audiocast
     entities:
       input_select.livingroom_harmony:
-        option: Chromecast Audio - 33452775
+        option: "Chromecast Audio : 33452775"
   - name: Livingroom Chromecast
     entities:
       input_select.livingroom_harmony:
-        option: Chromecast - 33452778
+        option: "Chromecast : 33452778"
   - name: Livingroom BD
     entities:
-      light.livingroom_dressoir_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
-      light.livingroom_bookcase_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
       input_select.livingroom_harmony:
-        option: BD_DVD - 33452773
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f29250: off
+        option: "BD_DVD : 33452773"
   - name: Livingroom Netflix
     entities:
-      light.livingroom_dressoir_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
-      light.livingroom_bookcase_rgb_light:
-        state: on
-        rgb_color: [255,0,0]
       input_select.livingroom_harmony:
-        option: PS4 - 33530080
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f29250: off
+        option: "PS4 : 33530080"
   - name: Livingroom Lights On
     entities:
       light.livingroom_dressoir_rgb_light:

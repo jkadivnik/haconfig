@@ -9,21 +9,21 @@
         state: on
         rgb_color: [255,0,0]
       input_select.gameroom_harmony:
-        option: HTPC - 33210805
+        option: "HTPC : 36518514"
   - name: Gameroom PS3
     entities:
       light.gameroom_rgb_light:
         state: on
         rgb_color: [0,0,255]
       input_select.gameroom_harmony:
-        option: PS3 - 33266495
+        option: "PS3 : 33266495"
   - name: Gameroom PS4
     entities:
       light.gameroom_rgb_light:
         state: on
         rgb_color: [0,0,255]
       input_select.gameroom_harmony:
-        option: PS4 - 35282221
+        option: "PS4 : 35282221"
   - name: Gameroom Lights On
     entities:
       light.gameroom_rgb_light:

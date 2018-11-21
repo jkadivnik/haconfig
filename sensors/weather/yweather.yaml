@@ -1,0 +1,3 @@
+  platform: darksky
+  api_key: 09575d7ab3918702722a9662f3bf93c8
+  mode: hourly

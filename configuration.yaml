@@ -55,12 +55,6 @@ notify:
     - kadivnik.maxim@gmail.com
     sender_name: My Home Assistant
 
-sabnzbd:
-  api_key: !secret sabnzbd_api_key
-  host: !secret sabnzbd_host
-  port: !secret sabnzbd_port
-  name: Sabnzbd Downloader
-
 # Discover some devices automatically
 discovery:
 
@@ -99,6 +93,12 @@ switch: !include_dir_list switches/
 input_select: !include_dir_merge_named input_selects/
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
+themes: !include_dir_list themes/
+
+custom_updater:
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 # Mqtt
 mqtt:
@@ -113,9 +113,6 @@ media_player:
   - platform: kodi
     host: !secret gameroom_kodi_ip
     name: kodibureau
-  - platform: ps4
-    host: !secret http_ps4_host
-    ps4_ip: !secret ps4_ip
 
 # Xiaomi
 xiaomi_aqara:
@@ -142,3 +139,9 @@ device_tracker:
     username: root
     password: !secret gameroom_router_password
     track_new_devices: false
+
+sabnzbd:
+  api_key: !secret sabnzbd_api_key
+  host: !secret sabnzbd_host
+  port: !secret sabnzbd_port
+  name: Sabnzbd Downloader

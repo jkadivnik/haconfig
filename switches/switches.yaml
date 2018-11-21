@@ -7,9 +7,9 @@
         service: remote.turn_on
         entity_id: remote.game_room_hub
         data:
-          activity: "33210805"
+          activity: "36518514"
       turn_off:
         service: remote.turn_off
         entity_id: remote.game_room_hub
         data:
-          activity: "33210805"
+          activity: "36518514"
