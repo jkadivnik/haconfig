@@ -81,6 +81,12 @@ views:
         entity_forecast_icon_3: sensor.dark_sky_icon_3
         entity_forecast_icon_4: sensor.dark_sky_icon_4
         entity_forecast_icon_5: sensor.dark_sky_icon_5
+    - type: entity-button
+      name: Turn Off Home
+      icon: mdi:close-circle-outline
+      tap_action: call-service
+      entity: script.home_all_off
+      service: script.turn_on
 - title: Living Room
   cards:
   - type: vertical-stack
