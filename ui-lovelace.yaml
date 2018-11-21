@@ -331,7 +331,7 @@ views:
           entities:
           - entity: binary_sensor.smoke_sensor_158d000279ddbc
             name: Smoke
-            icon: mdi:smoke
+            icon: mdi:smoke-detector
           - entity: binary_sensor.natgas_sensor_158d000204ae2a
             name: Gas
             icon: mdi:gas-station
