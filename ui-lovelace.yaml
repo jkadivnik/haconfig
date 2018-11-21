@@ -1,7 +1,7 @@
 resources:
-- url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.4
+- url: /local/custom_ui/mini-media-player-bundle.js
   type: module
-- url: /local/custom_ui/mini-graph-card-bundle.js?v=0.0.8
+- url: /local/custom_ui/mini-graph-card-bundle.js
   type: js
 - url: /local/custom_ui/card-modder.js
   type: module
@@ -11,7 +11,6 @@ resources:
 title: Kadivnik@Home
 views:
   - title: Living Room
-    panel: true
     cards:
     - type: vertical-stack
       cards:
@@ -27,18 +26,28 @@ views:
           - entity: scene.livingroom_telenet
             icon: mdi:television-box
             state_label: telenet
+            tap_action: call-service
+            service: scene.livingroom_telenet
           - entity: scene.livingroom_kodi
             icon: mdi:movie
             name: HTPC
+            tap_action: call-service
+            service: scene.livingroom_kodi
           - entity: scene.livingroom_audiocast
             icon: mdi:library-music
             name: Audiocast
+            tap_action: call-service
+            service: scene.livingroom_audiocast
           - entity: scene.livingroom_chromecast
             icon: mdi:cast
             name: Chromecast
+            tap_action: call-service
+            service: scene.livingroom_chromecast
           - entity: scene.livingroom_bd
             icon: mdi:filmstrip
             name: Bluray
+            tap_action: call-service
+            service: scene.livingroom_bd
           image: /local/lovelace/livingroom_tv_corner.jpeg
           aspect_ratio: 16:9
       - type: custom:card-modder
@@ -201,19 +210,29 @@ views:
         - light.gameroom_rgb_light
         - entity: scene.gameroom_gaming
           icon: mdi:flash
-          state_label: telenet
+          state_label: Telenet
+          tap_action: call-service
+          service: scene.gameroom_gaming
         - entity: scene.gameroom_kodi
           icon: mdi:movie
           name: HTPC
+          tap_action: call-service
+          service: scene.gameroom_kodi
         - entity: scene.gameroom_ps3
           icon: mdi:gamepad
           name: PS3
+          tap_action: call-service
+          service: scene.gameroom_ps3
         - entity: scene.gameroom_ps4
           icon: mdi:gamepad
           name: PS4
+          tap_action: call-service
+          service: scene.gameroom_ps4
         - entity: scene.gameroom_lights_on
           icon: mdi:lightbulb
           name: Lights
+          tap_action: call-service
+          service: scene.gameroom_lights_on
         image: /local/lovelace/gameroom.jpeg
         aspect_ratio: 16:9
     - type: conditional
@@ -288,5 +307,3 @@ views:
           name: Temperature
         - entity: sensor.humidity_158d00020f4dd3
           name: Humidity
-        - entity: sensor.illumination_158d0001f9cdfe
-          name: Light Strength

@@ -13,6 +13,7 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+
 # Enables the frontend
 frontend:
 
