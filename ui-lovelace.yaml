@@ -412,7 +412,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.livingroom_temperature_sensor_battery_state:
+          entity: sensor.livingroom_temperature_sensor_battery_state
           title: Livingroom Temperature Sensor Battery
       - type: custom:card-modder
         style:
@@ -420,7 +420,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.livingroom_cube_battery_state:
+          entity: sensor.livingroom_cube_battery_state
           title: Livingroom Cube Battery
       - type: custom:card-modder
         style:
@@ -436,7 +436,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.gameroom_temperature_sensor_battery_state:
+          entity: sensor.gameroom_temperature_sensor_battery_state
           title: Gameroom Temperature Sensor Battery
       - type: custom:card-modder
         style:
@@ -444,7 +444,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.gameroom_cube_battery_state:
+          entity: sensor.gameroom_cube_battery_state
           title: Gameroom Cube Battery
       - type: custom:card-modder
         style:
@@ -460,7 +460,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.veranda_temperature_sensor_battery_state:
+          entity: sensor.veranda_temperature_sensor_battery_state
           title: Veranda Temperature Sensor Battery
       - type: custom:card-modder
         style:
@@ -468,5 +468,5 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: gauge
-          entity: sensor.hallway_smoke_detector_battery_state:
+          entity: sensor.hallway_smoke_detector_battery_state
           title: Hallway Smoke Detector Battery
