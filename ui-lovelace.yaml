@@ -368,6 +368,19 @@ views:
               - type: state-label
                 entity: sensor.speedtest_upload
                 style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+          - type: horizontal-stack
+            cards:
+            - type: gauge
+              entity: sensor.livingroom_motion_sensor_battery_state
+              title: Livingroom Motion Sensor Battery
+            - type: gauge
+              entity: sensor.livingroom_temperature_sensor_battery_state
+              title: Livingroom Temperature Sensor Battery
+            - type: gauge
+              entity: sensor.livingroom_cube_battery_state
+              title: Livingroom Cube Battery
+      - type: vertical-stack
+        cards:
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -397,38 +410,25 @@ views:
                 - type: state-label
                   entity: sensor.disk_use_percent_
                   style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+          - type: horizontal-stack
+            cards:
+            - type: gauge
+              entity: sensor.gameroom_motion_sensor_battery_state
+              title: Gameroom Motion Sensor Battery
+            - type: gauge
+              entity: sensor.gameroom_temperature_sensor_battery_state
+              title: Gameroom Temperature Sensor Battery
+            - type: gauge
+              entity: sensor.gameroom_cube_battery_state
+              title: Gameroom Cube Battery
       - type: horizontal-stack
         cards:
-          - type: vertical-stack
-            cards:
-              - type: gauge
-                entity: sensor.livingroom_motion_sensor_battery_state
-                title: Livingroom Motion Sensor Battery
-              - type: gauge
-                entity: sensor.livingroom_temperature_sensor_battery_state
-                title: Livingroom Temperature Sensor Battery
-              - type: gauge
-                entity: sensor.livingroom_cube_battery_state
-                title: Livingroom Cube Battery
-          - type: vertical-stack
-            cards:
-              - type: gauge
-                entity: sensor.gameroom_motion_sensor_battery_state
-                title: Gameroom Motion Sensor Battery
-              - type: gauge
-                entity: sensor.gameroom_temperature_sensor_battery_state
-                title: Gameroom Temperature Sensor Battery
-              - type: gauge
-                entity: sensor.gameroom_cube_battery_state
-                title: Gameroom Cube Battery
-          - type: vertical-stack
-            cards:
-              - type: gauge
-                entity: sensor.veranda_motion_sensor_battery_state
-                title: Veranda Motion Sensor Battery
-              - type: gauge
-                entity: sensor.veranda_temperature_sensor_battery_state
-                title: Veranda Temperature Sensor Battery
-              - type: gauge
-                entity: sensor.hallway_smoke_detector_battery_state
-                title: Hallway Smoke Detector Battery
+        - type: gauge
+          entity: sensor.veranda_motion_sensor_battery_state
+          title: Veranda Motion Sensor Battery
+        - type: gauge
+          entity: sensor.veranda_temperature_sensor_battery_state
+          title: Veranda Temperature Sensor Battery
+        - type: gauge
+          entity: sensor.hallway_smoke_detector_battery_state
+          title: Hallway Smoke Detector Battery
