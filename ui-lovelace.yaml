@@ -20,7 +20,7 @@ views:
       cards:
         - type: custom:picture-status-card
           entity: device_tracker.papa_phone
-          image: /local/lovelace/Johnny.jpg
+          image: /local/lovelace/Johnny_gray.jpg
           font_color: white
           card_height: 90px
           state_image:
@@ -28,7 +28,7 @@ views:
             Just arrived: /local/lovelace/Johnny.jpg
         - type: custom:picture-status-card
           entity: device_tracker.thibo_phone
-          image: /local/lovelace/Thibo.jpg
+          image: /local/lovelace/Thibo_gray.jpg
           font_color: white
           card_height: 90px
           state_image:
@@ -36,7 +36,7 @@ views:
             Just arrived: /local/lovelace/Thibo.jpg
         - type: custom:picture-status-card
           entity: device_tracker.maxim_phone
-          image: /local/lovelace/Maxim.jpg
+          image: /local/lovelace/Maxim_gray.jpg
           font_color: white
           card_height: 90px
           state_image:
@@ -44,7 +44,7 @@ views:
             Just arrived: /local/lovelace/Maxim.jpg
         - type: custom:picture-status-card
           entity: device_tracker.mama_phone
-          image: /local/lovelace/Charlotte.jpg
+          image: /local/lovelace/Charlotte_gray.jpg
           font_color: white
           card_height: 90px
           state_image:
