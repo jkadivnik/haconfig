@@ -97,7 +97,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: TV
+        title: Sofa
         entities:
         - switch.plug_158d0001f29250
         - entity: scene.livingroom_telenet
@@ -132,14 +132,15 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: picture-glance
-        title: Diner Table
+        type: glance
+        show_name: false
         entities:
-        - switch.plug_158d0001f292c0
-        - light.livingroom_bookcase_rgb_light
-        - light.livingroom_dressoir_rgb_light
-        image: /local/lovelace/livingroom_diner_table.jpeg
-        aspect_ratio: 16:9
+        - entity: sensor.temperature_158d0002379148
+          name: Temperature
+        - entity: sensor.humidity_158d0002379148
+          name: Humidity
+        - entity: sensor.illumination_158d0001de7134
+          name: Light Strength
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -165,45 +166,30 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: custom:dark-sky-weather-card
-        entity_sun: sun.sun
-        entity_daily_summary: sensor.dark_sky_daily_summary
-        entity_current_conditions: sensor.dark_sky_icon
-        entity_humidity: sensor.dark_sky_humidity
-        entity_pressure: sensor.dark_sky_pressure
-        entity_temperature: sensor.dark_sky_temperature
-        entity_visibility: sensor.dark_sky_visibility
-        entity_wind_bearing: sensor.dark_sky_wind_bearing
-        entity_wind_speed: sensor.dark_sky_wind_speed
-        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
-        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
-        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
-        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
-        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
-        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature
-        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_1
-        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_2
-        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_3
-        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_4
-        entity_forecast_icon_1: sensor.dark_sky_icon_1
-        entity_forecast_icon_2: sensor.dark_sky_icon_2
-        entity_forecast_icon_3: sensor.dark_sky_icon_3
-        entity_forecast_icon_4: sensor.dark_sky_icon_4
-        entity_forecast_icon_5: sensor.dark_sky_icon_5
+        type: picture-glance
+        title: Diner Table
+        entities:
+        - switch.plug_158d0001f292c0
+        - light.livingroom_bookcase_rgb_light
+        - light.livingroom_dressoir_rgb_light
+        image: /local/lovelace/livingroom_diner_table.jpeg
+        aspect_ratio: 16:9
     - type: custom:card-modder
       style:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: glance
-        show_name: false
+        type: picture-glance
+        title: TV
         entities:
-        - entity: sensor.temperature_158d0002379148
-          name: Temperature
-        - entity: sensor.humidity_158d0002379148
-          name: Humidity
-        - entity: sensor.illumination_158d0001de7134
-          name: Light Strength
+        - entity: script.livingroom_volume_down
+          icon: mdi:volume-low
+        - entity: script.livingroom_volume_mute
+          icon: mdi:volume-off
+        - entity: script.livingroom_volume_up
+          icon: mdi:volume-up
+        image: /local/lovelace/cinema.jpeg
+        aspect_ratio: 16:9
     - type: conditional
       conditions:
       - entity: media_player.living_room_tv
