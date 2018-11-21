@@ -354,21 +354,21 @@ views:
               - type: state-label
                 entity: sensor.speedtest_ping
                 prefix: 'Internet : '
-                style: {color: white, left: 20%, top: 93%, font-size: 75%}
+                style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}}
 
               - type: state-icon
                 entity: sensor.speedtest_download
                 style: {color: white, left: 50%, top: 85%}
               - type: state-label
                 entity: sensor.speedtest_download
-                style: {color: white, left: 50%, top: 93%, font-size: 75%}
+                style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}}
 
               - type: state-icon
                 entity: sensor.speedtest_upload
                 style: {color: white, left: 75%, top: 85%}
               - type: state-label
                 entity: sensor.speedtest_upload
-                style: {color: white, left: 75%, top: 93%, font-size: 75%}
+                style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}}
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -377,10 +377,28 @@ views:
               type: picture-elements
               image: /local/lovelace/system_settings.jpeg
               elements:
+                - type: icon
+                  entity: mdi:cogs
+                  style: {color: white, left: 25%, top: 85%}
                 - type: state-label
                   entity: sensor.processor_use
                   prefix: 'CPU : '
-                  style: {color: white, left: 20%, top: 93%, font-size: 75%}
+                  style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+
+                - type: icon
+                  icon: mdi:memory
+                  style: {color: white, left: 50%, top: 85%}
+                - type: state-label
+                  entity: sensor.memory_use_percent
+                  style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+
+                - type: icon
+                  icon: mdi:disc-alert
+                  style: {color: white, left: 75%, top: 85%}
+                - type: state-label
+                  entity: sensor.disk_use_percent_
+                  style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+
       - type: gauge
         entity: sensor.livingroom_motion_sensor_battery_state
         title: Livingroom Motion Sensor Battery
