@@ -1,5 +1,3 @@
-  sensor.disk_use_:
-    friendly_name: Disk Use
   sensor.speedtest_ping:
     friendly_name: Ping
     icon: mdi:pulse
