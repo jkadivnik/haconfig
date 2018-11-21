@@ -16,6 +16,7 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  themes: !include_dir_list themes/
 
 # Enables the recorder
 recorder:
@@ -44,7 +45,7 @@ notify:
     server: smtp.gmail.com
     port: 587
     timeout: 15
-    sender: ! secret mail_sender
+    sender: !secret mail_sender
     encryption: starttls
     username:  !secret mail_main
     password: !secret google_app_key
@@ -93,7 +94,6 @@ switch: !include_dir_list switches/
 input_select: !include_dir_merge_named input_selects/
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
-themes: !include_dir_list themes/
 
 # Mqtt
 mqtt:

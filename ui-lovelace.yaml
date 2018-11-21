@@ -338,28 +338,36 @@ views:
   - title: System
     cards:
     - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: Entrance
-        entities:
-        - light.veranda_rgb_light
-        - switch.plug_158d0002368a0e
-        image: /local/lovelace/entrance.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-        - entity: binary_sensor.smoke_sensor_158d000279ddbc
-          name: Smoke
-          icon: mdi:smoke-detector
-        - entity: binary_sensor.natgas_sensor_158d000204ae2a
-          name: Gas
-          icon: mdi:gas-station
+        type: vertical-stack
+        cards:
+        - type: custom:card-modder
+          card:
+            type: picture-elements
+            image: /local/lovelace/isp.png
+            elements:
+            - type: state-icon
+              entity: sensor.speedtest_ping
+              style: {color: white, left: 25%, top: 85%}
+
+            - type: state-label
+              entity: sensor.speedtest_ping
+              prefix: 'Internet : '
+              style: {color: white, left: 20%, top: 93%, font-size: 115%, font-weight: bold}
+
+            - type: state-icon
+              entity: sensor.speedtest_download
+              style: {color: white, left: 50%, top: 85%}
+            - type: state-label
+              entity: sensor.speedtest_download
+              style: {color: white, left: 50%, top: 93%, font-size: 115%, font-weight: bold}
+
+            - type: state-icon
+              entity: sensor.speedtest_upload
+              style: {color: white, left: 75%, top: 85%}
+            - type: state-label
+              entity: sensor.speedtest_upload
+              style: {color: white, left: 75%, top: 93%, font-size: 115%, font-weight: bold}
+          style:
+            border-radius: 20px
+            border: solid 1px rgba(100,100,100,0.3)
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
