@@ -354,21 +354,21 @@ views:
               - type: state-label
                 entity: sensor.speedtest_ping
                 prefix: 'Internet : '
-                style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}}
+                style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
 
               - type: state-icon
                 entity: sensor.speedtest_download
                 style: {color: white, left: 50%, top: 85%}
               - type: state-label
                 entity: sensor.speedtest_download
-                style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}}
+                style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
 
               - type: state-icon
                 entity: sensor.speedtest_upload
                 style: {color: white, left: 75%, top: 85%}
               - type: state-label
                 entity: sensor.speedtest_upload
-                style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}}
+                style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
           - type: custom:card-modder
             style:
               border-radius: 10px
