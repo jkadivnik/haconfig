@@ -18,7 +18,7 @@
     gameroom_cube_battery_state:
       value_template: "{{ states.binary_sensor.cube_158d000118421f_2.attributes.battery_level }}"
       unit_of_measurement: "%"
-    veranda_motion_battery_state:
+    veranda_motion_sensor_battery_state:
       value_template: "{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}"
       unit_of_measurement: "%"
     veranda_temperature_sensor_battery_state:
