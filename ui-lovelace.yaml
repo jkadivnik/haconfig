@@ -375,7 +375,7 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: picture-elements
-              image: /local/lovelace/system_settings.png
+              image: /local/lovelace/system_settings.jpeg
               elements:
                 - type: state-label
                   entity: sensor.processor_use
