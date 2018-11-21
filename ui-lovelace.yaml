@@ -319,7 +319,7 @@ views:
           entities:
           - light.veranda_rgb_light
           - switch.plug_158d0002368a0e
-          image: /local/lovelace/veranda.jpeg
+          image: /local/lovelace/entrance.jpeg
           aspect_ratio: 16:9
       - type: custom:card-modder
         style:
@@ -329,7 +329,7 @@ views:
           type: glance
           show_name: false
           entities:
-          - entity: sensor.temperature_158d00020f4dd3
-            name: Temperature
-          - entity: sensor.humidity_158d00020f4dd3
-            name: Humidity
+          - entity: binary_sensor.smoke_sensor_158d000279ddbc
+            name: Smoke
+          - entity: binary_sensor.natgas_sensor_158d000204ae2a
+            name: Gas
