@@ -87,6 +87,7 @@ group: !include_dir_merge_named groups/
 automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
 sensor: !include_dir_list sensors/
+weather: !include_dir_list weather/
 light: !include_dir_list lights/
 remote: !include remotes.yaml
 switch: !include_dir_list switches/
