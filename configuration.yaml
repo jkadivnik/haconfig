@@ -13,7 +13,6 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
-
 # Enables the frontend
 frontend:
 
@@ -39,20 +38,20 @@ updater:
   # include_used_components: true
 
 notify:
-  - name: kadivnik_at_home_mail
+  - name: home_mail
     platform: smtp
     server: smtp.gmail.com
     port: 587
     timeout: 15
-    sender: homeassistant@kadivnik.be
+    sender: ! secret mail_sender
     encryption: starttls
-    username: johnny.kadivnik@gmail.com
+    username:  !secret mail_main
     password: !secret google_app_key
     recipient:
-    - johnny.kadivnik@gmail.com
-    - charlotte.vandewiele@gmail.com
-    - thibo.kadivnik@gmail.com
-    - kadivnik.maxim@gmail.com
+    - !secret mail_main
+    - !secret mail_secundary
+    - !secret mail_1
+    - !secret mail_2
     sender_name: My Home Assistant
 
 # Discover some devices automatically
@@ -87,7 +86,6 @@ group: !include_dir_merge_named groups/
 automation: !include_dir_merge_list automations/
 script: !include_dir_merge_named scripts/
 sensor: !include_dir_list sensors/
-weather: !include_dir_list weather/
 light: !include_dir_list lights/
 remote: !include remotes.yaml
 switch: !include_dir_list switches/
@@ -95,11 +93,6 @@ input_select: !include_dir_merge_named input_selects/
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
 themes: !include_dir_list themes/
-
-custom_updater:
-  card_urls:
-    - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
-    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 # Mqtt
 mqtt:

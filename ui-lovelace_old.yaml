@@ -1,0 +1,253 @@
+resources:
+  - url: /local/mini-media-player-bundle.js?v=0.9.4
+    type: module
+  - url: /local/mini-graph-card-bundle.js?v=0.0.8
+    type: js
+
+title: Home
+views:
+  - title: Home
+    cards:
+      - type: entities
+        title: Living Room
+        show_header_toggle: false
+        entities:
+          - sensor.livingroom_harmony_activity
+          - input_select.livingroom_mode
+          - input_select.livingroom_harmony
+          - remote.living_room_hub
+          - sensor.humidity_158d0002379148
+          - sensor.temperature_158d0002379148
+          - sensor.illumination_7811dcb35389
+          - sensor.illumination_158d0001de7134
+          - binary_sensor.motion_sensor_158d0001de7134
+          - switch.plug_158d0001f29250
+          - switch.plug_158d0001f292c0
+          - binary_sensor.cube_158d00010fd151_2
+      - type: media-control
+        entity: media_player.kadivniaudio
+      - type: media-control
+        entity: media_player.living_room_tv
+      - type: entities
+        title: Living Room RGB Lights
+        show_header_toggle: false
+        entities:
+          - light.livingroom_bookcase_rgb_light
+          - light.livingroom_dressoir_rgb_light
+          - light.gateway_light_7811dcb35389
+      - type: entities
+        title: Veranda Plugs
+        show_header_toggle: false
+        entities:
+          - switch.plug_158d0002368a0e
+      - type: entities
+        title: Veranda Room
+        show_header_toggle: false
+        entities:
+          - light.veranda_rgb_light
+          - binary_sensor.motion_sensor_158d0001f2a00f
+          - sensor.humidity_158d00020f4dd3
+          - sensor.temperature_158d00020f4dd3
+          - switch.plug_158d0002368a0e
+      - type: entities
+        title: Game Room RGB Lights
+        show_header_toggle: false
+        entities:
+          - light.gateway_light_7811dcded4dc
+      - type: entities
+        title: Game Room
+        show_header_toggle: false
+        entities:
+          - sensor.gameroom_harmony_activity
+          - input_select.gameroom_mode
+          - switch.kodi_gameroom
+          - remote.game_room_hub
+          - input_select.gameroom_watch
+          - input_select.gameroom_play
+          - binary_sensor.motion_sensor_158d0001f9cdfe
+          - sensor.temperature_158d000236744c
+          - sensor.humidity_158d000236744c
+          - sensor.illumination_7811dcded4dc
+          - sensor.illumination_158d0001f9cdfe
+          - binary_sensor.cube_158d000118421f_2
+      - type: media-control
+        entity: media_player.kodibureau
+      - type: entities
+        title: people
+        show_header_toggle: false
+        entities:
+          - device_tracker.papa_phone
+          - device_tracker.mama_phone
+          - device_tracker.maxim_phone
+          - device_tracker.thibo_phone
+      - type: entities
+        title: Media Select
+        show_header_toggle: false
+        entities:
+          - script.get_recent_movies_livingroom
+          - script.get_recent_episodes_livingroom
+      - type: entities
+        title: Veranda RGB Lights
+        show_header_toggle: false
+        entities:
+          - light.veranda_rgb_light
+      - type: entities
+        title: Living Room Plugs
+        show_header_toggle: false
+        entities:
+          - switch.plug_158d0001f29250
+          - switch.plug_158d0001f292c0
+      - type: entities
+        title: all scripts
+        show_header_toggle: true
+        entities:
+          - script.gameroom_all_off
+          - script.gameroom_kodi_toggle
+          - script.gameroom_volume_down
+          - script.gameroom_volume_mute
+          - script.gameroom_volume_up
+          - script.generic_volume_down
+          - script.generic_volume_mute
+          - script.generic_volume_up
+          - script.home_all_off
+          - script.livingroom_kitchen_radio_toggle
+          - script.get_recent_episodes_livingroom
+          - script.get_recent_movies_livingroom
+          - script.livingroom_all_off
+          - script.livingroom_kodi_toggle
+          - script.livingroom_volume_down
+          - script.livingroom_volume_mute
+          - script.livingroom_volume_up
+          - script.veranda_all_off
+      - type: entities
+        title: all switches
+        show_header_toggle: true
+        entities:
+          - switch.kodi_gameroom
+          - switch.plug_158d0001f29250
+          - switch.plug_158d0001f292c0
+          - switch.plug_158d0002368a0e
+      - type: entities
+        title: all lights
+        show_header_toggle: true
+        entities:
+          - light.gateway_light_7811dcb35389
+          - light.gateway_light_7811dcded4dc
+          - light.livingroom_bookcase_rgb_light
+          - light.livingroom_dressoir_rgb_light
+          - light.test_rgb_light
+          - light.veranda_rgb_light
+      - type: entities
+        title: all devices
+        show_header_toggle: true
+        entities:
+          - device_tracker.thibo_phone
+          - device_tracker.papa_phone
+          - device_tracker.maxim_phone
+          - device_tracker.mama_phone
+      - type: entities
+        title: all automations
+        show_header_toggle: true
+        entities:
+          - automation.fun_is_over
+          - automation.gameroom_cube_pause
+          - automation.gameroom_cube_volume
+          - automation.gameroom_gaming
+          - automation.gameroom_lights_on
+          - automation.gameroom_nightlight_motion
+          - automation.gameroom_no_motion
+          - automation.gameroom_play
+          - automation.gameroom_playstation_3
+          - automation.gameroom_playstation_4
+          - automation.gameroom_tv
+          - automation.gameroom_watch_movie_kodi
+          - automation.house_all_off
+          - automation.livingroom_audiocast_playing
+          - automation.livingroom_audiocast_stopped
+          - automation.livingroom_chromecast_playing
+          - automation.livingroom_chromecast_stopped
+          - automation.livingroom_cube_pause
+          - automation.livingroom_cube_volume
+          - automation.livingroom_lights
+          - automation.livingroom_morning
+          - automation.livingroom_music
+          - automation.livingroom_nightlight_motion
+          - automation.livingroom_no_motion
+          - automation.livingroom_play
+          - automation.livingroom_tv
+          - automation.livingroom_to_bed
+          - automation.livingroom_watch_movie__bd
+          - automation.livingroom_watch_movie__kodi
+          - automation.livingroom_watch_netflix
+          - automation.livingroom_watch_television
+          - automation.veranda_heater_off
+          - automation.veranda_heater_on
+          - automation.veranda_nightlight_motion
+          - automation.veranda_no_motion
+      - type: entities
+        title: all remotes
+        show_header_toggle: true
+        entities:
+          - remote.game_room_hub
+          - remote.living_room_hub
+      - type: media-control
+        entity: media_player.kodibureau
+      - type: media-control
+        entity: media_player.kodiliving
+      - type: media-control
+        entity: media_player.living_room_tv
+      - type: media-control
+        entity: media_player.living_room_speaker
+      - type: media-control
+        entity: media_player.kadivniaudio
+  - title: Rooms
+    cards:
+      - type: entities
+        title: Living Room
+        show_header_toggle: false
+        entities:
+          - sensor.livingroom_harmony_activity
+          - input_select.livingroom_mode
+          - remote.living_room_hub
+          - input_select.livingroom_watch
+          - input_select.livingroom_play
+          - input_select.livingroom_music
+          - sensor.humidity_158d0002379148
+          - sensor.temperature_158d0002379148
+          - sensor.illumination_7811dcb35389
+          - sensor.illumination_158d0001de7134
+          - binary_sensor.motion_sensor_158d0001de7134
+          - switch.plug_158d0001f29250
+          - switch.plug_158d0001f292c0
+          - binary_sensor.cube_158d00010fd151_2
+      - type: media-control
+        entity: media_player.kadivniaudio
+      - type: media-control
+        entity: media_player.living_room_tv
+      - type: entities
+        title: Game Room
+        show_header_toggle: false
+        entities:
+          - sensor.gameroom_harmony_activity
+          - input_select.gameroom_mode
+          - switch.kodi_gameroom
+          - remote.game_room_hub
+          - input_select.gameroom_watch
+          - input_select.gameroom_play
+          - binary_sensor.motion_sensor_158d0001f9cdfe
+          - sensor.temperature_158d000236744c
+          - sensor.humidity_158d000236744c
+          - sensor.illumination_7811dcded4dc
+          - sensor.illumination_158d0001f9cdfe
+          - binary_sensor.cube_158d000118421f_2
+      - type: media-control
+        entity: media_player.kodibureau
+      - type: entities
+        title: Veranda Room
+        show_header_toggle: false
+        entities:
+          - light.veranda_rgb_light
+          - binary_sensor.motion_sensor_158d0001f2a00f
+          - sensor.humidity_158d00020f4dd3
+          - sensor.temperature_158d00020f4dd3
+          - switch.plug_158d0002368a0e
