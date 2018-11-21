@@ -421,7 +421,7 @@ views:
             - type: gauge
               entity: sensor.gameroom_cube_battery_state
               title: Gameroom Cube Battery
-      - type: horizontal-stack
+      - type: vertical-stack
         cards:
         - type: gauge
           entity: sensor.veranda_motion_sensor_battery_state
