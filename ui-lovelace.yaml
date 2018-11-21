@@ -335,3 +335,31 @@ views:
           - entity: binary_sensor.natgas_sensor_158d000204ae2a
             name: Gas
             icon: mdi:gas-station
+  - title: System
+    cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: Entrance
+        entities:
+        - light.veranda_rgb_light
+        - switch.plug_158d0002368a0e
+        image: /local/lovelace/entrance.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: binary_sensor.smoke_sensor_158d000279ddbc
+          name: Smoke
+          icon: mdi:smoke-detector
+        - entity: binary_sensor.natgas_sensor_158d000204ae2a
+          name: Gas
+          icon: mdi:gas-station

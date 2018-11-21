@@ -1,4 +1,5 @@
   platform: darksky
+  hide_entity: true
   api_key: !secret darksky_api_key
   forecast:
   - 1
