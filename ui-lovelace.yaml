@@ -7,7 +7,7 @@ resources:
   type: module
 - url: /local/custom_ui/dark-sky-weather-card.js
   type: js
-- url: /local/custom_cards/custom-cards.js?v=1.055
+- url: /local/custom_ui/custom-cards.js
   type: module
 
 title: Kadivnik@Home
