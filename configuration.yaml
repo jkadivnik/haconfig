@@ -65,6 +65,39 @@ conversation:
 # Enables support for tracking state changes over time
 history:
 
+history_graph:
+  livingroom:
+    name: Livingroom Climate
+    entities:
+      - sensor.humidity_158d0002379148
+      - sensor.temperature_158d0002379148
+      - sensor.illumination_158d0001de7134
+    hours_to_show: 240
+    refresh: 300
+  gameroom:
+    name: Gameroom Climate
+    entities:
+      - sensor.temperature_158d000236744c
+      - sensor.humidity_158d000236744c
+      - sensor.illumination_158d0001f9cdfe
+    hours_to_show: 240
+    refresh: 300
+  veranda:
+    name: Veranda Climate
+    entities:
+      - sensor.humidity_158d00020f4dd3
+      - sensor.temperature_158d00020f4dd3
+    hours_to_show: 240
+    refresh: 300
+  internet:
+    name: Internet Graph
+    entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    hours_to_show: 240
+    refresh: 300
+
 # View all events in a logbook
 logbook:
 
