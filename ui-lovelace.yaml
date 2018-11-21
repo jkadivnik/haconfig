@@ -18,12 +18,31 @@ views:
     cards:
     - type: horizontal-stack
       cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:picture-status-card
+        - type: custom:picture-status-card
+          entity: device_tracker.papa_phone
+          image: /local/lovelace/Johnny.jpg
+          font_color: white
+          card_height: 90px
+          state_image:
+            Home: /local/lovelace/Johnny.jpg
+            Just arrived: /local/lovelace/Johnny.jpg
+        - type: custom:picture-status-card
+          entity: device_tracker.thibo_phone
+          image: /local/lovelace/Thibo.jpg
+          font_color: white
+          card_height: 90px
+          state_image:
+            Home: /local/lovelace/Thibo.jpg
+            Just arrived: /local/lovelace/Thibo.jpg
+        - type: custom:picture-status-card
+          entity: device_tracker.maxim_phone
+          image: /local/lovelace/Maxim.jpg
+          font_color: white
+          card_height: 90px
+          state_image:
+            Home: /local/lovelace/Maxim.jpg
+            Just arrived: /local/lovelace/Maxim.jpg
+        - type: custom:picture-status-card
           entity: device_tracker.mama_phone
           image: /local/lovelace/Charlotte.jpg
           font_color: white
@@ -32,30 +51,6 @@ views:
             Home: /local/lovelace/Charlotte.jpg
             Just arrived: /local/lovelace/Charlotte.jpg
           name: ' '
-      - type: custom:picture-status-card
-        entity: device_tracker.maxim_phone
-        image: /local/lovelace/Maxim.jpg
-        font_color: white
-        card_height: 90px
-        state_image:
-          Home: /local/lovelace/Maxim.jpg
-          Just arrived: /local/lovelace/Maxim.jpg
-      - type: custom:picture-status-card
-        entity: device_tracker.thibo_phone
-        image: /local/lovelace/Thibo.jpg
-        font_color: white
-        card_height: 90px
-        state_image:
-          Home: /local/lovelace/Thibo.jpg
-          Just arrived: /local/lovelace/Thibo.jpg
-      - type: custom:picture-status-card
-        entity: device_tracker.papa_phone
-        image: /local/lovelace/Johnny.jpg
-        font_color: white
-        card_height: 90px
-        state_image:
-          Home: /local/lovelace/Johnny.jpg
-          Just arrived: /local/lovelace/Johnny.jpg
     - type: custom:card-modder
       style:
         border-radius: 10px
