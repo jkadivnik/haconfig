@@ -307,3 +307,29 @@ views:
           name: Temperature
         - entity: sensor.humidity_158d00020f4dd3
           name: Humidity
+  - title: Hallway
+    cards:
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-glance
+          title: Entrance
+          entities:
+          - light.veranda_rgb_light
+          - switch.plug_158d0002368a0e
+          image: /local/lovelace/veranda.jpeg
+          aspect_ratio: 16:9
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_name: false
+          entities:
+          - entity: sensor.temperature_158d00020f4dd3
+            name: Temperature
+          - entity: sensor.humidity_158d00020f4dd3
+            name: Humidity
