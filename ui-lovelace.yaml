@@ -532,7 +532,7 @@ views:
   - type: custom:monster-card
     show_empty: false
     card:
-      type: picture-glance
+      type: glance
       title: Battery State
       image: /local/lovelace/battery.jpeg
       aspect_ratio: 16:9
