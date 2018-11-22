@@ -1,6 +1,5 @@
   # Smoke detected
   - alias: Smoke Detected
-    hide_entity: true
     trigger:
       platform: state
       entity_id: binary_sensor.smoke_sensor_158d000279ddbc
@@ -24,7 +23,6 @@
 
   # Smoke detected
   - alias: Smoke Detected
-    hide_entity: true
     trigger:
       platform: state
       entity_id: binary_sensor.natgas_sensor_158d000204ae2a

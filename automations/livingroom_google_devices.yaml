@@ -1,5 +1,4 @@
   - alias: Livingroom Audiocast stopped
-    hide_entity: true
     trigger:
       - platform: state
         entity_id: media_player.kadivniaudio
@@ -11,7 +10,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_hub_off
   - alias: Livingroom Audiocast playing
-    hide_entity: true
     trigger:
       - platform: state
         entity_id: media_player.kadivniaudio
@@ -27,7 +25,6 @@
       entity_id: scene.livingroom_audiocast
 
   - alias: Livingroom Chromecast stopped
-    hide_entity: true
     trigger:
       platform: state
       entity_id: media_player.living_room_tv
@@ -39,7 +36,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_hub_off
   - alias: Livingroom Chromecast playing
-    hide_entity: true
     trigger:
       - platform: state
         entity_id: media_player.living_room_tv
@@ -53,3 +49,22 @@
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_chromecast
+
+  - alias: Livingroom Audiocast Still Playing
+    trigger:
+      - platform: template
+        value_template: >
+        {% if is_state( 'media_player.kadivniaudio', 'off') %}
+          false
+        {% else %}
+          true
+        {% endif %}
+    condition:
+      - condition: template
+        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string != 'Music' }}"
+    action:
+      - service: media_player.media_stop
+        entity_id: media_player.kadivniaudio
+      - service: media_player.turn_off
+        entity_id: media_player.kadivniaudio
+

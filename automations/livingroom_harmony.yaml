@@ -1,5 +1,4 @@
   - alias: Livingroom Harmony
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_harmony

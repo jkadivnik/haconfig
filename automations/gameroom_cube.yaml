@@ -1,6 +1,5 @@
   # Change volume depending on rotation
   - alias: Gameroom Cube Volume
-    hide_entity: true
     trigger:
       platform: event
       event_type: cube_action
@@ -19,7 +18,6 @@
             VolumeUp
           {% endif %}
   - alias: Gameroom Cube Pause
-    hide_entity: true
     trigger:
       platform: event
       event_type: cube_action

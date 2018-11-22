@@ -9,6 +9,10 @@ resources:
   type: js
 - url: /local/custom_ui/custom-cards.js
   type: module
+- url: /local/custom_ui/custom-cards.js
+  type: module
+- url: /local/custom_ui/monster-card.js
+  type: js
 
 title: Kadivnik@Home
 views:
@@ -525,3 +529,15 @@ views:
     - type: gauge
       entity: sensor.hallway_smoke_detector_battery_state
       title: Hallway Smoke Detector Battery
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: picture-glance
+      title: Battery State
+      image: /local/lovelace/battery.jpeg
+      aspect_ratio: 16:9
+    filter:
+      include:
+      - entity_id: sensor.*_battery_state
+        attributes:
+          state: '< 40'

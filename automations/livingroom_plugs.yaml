@@ -1,5 +1,4 @@
   - alias: Kitchen Music Playing
-    hide_entity: false
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
@@ -16,7 +15,6 @@
       - service: automation.turn_off
         entity_id: automation.kitchen_music_playing
   - alias: Kitchen Music Turned Off
-    hide_entity: false
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861

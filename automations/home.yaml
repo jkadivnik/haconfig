@@ -1,7 +1,6 @@
 # Modes
   # House Mode
   - alias: House All Off
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.house_mode

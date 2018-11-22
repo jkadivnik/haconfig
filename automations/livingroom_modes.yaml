@@ -1,6 +1,5 @@
   # Livingroom Modes
   - alias: Livingroom Morning
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -11,7 +10,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_morning
   - alias: Livingroom Watch Movie - Kodi
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -22,7 +20,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_kodi
   - alias: Livingroom Watch Movie - BD
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -33,7 +30,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_bd
   - alias: Livingroom Watch Television
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -44,7 +40,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_telenet
   - alias: Livingroom Watch Netflix
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -55,7 +50,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_netflix
   - alias: Livingroom Lights
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
@@ -66,7 +60,6 @@
       service: scene.turn_on
       entity_id: scene.livingroom_lights_on
   - alias: Livingroom To Bed
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.livingroom_mode
