@@ -164,6 +164,22 @@ views:
           show_source: true
           artwork_border: true
           icon: mdi:movie
+    - type: conditional
+      conditions:
+      - entity: media_player.kadivniaudio
+        state_not: "off"
+      card:
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.kadivniaudio
+          name: Chromecast Audio
+          show_progress: true
+          show_cover: true
+          artwork_border: true
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -498,7 +514,7 @@ views:
       - type: gauge
         entity: sensor.gameroom_cube_battery_state
         title: Gameroom Cube Battery
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
     - type: gauge
       entity: sensor.veranda_motion_sensor_battery_state
