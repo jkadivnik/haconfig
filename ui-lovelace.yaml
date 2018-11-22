@@ -530,7 +530,7 @@ views:
       entity: sensor.hallway_smoke_detector_battery_state
       title: Hallway Smoke Detector Battery
   - type: custom:monster-card
-    show_empty: false
+    show_empty: true
     card:
       type: glance
       title: Battery State
@@ -539,5 +539,4 @@ views:
     filter:
       include:
       - entity_id: sensor.*_battery_state
-        attributes:
-          state: '< 40'
+        state: '< 40'
