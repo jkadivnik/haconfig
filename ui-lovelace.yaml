@@ -434,7 +434,7 @@ views:
         icon: mdi:gas-station
 - title: System
   cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
     - type: custom:card-modder
       style:
@@ -468,16 +468,20 @@ views:
     - type: custom:monster-card
       show_empty: true
       card:
-        type: picture-glance
-        title: Battery State
-        image: /local/lovelace/battery.jpeg
-        aspect_ratio: 16:9
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-glance
+          title: Battery State
+          image: /local/lovelace/battery.jpeg
+          aspect_ratio: 16:9
+          show_empty: false
       filter:
         include:
         - entity_id: sensor.*_battery_state
           state: '< 25'
-  - type: vertical-stack
-    cards:
     - type: custom:card-modder
       style:
         border-radius: 10px
