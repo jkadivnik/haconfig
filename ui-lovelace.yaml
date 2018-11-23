@@ -465,17 +465,17 @@ views:
         - type: state-label
           entity: sensor.speedtest_upload
           style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-      - type: custom:monster-card
-        show_empty: true
-        card:
-          type: picture-glance
-          title: Battery State
-          image: /local/lovelace/battery.jpeg
-          aspect_ratio: 16:9
-        filter:
-          include:
-          - entity_id: sensor.*_battery_state
-            state: '< 25'
+    - type: custom:monster-card
+      show_empty: true
+      card:
+        type: picture-glance
+        title: Battery State
+        image: /local/lovelace/battery.jpeg
+        aspect_ratio: 16:9
+      filter:
+        include:
+        - entity_id: sensor.*_battery_state
+          state: '< 25'
   - type: vertical-stack
     cards:
     - type: custom:card-modder
