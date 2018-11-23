@@ -434,75 +434,73 @@ views:
         icon: mdi:gas-station
 - title: System
   cards:
-  - type: horizontal-stack
-    cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-elements
-        image: /local/lovelace/isp.jpeg
-        elements:
-        - type: icon
-          icon: mdi:pulse
-          style: {color: white, left: 25%, top: 85%}
-        - type: state-label
-          entity: sensor.speedtest_ping
-          prefix: 'Internet : '
-          style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: picture-elements
+      image: /local/lovelace/isp.jpeg
+      elements:
+      - type: icon
+        icon: mdi:pulse
+        style: {color: white, left: 25%, top: 85%}
+      - type: state-label
+        entity: sensor.speedtest_ping
+        prefix: 'Internet : '
+        style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
 
-        - type: icon
-          icon: mdi:arrow-down-bold
-          style: {color: white, left: 50%, top: 85%}
-        - type: state-label
-          entity: sensor.speedtest_download
-          style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: icon
+        icon: mdi:arrow-down-bold
+        style: {color: white, left: 50%, top: 85%}
+      - type: state-label
+        entity: sensor.speedtest_download
+        style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
 
-        - type: icon
-          icon: mdi:arrow-up-bold
-          style: {color: white, left: 75%, top: 85%}
-        - type: state-label
-          entity: sensor.speedtest_upload
-          style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-    - type: custom:monster-card
-      show_empty: true
-      card:
-        type: picture-glance
-        title: Battery State
-        image: /local/lovelace/battery.jpeg
-        aspect_ratio: 16:9
-        show_empty: false
-      filter:
-        include:
-        - entity_id: sensor.*_battery_state
-          state: '< 25'
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-elements
-        image: /local/lovelace/system_settings.jpeg
-        elements:
-        - type: icon
-          icon: mdi:cogs
-          style: {color: white, left: 25%, top: 85%}
-        - type: state-label
-          entity: sensor.processor_use
-          prefix: 'CPU : '
-          style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: icon
+        icon: mdi:arrow-up-bold
+        style: {color: white, left: 75%, top: 85%}
+      - type: state-label
+        entity: sensor.speedtest_upload
+        style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+  - type: custom:monster-card
+    show_empty: true
+    card:
+      type: picture-glance
+      title: Battery State
+      image: /local/lovelace/battery.jpeg
+      aspect_ratio: 16:9
+      show_empty: false
+    filter:
+      include:
+      - entity_id: sensor.*_battery_state
+        state: '< 25'
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: picture-elements
+      image: /local/lovelace/system_settings.jpeg
+      elements:
+      - type: icon
+        icon: mdi:cogs
+        style: {color: white, left: 25%, top: 85%}
+      - type: state-label
+        entity: sensor.processor_use
+        prefix: 'CPU : '
+        style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
 
-        - type: icon
-          icon: mdi:memory
-          style: {color: white, left: 50%, top: 85%}
-        - type: state-label
-          entity: sensor.memory_use_percent
-          style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: icon
+        icon: mdi:memory
+        style: {color: white, left: 50%, top: 85%}
+      - type: state-label
+        entity: sensor.memory_use_percent
+        style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
 
-        - type: icon
-          icon: mdi:disc-alert
-          style: {color: white, left: 75%, top: 85%}
-        - type: state-label
-          entity: sensor.disk_use_percent_
-          style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: icon
+        icon: mdi:disc-alert
+        style: {color: white, left: 75%, top: 85%}
+      - type: state-label
+        entity: sensor.disk_use_percent_
+        style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
