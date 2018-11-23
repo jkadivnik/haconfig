@@ -468,16 +468,11 @@ views:
     - type: custom:monster-card
       show_empty: true
       card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Battery State
-          image: /local/lovelace/battery.jpeg
-          aspect_ratio: 16:9
-          show_empty: false
+        type: picture-glance
+        title: Battery State
+        image: /local/lovelace/battery.jpeg
+        aspect_ratio: 16:9
+        show_empty: false
       filter:
         include:
         - entity_id: sensor.*_battery_state
