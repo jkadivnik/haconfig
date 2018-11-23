@@ -3,30 +3,39 @@
     livingroom_motion_sensor_battery_state:
       value_template: "{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     livingroom_temperature_sensor_battery_state:
       value_template: "{{ states.sensor.temperature_158d0002379148.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     livingroom_cube_battery_state:
       value_template: "{{ states.binary_sensor.cube_158d00010fd151_2.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     gameroom_motion_sensor_battery_state:
       value_template: "{{ states.binary_sensor.motion_sensor_158d0001f9cdfe.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     gameroom_temperature_sensor_battery_state:
       value_template: "{{ states.sensor.temperature_158d000236744c.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     gameroom_cube_battery_state:
       value_template: "{{ states.binary_sensor.cube_158d000118421f_2.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     veranda_motion_sensor_battery_state:
       value_template: "{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     veranda_temperature_sensor_battery_state:
       value_template: "{{ states.sensor.temperature_158d00020f4dd3.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
     hallway_smoke_detector_battery_state:
       value_template: "{{ states.binary_sensor.smoke_sensor_158d000279ddbc.attributes.battery_level }}"
       unit_of_measurement: "%"
+      device_class: battery
 
 
 

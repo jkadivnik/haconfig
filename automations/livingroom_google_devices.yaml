@@ -53,12 +53,7 @@
   - alias: Livingroom Audiocast Still Playing
     trigger:
       - platform: template
-        value_template: >
-        {% if is_state( 'media_player.kadivniaudio', 'off') %}
-          false
-        {% else %}
-          true
-        {% endif %}
+        value_template: "{% if is_state( 'media_player.kadivniaudio', 'off')%}false{% else %}true{% endif %}"
     condition:
       - condition: template
         value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string != 'Music' }}"
