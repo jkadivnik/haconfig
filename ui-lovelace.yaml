@@ -14,6 +14,8 @@ resources:
 - url: /local/custom_ui/monster-card.js
   type: js
 
+background: center / cover no-repeat url("/local/lovelace/background.gif") fixed
+
 title: Kadivnik@Home
 views:
 - title: Home
