@@ -1,4 +1,4 @@
   livingroom_light:
     value: 'off'
     attributes:
-      icon: mdi: light-switch
+      icon: mdi:light-switch
