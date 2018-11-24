@@ -150,6 +150,8 @@ xiaomi_aqara:
       mac: !secret gameroom_gateway_mac
     - key: !secret livingroom_gateway_key
       mac: !secret livingroom_gateway_mac
+    - key: !secret upstairs_gateway_key
+      mac: !secret upstairs_gateway_mac
 
 ffmpeg:
 

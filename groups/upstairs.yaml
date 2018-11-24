@@ -1,0 +1,6 @@
+Upstairs Room:
+  control: hidden
+  entities:
+  - switch.plug_158d0001f29250
+  - switch.plug_158d0001f292c0
+  - switch.plug_158d0002368a0e
