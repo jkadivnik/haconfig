@@ -15,21 +15,31 @@
         data:
           entity_id: group.living_room_led_lights
           rgb_color: [255, 255, 255]
-      - service: automation.turn_on
-        entity_id: automation.livingroom_nightlight_off
-  - alias: Livingroom Nightlight Off
-    initial_state: off
+      - service: variable.set_variable
+        data:
+          variable: variable.livingroom_light
+          value: 'on'
+  - alias: Livingroom Nightlight Off Timer
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_sensor_158d0001de7134
         to: 'off'
         for:
           minutes: 1
-      - platform: numeric_state
-        entity_id: sensor.illumination_7811dcb35389
-        above: 10
+    condition:
+      - condition: template
+        entity_id: "{{ is_state('variable.livingroom_light', 'on' }}"
     action:
       - service: light.turn_off
         entity_id: group.living_room_led_lights
-      - service: automation.turn_off
-        entity_id: automation.livingroom_nightlight_off
+  - alias: Livingroom Nightlight Off Illumination
+    trigger:
+    - platform: numeric_state
+      entity_id: sensor.illumination_7811dcb35389
+      above: 10
+    condition:
+    - condition: template
+      entity_id: "{{ is_state('variable.livingroom_light', 'on' }}"
+    action:
+    - service: light.turn_off
+      entity_id: group.living_room_led_lights

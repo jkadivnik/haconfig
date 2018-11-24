@@ -126,6 +126,7 @@ switch: !include_dir_list switches/
 input_select: !include_dir_merge_named input_selects/
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
+variable: !include variables.yaml
 
 # Mqtt
 mqtt:
