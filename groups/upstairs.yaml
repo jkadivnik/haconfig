@@ -1,6 +1,7 @@
 Upstairs Room:
-  control: hidden
   entities:
-  - switch.plug_158d0001f29250
-  - switch.plug_158d0001f292c0
-  - switch.plug_158d0002368a0e
+  - binary_sensor.motion_sensor_158d000276e199
+  - group.upstairs_lights
+  - group.bathroom
+  - sensor.illumination_7811dcb9c795
+  - sensor.illumination_158d000276e199

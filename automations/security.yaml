@@ -17,12 +17,17 @@
           ringtone_vol: 85
       - service: xiaomi_aqara.play_ringtone
         data:
+          gw_mac: !secret upstairs_gateway_mac
+          ringtone_id: 2
+          ringtone_vol: 85
+      - service: xiaomi_aqara.play_ringtone
+        data:
           gw_mac: !secret gameroom_gateway_mac
           ringtone_id: 2
           ringtone_vol: 85
 
-  # Smoke detected
-  - alias: Smoke Detected
+  # Gas detected
+  - alias: Gas Detected
     trigger:
       platform: state
       entity_id: binary_sensor.natgas_sensor_158d000204ae2a
@@ -36,6 +41,11 @@
     - service: xiaomi_aqara.play_ringtone
       data:
         gw_mac: !secret livingroom_gateway_mac
+        ringtone_id: 2
+        ringtone_vol: 85
+    - service: xiaomi_aqara.play_ringtone
+      data:
+        gw_mac: !secret upstairs_gateway_mac
         ringtone_id: 2
         ringtone_vol: 85
     - service: xiaomi_aqara.play_ringtone

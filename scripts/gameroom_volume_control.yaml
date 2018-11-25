@@ -7,7 +7,7 @@
           entity_id: remote.game_room_hub
           command:
             - VolumeUp
-          device: 54116032
+          device: 58691919
   gameroom_volume_down:
     alias: Gameroom Volume Down
     sequence:
@@ -16,7 +16,7 @@
           entity_id: remote.game_room_hub
           command:
             - VolumeDown
-          device: 54116032
+          device: 58691919
   gameroom_volume_mute:
     alias: Gameroom Volume Mute
     sequence:
@@ -25,4 +25,4 @@
           entity_id: remote.game_room_hub
           command:
             - Mute
-          device: 54116032
+          device: 58691919

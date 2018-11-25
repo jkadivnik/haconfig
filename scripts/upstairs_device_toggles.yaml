@@ -1,0 +1,10 @@
+# Upstairs
+upstairs_all_off:
+  alias: Upstairs All Off
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: group.upstairs_lights
+    - service: switch.turn_off
+      data:
+        entity_id: group.upstairs_plugs
