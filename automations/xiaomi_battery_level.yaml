@@ -86,7 +86,7 @@
   - alias: Gameroom Cube Sensor Battery
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.cube_158d000118421f_2
+      entity_id: binary_sensor.cube_158d000118421f
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -99,7 +99,7 @@
   - alias: Livingroom Cube Sensor Battery
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.cube_158d00010fd151_2
+      entity_id: binary_sensor.cube_158d00010fd151
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:

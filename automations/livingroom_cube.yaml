@@ -4,7 +4,7 @@
       platform: event
       event_type: cube_action
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151_2
+        entity_id: binary_sensor.cube_158d00010fd151
         action_type: rotate
     action:
       - service: remote.send_command
@@ -32,7 +32,7 @@
       platform: event
       event_type: cube_action
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151_2
+        entity_id: binary_sensor.cube_158d00010fd151
         action_type: shake_air
     action:
       - service: remote.send_command

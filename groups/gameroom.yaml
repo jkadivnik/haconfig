@@ -16,4 +16,4 @@ Game Room:
     - sensor.humidity_158d000236744c
     - sensor.illumination_7811dcded4dc
     - sensor.illumination_158d0001f9cdfe
-    - binary_sensor.cube_158d000118421f_2
+    - binary_sensor.cube_158d000118421f
