@@ -8,6 +8,7 @@ Game Room:
     - media_player.kodibureau
     - remote.game_room_hub
     - light.gameroom_rgb_light
+    - light.gateway_light_7811dcded4dc
     - scripts.gameroom_volume_up
     - scripts.gameroom_volume_down
     - scripts.gameroom_volume_mute
