@@ -1,5 +1,5 @@
   platform: darksky
-  hide_entity: true
+  units: si
   api_key: !secret darksky_api_key
   forecast:
   - 1
@@ -31,4 +31,4 @@
   - pressure
   - visibility
   update_interval:
-    minutes: 5
+    minutes: 10

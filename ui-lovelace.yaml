@@ -1,19 +1,17 @@
 resources:
-- url: /local/custom_ui/mini-media-player-bundle.js
+- url: /local/custom_ui/mini-media-player-bundle.js?v=1.0
   type: module
-- url: /local/custom_ui/mini-graph-card-bundle.js
+- url: /local/custom_ui/mini-graph-card-bundle.js?v=1.0
   type: js
-- url: /local/custom_ui/card-modder.js
+- url: /local/custom_ui/card-modder.js?v=1.0
   type: module
-- url: /local/custom_ui/dark-sky-weather-card.js
+- url: /local/custom_ui/dark-sky-weather-card.js?v=1.1
   type: js
-- url: /local/custom_ui/custom-cards.js
+- url: /local/custom_ui/custom-cards.js?v=1.0
   type: module
-- url: /local/custom_ui/custom-cards.js
-  type: module
-- url: /local/custom_ui/monster-card.js
+- url: /local/custom_ui/monster-card.js?v=1.0
   type: js
-- url: /local/slider-entity-row.js
+- url: /local/slider-entity-row.js?v=1.0
   type: js
 
 background: center / cover no-repeat url("/local/lovelace/background3.gif") fixed
