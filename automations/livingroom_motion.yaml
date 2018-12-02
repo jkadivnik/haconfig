@@ -32,14 +32,22 @@
     action:
       - service: light.turn_off
         entity_id: group.livingroom_led_lights
+      - service: variable.set_variable
+        data:
+          variable: variable.livingroom_light
+          value: 'off'
   - alias: Livingroom Nightlight Off Illumination
     trigger:
       - platform: numeric_state
         entity_id: sensor.illumination_7811dcb35389
-        above: 10
+        above: 100
     condition:
       - condition: template
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"
     action:
       - service: light.turn_off
         entity_id: group.livingroom_led_lights
+      - service: variable.set_variable
+        data:
+          variable: variable.livingroom_light
+          value: 'off'
