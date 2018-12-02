@@ -7,3 +7,5 @@ System:
   - sensor.speedtest_upload
   - sensor.ipv4_address_eth0
   - sensor.last_boot
+  - sensor.cpu_temp
+  - sensor.disk_use_percent_
