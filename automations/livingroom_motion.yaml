@@ -5,8 +5,8 @@
       to: 'on'
     condition:
       - condition: numeric_state
-        entity_id: sensor.illumination_7811dcb35389
-        below: 5
+        entity_id: sensor.illumination_158d0001de7134
+        below: '1'
       - condition: template
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
     action:
@@ -14,7 +14,7 @@
         entity_id: group.livingroom_led_lights
         data:
           entity_id: group.livingroom_led_lights
-          rgb_color: [255, 255, 255]
+          rgb_color: [0, 0, 255]
       - service: variable.set_variable
         data:
           variable: variable.livingroom_light
@@ -39,8 +39,8 @@
   - alias: Livingroom Nightlight Off Illumination
     trigger:
       - platform: numeric_state
-        entity_id: sensor.illumination_7811dcb35389
-        above: 100
+        entity_id: sensor.illumination_158d0001de7134
+        above: '5'
     condition:
       - condition: template
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"

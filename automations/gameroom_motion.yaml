@@ -6,23 +6,26 @@
   condition:
   - condition: numeric_state
     entity_id: sensor.illumination_7811dcded4dc
-    below: 50
-  - condition: sun
-    after: sunset
-    before: sunrise
+    below: '10'
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+    - condition: sun
+      before: sunrise
   action:
   - service: light.turn_on
     entity_id: group.gameroom_led_lights
     data:
       entity_id: group.gameroom_led_lights
-      rgb_color: [255, 255, 255]
+      rgb_color: [0, 0, 255]
 - alias: Gameroom No Motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
     to: 'off'
     for:
-      minutes: 5
+      minutes: 1
   action:
   - service: light.turn_off
     entity_id: group.gameroom_led_lights

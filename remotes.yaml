@@ -1,6 +1,6 @@
   - platform: harmony
-    name: Game room hub
+    name: Gameroom hub
     host: !secret gameroom_harmony_ip
   - platform: harmony
-    name: Living room hub
+    name: Livingroom hub
     host: !secret livingroom_harmony_ip
