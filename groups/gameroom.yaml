@@ -1,4 +1,4 @@
-Game Room:
+Gameroom:
   control: hidden
   entities:
     - sensor.gameroom_harmony_activity

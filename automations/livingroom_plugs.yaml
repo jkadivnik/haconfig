@@ -2,7 +2,7 @@
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
-      value_template: '{{ state.attributes.power_load | float }}'
+      value_template: '{{ state.attributes.load_power | float }}'
       above: '1.5'
     condition:
       - condition: template
@@ -18,7 +18,7 @@
     trigger:
       platform: numeric_state
       entity_id: switch.plug_158d0002368861
-      value_template: '{{ state.attributes.power_load | float }}'
+      value_template: '{{ state.attributes.load_power | float }}'
       below: '1.5'
     action:
     - service: automation.turn_on
