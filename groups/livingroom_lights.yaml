@@ -1,5 +1,5 @@
-Living Room Lights:
+Livingroom Lights:
   control: hidden
   entities:
-    - group.living_room_led_lights
+    - group.livingroom_led_lights
     - light.gateway_light_7811dcb35389

@@ -6,9 +6,9 @@
         data_template:
           entity_id: >
             {% if is_state( 'input_select.remote_selection', 'Living Room') %}
-              remote.living_room_hub
+              remote.livingroom_hub
             {% else %}
-              remote.game_room_hub
+              remote.gameroom_hub
             {% endif %}
           command:
             - VolumeUp
@@ -25,9 +25,9 @@
         data_template:
           entity_id: >
             {% if is_state( 'input_select.remote_selection', 'Living Room') %}
-              remote.living_room_hub
+              remote.livingroom_hub
             {% else %}
-              remote.game_room_hub
+              remote.gameroom_hub
             {% endif %}
           command:
             - VolumeDown
@@ -44,9 +44,9 @@
         data_template:
           entity_id: >
             {% if is_state( 'input_select.remote_selection', 'Living Room') %}
-              remote.living_room_hub
+              remote.livingroom_hub
             {% else %}
-              remote.game_room_hub
+              remote.gameroom_hub
             {% endif %}
           command:
             - Mute

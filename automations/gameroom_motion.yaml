@@ -12,9 +12,9 @@
     before: sunrise
   action:
   - service: light.turn_on
-    entity_id: group.game_room_led_lights
+    entity_id: group.gameroom_led_lights
     data:
-      entity_id: group.game_room_led_lights
+      entity_id: group.gameroom_led_lights
       rgb_color: [255, 255, 255]
 - alias: Gameroom No Motion
   trigger:
@@ -25,4 +25,4 @@
       minutes: 5
   action:
   - service: light.turn_off
-    entity_id: group.game_room_led_lights
+    entity_id: group.gameroom_led_lights

@@ -4,8 +4,8 @@
       light.livingroom_dressoir_rgb_light: off
       light.livingroom_bookcase_rgb_light: off
       light.veranda_rgb_light: off
-      remote.living_room_hub: off
-      remote.game_room_hub: off
+      remote.livingroom_hub: off
+      remote.gameroom_hub: off
       switch.dressoir_light: off
       switch.sofa_light: off
       switch.plug_158d0001f29250: off

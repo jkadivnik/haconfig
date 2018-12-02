@@ -219,7 +219,7 @@ views:
         aspect_ratio: 16:9
     - type: conditional
       conditions:
-      - entity: media_player.living_room_tv
+      - entity: media_player.living_room_video
         state_not: "off"
       card:
         type: custom:card-modder
@@ -228,7 +228,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: custom:mini-media-player
-          entity: media_player.living_room_tv
+          entity: media_player.living_room_video
           name: Chromecast
           show_progress: true
           show_cover: true

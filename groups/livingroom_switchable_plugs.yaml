@@ -1,4 +1,4 @@
-Living Room Plugs:
+Livingroom Plugs:
   control: hidden
   entities:
     - switch.plug_158d0001f29250

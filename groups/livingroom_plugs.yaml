@@ -1,4 +1,4 @@
-Living Room Switchable Plugs:
+Livingroom Switchable Plugs:
   control: hidden
   entities:
     - group.livingroom_switchable_plugs

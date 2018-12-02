@@ -9,7 +9,7 @@
     action:
       service: remote.send_command
       data_template:
-        entity_id: remote.game_room_hub
+        entity_id: remote.gameroom_hub
         device: 58691919
         command: >
           {% if trigger.event.data.action_value | float > 0 %}
@@ -27,6 +27,6 @@
     action:
       service: remote.send_command
       data:
-        entity_id: remote.game_room_hub
+        entity_id: remote.gameroom_hub
         device: 58691919
         command: Mute

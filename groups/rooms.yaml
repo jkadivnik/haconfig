@@ -2,7 +2,7 @@ Rooms:
   view: yes
   name: Rooms
   entities:
-    - group.living_room
-    - group.game_room
-    - group.veranda_room
-    - group.hallway_room
+    - group.livingroom
+    - group.gameroom
+    - group.veranda
+    - group.hallway

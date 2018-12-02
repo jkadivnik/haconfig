@@ -9,7 +9,7 @@
     action:
       - service: remote.send_command
         data_template:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           device: 54449337
           command: >
             {% if trigger.event.data.action_value | float > 0 %}
@@ -19,7 +19,7 @@
             {% endif %}
       - service: remote.send_command
         data_template:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           device: 54449333
           command: >
             {% if trigger.event.data.action_value | float > 0 %}
@@ -37,11 +37,11 @@
     action:
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           device: 54449333
           command: Mute
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           device: 54449337
           command: Mute

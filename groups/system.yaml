@@ -1,0 +1,9 @@
+System:
+  entities:
+  - sensor.memory_use_percent
+  - sensor.processor_use
+  - sensor.speedtest_download
+  - sensor.speedtest_ping
+  - sensor.speedtest_upload
+  - sensor.ipv4_address_eth0
+  - sensor.last_boot

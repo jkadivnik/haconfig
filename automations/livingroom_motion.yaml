@@ -8,12 +8,12 @@
         entity_id: sensor.illumination_7811dcb35389
         below: 5
       - condition: template
-        value_template: "{{ is_state_attr('remote.living_room_hub', 'current_activity', 'PowerOff') }}"
+        value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
     action:
       - service: light.turn_on
-        entity_id: group.living_room_led_lights
+        entity_id: group.livingroom_led_lights
         data:
-          entity_id: group.living_room_led_lights
+          entity_id: group.livingroom_led_lights
           rgb_color: [255, 255, 255]
       - service: variable.set_variable
         data:
@@ -31,7 +31,7 @@
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"
     action:
       - service: light.turn_off
-        entity_id: group.living_room_led_lights
+        entity_id: group.livingroom_led_lights
   - alias: Livingroom Nightlight Off Illumination
     trigger:
       - platform: numeric_state
@@ -42,4 +42,4 @@
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"
     action:
       - service: light.turn_off
-        entity_id: group.living_room_led_lights
+        entity_id: group.livingroom_led_lights

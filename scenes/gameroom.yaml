@@ -32,4 +32,4 @@
   - name: Gameroom Fun Is Over
     entities:
       group.game_room_lights: off
-      remote.game_room_hub: off
+      remote.gameroom_hub: off

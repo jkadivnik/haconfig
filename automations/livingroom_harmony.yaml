@@ -4,6 +4,6 @@
       entity_id: input_select.livingroom_harmony
     action:
       service: remote.turn_on
-      entity_id: remote.living_room_hub
+      entity_id: remote.livingroom_hub
       data_template:
         activity: "{{ trigger.to_state.state.split(' : ')[1] }}"

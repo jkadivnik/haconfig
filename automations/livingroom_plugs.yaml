@@ -6,9 +6,9 @@
       above: '1.5'
     condition:
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string  != 'Keuken muziek luisteren' }}"
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') | string  != 'Keuken muziek luisteren' }}"
       - condition: template
-        value_template: "{{ state_attr('remote.living_room_hub', 'current_activity') | string != 'PowerOff' }}"
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') | string != 'PowerOff' }}"
     action:
       - service: script.turn_on
         entity_id: script.livingroom_kitchen_radio_toggle

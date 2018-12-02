@@ -4,7 +4,7 @@
     sequence:
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           command:
             - VolumeUp
           device: 54449333, 54449337
@@ -13,7 +13,7 @@
     sequence:
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           command:
             - VolumeDown
           device: 54449333
@@ -22,7 +22,7 @@
     sequence:
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           command:
             - Mute
           device: 54449333, 54449337

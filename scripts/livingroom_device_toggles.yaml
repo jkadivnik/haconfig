@@ -3,7 +3,7 @@
     sequence:
       - service: remote.send_command
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
           command:
             - PowerToggle
           device: 54449337
@@ -18,10 +18,10 @@
     sequence:
       - service: light.turn_off
         data:
-          entity_id: group.living_room_led_lights
+          entity_id: group.livingroom_led_lights
       - service: remote.turn_off
         data:
-          entity_id: remote.living_room_hub
+          entity_id: remote.livingroom_hub
       - service: switch.turn_off
         data:
-          entity_id: group.living_room_switchable_plugs
+          entity_id: group.livingroom_switchable_plugs

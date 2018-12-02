@@ -12,7 +12,7 @@
           entity_id: group.game_room_lights
       - service: remote.turn_off
         data:
-          entity_id: remote.game_room_hub
+          entity_id: remote.gameroom_hub
       - service: switch.turn_off
         data:
           entity_id: group.game_room_plugs

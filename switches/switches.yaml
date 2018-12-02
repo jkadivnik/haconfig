@@ -2,14 +2,14 @@
   switches:
     kodi_gameroom:
       friendly_name: "Gameroom Kodi"
-      value_template: "{{ is_state_attr('remote.game_room_hub', 'current_activity', 'HTPC') }}"
+      value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'HTPC') }}"
       turn_on:
         service: remote.turn_on
-        entity_id: remote.game_room_hub
+        entity_id: remote.gameroom_hub
         data:
           activity: "36518514"
       turn_off:
         service: remote.turn_off
-        entity_id: remote.game_room_hub
+        entity_id: remote.gameroom_hub
         data:
           activity: "36518514"

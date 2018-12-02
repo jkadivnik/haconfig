@@ -84,6 +84,11 @@ Weather:
   - sensor.dark_sky_summary_4
   - sensor.dark_sky_summary_5
   - sensor.dark_sky_temperature
+  - sensor.dark_sky_temperature_1
+  - sensor.dark_sky_temperature_2
+  - sensor.dark_sky_temperature_3
+  - sensor.dark_sky_temperature_4
+  - sensor.dark_sky_temperature_5
   - sensor.dark_sky_uv_index
   - sensor.dark_sky_uv_index_1
   - sensor.dark_sky_uv_index_2
@@ -108,3 +113,10 @@ Weather:
   - sensor.dark_sky_wind_speed_3
   - sensor.dark_sky_wind_speed_4
   - sensor.dark_sky_wind_speed_5
+  - sensor.yr_fog
+  - sensor.yr_humidity
+  - sensor.yr_precipitation
+  - sensor.yr_symbol
+  - sensor.yr_temperature
+  - sensor.yr_wind_speed
+  - sun.sun

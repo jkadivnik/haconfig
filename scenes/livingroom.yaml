@@ -42,4 +42,4 @@
       switch.plug_158d0001f29250: on
   - name: Livingroom Hub Off
     entities:
-      remote.living_room_hub: off
+      remote.livingroom_hub: off
