@@ -1,0 +1,4 @@
+Bathroom plugs:
+  control: hidden
+  entities:
+    - switch.plug_158d0001f2914c
