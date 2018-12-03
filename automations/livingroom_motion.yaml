@@ -12,7 +12,7 @@
     action:
       - service: variable.set_variable
         data:
-          variable: variable.livingroom_light
+          variable: livingroom_light
           value: on
       - service: light.turn_on
         entity_id: light.livingroom_led_lights
@@ -34,7 +34,7 @@
         entity_id: light.livingroom_led_lights
       - service: variable.set_variable
         data:
-          variable: variable.livingroom_light
+          variable: livingroom_light
           value: 'off'
   - alias: Livingroom Nightlight Off Illumination
     trigger:
@@ -49,5 +49,5 @@
         entity_id: light.livingroom_led_lights
       - service: variable.set_variable
         data:
-          variable: variable.livingroom_light
+          variable: livingroom_light
           value: off

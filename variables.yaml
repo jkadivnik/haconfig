@@ -1,4 +1,12 @@
   livingroom_light:
+    name: Livingroom Light Toggle
     value: 'off'
     attributes:
       icon: mdi:light-switch
+    restore: true
+  test_variable:
+    name: Test Variable
+    value: 'on'
+    attributes:
+      icon: mdi:help-circle
+    restore: true
