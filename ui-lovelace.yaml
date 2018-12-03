@@ -335,6 +335,39 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: scene.gameroom_gaming
+          icon: mdi:flash
+          state_label: Telenet
+          tap_action: scene.turn_on
+          service: scene.gameroom_gaming
+        - entity: scene.gameroom_kodi
+          icon: mdi:movie
+          name: HTPC
+          tap_action: scene.turn_on
+          service: scene.gameroom_kodi
+        - entity: scene.gameroom_ps3
+          icon: mdi:gamepad
+          name: PS3
+          tap_action: scene.turn_on
+          service: scene.gameroom_ps3
+        - entity: scene.gameroom_ps4
+          icon: mdi:gamepad
+          name: PS4
+          tap_action: scene.turn_on
+          service: scene.gameroom_ps4
+        - entity: scene.gameroom_lights_on
+          icon: mdi:lightbulb
+          name: Lights
+          tap_action: scene.turn_on
+          service: scene.gameroom_lights_on
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
         type: picture-entity
         name: Lights
         show_name: true
