@@ -1,3 +1,4 @@
 Upstairs Plugs:
+  view: false
   entities:
   - group.bathroom_plugs

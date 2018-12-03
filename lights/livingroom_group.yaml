@@ -1,0 +1,5 @@
+  platform: group
+  name: Livingroom Lights
+  entities:
+    - light.livingroom_led_lights
+    - light.gateway_light_7811dcb35389

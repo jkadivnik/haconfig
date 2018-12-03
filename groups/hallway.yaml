@@ -1,4 +1,3 @@
 Hallway:
-  control: hidden
   entities:
     - binary_sensor.smoke_sensor_158d000279ddbc

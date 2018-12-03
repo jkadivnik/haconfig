@@ -1,0 +1,5 @@
+  platform: group
+  name: Livingroom Led Lights
+  entities:
+    - light.livingroom_bookcase_rgb_light
+    - light.livingroom_dressoir_rgb_light

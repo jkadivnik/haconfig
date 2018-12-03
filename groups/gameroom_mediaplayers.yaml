@@ -1,4 +1,4 @@
 Gameroom Mediaplayers:
-  control: hidden
+  view: false
   entities:
     - media_player.kodibureau

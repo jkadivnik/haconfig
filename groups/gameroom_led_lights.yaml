@@ -1,4 +1,4 @@
 Gameroom Led Lights:
-  control: hidden
+  view: false
   entities:
     - light.gameroom_rgb_light

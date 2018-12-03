@@ -4,7 +4,7 @@ upstairs_all_off:
   sequence:
     - service: light.turn_off
       data:
-        entity_id: group.upstairs_lights
+        entity_id: light.upstairs_lights
     - service: switch.turn_off
       data:
         entity_id: group.upstairs_plugs

@@ -1,7 +1,7 @@
 Veranda:
-  control: hidden
+  view: true
   entities:
-    - group.veranda_rgb_lights
+    - light.veranda_led_lights
     - sensor.veranda_temperature
     - sensor.veranda_humidity
     - binary_sensor.motion_sensor_158d0001f2a00f

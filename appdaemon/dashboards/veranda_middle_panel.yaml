@@ -16,7 +16,7 @@ veranda_rgb:
   widget_type: light_with_colorpicker
   title: Veranda
   title2: RGB Lights
-  entity: group.veranda_rgb_lights
+  entity: light.veranda_led_lights
   on_attributes:
     rgb_color: 255, 0, 0
 

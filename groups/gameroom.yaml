@@ -1,5 +1,4 @@
 Gameroom:
-  control: hidden
   entities:
     - sensor.gameroom_harmony_activity
     - input_select.gameroom_mode
@@ -17,3 +16,4 @@ Gameroom:
     - sensor.illumination_7811dcded4dc
     - sensor.illumination_158d0001f9cdfe
     - binary_sensor.cube_158d000118421f
+    - group.gameroom_mediaplayers

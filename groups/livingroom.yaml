@@ -6,7 +6,7 @@ Livingroom:
     - input_select.livingroom_mode
     - remote.livingroom_hub
     - group.livingroom_mediaplayers
-    - group.livingroom_lights
+    - light.livingroom_lights
     - group.livingroom_plugs
     - scripts.livingroom_volume_up
     - scripts.livingroom_volume_down
@@ -18,5 +18,8 @@ Livingroom:
     - sensor.illumination_158d0001de7134
     - binary_sensor.motion_sensor_158d0001de7134
     - binary_sensor.cube_158d00010fd151
-    - group.livingroom_led_lights
+    - light.livingroom_led_lights
     - sensor.livingroom_kitchen_radio_plug_load
+    - sensor.livingroom_dressoir_plug_load
+    - sensor.livingroom_sofa_plug_load
+    - group.livingroom_mediaplayers

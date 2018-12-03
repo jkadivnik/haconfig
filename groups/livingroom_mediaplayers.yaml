@@ -1,5 +1,5 @@
 Livingroom mediaplayers:
-  control: hidden
+  view: false
   entities:
     - media_player.kodiliving
     - media_player.kadivniaudio

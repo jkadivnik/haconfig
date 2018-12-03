@@ -1,7 +1,5 @@
 Livingroom Switchable Plugs:
-  control: hidden
+  view: true
   entities:
     - group.livingroom_switchable_plugs
     - switch.plug_158d0002368861
-    - sensor.livingroom_dressoir_plug_load
-    - sensor.livingroom_sofa_plug_load

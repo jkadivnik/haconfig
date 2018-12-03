@@ -1,5 +1,5 @@
 Battery Check Automations:
-  control: hidden
+  view: false
   entities:
     - automation.hallway_smoke_sensor_battery
     - automation.gameroom_cube_sensor_battery
@@ -10,3 +10,4 @@ Battery Check Automations:
     - automation.veranda_motion_sensor_battery
     - automation.livingroom_motion_sensor_battery
     - automation.gameroom_motion_sensor_battery
+    - automation.upstairs_motion_sensor_battery

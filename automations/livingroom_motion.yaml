@@ -11,9 +11,9 @@
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
     action:
       - service: light.turn_on
-        entity_id: group.livingroom_led_lights
+        entity_id: light.livingroom_led_lights
         data:
-          entity_id: group.livingroom_led_lights
+          entity_id: light.livingroom_led_lights
           rgb_color: [0, 0, 255]
       - service: variable.set_variable
         data:
@@ -31,7 +31,7 @@
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"
     action:
       - service: light.turn_off
-        entity_id: group.livingroom_led_lights
+        entity_id: light.livingroom_led_lights
       - service: variable.set_variable
         data:
           variable: variable.livingroom_light
@@ -46,7 +46,7 @@
         value_template: "{{ is_state('variable.livingroom_light', 'on') }}"
     action:
       - service: light.turn_off
-        entity_id: group.livingroom_led_lights
+        entity_id: light.livingroom_led_lights
       - service: variable.set_variable
         data:
           variable: variable.livingroom_light

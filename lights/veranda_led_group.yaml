@@ -1,4 +1,4 @@
-Veranda RGB Lights:
-  control: hidden
+  platform: group
+  name: Veranda Lights
   entities:
     - light.veranda_rgb_light
