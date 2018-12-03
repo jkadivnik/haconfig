@@ -1,45 +1,55 @@
-  # Smoke detected
-  - alias: Smoke Detected
-    trigger:
-      platform: state
-      entity_id: binary_sensor.smoke_sensor_158d000279ddbc
-      from: 'off'
-      to: 'on'
-    action:
-      - service: script.notify_all
-        data:
-          title: "Vuur en/of rook ontdekt!"
-          message: "Er is thuis rook en/of vuur ontdekt!"
-      - service: xiaomi_aqara.play_ringtone
-        data:
-          gw_mac: !secret livingroom_gateway_mac
-          ringtone_id: 2
-          ringtone_vol: 85
-      - service: xiaomi_aqara.play_ringtone
-        data:
-          gw_mac: !secret gameroom_gateway_mac
-          ringtone_id: 2
-          ringtone_vol: 85
+# Smoke detected
+- alias: Smoke Detected
+  trigger:
+    platform: state
+    entity_id: binary_sensor.smoke_sensor_158d000279ddbc
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_all
+    data:
+      title: "Vuur en/of rook ontdekt!"
+      message: "Er is thuis rook en/of vuur ontdekt!"
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret livingroom_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret upstairs_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret gameroom_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85
 
-  # Smoke detected
-  - alias: Smoke Detected
-    trigger:
-      platform: state
-      entity_id: binary_sensor.natgas_sensor_158d000204ae2a
-      from: 'off'
-      to: 'on'
-    action:
-    - service: script.notify_all
-      data:
-        title: "Gaslek ontdekt!"
-        message: "Er is een gaslek in de bureau. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
-    - service: xiaomi_aqara.play_ringtone
-      data:
-        gw_mac: !secret livingroom_gateway_mac
-        ringtone_id: 2
-        ringtone_vol: 85
-    - service: xiaomi_aqara.play_ringtone
-      data:
-        gw_mac: !secret gameroom_gateway_mac
-        ringtone_id: 2
-        ringtone_vol: 85
+# Gas detected
+- alias: Gas Detected
+  trigger:
+    platform: state
+    entity_id: binary_sensor.natgas_sensor_158d000204ae2a
+    from: 'off'
+    to: 'on'
+  action:
+  - service: script.notify_all
+    data:
+      title: "Gaslek ontdekt!"
+      message: "Er is in de bureau een gaslek. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret livingroom_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret upstairs_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: !secret gameroom_gateway_mac
+      ringtone_id: 2
+      ringtone_vol: 85

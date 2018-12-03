@@ -1,3 +1,4 @@
 Hallway:
   entities:
     - binary_sensor.smoke_sensor_158d000279ddbc
+    - automation.hallway_smoke_sensor_battery

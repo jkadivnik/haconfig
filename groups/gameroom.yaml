@@ -20,4 +20,18 @@ Gameroom:
     - switch.gameroom_ps3
     - switch.gameroom_ps4
     - switch.gameroom_pc_sound
-
+    - automation.gameroom_cube_pause
+    - automation.gameroom_cube_sensor_battery
+    - automation.gameroom_cube_volume
+    - automation.gameroom_gaming
+    - automation.gameroom_harmony
+    - automation.gameroom_lights_on
+    - automation.gameroom_motion_sensor_battery
+    - automation.gameroom_nightlight_motion
+    - automation.gameroom_no_motion
+    - automation.gameroom_playstation_3
+    - automation.gameroom_playstation_4
+    - automation.gameroom_temperature_sensor_battery
+    - automation.gameroom_watch_movie_kodi
+    - automation.gameroom_fun_is_over
+    - automation.gas_detected

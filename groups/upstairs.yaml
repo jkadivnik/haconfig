@@ -5,3 +5,6 @@ Upstairs:
     - switch.plug_158d0001f2914c
     - sensor.illumination_7811dcb9c795
     - sensor.illumination_158d000276e199
+    - automation.upstairs_motion_sensor_battery
+    - automation.upstairs_nightlight_motion
+    - automation.upstairs_no_motion

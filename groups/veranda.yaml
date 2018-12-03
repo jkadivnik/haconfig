@@ -8,4 +8,9 @@ Veranda:
     - sensor.temperature_158d00020f4dd3
     - switch.plug_158d0002368a0e
     - sensor.veranda_heater_plug_load
-
+    - automation.veranda_heater_off
+    - automation.veranda_heater_on
+    - automation.veranda_motion_sensor_battery
+    - automation.veranda_nightlight_motion
+    - automation.veranda_no_motion
+    - automation.veranda_temperature_sensor_battery

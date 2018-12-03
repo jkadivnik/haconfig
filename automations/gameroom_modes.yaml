@@ -49,7 +49,7 @@
     action:
       service: scene.turn_on
       entity_id: scene.gameroom_lights_on
-  - alias: Fun Is Over
+  - alias: Gameroom Fun Is Over
     trigger:
       platform: state
       entity_id: input_select.gameroom_mode

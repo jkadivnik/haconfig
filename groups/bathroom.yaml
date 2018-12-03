@@ -1,3 +1,3 @@
 Bathroom:
   entities:
-    - group.bathroom_plugs
+    - switch.plug_158d0001f2914c
