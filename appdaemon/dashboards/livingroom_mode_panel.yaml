@@ -11,32 +11,32 @@ livingroom_morning:
   entity: scene.livingroom_morning
 
 livingroom_watch_movie_kodi:
-  widget_type: scene
+  widget_type: switch
   title: Kodi
   icon_on: mdi-movie
   icon_off: mdi-movie
-  entity: scene.livingroom_kodi
+  entity: switch.livingroom_kodi
 
 livingroom_watch_movie_bd:
-  widget_type: scene
+  widget_type: switch
   title: BluRay
   icon_on: mdi-movie
   icon_off: mdi-movie
-  entity: scene.livingroom_bd
+  entity: switch.livingroom_bluray
 
 livingroom_ps4:
-  widget_type: scene
+  widget_type: switch
   title: Playstation
   icon_on: mdi-youtube-gaming
   icon_off: mdi-youtube-gaming
-  entity: scene.livingroom_netflix
+  entity: switch.livingroom_ps4
 
 livingroom_watch_television:
-  widget_type: scene
+  widget_type: switch
   title: Telenet
   icon_on: mdi-television
   icon_off: mdi-television
-  entity: scene.livingroom_telenet
+  entity: switch.livingroom_telenet
 
 livingroom_lights:
   widget_type: scene
@@ -53,11 +53,18 @@ livingroom_all_off:
   entity: script.livingroom_all_off
 
 livingroom_chrome_audiocast:
-  widget_type: scene
+  widget_type: switch
   title: Music
   icon_on: mdi-music
   icon_off: mdi-music
-  entity: scene.livingroom_audiocast
+  entity: switch.livingroom_chromecast_audio
+
+livingroom_chrome_chromecast:
+  widget_type: switch
+  title: Music
+  icon_on: mdi-music
+  icon_off: mdi-music
+  entity: switch.livingroom_chromecast
 
 livingroom_kitchen_radio:
   widget_type: script

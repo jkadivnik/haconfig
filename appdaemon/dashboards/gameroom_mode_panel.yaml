@@ -4,32 +4,32 @@ gameroom_mode:
     entity: input_select.gameroom_mode
 
 gameroom_gaming:
-    widget_type: scene
+    widget_type: switch
     title: Gaming
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    entity: scene.gameroom_gaming
+    entity: switch.gameroom_pc_sound
 
 gameroom_watch_movie_kodi:
-    widget_type: scene
+    widget_type: switch
     title: Kodi
     icon_on: mdi-movie
     icon_off: mdi-movie
-    entity: scene.gameroom_kodi
+    entity: switch.gameroom_kodi
 
 gameroom_ps3:
-    widget_type: scene
+    widget_type: switch
     title: Playstation 3
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    entity: scene.gameroom_ps3
+    entity: switch.gameroom_ps3
 
 gameroom_ps4:
-    widget_type: scene
+    widget_type: switch
     title: Playstation 4
     icon_on: mdi-gamepad
     icon_off: mdi-gamepad
-    entity: scene.gameroom_ps4
+    entity: switch.gameroom_ps4
 
 gameroom_lights:
     widget_type: scene
@@ -44,13 +44,6 @@ gameroom_all_off:
   icon_on: mdi-hotel
   icon_off: mdi-hotel
   entity: script.gameroom_all_off
-
-gameroom_fun_is_over:
-    widget_type: scene
-    title: Sleep
-    icon_on: mdi-hotel
-    icon_off: mdi-hotel
-    entity: scene.gameroom_fun_is_over
 
 layout:
     - gameroom_mode, gameroom_gaming, gameroom_watch_movie_kodi, gameroom_ps3, gameroom_ps4, gameroom_lights, gameroom_all_off

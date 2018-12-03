@@ -110,32 +110,24 @@ views:
         type: picture-glance
         title: Sofa
         entities:
-        - switch.plug_158d0001f29250
-        - entity: scene.livingroom_telenet
+        - entity: switch.plug_158d0001f29250
+          icon: mdi:light-switch
+          name: Sofalight
+        - entity: switch.livingroom_telenet
           icon: mdi:television-box
-          state_label: telenet
-          tap_action: scene.turn_on
-          service: scene.livingroom_telenet
-        - entity: scene.livingroom_kodi
+          name: Telenet
+        - entity: switch.livingroom_kodi
           icon: mdi:movie
           name: HTPC
-          tap_action: scene.turn_on
-          service: scene.livingroom_kodi
-        - entity: scene.livingroom_audiocast
+        - entity: switch.livingroom_chromecast_audio
           icon: mdi:library-music
           name: Audiocast
-          tap_action: scene.turn_on
-          service: scene.livingroom_audiocast
-        - entity: scene.livingroom_chromecast
+        - entity: switch.livingroom_chromecast
           icon: mdi:cast
           name: Chromecast
-          tap_action: scene.turn_on
-          service: scene.livingroom_chromecast
-        - entity: scene.livingroom_bd
+        - entity: switch.livingroom_bluray
           icon: mdi:filmstrip
           name: Bluray
-          tap_action: scene.turn_on
-          service: scene.livingroom_bd
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -260,8 +252,6 @@ views:
           icon: mdi:remote
         - entity: input_select.livingroom_harmony
           icon: mdi:arrow-down-drop-circle
-        - entity: input_select.livingroom_harmony
-          icon: mdi:arrow-down-drop-circle
     - type: conditional
       conditions:
       - entity: media_player.living_room_speaker
@@ -290,7 +280,6 @@ views:
         type: picture-glance
         title: Gameroom
         entities:
-        - light.gameroom_rgb_light
         - entity: switch.gameroom_pc_sound
           icon: mdi:flash
           name: Gaming
@@ -303,6 +292,7 @@ views:
         - entity: switch.gameroom_ps4
           icon: mdi:gamepad
           name: PS4
+        - light.gameroom_rgb_light
         image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -317,21 +307,6 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Lights
-        show_name: true
-        entity: scene.gameroom_lights_on
-        icon: mdi:lightbulb
-        tap_action: scene.turn_on
-        service: scene.gameroom_lights_on
-        state_image:
-          "on": /local/lovelace/images/pictures/light_switch.jpeg
-          "off": /local/lovelace/images/pictures_gray/light_switch.jpeg
     - type: conditional
       conditions:
       - entity: media_player.kodibureau

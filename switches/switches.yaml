@@ -40,7 +40,7 @@
         data:
           option: "None : -1"
     gameroom_pc_sound:
-      friendly_name: "Gameroom Big Screen Gaming"
+      friendly_name: "Gameroom No Screen Gaming"
       value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'No Screen Gaming') }}"
       turn_on:
         service: input_select.select_option
@@ -190,7 +190,7 @@
         entity_id: light.gameroom_rgb_lights
         data:
           entity_id: light.gameroom_rgb_lights
-          rgb_color: [255,0,0]
+          rgb_color: [0,0,255]
       turn_off:
         service: light.turn_off
         entity_id: light.gameroom_rgb_lights
