@@ -7,12 +7,12 @@
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "HTPC : 36518514"
+          option: "HTPC : 36518514"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     gameroom_ps3:
       friendly_name: "Gameroom PS3"
       value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Play PS3') }}"
@@ -20,12 +20,12 @@
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "PS3 : 33266495"
+          option: "PS3 : 33266495"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     gameroom_ps4:
       friendly_name: "Gameroom PS4"
       value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Play PS4') }}"
@@ -33,12 +33,12 @@
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "PS4 : 35282221"
+          option: "PS4 : 35282221"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     gameroom_pc_sound:
       friendly_name: "Gameroom Big Screen Gaming"
       value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'No Screen Gaming') }}"
@@ -46,12 +46,12 @@
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "No Screen Gaming : 33210808"
+          option: "No Screen Gaming : 33210808"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.gameroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_kodi:
       friendly_name: "Livingroom HTPC"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'HTPC') }}"
@@ -59,12 +59,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "HTPC : 33452776"
+          option: "HTPC : 33452776"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_telenet:
       friendly_name: "Livingroom Telenet"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Telenet') }}"
@@ -72,12 +72,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Telenet : 33452772"
+          option: "Telenet : 33452772"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_chromecast:
       friendly_name: "Livingroom Chromecast"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Chromecast') }}"
@@ -85,12 +85,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Chromecast : 33452778"
+          option: "Chromecast : 33452778"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_bluray:
       friendly_name: "Livingroom Bluray"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'BD_DVD') }}"
@@ -98,12 +98,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "BD_DVD : 33452773"
+          option: "BD_DVD : 33452773"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_ps3:
       friendly_name: "Livingroom PS3"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Playstation 3') }}"
@@ -111,12 +111,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "PS3 : 33452777"
+          option: "PS3 : 33452777"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_ps4:
       friendly_name: "Livingroom PS4"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Play PS4') }}"
@@ -124,12 +124,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "PS4 : 33530080"
+          option: "PS4 : 33530080"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_steamlink:
       friendly_name: "Livingroom Steamlink"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Steam Link') }}"
@@ -137,12 +137,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Steam Link : 33452780"
+          option: "Steam Link : 33452780"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_tuner:
       friendly_name: "Livingroom Tuner"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Radio') }}"
@@ -150,12 +150,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Radio : 33452774"
+          option: "Radio : 33452774"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_kitchen_radio:
       friendly_name: "Livingroom Kitchen Radio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
@@ -163,12 +163,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Kitchen Radio : 33452779"
+          option: "Kitchen Radio : 33452779"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     livingroom_chromecast_audio:
       friendly_name: "Livingroom Chromecast Audio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Music') }}"
@@ -176,12 +176,12 @@
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "Chromecast Audio : 33452775"
+          option: "Chromecast Audio : 33452775"
       turn_off:
         service: input_select.select_option
         entity_id: input_select.livingroom_harmony
         data:
-          activity: "None : -1"
+          option: "None : -1"
     gameroom_led_light:
       friendly_name: "Gameroom Led Light"
       value_template: "{{ is_state('light.gameroom_rgb_lights', 'on') }}"
