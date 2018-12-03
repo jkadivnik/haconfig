@@ -194,17 +194,16 @@
       turn_off:
         service: light.turn_off
         entity_id: light.gameroom_rgb_lights
-    variable_switch:
-      friendly_name: Variable testing
-      value_template: "{{ is_state('variable.test_variable', 'on') }}"
+    livingroom_motion_light_variable_switch:
+      friendly_name: Livingroom Motion Light Variable
+      value_template: "{{ is_state('variable.livingroom_light_toggle', 'on') }}"
       turn_on:
         service: variable.set_variable
         data:
-          variable: test_variable
+          variable: livingroom_light_toggle
           value: 'on'
       turn_off:
         service: variable.set_variable
         data:
-          variable: test_variable
+          variable: livingroom_light_toggle
           value: 'off'
-

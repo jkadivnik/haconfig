@@ -3,9 +3,10 @@ Gameroom:
     - sensor.gameroom_harmony_activity
     - input_select.gameroom_mode
     - input_select.gameroom_harmony
-    - group.mediaplayers
+    - group.gameroom_mediaplayers
     - remote.gameroom_hub
-    - group.gameroom_lights
+    - light.gameroom_rgb_light
+    - light.gateway_light_7811dcded4dc
     - scripts.gameroom_volume_up
     - scripts.gameroom_volume_down
     - scripts.gameroom_volume_mute
@@ -15,4 +16,8 @@ Gameroom:
     - sensor.illumination_7811dcded4dc
     - sensor.illumination_158d0001f9cdfe
     - binary_sensor.cube_158d000118421f
-    - group.gameroom_mediaplayers
+    - switch.gameroom_kodi
+    - switch.gameroom_ps3
+    - switch.gameroom_ps4
+    - switch.gameroom_pc_sound
+

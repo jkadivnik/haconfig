@@ -1,7 +1,7 @@
 Upstairs:
   entities:
     - binary_sensor.motion_sensor_158d000276e199
-    - light.upstairs_lights
-    - group.bathroom
+    - light.gateway_light_7811dcb9c795
+    - switch.plug_158d0001f2914c
     - sensor.illumination_7811dcb9c795
     - sensor.illumination_158d000276e199

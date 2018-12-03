@@ -5,8 +5,8 @@ Livingroom:
     - input_select.livingroom_mode
     - remote.livingroom_hub
     - group.livingroom_mediaplayers
-    - light.livingroom_lights
-    - group.livingroom_plugs
+    - light.livingroom_bookcase_rgb_light
+    - light.livingroom_dressoir_rgb_light
     - scripts.livingroom_volume_up
     - scripts.livingroom_volume_down
     - scripts.livingroom_volume_mute
@@ -21,4 +21,17 @@ Livingroom:
     - sensor.livingroom_kitchen_radio_plug_load
     - sensor.livingroom_dressoir_plug_load
     - sensor.livingroom_sofa_plug_load
-    - group.livingroom_mediaplayers
+    - switch.livingroom_motion_light_variable_switch
+    - switch.livingroom_chromecast_audio
+    - switch.livingroom_kitchen_radio
+    - switch.livingroom_tuner
+    - switch.livingroom_steamlink
+    - switch.livingroom_ps4
+    - switch.livingroom_ps3
+    - switch.livingroom_bluray
+    - switch.livingroom_chromecast
+    - switch.livingroom_telenet
+    - switch.livingroom_kodi
+    - switch.plug_158d0002368861
+    - switch.plug_158d0001f29250
+    - switch.plug_158d0001f292c0
