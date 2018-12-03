@@ -128,6 +128,12 @@ views:
         - entity: switch.livingroom_bluray
           icon: mdi:filmstrip
           name: Bluray
+        - entity: switch.livingroom_steamlink
+          icon: mdi:cellphone-link
+          name: Steam Link
+        - entity: switch.livingroom_ps4
+          icon: mdi:gamepad
+          name: PS4
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
