@@ -291,7 +291,6 @@ views:
         title: Gameroom
         entities:
         - light.gameroom_rgb_light
-          tap_action: toggle
         - entity: switch.gameroom_pc_sound
           icon: mdi:flash
           name: Gaming
