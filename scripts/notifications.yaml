@@ -1,0 +1,23 @@
+  notify_mail:
+    sequence:
+      - service: script.notify_all
+        data_template:
+          title: "{{ title }}"
+          message: "{{ message }}"
+  message_publish_pushbullet:
+    sequence:
+      - service: notify.pushbullet
+        data_template:
+          title:
+            title: "{{ title }}"
+            message: "{{ message }}"
+  notify_all:
+    sequence:
+    - service: script.notify_mail
+      data_template:
+        title: "{{ title }}"
+        message: "{{ message }}"
+    - service: script.notify_pushbullet
+      data_template:
+        title: "{{ title }}"
+        message: "{{ message }}"

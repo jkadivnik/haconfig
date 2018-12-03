@@ -8,7 +8,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi veranda temperatuur sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -21,7 +21,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi gameroom temperatuur sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -34,7 +34,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi livingroom temperatuur sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -49,7 +49,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi veranda bewegingssensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -62,7 +62,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-    - service: notify.home_mail
+    - service: script.notify_all
       data:
         title: "Xiaomi gameroom bewegingssensor : batterij leeg!"
         message: "Vervang de batterij zo snel mogelijk!"
@@ -75,7 +75,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi livingroom bewegingssensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -88,7 +88,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-    - service: notify.home_mail
+    - service: script.notify_all
       data:
         title: "Xiaomi upstairs bewegingssensor : batterij leeg!"
         message: "Vervang de batterij zo snel mogelijk!"
@@ -103,7 +103,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi gameroom cube sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -116,7 +116,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi livingroom cube sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"
@@ -131,7 +131,7 @@
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Xiaomi hallway smoke sensor : batterij leeg!"
           message: "Vervang de batterij zo snel mogelijk!"

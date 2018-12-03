@@ -4,7 +4,7 @@
       entity_id: sensor.ssl_cert_expiry
       below: 10
     action:
-      service: notify.home_mail
+      service: script.notify_all
       data:
         title: "SSL certificate expiration warning"
         message: 'Warning - SSL certificate expires in 10 days and has not been automatically renewed'

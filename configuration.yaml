@@ -38,7 +38,7 @@ updater:
   # include_used_components: true
 
 notify:
-  - name: home_mail
+  - name: homemail
     platform: smtp
     server: smtp.gmail.com
     port: 587
@@ -53,6 +53,9 @@ notify:
     - !secret mail_1
     - !secret mail_2
     sender_name: My Home Assistant
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_apikey
 
 # Discover some devices automatically
 discovery:

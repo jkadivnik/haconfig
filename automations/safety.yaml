@@ -6,7 +6,7 @@
       from: 'off'
       to: 'on'
     action:
-      - service: notify.home_mail
+      - service: script.notify_all
         data:
           title: "Vuur en/of rook ontdekt!"
           message: "Er is thuis rook en/of vuur ontdekt!"
@@ -29,7 +29,7 @@
       from: 'off'
       to: 'on'
     action:
-    - service: notify.home_mail
+    - service: script.notify_all
       data:
         title: "Gaslek ontdekt!"
         message: "Er is een gaslek in de bureau. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
