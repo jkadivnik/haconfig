@@ -343,8 +343,8 @@ views:
         tap_action: scene.turn_on
         service: scene.gameroom_lights_on
         state_image:
-          "on": /local/lovelace/images/pictures/images/pictures/light_switch.jpeg
-          "off": /local/lovelace/images/pictures/images/pictures_gray/light_switch.jpeg
+          "on": /local/lovelace/images/pictures/light_switch.jpeg
+          "off": /local/lovelace/images/pictures_gray/light_switch.jpeg
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
