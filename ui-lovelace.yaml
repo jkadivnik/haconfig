@@ -429,7 +429,7 @@ views:
           title: Entrance
           entities:
             - entity: light.gateway_light_7811dcb9c795
-          image: /local/lovelace/images/pictures/hallway_upstairs.jpeg
+          image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
           aspect_ratio: 16:9
       - type: custom:card-modder
         style:
