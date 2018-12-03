@@ -291,31 +291,19 @@ views:
         title: Gameroom
         entities:
         - light.gameroom_rgb_light
-        - entity: scene.gameroom_gaming
+          tap_action: toggle
+        - entity: switch.gameroom_pc_sound
           icon: mdi:flash
-          state_label: Telenet
-          tap_action: scene.turn_on
-          service: scene.gameroom_gaming
-        - entity: scene.gameroom_kodi
+          name: Gaming
+        - entity: switch.gameroom_kodi
           icon: mdi:movie
           name: HTPC
-          tap_action: scene.turn_on
-          service: scene.gameroom_kodi
-        - entity: scene.gameroom_ps3
+        - entity: switch.gameroom_ps3
           icon: mdi:gamepad
           name: PS3
-          tap_action: scene.turn_on
-          service: scene.gameroom_ps3
-        - entity: scene.gameroom_ps4
+        - entity: switch.gameroom_ps4
           icon: mdi:gamepad
           name: PS4
-          tap_action: scene.turn_on
-          service: scene.gameroom_ps4
-        - entity: scene.gameroom_lights_on
-          icon: mdi:lightbulb
-          name: Lights
-          tap_action: scene.turn_on
-          service: scene.gameroom_lights_on
         image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -330,39 +318,6 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-        - entity: scene.gameroom_gaming
-          icon: mdi:flash
-          state_label: Telenet
-          tap_action: scene.turn_on
-          service: scene.gameroom_gaming
-        - entity: scene.gameroom_kodi
-          icon: mdi:movie
-          name: HTPC
-          tap_action: scene.turn_on
-          service: scene.gameroom_kodi
-        - entity: scene.gameroom_ps3
-          icon: mdi:gamepad
-          name: PS3
-          tap_action: scene.turn_on
-          service: scene.gameroom_ps3
-        - entity: scene.gameroom_ps4
-          icon: mdi:gamepad
-          name: PS4
-          tap_action: scene.turn_on
-          service: scene.gameroom_ps4
-        - entity: scene.gameroom_lights_on
-          icon: mdi:lightbulb
-          name: Lights
-          tap_action: scene.turn_on
-          service: scene.gameroom_lights_on
     - type: custom:card-modder
       style:
         border-radius: 10px

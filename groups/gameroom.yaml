@@ -3,7 +3,6 @@ Gameroom:
     - sensor.gameroom_harmony_activity
     - input_select.gameroom_mode
     - input_select.gameroom_harmony
-    - switch.kodi_gameroom
     - group.mediaplayers
     - remote.gameroom_hub
     - group.gameroom_lights
