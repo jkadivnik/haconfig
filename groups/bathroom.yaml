@@ -1,4 +1,3 @@
 Bathroom:
-  control: hidden
   entities:
     - group.bathroom_plugs

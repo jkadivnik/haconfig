@@ -1,5 +1,4 @@
 Rooms:
-  view: yes
   name: Rooms
   entities:
     - group.livingroom

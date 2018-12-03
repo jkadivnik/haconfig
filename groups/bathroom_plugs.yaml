@@ -1,4 +1,3 @@
 Bathroom plugs:
-  view: false
   entities:
     - switch.plug_158d0001f2914c

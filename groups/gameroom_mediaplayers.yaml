@@ -1,4 +1,3 @@
 Gameroom Mediaplayers:
-  view: false
   entities:
     - media_player.kodibureau

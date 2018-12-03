@@ -1,5 +1,4 @@
 Livingroom Switchable Plugs:
-  view: true
   entities:
     - group.livingroom_switchable_plugs
     - switch.plug_158d0002368861

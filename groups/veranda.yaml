@@ -1,5 +1,4 @@
 Veranda:
-  view: true
   entities:
     - light.veranda_led_lights
     - sensor.veranda_temperature

@@ -1,5 +1,4 @@
 Weather:
-  view: true
   entities:
   - sensor.yr_fog
   - sensor.yr_humidity

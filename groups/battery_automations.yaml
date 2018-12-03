@@ -1,5 +1,4 @@
 Battery Check Automations:
-  view: false
   entities:
     - automation.hallway_smoke_sensor_battery
     - automation.gameroom_cube_sensor_battery

@@ -1,5 +1,4 @@
 Livingroom:
-  control: hidden
   entities:
     - sensor.livingroom_harmony_activity
     - input_select.livingroom_harmony

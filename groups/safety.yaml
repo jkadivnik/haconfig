@@ -1,5 +1,4 @@
 Safety Devices:
-  view: false
   entities:
     - binary_sensor.smoke_sensor_158d000279ddbc
     - binary_sensor.natgas_sensor_158d000204ae2a

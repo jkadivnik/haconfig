@@ -1,5 +1,4 @@
 System:
-  view: true
   entities:
   - sensor.memory_use_percent
   - sensor.processor_use
