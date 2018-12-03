@@ -307,7 +307,9 @@ views:
         - entity: switch.gameroom_ps4
           icon: mdi:gamepad
           name: PS4
-        - light.gameroom_rgb_light
+        - entity: switch.gameroom_rgb_light
+          icon: mdi:light-switch
+          name: RGB Lights
         image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -403,51 +405,55 @@ views:
         name: Humidity
 - title: Hallway
   cards:
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: picture-glance
-      title: Entrance
-      entities:
-      - entity: light.gateway_light_7811dcb9c795
-      image: /local/lovelace/images/pictures/entrance.jpeg
-      aspect_ratio: 16:9
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: glance
-      show_name: false
-      entities:
-      - entity: binary_sensor.smoke_sensor_158d000279ddbc
-        name: Smoke
-        icon: mdi:smoke-detector
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: picture-glance
-      title: Entrance
-      entities:
-        - entity: light.gateway_light_7811dcb9c795
-      image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
-      aspect_ratio: 16:9
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: glance
-      name: Upstairs
-      entities:
-        - entity: binary_sensor.motion_sensor_158d000276e199
-          name: Motion
-        - entity: sensor.illumination_7811dcb9c795
-          name: Illumination
+    - type: vertical-stack
+      cards:
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: picture-glance
+            title: Entrance
+            entities:
+            - entity: light.gateway_light_7811dcb9c795
+            image: /local/lovelace/images/pictures/entrance.jpeg
+            aspect_ratio: 16:9
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            show_name: false
+            entities:
+            - entity: binary_sensor.smoke_sensor_158d000279ddbc
+              name: Smoke
+              icon: mdi:smoke-detector
+    - type: vertical-stack
+      cards:
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: picture-glance
+            title: Upstairs
+            entities:
+              - entity: light.gateway_light_7811dcb9c795
+            image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
+            aspect_ratio: 16:9
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            name: Upstairs
+            entities:
+              - entity: binary_sensor.motion_sensor_158d000276e199
+                name: Motion
+              - entity: sensor.illumination_7811dcb9c795
+                name: Illumination
 - title: Bathroom
   cards:
   - type: custom:card-modder
@@ -456,7 +462,7 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-glance
-      title: Entrance
+      title: Bathroom
       entities:
       - entity: switch.plug_158d0001f2914c
         icon: mdi:radio

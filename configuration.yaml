@@ -126,7 +126,7 @@ script: !include_dir_merge_named scripts/
 sensor: !include_dir_list sensors/
 light: !include_dir_list lights/
 remote: !include remotes.yaml
-switch: !include_dir_list switches/
+switch: !include_dir_merge_named switches/
 input_select: !include_dir_merge_named input_selects/
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
