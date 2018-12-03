@@ -1,0 +1,4 @@
+  platform: group
+  name: Gameroom Led Lights
+  entities:
+   - light.gameroom_rgb_light

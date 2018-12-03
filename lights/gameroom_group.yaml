@@ -1,0 +1,5 @@
+  platform: group
+  name: Gameroom Lights
+  entities:
+    - light.gameroom_led_lights
+    - light.gateway_light_7811dcded4dc

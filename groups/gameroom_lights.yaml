@@ -1,5 +1,1 @@
-Gameroom Lights:
-  view: false
-  entities:
-    - group.gameroom_led_lights
-    - light.gateway_light_7811dcded4dc
+

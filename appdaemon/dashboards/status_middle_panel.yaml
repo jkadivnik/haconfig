@@ -19,7 +19,7 @@ gameroom_rgb:
   widget_type: light_with_colorpicker
   title: Gameroom
   title2: RGB Lights
-  entity: group.gameroom_led_lights
+  entity: light.gameroom_led_lights
   on_attributes:
     rgb_color: 0, 0, 255
 
