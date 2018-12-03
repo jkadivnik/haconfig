@@ -14,7 +14,7 @@ resources:
 - url: /local/slider-entity-row.js?v=1.0
   type: js
 
-background: center / cover no-repeat url("/local/lovelace/background3.gif") fixed
+background: center / cover no-repeat url("/local/lovelace/images/animated/background3.gif") fixed
 
 title: Kadivnik@Home
 views:
@@ -26,36 +26,36 @@ views:
       cards:
       - type: custom:picture-status-card
         entity: device_tracker.papa_phone
-        image: /local/lovelace/Johnny.jpg
+        image: /local/lovelace/images/pictures/Johnny.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/Johnny.jpg
-          Just arrived: /local/lovelace/Johnny.jpg
+          Home: /local/lovelace/images/pictures/Johnny.jpeg
+          Just arrived: /local/lovelace/images/pictures/Johnny.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.thibo_phone
-        image: /local/lovelace/Thibo.jpg
+        image: /local/lovelace/images/pictures/Thibo.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/Thibo.jpg
-          Just arrived: /local/lovelace/Thibo.jpg
+          Home: /local/lovelace/images/pictures/Thibo.jpeg
+          Just arrived: /local/lovelace/images/pictures/Thibo.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.maxim_phone
-        image: /local/lovelace/Maxim.jpg
+        image: /local/lovelace/images/pictures/Maxim.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/Maxim.jpg
-          Just arrived: /local/lovelace/Maxim.jpg
+          Home: /local/lovelace/images/pictures/Maxim.jpeg
+          Just arrived: /local/lovelace/images/pictures/Maxim.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.mama_phone
-        image: /local/lovelace/Charlotte.jpg
+        image: /local/lovelace/images/pictures/Charlotte.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/Charlotte.jpg
-          Just arrived: /local/lovelace/Charlotte.jpg
+          Home: /local/lovelace/images/pictures/Charlotte.jpeg
+          Just arrived: /local/lovelace/images/pictures/Charlotte.jpeg
         name: ' '
     - type: custom:card-modder
       style:
@@ -98,7 +98,7 @@ views:
         tap_action: scene.turn_on
         entity: script.home_all_off
         service: script.turn_on
-- title: Living Room
+- title: Livingroom
   cards:
   - type: vertical-stack
     cards:
@@ -136,7 +136,7 @@ views:
           name: Bluray
           tap_action: scene.turn_on
           service: scene.livingroom_bd
-        image: /local/lovelace/livingroom_tv_corner.jpeg
+        image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -199,7 +199,7 @@ views:
         - switch.plug_158d0001f292c0
         - light.livingroom_bookcase_rgb_light
         - light.livingroom_dressoir_rgb_light
-        image: /local/lovelace/livingroom_diner_table.jpeg
+        image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -215,7 +215,7 @@ views:
           icon: mdi:volume-off
         - entity: script.livingroom_volume_up
           icon: mdi:volume-high
-        image: /local/lovelace/cinema.jpeg
+        image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
     - type: conditional
       conditions:
@@ -246,7 +246,7 @@ views:
         - switch.plug_158d0001f292c0
         - entity: script.livingroom_kitchen_radio_toggle
           icon: mdi:radio
-        image: /local/lovelace/livingroom_kitchen.jpeg
+        image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -316,7 +316,7 @@ views:
           name: Lights
           tap_action: scene.turn_on
           service: scene.gameroom_lights_on
-        image: /local/lovelace/gameroom.jpeg
+        image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -330,6 +330,21 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Lights
+        show_name: true
+        entity: scene.gameroom_lights_on
+        icon: mdi:lightbulb
+        tap_action: scene.turn_on
+        service: scene.gameroom_lights_on
+        state_image:
+          "on": /local/lovelace/images/pictures/images/pictures/light_switch.jpeg
+          "off": /local/lovelace/images/pictures/images/pictures_gray/light_switch.jpeg
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -364,7 +379,7 @@ views:
           icon: mdi:volume-off
         - entity: script.gameroom_volume_up
           icon: mdi:volume-high
-        image: /local/lovelace/cinema.jpeg
+        image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -388,11 +403,11 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-glance
-      title: Gameroom
+      title: Veranda
       entities:
       - light.veranda_rgb_light
       - switch.plug_158d0002368a0e
-      image: /local/lovelace/veranda.jpeg
+      image: /local/lovelace/images/pictures/veranda.jpeg
       aspect_ratio: 16:9
   - type: custom:card-modder
     style:
@@ -418,7 +433,7 @@ views:
       entities:
       - light.veranda_rgb_light
       - switch.plug_158d0002368a0e
-      image: /local/lovelace/entrance.jpeg
+      image: /local/lovelace/images/pictures/entrance.jpeg
       aspect_ratio: 16:9
   - type: custom:card-modder
     style:
@@ -442,7 +457,7 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-elements
-      image: /local/lovelace/isp.jpeg
+      image: /local/lovelace/images/pictures/isp.jpeg
       elements:
       - type: icon
         icon: mdi:pulse
@@ -470,7 +485,7 @@ views:
     card:
       type: picture-glance
       title: Battery State
-      image: /local/lovelace/battery.jpeg
+      image: /local/lovelace/images/pictures/battery.jpeg
       aspect_ratio: 16:9
     filter:
       include:
@@ -482,7 +497,7 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-elements
-      image: /local/lovelace/system_settings.jpeg
+      image: /local/lovelace/images/pictures/system_settings.jpeg
       elements:
       - type: icon
         icon: mdi:cogs
