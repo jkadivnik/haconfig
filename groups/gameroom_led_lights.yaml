@@ -1,4 +1,0 @@
-Gameroom Led Lights:
-  view: false
-  entities:
-    - light.gameroom_rgb_light
