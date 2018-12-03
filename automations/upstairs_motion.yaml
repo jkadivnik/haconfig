@@ -6,10 +6,13 @@
   condition:
   - condition: numeric_state
     entity_id: sensor.illumination_7811dcded4dc
-    below: 5
-  - condition: sun
-    after: sunset
-    before: sunrise
+    below: '5'
+  - condition: or
+    conditions:
+    - condition: sun
+      after: sunset
+    - condition: sun
+      before: sunrise
   action:
   - service: light.turn_on
     entity_id: light.gateway_light_7811dcb9c795
@@ -19,7 +22,7 @@
     entity_id: binary_sensor.motion_sensor_158d000276e199
     to: 'off'
     for:
-      minutes: 3
+      minutes: '3'
   action:
   - service: light.turn_off
     entity_id: light.gateway_light_7811dcb9c795
