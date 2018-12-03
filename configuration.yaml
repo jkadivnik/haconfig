@@ -105,7 +105,9 @@ history_graph:
 logbook:
 
 logger:
-  default: debug
+  default: info
+  logs:
+    homeassistant.components.device_tracker: debug
 
 # Enables a map showing the location of tracked devices
 map:
@@ -175,7 +177,7 @@ device_tracker:
     host: !secret gameroom_router_ip
     username: root
     password: !secret gameroom_router_password
-    track_new_devices: false
+    track_new_devices: true
 
 sabnzbd:
   api_key: !secret sabnzbd_api_key
