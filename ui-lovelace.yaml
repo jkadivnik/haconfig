@@ -95,9 +95,9 @@ views:
         type: entity-button
         name: Turn Off Home
         icon: mdi:close-circle-outline
-        tap_action: scene.turn_on
-        entity: script.home_all_off
+        tap_action: call-service
         service: script.turn_on
+        entity: script.home_all_off
 - title: Livingroom
   cards:
   - type: vertical-stack
@@ -276,6 +276,15 @@ views:
           artwork_border: true
 - title: Gameroom
   cards:
+  - type: entity-button
+    name: Toggle Lights
+    icon: mdi:light-switch
+    tap_action: toggle
+    service: light.toggle
+    entity: light.gameroom_rgb_light
+    service_data:
+      entity_id: light.gameroom_rgb_light
+      rgb_color: [0, 0, 255]
   - type: vertical-stack
     cards:
     - type: custom:card-modder
