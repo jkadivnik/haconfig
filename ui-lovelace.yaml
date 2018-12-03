@@ -394,57 +394,55 @@ views:
         name: Humidity
 - title: Hallway
   cards:
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
-    - type: vertical-stack
-      cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Entrance
-          entities:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: Entrance
+        entities:
+        - entity: light.gateway_light_7811dcb9c795
+        image: /local/lovelace/images/pictures/entrance.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_name: false
+        entities:
+        - entity: binary_sensor.smoke_sensor_158d000279ddbc
+          name: Smoke
+          icon: mdi:smoke-detector
+  - type: vertical-stack
+    cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-glance
+        title: Entrance
+        entities:
           - entity: light.gateway_light_7811dcb9c795
-          image: /local/lovelace/images/pictures/entrance.jpeg
-          aspect_ratio: 16:9
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: binary_sensor.smoke_sensor_158d000279ddbc
-            name: Smoke
-            icon: mdi:smoke-detector
-    - type: vertical-stack
-      cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-glance
-          title: Entrance
-          entities:
-            - entity: light.gateway_light_7811dcb9c795
-          image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
-          aspect_ratio: 16:9
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          name: Upstairs
-          entities:
-            - entity: binary_sensor.motion_sensor_158d000276e199
-              name: Motion
-            - entity: sensor.illumination_7811dcb9c795
-              name: Illumination
+        image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
+        aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        name: Upstairs
+        entities:
+          - entity: binary_sensor.motion_sensor_158d000276e199
+            name: Motion
+          - entity: sensor.illumination_7811dcb9c795
+            name: Illumination
 - title: Bathroom
   cards:
   - type: custom:card-modder
