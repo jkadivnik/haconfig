@@ -190,7 +190,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Diner Table
+        title: Dinner Table
         entities:
         - switch.plug_158d0001f292c0
         - light.livingroom_bookcase_rgb_light
@@ -298,7 +298,7 @@ views:
         - entity: switch.gameroom_ps4
           icon: mdi:gamepad
           name: PS4
-        - entity: switch.gameroom_rgb_light
+        - entity: light.gameroom_rgb_light
           icon: mdi:light-switch
           name: RGB Lights
         image: /local/lovelace/images/pictures/gameroom.jpeg
