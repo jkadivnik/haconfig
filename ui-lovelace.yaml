@@ -144,12 +144,10 @@ views:
         type: glance
         show_name: false
         entities:
-        - entity: sensor.temperature_158d0002379148
-          name: Temperature
-        - entity: sensor.humidity_158d0002379148
-          name: Humidity
-        - entity: sensor.illumination_158d0001de7134
-          name: Light Strength
+          - entity: sensor.livingroom_harmony_activity
+            icon: mdi:remote
+          - entity: input_select.livingroom_harmony
+            icon: mdi:arrow-down-drop-circle
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -254,10 +252,12 @@ views:
         type: glance
         show_name: false
         entities:
-        - entity: sensor.livingroom_harmony_activity
-          icon: mdi:remote
-        - entity: input_select.livingroom_harmony
-          icon: mdi:arrow-down-drop-circle
+          - entity: sensor.temperature_158d0002379148
+            name: Temperature
+          - entity: sensor.humidity_158d0002379148
+            name: Humidity
+          - entity: sensor.illumination_158d0001de7134
+            name: Light Strength
     - type: conditional
       conditions:
       - entity: media_player.living_room_speaker
@@ -276,15 +276,6 @@ views:
           artwork_border: true
 - title: Gameroom
   cards:
-  - type: entity-button
-    name: Toggle Lights
-    icon: mdi:light-switch
-    tap_action: toggle
-    service: light.toggle
-    entity: light.gameroom_rgb_light
-    service_data:
-      entity_id: light.gameroom_rgb_light
-      rgb_color: [0, 0, 255]
   - type: vertical-stack
     cards:
     - type: custom:card-modder
