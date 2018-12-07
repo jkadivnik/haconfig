@@ -14,7 +14,7 @@ resources:
 - url: /local/slider-entity-row.js?v=1.0
   type: js
 
-background: center / cover no-repeat url("/local/lovelace/images/animated/background3.gif") fixed
+background: center / cover no-repeat url("/local/lovelace/images/pictures/background/black_gray_wall.jpeg") fixed
 
 title: Kadivnik@Home
 views:
@@ -239,7 +239,7 @@ views:
         type: picture-glance
         title: Kitchen
         entities:
-        - switch.plug_158d0001f292c0
+        - switch.plug_158d0002368861
         - entity: script.livingroom_kitchen_radio_toggle
           icon: mdi:radio
         image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg

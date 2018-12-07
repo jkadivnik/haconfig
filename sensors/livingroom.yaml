@@ -1,7 +1,7 @@
   platform: template
   sensors:
     livingroom_harmony_activity:
-      friendly_name: "Livingroom Harmony Status"
+      friendly_name: "Livingroom Remote Status"
       value_template: >-
         {% if is_state("remote.livingroom_hub", 'on') %}
           {{ states.remote.livingroom_hub.attributes.current_activity }}
