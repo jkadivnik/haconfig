@@ -1,4 +1,4 @@
   platform: group
-  name: Veranda Lights
+  name: Veranda Led Lights
   entities:
     - light.veranda_rgb_light

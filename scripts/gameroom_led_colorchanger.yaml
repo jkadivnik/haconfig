@@ -1,10 +1,29 @@
-  gameroom_rgb_colorchanger:
-    alias: Gameroom Colorchanger
+  generic_colorchanger:
+    alias: Generic Colorchanger
     sequence:
       - service: light.turn_on
         data_template:
-          entity_id: light.gameroom_rgb_light
+          entity_id: "{{ entity | string }}"
           color_name: "{{ states.input_select.led_colors.state | string }}"
       - service: input_select.select_next
         data:
           entity_id: input_select.led_colors
+  gameroom_rgb_colorchanger:
+    alias: Gameroom Colorchanger
+    sequence:
+      - service: script.generic_colorchanger
+        data:
+          entity: "light.gameroom_led_lights"
+  livingroom_rgb_colorchanger:
+    alias: Livingroom Colorchanger
+    sequence:
+      - service: script.generic_colorchanger
+        data:
+          entity: "light.livingroom_led_lights"
+  veranda_rgb_colorchanger:
+    alias: Veranda Colorchanger
+    sequence:
+      - service: script.generic_colorchanger
+        data:
+          entity: "light.veranda_led_lights"
+
