@@ -110,9 +110,6 @@ views:
         type: picture-glance
         title: Sofa
         entities:
-        - entity: switch.plug_158d0001f29250
-          icon: mdi:lightbulb
-          name: Sofalight
         - entity: switch.livingroom_telenet
           icon: mdi:television-box
           name: Telenet
@@ -134,6 +131,9 @@ views:
         - entity: switch.livingroom_ps4
           icon: mdi:gamepad
           name: PS4
+        - entity: switch.plug_158d0001f29250
+          icon: mdi:lightbulb
+          name: Sofalight
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -148,24 +148,26 @@ views:
             icon: mdi:remote
           - entity: input_select.livingroom_harmony
             icon: mdi:arrow-down-drop-circle
-    - type: horizontal-stack
-      cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          title: Led Color Changer
-          entities:
-            - entity: script.livingroom_rgb_colorchanger
-              tap_action: call-service
-              service: script.turn_on
-              icon: mdi:invert-colors
-            - entity: script.livingroom_rgb_colorchanger_off
-              tap_action: call-service
-              service: script.turn_on
-              icon: mdi:water-off
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        title: Led Color Changer
+        entities:
+          - entity: script.livingroom_rgb_colorchanger
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:invert-colors
+            show_state: false
+            show_name: false
+          - entity: script.livingroom_rgb_colorchanger_off
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:water-off
+            show_state: false
+            show_name: false
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -221,20 +223,26 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: glance
-        title: TV
+        title: Volume
         entities:
         - entity: script.livingroom_volume_down
           icon: mdi:volume-low
           tap_action: call-service
           service: script.turn_on
+          show_state: false
+          show_name: false
         - entity: script.livingroom_volume_mute
           icon: mdi:volume-off
           tap_action: call-service
           service: script.turn_on
+          show_state: false
+          show_name: false
         - entity: script.livingroom_volume_up
           icon: mdi:volume-high
           tap_action: call-service
           service: script.turn_on
+          show_state: false
+          show_name: false
         image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -350,6 +358,46 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        title: Led Color Changer
+        entities:
+          - entity: script.gameroom_rgb_colorchanger
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:invert-colors
+            show_state: false
+            show_name: false
+          - entity: script.gameroom_rgb_colorchanger_off
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:water-off
+            show_state: false
+            show_name: false
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        title: Led Color Changer
+        entities:
+          - entity: script.gameroom_rgb_colorchanger
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:invert-colors
+            show_state: false
+            show_name: false
+          - entity: script.gameroom_rgb_colorchanger_off
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:water-off
+            show_state: false
+            show_name: false
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -434,6 +482,26 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: glance
+      title: Led Color Changer
+      entities:
+        - entity: script.veranda_rgb_colorchanger
+          tap_action: call-service
+          service: script.turn_on
+          icon: mdi:invert-colors
+          show_state: false
+          show_name: false
+        - entity: script.veranda_rgb_colorchanger_off
+          tap_action: call-service
+          service: script.turn_on
+          icon: mdi:water-off
+          show_state: false
+          show_name: false
+  - type: custom:card-modder
+    style:
+      border-radius: 10px
+      box-shadow: 3px 3px rgba(0,0,0,0.4)
+    card:
+      type: glance
       show_name: false
       entities:
       - entity: sensor.temperature_158d00020f4dd3
@@ -442,30 +510,6 @@ views:
         name: Humidity
 - title: Hallway
   cards:
-    - type: vertical-stack
-      cards:
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: picture-glance
-            title: Entrance
-            entities:
-            - entity: light.gateway_light_7811dcb9c795
-            image: /local/lovelace/images/pictures/entrance.jpeg
-            aspect_ratio: 16:9
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            show_name: false
-            entities:
-            - entity: binary_sensor.smoke_sensor_158d000279ddbc
-              name: Smoke
-              icon: mdi:smoke-detector
     - type: vertical-stack
       cards:
         - type: custom:card-modder
@@ -491,6 +535,50 @@ views:
                 name: Motion
               - entity: sensor.illumination_7811dcb9c795
                 name: Illumination
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            title: Led Color Changer
+            entities:
+              - entity: script.upstairs_rgb_colorchanger
+                tap_action: call-service
+                service: script.turn_on
+                icon: mdi:invert-colors
+                show_state: false
+                show_name: false
+              - entity: script.upstairs_rgb_colorchanger_off
+                tap_action: call-service
+                service: script.turn_on
+                icon: mdi:water-off
+                show_state: false
+                show_name: false
+    - type: vertical-stack
+      cards:
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: picture-glance
+            title: Entrance
+            entities:
+            - entity: light.gateway_light_7811dcb9c795
+            image: /local/lovelace/images/pictures/entrance.jpeg
+            aspect_ratio: 16:9
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            show_name: false
+            entities:
+            - entity: binary_sensor.smoke_sensor_158d000279ddbc
+              name: Smoke
+              icon: mdi:smoke-detector
 - title: Bathroom
   cards:
   - type: custom:card-modder
