@@ -21,6 +21,8 @@
               purple
             {% elif is_state("input_select.led_light_colors", "white") %}
               white
+            {% else %}
+              green
             {% endif %}
       - service: input_select.select_next
         data:
