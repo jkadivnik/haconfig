@@ -9,4 +9,4 @@
     sequence:
       - service: light.turn_off
         data:
-          entity: light.gameroom_led_lights
+          entity_id: light.gameroom_led_lights
