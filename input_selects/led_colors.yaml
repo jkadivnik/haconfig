@@ -5,7 +5,7 @@ led_colors:
     - "blue"
     - "yellow"
     - "green"
-    - "puple"
+    - "purple"
     - "white"
   initial: "blue"
   icon: mdi:palette
