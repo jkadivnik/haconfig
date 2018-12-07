@@ -1,11 +1,11 @@
 led_colors:
   name: Led Light Colors
   options:
-    - "red"
-    - "blue"
-    - "yellow"
-    - "green"
-    - "purple"
-    - "white"
-  initial: "blue"
+    - red
+    - blue
+    - yellow
+    - green
+    - purple
+    - white
+  initial: blue
   icon: mdi:palette
