@@ -26,4 +26,10 @@
       - service: script.generic_colorchanger
         data:
           entity: "light.veranda_led_lights"
+  upstairs_rgb_colorchanger:
+    alias: Upstairs Colorchanger
+    sequence:
+      - service: script.generic_colorchanger
+        data:
+          entity: "light.gateway_light_7811dcb9c795"
 
