@@ -154,18 +154,17 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: glance
-        title: Led Color Changer
         show_state: false
         show_name: false
         entities:
           - entity: script.livingroom_rgb_colorchanger
             tap_action: call-service
             service: script.turn_on
-            icon: mdi:invert-colors
+            icon: mdi:palette
           - entity: script.livingroom_rgb_colorchanger_off
             tap_action: call-service
             service: script.turn_on
-            icon: mdi:water-off
+            icon: mdi:close-circle-outline
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -358,36 +357,17 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: glance
-        title: Led Color Changer
         show_state: false
         show_name: false
         entities:
           - entity: script.gameroom_rgb_colorchanger
             tap_action: call-service
             service: script.turn_on
-            icon: mdi:invert-colors
+            icon: mdi:palette
           - entity: script.gameroom_rgb_colorchanger_off
             tap_action: call-service
             service: script.turn_on
-            icon: mdi:water-off
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        title: Led Color Changer
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.gameroom_rgb_colorchanger
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:invert-colors
-          - entity: script.gameroom_rgb_colorchanger_off
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:water-off
+            icon: mdi:close-circle-outline
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -472,18 +452,17 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: glance
-      title: Led Color Changer
       show_state: false
       show_name: false
       entities:
         - entity: script.veranda_rgb_colorchanger
           tap_action: call-service
           service: script.turn_on
-          icon: mdi:invert-colors
+          icon: mdi:palette
         - entity: script.veranda_rgb_colorchanger_off
           tap_action: call-service
           service: script.turn_on
-          icon: mdi:water-off
+          icon: mdi:close-circle-outline
   - type: custom:card-modder
     style:
       border-radius: 10px
@@ -529,18 +508,17 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: glance
-            title: Led Color Changer
             show_state: false
             show_name: false
             entities:
               - entity: script.upstairs_rgb_colorchanger
                 tap_action: call-service
                 service: script.turn_on
-                icon: mdi:invert-colors
+                icon: mdi:palette
               - entity: script.upstairs_rgb_colorchanger_off
                 tap_action: call-service
                 service: script.turn_on
-                icon: mdi:water-off
+                icon: mdi:close-circle-outline
     - type: vertical-stack
       cards:
         - type: custom:card-modder
