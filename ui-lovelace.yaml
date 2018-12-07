@@ -213,6 +213,17 @@ views:
           icon: mdi:volume-high
         image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Turn Off Livingroom
+        icon: mdi:close-circle-outline
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.livingroom_all_off
     - type: conditional
       conditions:
       - entity: media_player.living_room_video
@@ -368,6 +379,17 @@ views:
         - entity: binary_sensor.natgas_sensor_158d000204ae2a
           name: Gas
           icon: mdi:gas-station
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Turn Off Gameroom
+        icon: mdi:close-circle-outline
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.gameroom_all_off
 - title: Veranda
   cards:
   - type: custom:card-modder

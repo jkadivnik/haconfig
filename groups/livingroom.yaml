@@ -58,3 +58,10 @@ Livingroom:
     - automation.livingroom_watch_television
     - automation.kitchen_music_playing
     - automation.kitchen_music_turned_off
+    - script.livingroom_kitchen_radio_toggle
+    - script.livingroom_all_off
+    - script.livingroom_rgb_colorchanger
+    - script.livingroom_kodi_toggle
+    - script.livingroom_volume_down
+    - script.livingroom_volume_mute
+    - script.livingroom_volume_up

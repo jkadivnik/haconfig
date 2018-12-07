@@ -8,3 +8,4 @@ Upstairs:
     - automation.upstairs_motion_sensor_battery
     - automation.upstairs_nightlight_motion
     - automation.upstairs_no_motion
+    - script.upstairs_all_off
