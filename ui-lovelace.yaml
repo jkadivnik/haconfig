@@ -155,19 +155,17 @@ views:
       card:
         type: glance
         title: Led Color Changer
+        show_state: false
+        show_name: false
         entities:
           - entity: script.livingroom_rgb_colorchanger
             tap_action: call-service
             service: script.turn_on
             icon: mdi:invert-colors
-            show_state: false
-            show_name: false
           - entity: script.livingroom_rgb_colorchanger_off
             tap_action: call-service
             service: script.turn_on
             icon: mdi:water-off
-            show_state: false
-            show_name: false
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -224,25 +222,21 @@ views:
       card:
         type: glance
         title: Volume
+        show_state: false
+        show_name: false
         entities:
         - entity: script.livingroom_volume_down
           icon: mdi:volume-low
           tap_action: call-service
           service: script.turn_on
-          show_state: false
-          show_name: false
         - entity: script.livingroom_volume_mute
           icon: mdi:volume-off
           tap_action: call-service
           service: script.turn_on
-          show_state: false
-          show_name: false
         - entity: script.livingroom_volume_up
           icon: mdi:volume-high
           tap_action: call-service
           service: script.turn_on
-          show_state: false
-          show_name: false
         image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -365,19 +359,17 @@ views:
       card:
         type: glance
         title: Led Color Changer
+        show_state: false
+        show_name: false
         entities:
           - entity: script.gameroom_rgb_colorchanger
             tap_action: call-service
             service: script.turn_on
             icon: mdi:invert-colors
-            show_state: false
-            show_name: false
           - entity: script.gameroom_rgb_colorchanger_off
             tap_action: call-service
             service: script.turn_on
             icon: mdi:water-off
-            show_state: false
-            show_name: false
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -385,19 +377,17 @@ views:
       card:
         type: glance
         title: Led Color Changer
+        show_state: false
+        show_name: false
         entities:
           - entity: script.gameroom_rgb_colorchanger
             tap_action: call-service
             service: script.turn_on
             icon: mdi:invert-colors
-            show_state: false
-            show_name: false
           - entity: script.gameroom_rgb_colorchanger_off
             tap_action: call-service
             service: script.turn_on
             icon: mdi:water-off
-            show_state: false
-            show_name: false
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -483,19 +473,17 @@ views:
     card:
       type: glance
       title: Led Color Changer
+      show_state: false
+      show_name: false
       entities:
         - entity: script.veranda_rgb_colorchanger
           tap_action: call-service
           service: script.turn_on
           icon: mdi:invert-colors
-          show_state: false
-          show_name: false
         - entity: script.veranda_rgb_colorchanger_off
           tap_action: call-service
           service: script.turn_on
           icon: mdi:water-off
-          show_state: false
-          show_name: false
   - type: custom:card-modder
     style:
       border-radius: 10px
@@ -542,19 +530,17 @@ views:
           card:
             type: glance
             title: Led Color Changer
+            show_state: false
+            show_name: false
             entities:
               - entity: script.upstairs_rgb_colorchanger
                 tap_action: call-service
                 service: script.turn_on
                 icon: mdi:invert-colors
-                show_state: false
-                show_name: false
               - entity: script.upstairs_rgb_colorchanger_off
                 tap_action: call-service
                 service: script.turn_on
                 icon: mdi:water-off
-                show_state: false
-                show_name: false
     - type: vertical-stack
       cards:
         - type: custom:card-modder
