@@ -11,15 +11,15 @@
           color_name: >-
             {% if is_state("input_select.led_light_colors", "red") %}
               red
-            {% else if is_state("input_select.led_light_colors", "blue") %}
+            {% elif is_state("input_select.led_light_colors", "blue") %}
               blue
-            {% else if is_state("input_select.led_light_colors", "yellow") %}
+            {% elif is_state("input_select.led_light_colors", "yellow") %}
               yellow
-            {% else if is_state("input_select.led_light_colors", "green") %}
+            {% elif is_state("input_select.led_light_colors", "green") %}
               green
-            {% else if is_state("input_select.led_light_colors", "purple") %}
+            {% elif is_state("input_select.led_light_colors", "purple") %}
               purple
-            {% else if is_state("input_select.led_light_colors", "white") %}
+            {% elif is_state("input_select.led_light_colors", "white") %}
               white
             {% endif %}
       - service: input_select.select_next
