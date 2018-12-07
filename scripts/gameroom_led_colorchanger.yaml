@@ -1,6 +1,10 @@
   gameroom_rgb_colorchanger:
     alias: Gameroom Colorchanger
     sequence:
+      - service: logbook.log
+        data_template:
+          name: "Color select"
+          message: "Selected the {{ states.input_select.led_light_colors.state | string }} color"
       - service: light.turn_on
         data_template:
           entity_id: light.gameroom_rgb_light
