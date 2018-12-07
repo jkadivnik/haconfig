@@ -5,7 +5,7 @@
         data:
           entity: "light.gameroom_led_lights"
   gameroom_rgb_colorchanger_off:
-    alias: Gameroom Colorchanger Off
+    alias: Gameroom Led Lights Off
     sequence:
       - service: light.turn_off
         data:

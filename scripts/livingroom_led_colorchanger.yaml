@@ -5,7 +5,7 @@
         data:
           entity: "light.livingroom_led_lights"
   livingroom_rgb_colorchanger_off:
-    alias: Livingroom Colorchanger Off
+    alias: Livingroom Led Lights Off
     sequence:
       - service: light.turn_off
         data:
