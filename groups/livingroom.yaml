@@ -61,6 +61,7 @@ Livingroom:
     - script.livingroom_kitchen_radio_toggle
     - script.livingroom_all_off
     - script.livingroom_rgb_colorchanger
+    - script.livingroom_rgb_colorchanger_off
     - script.livingroom_kodi_toggle
     - script.livingroom_volume_down
     - script.livingroom_volume_mute

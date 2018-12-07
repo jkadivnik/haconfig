@@ -9,3 +9,5 @@ Upstairs:
     - automation.upstairs_nightlight_motion
     - automation.upstairs_no_motion
     - script.upstairs_all_off
+    - script.upstairs_rgb_colorchanger
+    - script.upstairs_rgb_colorchanger_off

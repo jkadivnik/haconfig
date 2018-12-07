@@ -148,6 +148,28 @@ views:
             icon: mdi:remote
           - entity: input_select.livingroom_harmony
             icon: mdi:arrow-down-drop-circle
+    - type: horizontal-stack
+      cards:
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          entity: script.livingroom_rgb_colorchanger
+          tap_action: call-service
+          service: script.turn_on
+          icon: mdi:invert-colors
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          entity: script.livingroom_rgb_colorchanger_off
+          tap_action: call-service
+          service: script.turn_on
+          icon: mdi:water-off
     - type: conditional
       conditions:
       - entity: media_player.kodiliving

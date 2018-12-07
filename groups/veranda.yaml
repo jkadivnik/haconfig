@@ -16,3 +16,4 @@ Veranda:
     - automation.veranda_temperature_sensor_battery
     - script.veranda_all_off
     - script.veranda_rgb_colorchanger
+    - script.veranda_rgb_colorchanger_off

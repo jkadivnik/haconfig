@@ -38,6 +38,7 @@ Gameroom:
     - automation.gas_detected
     - script.gameroom_all_off
     - script.gameroom_rgb_colorchanger
+    - script.gameroom_rgb_colorchanger_off
     - script.gameroom_kodi_toggle
     - script.gameroom_volume_down
     - script.gameroom_volume_mute
