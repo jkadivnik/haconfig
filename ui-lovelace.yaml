@@ -142,29 +142,35 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: glance
+        show_state: false
         show_name: false
         entities:
-          - entity: sensor.livingroom_harmony_activity
-            icon: mdi:remote
-          - entity: input_select.livingroom_harmony
-            icon: mdi:arrow-down-drop-circle
+          - entity: script.livingroom_volume_down
+            icon: mdi:volume-low
+            tap_action: call-service
+            service: script.turn_on
+          - entity: script.livingroom_volume_mute
+            icon: mdi:volume-off
+            tap_action: call-service
+            service: script.turn_on
+          - entity: script.livingroom_volume_up
+            icon: mdi:volume-high
+            tap_action: call-service
+            service: script.turn_on
+        image: /local/lovelace/images/pictures/cinema.jpeg
+        aspect_ratio: 16:9
     - type: custom:card-modder
       style:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: glance
-        show_state: false
         show_name: false
         entities:
-          - entity: script.livingroom_rgb_colorchanger
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:palette
-          - entity: script.livingroom_rgb_colorchanger_off
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:close-circle-outline
+          - entity: sensor.livingroom_harmony_activity
+            icon: mdi:remote
+          - entity: input_select.livingroom_harmony
+            icon: mdi:arrow-down-drop-circle
     - type: conditional
       conditions:
       - entity: media_player.kodiliving
@@ -213,30 +219,6 @@ views:
         - light.livingroom_bookcase_rgb_light
         - light.livingroom_dressoir_rgb_light
         image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        title: Volume
-        show_state: false
-        show_name: false
-        entities:
-        - entity: script.livingroom_volume_down
-          icon: mdi:volume-low
-          tap_action: call-service
-          service: script.turn_on
-        - entity: script.livingroom_volume_mute
-          icon: mdi:volume-off
-          tap_action: call-service
-          service: script.turn_on
-        - entity: script.livingroom_volume_up
-          icon: mdi:volume-high
-          tap_action: call-service
-          service: script.turn_on
-        image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
       style:
@@ -294,6 +276,23 @@ views:
             name: Humidity
           - entity: sensor.illumination_158d0001de7134
             name: Light Strength
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: script.livingroom_rgb_colorchanger
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:palette
+          - entity: script.livingroom_rgb_colorchanger_off
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:close-circle-outline
     - type: conditional
       conditions:
       - entity: media_player.living_room_speaker
