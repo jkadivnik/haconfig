@@ -105,9 +105,18 @@ history_graph:
 logbook:
 
 logger:
-  default: info
+  default: error
   logs:
     homeassistant.components.device_tracker: error
+    homeassistant.components.xiaomi_aqara: debug
+    homeassistant.components.sensor: info
+    homeassistant.components.switch: info
+    homeassistant.components.automation: error
+    homeassistant.components.scripts: error
+    homeassistant.components.group: error
+    homeassistant.components.remote: error
+    homeassistant.components.light: error
+    homeassistant.components.media_player: error
 
 # Enables a map showing the location of tracked devices
 map:

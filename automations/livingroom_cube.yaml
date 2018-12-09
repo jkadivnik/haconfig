@@ -2,7 +2,7 @@
   - alias: Livingroom Cube Volume
     trigger:
       platform: event
-      event_type: cube_action
+      event_type: xiaomi_aqara.cube_action
       event_data:
         entity_id: binary_sensor.cube_158d00010fd151
         action_type: rotate
@@ -30,7 +30,7 @@
   - alias: Livingroom Cube Pause
     trigger:
       platform: event
-      event_type: cube_action
+      event_type: xiaomi_aqara.cube_action
       event_data:
         entity_id: binary_sensor.cube_158d00010fd151
         action_type: shake_air

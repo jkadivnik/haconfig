@@ -2,7 +2,7 @@
   - alias: Gameroom Cube Volume
     trigger:
       platform: event
-      event_type: cube_action
+      event_type: xiaomi_aqara.cube_action
       event_data:
         entity_id: binary_sensor.cube_158d000118421f
         action_type: rotate
@@ -20,7 +20,7 @@
   - alias: Gameroom Cube Pause
     trigger:
       platform: event
-      event_type: cube_action
+      event_type: xiaomi_aqara.cube_action
       event_data:
         entity_id: binary_sensor.cube_158d000118421f
         action_type: shake_air
