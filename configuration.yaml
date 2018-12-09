@@ -107,7 +107,7 @@ logbook:
 logger:
   default: info
   logs:
-    homeassistant.components.device_tracker: debug
+    homeassistant.components.device_tracker: error
 
 # Enables a map showing the location of tracked devices
 map:
