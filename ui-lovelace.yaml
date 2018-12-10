@@ -350,23 +350,6 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.gameroom_rgb_colorchanger
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:palette
-          - entity: script.gameroom_rgb_colorchanger_off
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:close-circle-outline
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -394,9 +377,39 @@ views:
         card:
           type: picture-glance
           title: Work Desk
+          image: /local/lovelace/images/pictures/workdesk.jpeg
+          aspect_ratio: 16:9
           entities:
             - entity: switch.gameroom_desk_light
               icon: mdi:lightbulb
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_state: false
+          show_name: false
+          entities:
+            - entity: script.gameroom_rgb_colorchanger
+              tap_action: call-service
+              service: script.turn_on
+              icon: mdi:palette
+            - entity: script.gameroom_rgb_colorchanger_off
+              tap_action: call-service
+              service: script.turn_on
+              icon: mdi:close-circle-outline
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          name: Turn Off Gameroom
+          icon: mdi:close-circle-outline
+          tap_action: call-service
+          service: script.turn_on
+          entity: script.gameroom_all_off
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -432,17 +445,6 @@ views:
         - entity: binary_sensor.natgas_sensor_158d000204ae2a
           name: Gas
           icon: mdi:gas-station
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Turn Off Gameroom
-        icon: mdi:close-circle-outline
-        tap_action: call-service
-        service: script.turn_on
-        entity: script.gameroom_all_off
 - title: Veranda
   cards:
   - type: custom:card-modder
