@@ -7,6 +7,8 @@
           entity_id: remote.gameroom_hub
           command:
             - VolumeUp
+            - VolumeUp
+            - VolumeUp
           device: 58691919
   gameroom_volume_down:
     alias: Gameroom Volume Down

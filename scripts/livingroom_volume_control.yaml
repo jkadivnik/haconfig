@@ -13,8 +13,6 @@
           entity_id: remote.livingroom_hub
           command:
             - VolumeUp
-            - VolumeUp
-            - VolumeUp
           device: 54449337
   livingroom_volume_down:
     alias: Livingroom Volume Down
