@@ -7,7 +7,15 @@
           entity_id: remote.livingroom_hub
           command:
             - VolumeUp
-          device: 54449333, 54449337
+          device: 54449333
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          command:
+            - VolumeUp
+            - VolumeUp
+            - VolumeUp
+          device: 54449337
   livingroom_volume_down:
     alias: Livingroom Volume Down
     sequence:
@@ -17,6 +25,12 @@
           command:
             - VolumeDown
           device: 54449333
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          command:
+            - VolumeDown
+          device: 54449337
   livingroom_volume_mute:
     alias: Livingroom Volume Mute
     sequence:
@@ -25,4 +39,10 @@
           entity_id: remote.livingroom_hub
           command:
             - Mute
-          device: 54449333, 54449337
+          device: 54449333
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          command:
+            - Mute
+          device: 54449337

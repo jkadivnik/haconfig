@@ -1,6 +1,5 @@
 Livingroom:
   entities:
-    - sensor.livingroom_harmony_activity
     - input_select.livingroom_harmony
     - input_select.livingroom_mode
     - remote.livingroom_hub
@@ -66,3 +65,4 @@ Livingroom:
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
     - script.livingroom_volume_up
+    - group.livingroom_switches

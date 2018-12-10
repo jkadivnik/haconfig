@@ -1,0 +1,42 @@
+  - alias: Toggle radio in the morning
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.switch_158d00026bb099
+        click_type: single
+    condition:
+      condition: time
+      after: '06:00:00'
+      before: '10:00:00'
+    action:
+      service: script.turn_on
+      data:
+        entity_id: script.livingroom_kitchen_radio_toggle
+  - alias: Toggle sofa plug in the evening
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.switch_158d00026bb099
+        click_type: single
+    condition:
+      condition: time
+      after: '18:00:00'
+      before: '23:00:00'
+    action:
+      service: switch.toggle
+      data:
+        entity_id: switch.plug_158d0001f29250
+  - alias: Turn on alarm
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.switch_158d00026bb099
+        click_type: long_click_press
+    action:
+      service: variable.set_variable
+      data:
+        variable: alarm_armed
+        value_template: "{{ not (variable.alarm_armed) | string }}"
