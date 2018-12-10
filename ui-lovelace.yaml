@@ -496,6 +496,7 @@ views:
           card:
             type: glance
             name: Upstairs
+            show_name: false
             entities:
               - entity: binary_sensor.motion_sensor_158d000276e199
                 name: Motion

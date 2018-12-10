@@ -108,9 +108,9 @@ logger:
   default: error
   logs:
     homeassistant.components.device_tracker: error
-    homeassistant.components.xiaomi_aqara: debug
-    homeassistant.components.sensor: info
-    homeassistant.components.switch: info
+    homeassistant.components.xiaomi_aqara: error
+    homeassistant.components.sensor: error
+    homeassistant.components.switch: error
     homeassistant.components.automation: error
     homeassistant.components.scripts: error
     homeassistant.components.group: error
