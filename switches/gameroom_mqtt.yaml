@@ -1,7 +1,7 @@
-  - platform: mqtt
-    name: "Gameroom Desk Light"
-    state_topic: "stat/bureau/desklight/POWER"
-    command_topic: "cmnd/bureau/desklight/POWER"
-    payload_on: "ON"
-    payload_off: "OFF"
-    retain: true
+  platform: mqtt
+  name: "Gameroom Desk Light"
+  state_topic: "stat/bureau/desklight/POWER"
+  command_topic: "cmnd/bureau/desklight/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
