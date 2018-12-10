@@ -27,6 +27,10 @@ Livingroom:
     - switch.livingroom_chromecast
     - switch.livingroom_telenet
     - switch.livingroom_kodi
+    - switch.livingroom_volume_down
+    - switch.livingroom_volume_mute
+    - switch.livingroom_volume_up
+    - switch.livingroom_kitchen_radio_toggle
     - switch.plug_158d0002368861
     - switch.plug_158d0001f29250
     - switch.plug_158d0001f292c0

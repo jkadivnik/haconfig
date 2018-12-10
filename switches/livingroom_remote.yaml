@@ -130,3 +130,12 @@
         entity_id: input_select.livingroom_harmony
         data:
           option: "None : -1"
+    livingroom_kitchen_radio_toggle:
+      friendly_name: "Livingroom Kitchen Radio Toggle"
+      value_template: true
+      turn_on:
+        service: script.turn_on
+        entity_id: script.livingroom_kitchen_radio_toggle
+      turn_off:
+        service: script.turn_on
+        entity_id: script.livingroom_kitchen_radio_toggle

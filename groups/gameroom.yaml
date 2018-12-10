@@ -22,6 +22,9 @@ Gameroom:
     - switch.gameroom_pc_sound
     - switch.gameroom_led_light
     - switch.gameroom_desk_light
+    - switch.gameroom_volume_down
+    - switch.gameroom_volume_mute
+    - switch.gameroom_volume_up
     - automation.gameroom_cube_pause
     - automation.gameroom_cube_sensor_battery
     - automation.gameroom_cube_volume

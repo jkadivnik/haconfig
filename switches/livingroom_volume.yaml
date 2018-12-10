@@ -1,0 +1,29 @@
+  platform: template
+  switches:
+    livingroom_volume_up:
+      friendly_name: "livingroom Volume Up"
+      value_template: true
+      turn_on:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_up
+      turn_off:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_up
+    livingroom_volume_down:
+      friendly_name: "livingroom Volume Down"
+      value_template: true
+      turn_on:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_down
+      turn_off:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_down
+    livingroom_volume_mute:
+      friendly_name: "livingroom Volume Mute"
+      value_template: true
+      turn_on:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_mute
+      turn_off:
+        service: script.turn_on
+        entity_id: script.livingroom_volume_mute

@@ -131,9 +131,12 @@ views:
         - entity: switch.livingroom_ps4
           icon: mdi:gamepad
           name: PS4
+        - entity: switch.livingroom_tuner
+          icon: mdi:radio
+          name: Tuner
         - entity: switch.plug_158d0001f29250
           icon: mdi:lightbulb
-          name: Sofalight
+          name: Tuner
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -157,8 +160,6 @@ views:
             icon: mdi:volume-high
             tap_action: call-service
             service: script.turn_on
-        image: /local/lovelace/images/pictures/cinema.jpeg
-        aspect_ratio: 16:9
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -258,7 +259,7 @@ views:
         title: Kitchen
         entities:
         - switch.plug_158d0002368861
-        - entity: script.livingroom_kitchen_radio_toggle
+        - entity: switch.livingroom_kitchen_radio_toggle
           icon: mdi:radio
         image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
         aspect_ratio: 16:9
@@ -420,11 +421,11 @@ views:
         type: picture-glance
         title: TV
         entities:
-        - entity: script.gameroom_volume_down
+        - entity: switch.gameroom_volume_down
           icon: mdi:volume-low
-        - entity: script.gameroom_volume_mute
+        - entity: switch.gameroom_volume_mute
           icon: mdi:volume-off
-        - entity: script.gameroom_volume_up
+        - entity: switch.gameroom_volume_up
           icon: mdi:volume-high
         image: /local/lovelace/images/pictures/cinema.jpeg
         aspect_ratio: 16:9
