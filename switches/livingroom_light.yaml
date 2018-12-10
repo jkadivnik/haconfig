@@ -2,14 +2,12 @@
   switches:
     livingroom_motion_light_variable_switch:
       friendly_name: Livingroom Motion Light Variable
-      value_template: "{{ is_state('variable.livingroom_light_toggle', 'on') }}"
+      value_template: "{{ is_state('input_boolean.livingroom_light_toggle', 'on') }}"
       turn_on:
-        service: variable.set_variable
+        service: input_boolean.turn_on
         data:
-          variable: livingroom_light_toggle
-          value: 'on'
+          entity_id: input_boolean.livingroom_light_toggle
       turn_off:
-        service: variable.set_variable
+        service: input_boolean.turn_off
         data:
-          variable: livingroom_light_toggle
-          value: 'off'
+          entity_id: input_boolean.livingroom_light_toggle

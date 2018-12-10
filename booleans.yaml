@@ -2,3 +2,8 @@
     name: Alarm Armed
     initial: off
     icon: mdi:home-heart
+  livingroom_light_toggle:
+    name: Livingroom Light Toggle
+    icon: mdi:light-switch
+    initial: off
+

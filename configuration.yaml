@@ -142,7 +142,7 @@ input_select: !include_dir_merge_named input_selects/
 input_boolean: !include booleans.yaml
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
-variable: !include variables.yaml
+#variable: !include variables.yaml
 
 # Mqtt
 mqtt:
