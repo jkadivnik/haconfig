@@ -10,6 +10,7 @@
             - VolumeUp
             - VolumeUp
           device: 58691919
+          delay_secs: 0.6
   gameroom_volume_down:
     alias: Gameroom Volume Down
     sequence:
@@ -19,6 +20,7 @@
           command:
             - VolumeDown
           device: 58691919
+          delay_secs: 0.6
   gameroom_volume_mute:
     alias: Gameroom Volume Mute
     sequence:
@@ -28,3 +30,4 @@
           command:
             - Mute
           device: 58691919
+          delay_secs: 0.6
