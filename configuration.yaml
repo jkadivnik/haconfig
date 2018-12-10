@@ -108,11 +108,11 @@ logger:
   default: error
   logs:
     homeassistant.components.device_tracker: error
-    homeassistant.components.xiaomi_aqara: debug
+    homeassistant.components.xiaomi_aqara: error
     homeassistant.components.sensor: error
     homeassistant.components.switch: error
     homeassistant.components.automation: debug
-    homeassistant.components.scripts: debug
+    homeassistant.components.scripts: error
     homeassistant.components.group: error
     homeassistant.components.remote: error
     homeassistant.components.light: error
@@ -139,6 +139,7 @@ light: !include_dir_list lights/
 remote: !include remotes.yaml
 switch: !include_dir_list switches/
 input_select: !include_dir_merge_named input_selects/
+input_boolean: !include booleans.yaml
 #camera: !include cameras.yaml
 scene: !include_dir_merge_list scenes/
 variable: !include variables.yaml

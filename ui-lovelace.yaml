@@ -387,6 +387,18 @@ views:
           icon: mdi:movie
   - type: vertical-stack
     cards:
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-glance
+          title: Work Desk
+          entities:
+            - entity: switch.gameroom_desk_light
+              icon: mdi:lightbulb
+  - type: vertical-stack
+    cards:
     - type: custom:card-modder
       style:
         border-radius: 10px

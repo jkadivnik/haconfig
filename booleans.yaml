@@ -1,0 +1,4 @@
+  alarm_armed:
+    name: Alarm Armed
+    initial: off
+    icon: mdi:home-heart

@@ -21,6 +21,7 @@ Gameroom:
     - switch.gameroom_ps4
     - switch.gameroom_pc_sound
     - switch.gameroom_led_light
+    - switch.gameroom_desk_light
     - automation.gameroom_cube_pause
     - automation.gameroom_cube_sensor_battery
     - automation.gameroom_cube_volume

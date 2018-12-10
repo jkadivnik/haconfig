@@ -3,8 +3,3 @@
     attributes:
       icon: mdi:light-switch
     restore: true
-  alarm_armed:
-    value: false
-    attributes:
-      icon: mdi:home-heart
-    restore: true
