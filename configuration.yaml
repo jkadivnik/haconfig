@@ -111,7 +111,7 @@ logger:
     homeassistant.components.xiaomi_aqara: error
     homeassistant.components.sensor: error
     homeassistant.components.switch: error
-    homeassistant.components.automation: error
+    homeassistant.components.automation: debug
     homeassistant.components.scripts: debug
     homeassistant.components.group: error
     homeassistant.components.remote: error
