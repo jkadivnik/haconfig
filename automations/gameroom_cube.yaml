@@ -7,9 +7,9 @@
         entity_id: binary_sensor.cube_158d000118421f
         action_type: rotate
     action:
-      service: remote.send_command
+      service: script.generic_volume_control
       data_template:
-        entity_id: remote.gameroom_hub
+        remote_hub: remote.gameroom_hub
         device: 58691919
         command: >
           {% if trigger.event.data.action_value | float > 0 %}
@@ -17,6 +17,7 @@
           {% elif trigger.event.data.action_value | float < 0 %}
             VolumeUp
           {% endif %}
+        counter: {{ trigger.event.data.action_value // 5 }}
   - alias: Gameroom Cube Pause
     trigger:
       platform: event
