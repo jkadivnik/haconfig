@@ -7,26 +7,16 @@
         entity_id: binary_sensor.cube_158d00010fd151
         action_type: rotate
     action:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data_template:
-          entity_id: remote.livingroom_hub
+          remote_hub: remote.livingroom_hub
           device: 54449337
-          command: >
-            {% if trigger.event.data.action_value | float > 0 %}
-              VolumeDown
-            {% elif trigger.event.data.action_value | float < 0 %}
-              VolumeUp
-            {% endif %}
-      - service: remote.send_command
+          action_value: "{{ trigger.event.data.action_value }}"
+      - service: script.generic_volume_control
         data_template:
-          entity_id: remote.livingroom_hub
+          remote_hub: remote.livingroom_hub
           device: 54449333
-          command: >
-            {% if trigger.event.data.action_value | float > 0 %}
-              VolumeDown
-            {% elif trigger.event.data.action_value | float < 0 %}
-              VolumeUp
-            {% endif %}
+          action_value: "{{ trigger.event.data.action_value }}"
   - alias: Livingroom Cube Pause
     trigger:
       platform: event

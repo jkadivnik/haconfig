@@ -11,13 +11,7 @@
       data_template:
         remote_hub: remote.gameroom_hub
         device: 58691919
-        command: >
-          {% if trigger.event.data.action_value | float > 0 %}
-            VolumeDown
-          {% elif trigger.event.data.action_value | float < 0 %}
-            VolumeUp
-          {% endif %}
-        counter: {{ trigger.event.data.action_value // 5 }}
+        action_value: "{{ trigger.event.data.action_value }}"
   - alias: Gameroom Cube Pause
     trigger:
       platform: event

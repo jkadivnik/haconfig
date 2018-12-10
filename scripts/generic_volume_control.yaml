@@ -4,9 +4,11 @@
     sequence:
       - service: remote.send_command
         data_template:
-          entity_id: {{ remote_hub }}
-          device: {{ device }}
-          command:
-            {% for i in range (0, counter) %}
-              {{ command }}
-            {% endfor %}
+          entity_id: "{{ remote_hub }}"
+          device: "{{ device }}"
+          command: >
+            {% if action_value | float > 0 %}
+            VolumeDown
+            {% elif action_value | float < 0 %}
+            VolumeUp
+            {% endif %}
