@@ -323,7 +323,7 @@ views:
         title: Gameroom
         entities:
         - entity: switch.gameroom_pc_sound
-          icon: mdi:flash
+          icon: mdi:surround-sound
           name: Gaming
         - entity: switch.gameroom_kodi
           icon: mdi:movie
