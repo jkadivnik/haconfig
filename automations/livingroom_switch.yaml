@@ -39,4 +39,4 @@
       service: variable.set_variable
       data:
         variable: alarm_armed
-        value_template: "{{ not (variable.alarm_armed) | string }}"
+        value_template: "{{ not variable.alarm_armed | boolean }}"

@@ -112,7 +112,7 @@ logger:
     homeassistant.components.sensor: error
     homeassistant.components.switch: error
     homeassistant.components.automation: error
-    homeassistant.components.scripts: error
+    homeassistant.components.scripts: debug
     homeassistant.components.group: error
     homeassistant.components.remote: error
     homeassistant.components.light: error

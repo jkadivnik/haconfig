@@ -6,5 +6,5 @@
   alarm_armed:
     value: false
     attributes:
-      icon: mdi:home:heart
+      icon: mdi:home-heart
     restore: true
