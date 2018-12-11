@@ -1,10 +1,25 @@
-- alias: 'SSL expiry notification'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.ssl_cert_expiry
-    below: 10
-  action:
-    service: script.notify_all
-    data:
-      title: "SSL certificate expiration warning"
-      message: 'Warning - SSL certificate expires in 10 days and has not been automatically renewed'
+  - alias: 'SSL expiry notification'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.ssl_cert_expiry
+      below: 10
+    action:
+      service: script.notify_all
+      data:
+        title: "SSL certificate expiration warning"
+        message: 'Warning - SSL certificate expires in 10 days and has not been automatically renewed'
+  - alias: 'Alarm Notifications'
+    trigger:
+      platform: state
+      entity_id: group.alarm_notification_sensors
+      to: 'on'
+    action:
+      service: script.notify_all
+      data_template:
+        title: "Er is beweging in het huis."
+        message: >
+          Er is beweging gedetecteerd in het huis. De volgende sensors hebben beweging gezien :
+          {% if is_state(binary_sensor.motion_sensor_158d0001de7134, 'on') %} - Living sensor{% endif %}
+          {% if is_state(binary_sensor.motion_sensor_158d0001f2a00f, 'on') %} - Veranda sensor{% endif %}
+          {% if is_state(binary_sensor.motion_sensor_158d0001f9cdfe, 'on') %} - Mancave sensor{% endif %}
+          {% if is_state(binary_sensor.motion_sensor_158d000276e199, 'on') %} - Gang boven sensor{% endif %}
