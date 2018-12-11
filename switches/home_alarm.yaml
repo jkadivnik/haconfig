@@ -1,6 +1,6 @@
   platform: template
   switches:
-    alarm_on:
+    alarm_toggle:
       friendly_name: Alarm Toggle
       value_template: "{{ is_state(input_boolean.alarm_armed, 'on') }}"
       turn_on:
