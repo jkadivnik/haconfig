@@ -7,3 +7,12 @@
       entity_id: remote.livingroom_hub
       data_template:
         activity: "{{ trigger.to_state.state.split(' : ')[1] }}"
+  - alias: Livingroom Harmony Triggered
+    trigger:
+      platform: state
+      entity_id: remote.livingroom_hub
+      value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') | string }}"
+      from: "PowerOff"
+    action:
+      service: script.turn_on
+      entity_id: script.livingroom_kitchen_radio_off

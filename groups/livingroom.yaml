@@ -57,6 +57,7 @@ Livingroom:
     - automation.livingroom_watch_television
     - automation.kitchen_music_playing
     - automation.kitchen_music_turned_off
+    - automation.livingroom_harmony_triggered
     - scripts.livingroom_volume_up
     - scripts.livingroom_volume_down
     - scripts.livingroom_volume_mute
@@ -69,5 +70,7 @@ Livingroom:
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
     - script.livingroom_volume_up
+    - script.livingroom_kitchen_radio_on
+    - script.livingroom_kitchen_radio_off
     - group.livingroom_mediaplayers
     - group.livingroom_switches

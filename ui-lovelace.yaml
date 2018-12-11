@@ -110,33 +110,28 @@ views:
         type: picture-glance
         title: Sofa
         entities:
-        - entity: switch.livingroom_telenet
-          icon: mdi:television-box
-          name: Telenet
-        - entity: switch.livingroom_kodi
-          icon: mdi:movie
-          name: HTPC
-        - entity: switch.livingroom_chromecast_audio
-          icon: mdi:library-music
-          name: Audiocast
-        - entity: switch.livingroom_chromecast
-          icon: mdi:cast
-          name: Chromecast
-        - entity: switch.livingroom_bluray
-          icon: mdi:filmstrip
-          name: Bluray
-        - entity: switch.livingroom_steamlink
-          icon: mdi:cellphone-link
-          name: Steam Link
-        - entity: switch.livingroom_ps4
-          icon: mdi:gamepad
-          name: PS4
-        - entity: switch.livingroom_tuner
-          icon: mdi:radio
-          name: Tuner
-        - entity: switch.plug_158d0001f29250
-          icon: mdi:lightbulb
-          name: Tuner
+          - light.livingroom_bookcase_rgb_light
+          - entity: switch.livingroom_telenet
+            icon: mdi:television-box
+            name: Telenet
+          - entity: switch.livingroom_kodi
+            icon: mdi:movie
+            name: HTPC
+          - entity: switch.livingroom_chromecast
+            icon: mdi:cast
+            name: Chromecast
+          - entity: switch.livingroom_bluray
+            icon: mdi:filmstrip
+            name: Bluray
+          - entity: switch.livingroom_steamlink
+            icon: mdi:cellphone-link
+            name: Steam Link
+          - entity: switch.livingroom_ps4
+            icon: mdi:gamepad
+            name: PS4
+          - entity: switch.plug_158d0001f29250
+            icon: mdi:lightbulb
+            name: Tuner
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -190,22 +185,6 @@ views:
           show_source: true
           artwork_border: true
           icon: mdi:movie
-    - type: conditional
-      conditions:
-      - entity: media_player.living_room_audio
-        state_not: "off"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_audio
-          name: Chromecast Audio
-          show_progress: true
-          show_cover: true
-          artwork_border: true
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -214,11 +193,16 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Dinner Table
+        title: Dinner
         entities:
-        - switch.plug_158d0001f292c0
-        - light.livingroom_bookcase_rgb_light
-        - light.livingroom_dressoir_rgb_light
+          - entity: switch.livingroom_chromecast_audio
+            icon: mdi:library-music
+            name: Audiocast
+          - entity: switch.livingroom_tuner
+            icon: mdi:radio
+            name: Tuner
+          - switch.plug_158d0001f292c0
+          - light.livingroom_dressoir_rgb_light
         image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -248,6 +232,38 @@ views:
           show_progress: true
           show_cover: true
           artwork_border: true
+    - type: conditional
+      conditions:
+        - entity: media_player.living_room_audio
+          state_not: "off"
+      card:
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.living_room_audio
+          name: Chromecast Audio
+          show_progress: true
+          show_cover: true
+          artwork_border: true
+    - type: conditional
+      conditions:
+        - entity: media_player.living_room_speaker
+          state_not: "off"
+      card:
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.living_room_speaker
+          name: Google Mini
+          show_progress: true
+          show_cover: true
+          artwork_border: true
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -258,25 +274,10 @@ views:
         type: picture-glance
         title: Kitchen
         entities:
-        - switch.plug_158d0002368861
         - entity: switch.livingroom_kitchen_radio_toggle
           icon: mdi:radio
         image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
         aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-          - entity: sensor.temperature_158d0002379148
-            name: Temperature
-          - entity: sensor.humidity_158d0002379148
-            name: Humidity
-          - entity: sensor.illumination_158d0001de7134
-            name: Light Strength
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -294,22 +295,20 @@ views:
             tap_action: call-service
             service: script.turn_on
             icon: mdi:close-circle-outline
-    - type: conditional
-      conditions:
-      - entity: media_player.living_room_speaker
-        state_not: "off"
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_speaker
-          name: Google Mini
-          show_progress: true
-          show_cover: true
-          artwork_border: true
+        type: glance
+        show_name: false
+        entities:
+          - entity: sensor.temperature_158d0002379148
+            name: Temperature
+          - entity: sensor.humidity_158d0002379148
+            name: Humidity
+          - entity: sensor.illumination_158d0001de7134
+            name: Light Strength
 - title: Gameroom
   cards:
   - type: vertical-stack

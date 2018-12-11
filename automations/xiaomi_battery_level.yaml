@@ -138,6 +138,21 @@
       - service: automation.turn_off
         entity_id: automation.hallway_smoke_sensor_battery
 
+  # Wireless button battery check
+  - alias: Livingroom Wireless Button Sensor Battery
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.switch_158d00026bb099
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: script.notify_all
+        data:
+          title: "Livingroom wireless sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+        entity_id: automation.livingroom_wireless_button_sensor_battery
+
   # Turn on all automations
   - alias: Battery Automation Turn On
     trigger:
