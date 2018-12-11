@@ -136,7 +136,6 @@ views:
         type: picture-glance
         title: Sofa
         entities:
-          - light.livingroom_bookcase_rgb_light
           - entity: switch.livingroom_telenet
             icon: mdi:television-box
             name: Telenet
@@ -156,8 +155,10 @@ views:
             icon: mdi:gamepad
             name: PS4
           - entity: switch.plug_158d0001f29250
+            name: Sofa Light
+          - entity: light.livingroom_bookcase_rgb_light
             icon: mdi:lightbulb
-            name: Tuner
+            name: RGB Bookcase Leds
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
