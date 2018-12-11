@@ -1,7 +1,7 @@
   - alias: Livingroom Audiocast stopped
     trigger:
       - platform: state
-        entity_id: media_player.kadivniaudio
+        entity_id: media_player.living_room_audio
         to: 'off'
     condition:
     - condition: template
@@ -12,10 +12,10 @@
   - alias: Livingroom Audiocast playing
     trigger:
       - platform: state
-        entity_id: media_player.kadivniaudio
+        entity_id: media_player.living_room_audio
         to: 'playing'
       - platform: state
-        entity_id: media_player.kadivniaudio
+        entity_id: media_player.living_room_audio
         to: 'paused'
     condition:
       - condition: template
@@ -53,13 +53,13 @@
   - alias: Livingroom Audiocast Still Playing
     trigger:
       - platform: template
-        value_template: "{% if is_state( 'media_player.kadivniaudio', 'off')%}false{% else %}true{% endif %}"
+        value_template: "{% if is_state( 'media_player.living_room_audio', 'off')%}false{% else %}true{% endif %}"
     condition:
       - condition: template
         value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') | string != 'Music' }}"
     action:
       - service: media_player.media_stop
-        entity_id: media_player.kadivniaudio
+        entity_id: media_player.living_room_audio
       - service: media_player.turn_off
-        entity_id: media_player.kadivniaudio
+        entity_id: media_player.living_room_audio
 

@@ -192,7 +192,7 @@ views:
           icon: mdi:movie
     - type: conditional
       conditions:
-      - entity: media_player.kadivniaudio
+      - entity: media_player.living_room_audio
         state_not: "off"
       card:
         type: custom:card-modder
@@ -201,7 +201,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: custom:mini-media-player
-          entity: media_player.kadivniaudio
+          entity: media_player.living_room_audio
           name: Chromecast Audio
           show_progress: true
           show_cover: true
@@ -335,7 +335,7 @@ views:
           icon: mdi:gamepad
           name: PS4
         - entity: light.gameroom_rgb_light
-          icon: mdi:light-switch
+          icon: mdi:lightbulb
           name: RGB Lights
         image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
