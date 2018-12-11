@@ -36,6 +36,6 @@
         entity_id: binary_sensor.switch_158d00026bb099
         click_type: long_click_press
     action:
-      service: boolean_input.toggle
+      service: input_boolean.toggle
       data:
         entity_id: input_boolean.alarm_armed
