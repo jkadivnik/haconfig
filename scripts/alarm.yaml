@@ -17,7 +17,7 @@
           gw_mac: !secret gameroom_gateway_mac
           ringtone_id: "{{ ringtone_id }}"
           ringtone_vol: "{{ ringtone_volume }}"
-  alarm_off:
+  alarm_siren_off:
     alias: Alarm Siren Off
     sequence:
       - service: xiaomi_aqara.stop_ringtone

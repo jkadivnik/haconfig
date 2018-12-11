@@ -112,6 +112,17 @@ views:
         state_image:
           "on": /local/lovelace/images/pictures/alarm.jpeg
           "off": /local/lovelace/images/pictures_gray/alarm.jpeg
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Turn Off Alarm
+        icon: mdi:alarm-off
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.alarm_siren_off
 - title: Livingroom
   cards:
   - type: vertical-stack
