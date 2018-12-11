@@ -1,0 +1,31 @@
+  # https://www.home-assistant.io/components/xiaomi_aqara/
+  alarm_siren_on:
+    alias: Alarm Siren On
+    sequence:
+      - service: xiaomi_aqara.play_ringtone
+        data_template:
+          gw_mac: !secret livingroom_gateway_mac
+          ringtone_id: "{{ ringtone_id }}"
+          ringtone_vol: "{{ ringtone_volume }}"
+      - service: xiaomi_aqara.play_ringtone
+        data_template:
+          gw_mac: !secret upstairs_gateway_mac
+          ringtone_id: "{{ ringtone_id }}"
+          ringtone_vol: "{{ ringtone_volume }}"
+      - service: xiaomi_aqara.play_ringtone
+        data_template:
+          gw_mac: !secret gameroom_gateway_mac
+          ringtone_id: "{{ ringtone_id }}"
+          ringtone_vol: "{{ ringtone_volume }}"
+  alarm_off:
+    alias: Alarm Siren Off
+    sequence:
+      - service: xiaomi_aqara.stop_ringtone
+        data_template:
+          gw_mac: !secret livingroom_gateway_mac
+      - service: xiaomi_aqara.stop_ringtone
+        data_template:
+          gw_mac: !secret upstairs_gateway_mac
+      - service: xiaomi_aqara.stop_ringtone
+        data_template:
+          gw_mac: !secret gameroom_gateway_mac

@@ -98,6 +98,20 @@ views:
         tap_action: call-service
         service: script.turn_on
         entity: script.home_all_off
+- title: Alarm
+  cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Alarm Toggle
+        entity_id: switch.alarm_toggle
+        aspect_ratio: 16:9
+        state_image:
+          "on": /local/lovelace/images/pictures/alarm.jpeg
+          "off": /local/lovelace/images/pictures_gray/alarm.jpeg
 - title: Livingroom
   cards:
   - type: vertical-stack

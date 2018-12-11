@@ -1,4 +1,4 @@
-  - alias: 'SSL expiry notification'
+  - alias: SSL expiry notification
     trigger:
       platform: numeric_state
       entity_id: sensor.ssl_cert_expiry
@@ -13,6 +13,10 @@
       platform: state
       entity_id: group.alarm_notification_sensors
       to: 'on'
+    condition:
+      - condition: state
+        entity_id: input_boolean.alarm_armed
+        state: 'on'
     action:
       service: script.notify_all
       data_template:
@@ -23,3 +27,35 @@
           {% if is_state(binary_sensor.motion_sensor_158d0001f2a00f, 'on') %} - Veranda sensor{% endif %}
           {% if is_state(binary_sensor.motion_sensor_158d0001f9cdfe, 'on') %} - Mancave sensor{% endif %}
           {% if is_state(binary_sensor.motion_sensor_158d000276e199, 'on') %} - Gang boven sensor{% endif %}
+  - alias: Alarm Siren
+    trigger:
+      platform: state
+      entity_id: group.alarm_siren_sensors
+      to: 'on'
+    condition:
+      - condition: state
+        entity_id: input_boolean.alarm_armed
+        state: 'on'
+    action:
+      - service: script.notify_all
+        data_template:
+          title: "Het alarm is aan het afgaan."
+          message: "Er is thuis beweging gedetecteerd en het alarm is aangezet!"
+      - service: script.turn_on
+        entity_id: script.alarm_siren_on
+        data:
+          variables:
+            ringtone_id: 8
+            ringtone_vol: 90
+  - alias: Alarm Off
+    trigger:
+      platform: state
+      entity_id: input_boolean.alarm_armed
+      state: 'off'
+    action:
+      - service: script.notify_all
+        data_template:
+          title: "Het alarm is afgegaan en wordt nu uitgezet."
+          message: "Het alarm is nu afgezet!"
+      - service: script.turn_on
+        entity_id: script.alarm_siren_off

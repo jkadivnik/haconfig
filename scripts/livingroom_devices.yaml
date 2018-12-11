@@ -15,11 +15,13 @@
         value_template: "{{ state.attributes.load_power }}"
         above: '1.5'
       - condition: template
-        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity',) !=  'Keuken muziek luisteren' }}"
-      - service: remote.livingroom_hub
-        command:
-          - PowerToggle
-        device: 54449337
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') !=  'Keuken muziek luisteren' }}"
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          command:
+            - PowerToggle
+          device: 54449337
   livingroom_kitchen_radio_on:
     alias: Kitchen Radio On
     sequence:
@@ -27,10 +29,12 @@
         entity_id: switch.plug_158d0002368861
         value_template: "{{ state.attributes.load_power }}"
         below: '1.5'
-      - service: remote.livingroom_hub
-        command:
-          - PowerToggle
-        device: 54449337
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          command:
+            - PowerToggle
+          device: 54449337
   livingroom_kodi_toggle:
     alias: Livingroom Kodi Toggle
     sequence:

@@ -10,22 +10,12 @@
     data:
       title: "Vuur en/of rook ontdekt!"
       message: "Er is thuis rook en/of vuur ontdekt!"
-  - service: xiaomi_aqara.play_ringtone
+  - service: script.turn_on
+    entity_id: script.alarm_siren_on
     data:
-      gw_mac: !secret livingroom_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
-  - service: xiaomi_aqara.play_ringtone
-    data:
-      gw_mac: !secret upstairs_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
-  - service: xiaomi_aqara.play_ringtone
-    data:
-      gw_mac: !secret gameroom_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
-
+      variables:
+        ringtone_id: 2
+        ringtone_vol: 85
 # Gas detected
 - alias: Gas Detected
   trigger:
@@ -38,18 +28,9 @@
     data:
       title: "Gaslek ontdekt!"
       message: "Er is in de bureau een gaslek. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
-  - service: xiaomi_aqara.play_ringtone
+  - service: script.turn_on
+    entity_id: script.alarm_siren_on
     data:
-      gw_mac: !secret livingroom_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
-  - service: xiaomi_aqara.play_ringtone
-    data:
-      gw_mac: !secret upstairs_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
-  - service: xiaomi_aqara.play_ringtone
-    data:
-      gw_mac: !secret gameroom_gateway_mac
-      ringtone_id: 2
-      ringtone_vol: 85
+      variables:
+        ringtone_id: 2
+        ringtone_vol: 85
