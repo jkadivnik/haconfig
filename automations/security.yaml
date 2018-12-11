@@ -51,7 +51,7 @@
     trigger:
       platform: state
       entity_id: input_boolean.alarm_armed
-      state: 'off'
+      to: 'off'
     action:
       - service: script.notify_all
         data_template:
