@@ -107,11 +107,12 @@ views:
       card:
         type: picture-entity
         name: Alarm Toggle
-        entity_id: switch.alarm_toggle
+        entity: switch.alarm_toggle
+        tap_action: toggle
         aspect_ratio: 16:9
         state_image:
-          "on": /local/lovelace/images/pictures/alarm.jpeg
-          "off": /local/lovelace/images/pictures_gray/alarm.jpeg
+          'on': /local/lovelace/images/pictures/alarm.jpeg
+          'off': /local/lovelace/images/pictures_gray/alarm.jpeg
     - type: custom:card-modder
       style:
         border-radius: 10px
