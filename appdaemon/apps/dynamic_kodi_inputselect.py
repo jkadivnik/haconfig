@@ -26,6 +26,7 @@ class DynamicKodiInputSelect(appapi.AppDaemon):
 
         assert event_id == EVENT_KODI_CALL_METHOD_RESULT
         if method == 'VideoLibrary.GetRecentlyAddedMovies':
+            self.log("I am here!")
             values = result['movies'][:self._max_entries]
             data = [('{} ({})'.format(r['label'], r['year']), ('MOVIE', r['file'])) for r in values]
             self._ids_options.update(dict(zip(*zip(*data))))
@@ -33,6 +34,7 @@ class DynamicKodiInputSelect(appapi.AppDaemon):
             self.call_service('input_select/set_options', entity_id=self._movie_inputselect_entity, options=["Movies not filled"] + labels)
             self.set_state(self._movie_inputselect_entity, attributes={"friendly_name": 'Recent Movies', "icon": 'mdi:movie'})
         elif method == 'VideoLibrary.GetRecentlyAddedEpisodes':
+            self.log("I am here!")
             values = list(filter(lambda r: not r['lastplayed'], result['episodes']))[:self._max_entries]
             data = [('{} - {}'.format(r['showtitle'], r['label']), ('TVSHOW', r['file'])) for r in values]
             self._ids_options.update(dict(zip(*zip(*data))))
