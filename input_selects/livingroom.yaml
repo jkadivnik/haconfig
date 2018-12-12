@@ -31,8 +31,8 @@
   livingroom_kodi_movie_results:
     name: Livingroom Kodi Movie Results
     options:
-      - Movies not yet filled
+      - Select a movie to watch
   livingroom_kodi_series_results:
     name: Livingroom Kodi Series Results
     options:
-      - Series not yet filled
+      - Select an episode to watch
