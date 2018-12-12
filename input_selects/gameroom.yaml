@@ -24,8 +24,8 @@
   gameroom_kodi_movie_results:
     name: Gameroom Kodi Movie Results
     options:
-      - Movies not yet filled
+      - Select a movie to watch
   gameroom_kodi_series_results:
     name: Gameroom Kodi Series Results
     options:
-      - Series not yet filled
+      - Select an episode to watch
