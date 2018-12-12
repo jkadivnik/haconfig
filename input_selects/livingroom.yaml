@@ -28,3 +28,11 @@
       - To Bed
     initial: "No Mode"
     icon: mdi:home
+  livingroom_kodi_movie_results:
+    name: Livingroom Kodi Movie Results
+    options:
+      - Movies not yet filled
+  livingroom_kodi_series_results:
+    name: Livingroom Kodi Series Results
+    options:
+      - Series not yet filled

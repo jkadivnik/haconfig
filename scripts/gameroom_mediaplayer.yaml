@@ -1,0 +1,24 @@
+  get_recent_movies:
+    alias: Last added movies
+    sequence:
+      - service: media_player.kodi_call_method
+        data:
+          entity_id: media_player.kodibureau
+          method: VideoLibrary.GetRecentlyAddedMovies
+          properties:
+            - title
+            - year
+            - file
+            - lastplayed
+  get_recent_episodes:
+    alias: Last TV shows
+    sequence:
+      - service: media_player.kodi_call_method
+        data:
+          entity_id: media_player.kodibureau
+          method: VideoLibrary.GetRecentlyAddedEpisodes
+          properties:
+            - showtitle
+            - file
+            - lastplayed
+            - firstaired

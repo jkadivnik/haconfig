@@ -21,3 +21,11 @@
       - Fun Is Over
     initial: "No Mode"
     icon: mdi:home
+  gameroom_kodi_movie_results:
+    name: Gameroom Kodi Movie Results
+    options:
+      - Movies not yet filled
+  gameroom_kodi_series_results:
+    name: Gameroom Kodi Series Results
+    options:
+      - Series not yet filled
