@@ -2,13 +2,16 @@ gameroom_kodi_dynamic_inputselect:
   module: dynamic_kodi_inputselect
   class: DynamicKodiInputSelect
   movie_inputselect: input_select.gameroom_kodi_movie_results
+  movies_max_entries: 15
   series_inputselect: input_select.gameroom_kodi_series_results
+  series_max_entries: 20
   kodi_entity: media_player.kodibureau
-  max_entries: 10
 livingroom_kodi_dynamic_inputselect:
   module: dynamic_kodi_inputselect
   class: DynamicKodiInputSelect
   movie_inputselect: input_select.livingroom_kodi_movie_results
+  movies_max_entries: 15
   series_inputselect: input_select.livingroom_kodi_series_results
+  series_max_entries: 20
   kodi_entity: media_player.kodiliving
-  max_entries: 10
+
