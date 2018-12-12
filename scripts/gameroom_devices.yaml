@@ -9,10 +9,10 @@
     sequence:
       - service: light.turn_off
         data:
-          entity_id: group.gameroom_lights
+          entity_id: light.gameroom_lights
       - service: remote.turn_off
         data:
           entity_id: remote.gameroom_hub
       - service: switch.turn_off
         data:
-          entity_id: group.gameroom_plugs
+          entity_id: group.gameroom_switches
