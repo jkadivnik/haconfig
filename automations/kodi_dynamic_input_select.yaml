@@ -1,0 +1,20 @@
+  - alias: Kodi InputSelect Update On Startup
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: script.turn_on
+        entity_id: script.get_recent_movies
+      - service: script.turn_on
+        entity_id: script.get_recent_episodes
+  - alias: Kodi InputSelect Update Periodically
+    trigger:
+      - platform: time
+        hours: /1
+        minutes: 00
+        seconds: 00
+    action:
+      - service: script.turn_on
+        entity_id: script.get_recent_movies
+      - service: script.turn_on
+        entity_id: script.get_recent_episodes
