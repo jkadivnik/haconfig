@@ -1,0 +1,8 @@
+Kodi:
+  entities:
+    - input_select.gameroom_kodi_movie_results
+    - input_select.gameroom_kodi_series_results
+    - script.get_recent_movies
+    - script.get_recent_episodes
+    - input_select.livingroom_kodi_movie_results
+    - input_select.livingroom_kodi_series_results
