@@ -237,6 +237,26 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: input_select.livingroom_kodi_movie_results
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: input_select.livingroom_kodi_series_results
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
         type: entity-button
         name: Turn Off Livingroom
         icon: mdi:close-circle-outline
@@ -377,6 +397,16 @@ views:
           icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: input_select.gameroom_kodi_movie_results
     - type: conditional
       conditions:
       - entity: media_player.kodibureau
@@ -472,6 +502,16 @@ views:
         - entity: binary_sensor.natgas_sensor_158d000204ae2a
           name: Gas
           icon: mdi:gas-station
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: input_select.gameroom_kodi_series_results
 - title: Veranda
   cards:
   - type: custom:card-modder

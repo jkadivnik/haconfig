@@ -1,0 +1,9 @@
+  - alias: Livingroom Kodi Input Selected
+    trigger:
+      - platform: state
+        entity_id: input_select.livingroom_kodi_movie_results
+      - platform: state
+        entity_id: input_select.livingroom_kodi_series_results
+    action:
+      service: switch.turn_on
+      entity_id: switch.livingroom_kodi
