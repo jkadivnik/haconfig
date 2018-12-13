@@ -508,6 +508,7 @@ views:
           name: Work Desk
           entity: switch.gameroom_desk_light
           icon: mdi:lightbulb
+          tap_action: toggle
           aspect_ratio: 16:9
           state_image:
             "on": /local/lovelace/images/pictures/workdesk.jpeg
