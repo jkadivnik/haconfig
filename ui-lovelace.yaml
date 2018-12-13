@@ -16,9 +16,9 @@ resources:
 
 background: center / cover no-repeat url("/local/lovelace/images/pictures/background/black_gray_wall.jpeg") fixed
 
-title: Kadivnik@Home
+title: Kadivnikskes
 views:
-- title: Home
+- title: Thuis
   cards:
   - type: vertical-stack
     cards:
@@ -93,7 +93,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: entity-button
-        name: Turn Off Home
+        name: Alles Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
         service: script.turn_on
@@ -106,7 +106,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-entity
-        name: Alarm Toggle
+        name: Toggle Alarm
         entity: switch.alarm_toggle
         tap_action: toggle
         aspect_ratio: 16:9
@@ -119,12 +119,12 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: entity-button
-        name: Turn Off Siren
+        name: Sirene Afzetten
         icon: mdi:alarm-off
         tap_action: call-service
         service: script.turn_on
         entity: script.alarm_siren_off
-- title: Livingroom
+- title: Living
   cards:
   - type: vertical-stack
     cards:
@@ -155,10 +155,10 @@ views:
             icon: mdi:gamepad
             name: PS4
           - entity: switch.plug_158d0001f29250
-            name: Sofa Light
+            name: Sofa Licht
           - entity: light.livingroom_bookcase_rgb_light
             icon: mdi:lightbulb
-            name: RGB Bookcase Leds
+            name: Boekenkast LEDs
         image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -167,7 +167,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-entity
-        name: Livingroom Harmony Hub Status
+        name: Afstandsbediening
         entity: sensor.livingroom_harmony_activity
         aspect_ratio: 16:9
         state_image:
@@ -180,7 +180,7 @@ views:
           "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
           "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
           "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
-          "Keuken Muziek Luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
+          "Keuken muziek luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
           "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
     - type: custom:card-modder
       style:
@@ -202,7 +202,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Dinner
+        title: Eettafel
         entities:
           - entity: switch.livingroom_chromecast_audio
             icon: mdi:library-music
@@ -324,7 +324,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: entity-button
-        name: Turn Off Livingroom
+        name: Livingroom Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
         service: script.turn_on
@@ -337,7 +337,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Kitchen
+        title: Keuken
         entities:
         - entity: switch.livingroom_kitchen_radio_toggle
           icon: mdi:radio
@@ -349,7 +349,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-entity
-        name: Livingroom Christmas Tree
+        name: Kerstboom
         entity: switch.plug_158d0001f2914c
         tap_action: toggle
         aspect_ratio: 16:9
@@ -365,12 +365,12 @@ views:
         show_name: false
         entities:
           - entity: sensor.temperature_158d0002379148
-            name: Temperature
+            name: Temperatuur
           - entity: sensor.humidity_158d0002379148
-            name: Humidity
+            name: Vochtigheid
           - entity: sensor.illumination_158d0001de7134
-            name: Light Strength
-- title: Gameroom
+            name: Lichtsterkte
+- title: Mancave
   cards:
   - type: vertical-stack
     cards:
@@ -380,7 +380,7 @@ views:
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
         type: picture-glance
-        title: Gameroom
+        title: Bureau
         entities:
         - entity: switch.gameroom_pc_sound
           icon: mdi:surround-sound
@@ -396,7 +396,7 @@ views:
           name: PS4
         - entity: light.gameroom_rgb_light
           icon: mdi:lightbulb
-          name: RGB Lights
+          name: LED Lichten
         image: /local/lovelace/images/pictures/gameroom.jpeg
         aspect_ratio: 16:9
     - type: custom:card-modder
@@ -440,7 +440,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Gameroom Harmony Hub Status
+          name: Afstandsbediening
           entity: sensor.gameroom_harmony_activity
           aspect_ratio: 16:9
           state_image:
@@ -475,7 +475,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: entity-button
-          name: Turn Off Gameroom
+          name: Mancave Afzetten
           icon: mdi:close-circle-outline
           tap_action: call-service
           service: script.turn_on
@@ -488,7 +488,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Work Desk
+          name: Werk Bureautje
           entity: switch.gameroom_desk_light
           icon: mdi:lightbulb
           tap_action: toggle
@@ -522,11 +522,11 @@ views:
           show_name: false
           entities:
           - entity: sensor.temperature_158d000236744c
-            name: Temperature
+            name: Temperatuur
           - entity: sensor.humidity_158d000236744c
-            name: Humidity
+            name: Vochtigheid
           - entity: sensor.illumination_158d0001f9cdfe
-            name: Light Strength
+            name: Lichtsterkte
           - entity: binary_sensor.natgas_sensor_158d000204ae2a
             name: Gas
             icon: mdi:gas-station
@@ -570,10 +570,10 @@ views:
       show_name: false
       entities:
       - entity: sensor.temperature_158d00020f4dd3
-        name: Temperature
+        name: Temperatuur
       - entity: sensor.humidity_158d00020f4dd3
-        name: Humidity
-- title: Hallway
+        name: Vochtigheid
+- title: Inkom
   cards:
     - type: vertical-stack
       cards:
@@ -583,7 +583,7 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: picture-glance
-            title: Upstairs
+            title: Traphal
             entities:
               - entity: light.gateway_light_7811dcb9c795
             image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
@@ -594,13 +594,13 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: glance
-            name: Upstairs
+            name: Boven
             show_name: false
             entities:
               - entity: binary_sensor.motion_sensor_158d000276e199
-                name: Motion
+                name: Beweging
               - entity: sensor.illumination_7811dcb9c795
-                name: Illumination
+                name: Lichtsterkte
         - type: custom:card-modder
           style:
             border-radius: 10px
@@ -626,7 +626,7 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: picture-glance
-            title: Entrance
+            title: Inkom
             entities:
             - entity: light.gateway_light_7811dcb9c795
             image: /local/lovelace/images/pictures/entrance.jpeg
@@ -640,9 +640,9 @@ views:
             show_name: false
             entities:
             - entity: binary_sensor.smoke_sensor_158d000279ddbc
-              name: Smoke
+              name: Rook
               icon: mdi:smoke-detector
-- title: Bathroom
+- title: Badkamer
   cards:
   - type: custom:card-modder
     style:
@@ -650,13 +650,13 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-glance
-      title: Bathroom
+      title: Badkamer
       entities:
       - entity: switch.bathroom_radion
         icon: mdi:radio
       image: /local/lovelace/images/pictures/bathroom.jpeg
       aspect_ratio: 16:9
-- title: System
+- title: Systeem
   cards:
   - type: custom:card-modder
     style:
@@ -689,7 +689,7 @@ views:
     show_empty: false
     card:
       type: picture-glance
-      title: Battery State
+      title: Batterij Status
       image: /local/lovelace/images/pictures/battery.jpeg
       aspect_ratio: 16:9
     filter:
