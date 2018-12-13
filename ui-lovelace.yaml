@@ -166,22 +166,22 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.livingroom_volume_down
-            icon: mdi:volume-low
-            tap_action: call-service
-            service: script.turn_on
-          - entity: script.livingroom_volume_mute
-            icon: mdi:volume-off
-            tap_action: call-service
-            service: script.turn_on
-          - entity: script.livingroom_volume_up
-            icon: mdi:volume-high
-            tap_action: call-service
-            service: script.turn_on
+        type: picture-entity
+        name: Livingroom Harmony Hub Status
+        entity: sensor.livingroom_harmony_activity
+        aspect_ratio: 16:9
+        state_image:
+          "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
+          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+          "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
+          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+          "Telenet": /local/lovelace/images/pictures/telenet.jpeg
+          "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
+          "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
+          "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
+          "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
+          "Keuken Muziek Luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
+          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -190,8 +190,6 @@ views:
         type: glance
         show_name: false
         entities:
-          - entity: sensor.livingroom_harmony_activity
-            icon: mdi:remote
           - entity: input_select.livingroom_harmony
             icon: mdi:arrow-down-drop-circle
           - entity: input_select.livingroom_kodi_movie_results
@@ -234,6 +232,44 @@ views:
           - light.livingroom_dressoir_rgb_light
         image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
         aspect_ratio: 16:9
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: script.livingroom_volume_down
+            icon: mdi:volume-low
+            tap_action: call-service
+            service: script.turn_on
+          - entity: script.livingroom_volume_mute
+            icon: mdi:volume-off
+            tap_action: call-service
+            service: script.turn_on
+          - entity: script.livingroom_volume_up
+            icon: mdi:volume-high
+            tap_action: call-service
+            service: script.turn_on
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: glance
+        show_state: false
+        show_name: false
+        entities:
+          - entity: script.livingroom_rgb_colorchanger
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:palette
+          - entity: script.livingroom_rgb_colorchanger_off
+            tap_action: call-service
+            service: script.turn_on
+            icon: mdi:close-circle-outline
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -312,18 +348,13 @@ views:
         border-radius: 10px
         box-shadow: 3px 3px rgba(0,0,0,0.4)
       card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.livingroom_rgb_colorchanger
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:palette
-          - entity: script.livingroom_rgb_colorchanger_off
-            tap_action: call-service
-            service: script.turn_on
-            icon: mdi:close-circle-outline
+        type: picture-entity
+        name: Livingroom Christmas Tree
+        entity: switch.plug_158d0001f2914c
+        aspect_ratio: 16:9
+        state_image:
+          "on": /local/lovelace/images/pictures/christmas.jpeg
+          "off": /local/lovelace/images/pictures_gray/christmas.jpeg
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -375,8 +406,6 @@ views:
         type: glance
         show_name: false
         entities:
-        - entity: sensor.gameroom_harmony_activity
-          icon: mdi:remote
         - entity: input_select.gameroom_harmony
           icon: mdi:arrow-down-drop-circle
         - entity: input_select.gameroom_kodi_movie_results
@@ -406,13 +435,39 @@ views:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
-          type: picture-glance
-          title: Work Desk
-          image: /local/lovelace/images/pictures/workdesk.jpeg
+          type: picture-entity
+          name: Gameroom Harmony Hub Status
+          entity: sensor.gameroom_harmony_activity
           aspect_ratio: 16:9
+          state_image:
+            "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+            "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+            "Get Colder": /local/lovelace/images/pictures/wind.jpeg
+            "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
+            "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+            "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+            "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_state: false
+          show_name: false
           entities:
-            - entity: switch.gameroom_desk_light
-              icon: mdi:lightbulb
+            - entity: script.gameroom_volume_down
+              icon: mdi:volume-low
+              tap_action: call-service
+              service: script.turn_on
+            - entity: script.gameroom_volume_mute
+              icon: mdi:volume-off
+              tap_action: call-service
+              service: script.turn_on
+            - entity: script.gameroom_volume_up
+              icon: mdi:volume-high
+              tap_action: call-service
+              service: script.turn_on
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -443,39 +498,36 @@ views:
           entity: script.gameroom_all_off
   - type: vertical-stack
     cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: TV
-        entities:
-        - entity: switch.gameroom_volume_down
-          icon: mdi:volume-low
-        - entity: switch.gameroom_volume_mute
-          icon: mdi:volume-off
-        - entity: switch.gameroom_volume_up
-          icon: mdi:volume-high
-        image: /local/lovelace/images/pictures/cinema.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-        - entity: sensor.temperature_158d000236744c
-          name: Temperature
-        - entity: sensor.humidity_158d000236744c
-          name: Humidity
-        - entity: sensor.illumination_158d0001f9cdfe
-          name: Light Strength
-        - entity: binary_sensor.natgas_sensor_158d000204ae2a
-          name: Gas
-          icon: mdi:gas-station
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-entity
+          name: Work Desk
+          entity: switch.gameroom_desk_light
+          icon: mdi:lightbulb
+          aspect_ratio: 16:9
+          state_image:
+            "on": /local/lovelace/images/pictures/workdesk.jpeg
+            "off": /local/lovelace/images/pictures_gray/workdesk.jpeg
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_name: false
+          entities:
+          - entity: sensor.temperature_158d000236744c
+            name: Temperature
+          - entity: sensor.humidity_158d000236744c
+            name: Humidity
+          - entity: sensor.illumination_158d0001f9cdfe
+            name: Light Strength
+          - entity: binary_sensor.natgas_sensor_158d000204ae2a
+            name: Gas
+            icon: mdi:gas-station
 - title: Veranda
   cards:
   - type: custom:card-modder
@@ -669,55 +721,3 @@ views:
       - type: state-label
         entity: sensor.disk_use_percent_
         style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-- title: Test
-  cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Gameroom Harmony Hub Status
-        entity: sensor.gameroom_harmony_activity
-        aspect_ratio: 16:9
-        state_image:
-          "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
-          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
-          "Get Colder": /local/lovelace/images/pictures/wind.jpeg
-          "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
-          "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
-          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
-          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Livingroom Harmony Hub Status
-        entity: sensor.livingroom_harmony_activity
-        aspect_ratio: 16:9
-        state_image:
-          "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
-          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
-          "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
-          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
-          "Telenet": /local/lovelace/images/pictures/telenet.jpeg
-          "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
-          "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
-          "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
-          "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
-          "Keuken Muziek Luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
-          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Livingroom Christmas Tree
-        entity: switch.plug_158d0001f2914c
-        aspect_ratio: 16:9
-        state_image:
-          "on": /local/lovelace/images/pictures/christmas.jpeg
-          "off": /local/lovelace/images/pictures_gray/christmas.jpeg
