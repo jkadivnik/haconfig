@@ -583,6 +583,41 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: picture-glance
+            title: Inkom
+            entities:
+            - entity: light.gateway_light_7811dcb9c795
+            image: /local/lovelace/images/pictures/entrance.jpeg
+            aspect_ratio: 16:9
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            show_name: false
+            entities:
+            - entity: binary_sensor.smoke_sensor_158d000279ddbc
+              name: Rook
+              icon: mdi:smoke-detector
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Alles Afzetten
+        icon: mdi:close-circle-outline
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.upstairs_all_off
+    - type: vertical-stack
+      cards:
+        - type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: picture-glance
             title: Traphal
             entities:
               - entity: light.gateway_light_7811dcb9c795
@@ -618,45 +653,32 @@ views:
                 tap_action: call-service
                 service: script.turn_on
                 icon: mdi:close-circle-outline
-    - type: vertical-stack
-      cards:
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: picture-glance
-            title: Inkom
-            entities:
-            - entity: light.gateway_light_7811dcb9c795
-            image: /local/lovelace/images/pictures/entrance.jpeg
-            aspect_ratio: 16:9
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            show_name: false
-            entities:
-            - entity: binary_sensor.smoke_sensor_158d000279ddbc
-              name: Rook
-              icon: mdi:smoke-detector
 - title: Badkamer
   cards:
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: picture-entity
-      name: Toggle Radio
-      entity: switch.bathroom_radio
-      tap_action: toggle
-      aspect_ratio: 16:9
-      state_image:
-        'on': /local/lovelace/images/pictures/bathroom.jpeg
-        'off': /local/lovelace/images/pictures_gray/bathroom.jpeg
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Toggle Radio
+        entity: switch.bathroom_radio
+        tap_action: toggle
+        aspect_ratio: 16:9
+        state_image:
+          'on': /local/lovelace/images/pictures/bathroom.jpeg
+          'off': /local/lovelace/images/pictures_gray/bathroom.jpeg
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Alles Afzetten
+        icon: mdi:close-circle-outline
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.bathroom_all_off
 - title: Systeem
   cards:
   - type: custom:card-modder

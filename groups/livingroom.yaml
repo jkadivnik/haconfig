@@ -34,6 +34,7 @@ Livingroom:
     - switch.plug_158d0002368861
     - switch.plug_158d0001f29250
     - switch.plug_158d0001f292c0
+    - switch.plug_158d0001f2914c
     - automation.livingroom_audiocast_playing
     - automation.livingroom_audiocast_still_playing
     - automation.livingroom_audiocast_stopped
