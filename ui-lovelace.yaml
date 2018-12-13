@@ -649,13 +649,14 @@ views:
       border-radius: 10px
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
-      type: picture-glance
-      title: Badkamer
-      entities:
-      - entity: switch.bathroom_radion
-        icon: mdi:radio
-      image: /local/lovelace/images/pictures/bathroom.jpeg
+      type: picture-entity
+      name: Toggle Radio
+      entity: switch.bathroom_radio
+      tap_action: toggle
       aspect_ratio: 16:9
+      state_image:
+        'on': /local/lovelace/images/pictures/bathroom.jpeg
+        'off': /local/lovelace/images/pictures_gray/bathroom.jpeg
 - title: Systeem
   cards:
   - type: custom:card-modder
