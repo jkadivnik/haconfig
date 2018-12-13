@@ -351,6 +351,7 @@ views:
         type: picture-entity
         name: Livingroom Christmas Tree
         entity: switch.plug_158d0001f2914c
+        tap_action: toggle
         aspect_ratio: 16:9
         state_image:
           "on": /local/lovelace/images/pictures/christmas.jpeg
