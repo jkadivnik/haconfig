@@ -1,6 +1,6 @@
   - alias: Livingroom Christmas Turn on
     trigger:
-      - platform: event
+      - platform: sun
         event: sunset
         offset: '-00:30:00'
       - platform: time
@@ -13,7 +13,7 @@
       entity_id: switch.plug_158d0001f2914c
   - alias: Livingroom Christmas Turn Off
     trigger:
-      - platform: event
+      - platform: sun
         event: sunrise
         offset: '+00:30:00'
       - platform: time
