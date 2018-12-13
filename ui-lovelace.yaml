@@ -194,24 +194,6 @@ views:
             icon: mdi:arrow-down-drop-circle
           - entity: input_select.livingroom_kodi_movie_results
           - entity: input_select.livingroom_kodi_series_results
-    - type: conditional
-      conditions:
-      - entity: media_player.kodiliving
-        state_not: "idle"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.kodiliving
-          name: HTPC
-          artwork: cover
-          show_progress: true
-          show_source: true
-          artwork_border: true
-          icon: mdi:movie
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -270,17 +252,24 @@ views:
             tap_action: call-service
             service: script.turn_on
             icon: mdi:close-circle-outline
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
+    - type: conditional
+      conditions:
+        - entity: media_player.kodiliving
+          state_not: "idle"
       card:
-        type: entity-button
-        name: Turn Off Livingroom
-        icon: mdi:close-circle-outline
-        tap_action: call-service
-        service: script.turn_on
-        entity: script.livingroom_all_off
+        type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:mini-media-player
+          entity: media_player.kodiliving
+          name: HTPC
+          artwork: cover
+          show_progress: true
+          show_source: true
+          artwork_border: true
+          icon: mdi:movie
     - type: conditional
       conditions:
       - entity: media_player.living_room_video
@@ -329,6 +318,17 @@ views:
           show_progress: true
           show_cover: true
           artwork_border: true
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: entity-button
+        name: Turn Off Livingroom
+        icon: mdi:close-circle-outline
+        tap_action: call-service
+        service: script.turn_on
+        entity: script.livingroom_all_off
   - type: vertical-stack
     cards:
     - type: custom:card-modder
@@ -432,24 +432,6 @@ views:
           icon: mdi:arrow-down-drop-circle
         - entity: input_select.gameroom_kodi_movie_results
         - entity: input_select.gameroom_kodi_series_results
-    - type: conditional
-      conditions:
-      - entity: media_player.kodibureau
-        state_not: "idle"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.kodibureau
-          name: HTPC
-          artwork: cover
-          show_progress: true
-          show_source: true
-          artwork_border: true
-          icon: mdi:movie
   - type: vertical-stack
     cards:
       - type: custom:card-modder
@@ -469,6 +451,24 @@ views:
             "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
             "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
             "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+      - type: conditional
+        conditions:
+          - entity: media_player.kodibureau
+            state_not: "idle"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: custom:mini-media-player
+            entity: media_player.kodibureau
+            name: HTPC
+            artwork: cover
+            show_progress: true
+            show_source: true
+            artwork_border: true
+            icon: mdi:movie
       - type: custom:card-modder
         style:
           border-radius: 10px
