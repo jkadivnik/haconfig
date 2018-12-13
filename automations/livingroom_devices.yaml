@@ -64,10 +64,10 @@
       entity_id: media_player.living_room_audio
 
 - alias: Livingroom Kodi Input Selected
-    trigger:
-      platform: state
+  trigger:
+    - platform: state
       entity_id: media_player.kodiliving
       to: 'playing'
-    action:
-      service: switch.turn_on
-      entity_id: switch.livingroom_kodi
+  action:
+    service: switch.turn_on
+    entity_id: switch.livingroom_kodi
