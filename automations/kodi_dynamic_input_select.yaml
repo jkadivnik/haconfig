@@ -1,13 +1,16 @@
   - alias: Kodi InputSelect Update On Startup
-    initial_state: off
+    initial_state: on
     trigger:
-      - platform: homeassistant
-        event: start
+      - platform: time
+        minutes: '/1'
+        seconds: '00'
     action:
       - service: script.turn_on
         entity_id: script.get_recent_movies
       - service: script.turn_on
         entity_id: script.get_recent_episodes
+      - service: automation.turn_off
+        entity_id: automation.kodi_inputselect_update_on_startup
   - alias: Kodi InputSelect Update Periodically
     initial_state: off
     trigger:

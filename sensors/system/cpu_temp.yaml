@@ -3,5 +3,5 @@
   icon: mdi:thermostat
   name: CPU Temp
   command: "cat /sys/class/thermal/thermal_zone0/temp"
-  unit_of_measurement: "°C"
-  value_template: '{{ value | multiply(0.001) | round(2)  }}'
+  unit_of_measurement: '°C'
+  value_template: "{{ value | multiply(0.001) | round(2)  }}"

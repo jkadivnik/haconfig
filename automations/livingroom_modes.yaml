@@ -15,7 +15,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Movie - Kodi" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'Watch Movie - Kodi' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_kodi
@@ -25,7 +25,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Movie - BD" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'Watch Movie - BD' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_bd
@@ -35,7 +35,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Television" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'Watch Television' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_telenet
@@ -45,7 +45,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Netflix" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'Watch Netflix' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_netflix
@@ -55,7 +55,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "Livingroom Lights" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'Livingroom Lights' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_lights_on
@@ -65,7 +65,7 @@
       entity_id: input_select.livingroom_mode
     condition:
       condition: template
-      value_template: '{{ trigger.to_state.attributes.current_activity == "To Bed" }}'
+      value_template: "{{ trigger.to_state.attributes.current_activity == 'To Bed' }}"
     action:
       service: scene.turn_on
       entity_id: scene.livingroom_to_bed

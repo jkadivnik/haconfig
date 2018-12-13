@@ -598,7 +598,7 @@ views:
       type: picture-glance
       title: Bathroom
       entities:
-      - entity: switch.plug_158d0001f2914c
+      - entity: switch.bathroom_radion
         icon: mdi:radio
       image: /local/lovelace/images/pictures/bathroom.jpeg
       aspect_ratio: 16:9
