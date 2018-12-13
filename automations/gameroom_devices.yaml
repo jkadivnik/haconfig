@@ -1,0 +1,8 @@
+  - alias: Gameroom Kodi Started Playing
+    trigger:
+      platform: state
+      entity_id: media_player.kodibureau
+      to: 'playing'
+    action:
+      service: switch.turn_on
+      entity_id: switch.gameroom_kodi

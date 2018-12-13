@@ -1,9 +1,0 @@
-  - alias: Gameroom Kodi Input Selected
-    trigger:
-      - platform: state
-        entity_id: input_select.gameroom_kodi_movie_results
-      - platform: state
-        entity_id: input_select.gameroom_kodi_series_results
-    action:
-      service: switch.turn_on
-      entity_id: switch.gameroom_kodi
