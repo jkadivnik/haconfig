@@ -12,5 +12,8 @@ known_devices.yaml
 tts/
 deps/
 appdaemon/compiled
+appdaemon/apps/__pycache__
+appdaemon/logs
+.Trash-1000/
 .uuid
 .HA_VERSION
