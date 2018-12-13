@@ -30,32 +30,32 @@ views:
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/images/pictures/Johnny.jpeg
-          Just arrived: /local/lovelace/images/pictures/Johnny.jpeg
+          "home": /local/lovelace/images/pictures/Johnny.jpeg
+          "not_home": /local/lovelace/images/pictures_gray/Johnny.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.thibo_phone
         image: /local/lovelace/images/pictures/Thibo.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/images/pictures/Thibo.jpeg
-          Just arrived: /local/lovelace/images/pictures/Thibo.jpeg
+          "home": /local/lovelace/images/pictures/Thibo.jpeg
+          "not_home": /local/lovelace/images/pictures_gray/Thibo.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.maxim_phone
         image: /local/lovelace/images/pictures/Maxim.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/images/pictures/Maxim.jpeg
-          Just arrived: /local/lovelace/images/pictures/Maxim.jpeg
+          "home": /local/lovelace/images/pictures/Maxim.jpeg
+          "not_home": /local/lovelace/images/pictures_gray/Maxim.jpeg
       - type: custom:picture-status-card
         entity: device_tracker.mama_phone
         image: /local/lovelace/images/pictures/Charlotte.jpeg
         font_color: white
         card_height: 90px
         state_image:
-          Home: /local/lovelace/images/pictures/Charlotte.jpeg
-          Just arrived: /local/lovelace/images/pictures/Charlotte.jpeg
+          "home": /local/lovelace/images/pictures/Charlotte.jpeg
+          "not_home": /local/lovelace/images/pictures_gray/Charlotte.jpeg
         name: ' '
     - type: custom:card-modder
       style:
@@ -619,14 +619,12 @@ views:
         entity: sensor.speedtest_ping
         prefix: 'Internet : '
         style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
-
       - type: icon
         icon: mdi:arrow-down-bold
         style: {color: white, left: 50%, top: 85%}
       - type: state-label
         entity: sensor.speedtest_download
         style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
-
       - type: icon
         icon: mdi:arrow-up-bold
         style: {color: white, left: 75%, top: 85%}
@@ -659,17 +657,67 @@ views:
         entity: sensor.processor_use
         prefix: 'CPU : '
         style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
-
       - type: icon
         icon: mdi:memory
         style: {color: white, left: 50%, top: 85%}
       - type: state-label
         entity: sensor.memory_use_percent
         style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
-
       - type: icon
         icon: mdi:disc-alert
         style: {color: white, left: 75%, top: 85%}
       - type: state-label
         entity: sensor.disk_use_percent_
         style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+- title: Test
+  cards:
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Gameroom Harmony Hub Status
+        entity: sensor.gameroom_harmony_activity
+        aspect_ratio: 16:9
+        state_image:
+          "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+          "Get Colder": /local/lovelace/images/pictures/wind.jpeg
+          "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
+          "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Livingroom Harmony Hub Status
+        entity: sensor.livingroom_harmony_activity
+        aspect_ratio: 16:9
+        state_image:
+          "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
+          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+          "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
+          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+          "Telenet": /local/lovelace/images/pictures/telenet.jpeg
+          "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
+          "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
+          "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
+          "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
+          "Keuken Muziek Luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
+          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+    - type: custom:card-modder
+      style:
+        border-radius: 10px
+        box-shadow: 3px 3px rgba(0,0,0,0.4)
+      card:
+        type: picture-entity
+        name: Livingroom Christmas Tree
+        entity: switch.plug_158d0001f2914c
+        aspect_ratio: 16:9
+        state_image:
+          "on": /local/lovelace/images/pictures/christmas.jpeg
+          "off": /local/lovelace/images/pictures_gray/christmas.jpeg
