@@ -1,6 +1,7 @@
 Kitchen:
   entities:
     - sensor.kitchen_radio_power_load
+    - sensor.kichten_radio_status
     - switch.kitchen_radio
     - switch.kitchen_radio_toggle
     - switch.plug_158d0002368861
