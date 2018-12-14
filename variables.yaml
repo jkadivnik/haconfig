@@ -1,5 +1,0 @@
-  livingroom_light_toggle:
-    value: 'off'
-    attributes:
-      icon: mdi:light-switch
-    restore: true

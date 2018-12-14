@@ -6,4 +6,7 @@
     name: Livingroom Light Toggle
     icon: mdi:light-switch
     initial: off
-
+  veranda_camera_movement:
+    name: Veranda Camera Movement
+    icon: mdi:camcorder
+    initial: off

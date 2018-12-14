@@ -765,6 +765,7 @@ views:
       box-shadow: 3px 3px rgba(0,0,0,0.4)
     card:
       type: picture-elements
+      aspect_ratio: 16:9
       image: /local/lovelace/images/pictures/isp.jpeg
       elements:
       - type: icon
@@ -804,6 +805,7 @@ views:
     card:
       type: picture-elements
       image: /local/lovelace/images/pictures/system_settings.jpeg
+      aspect_ratio: 16:9
       elements:
       - type: icon
         icon: mdi:cogs
