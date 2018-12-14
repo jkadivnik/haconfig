@@ -95,10 +95,12 @@ views:
         type: entity-button
         name: Alles Afzetten
         icon: mdi:close-circle-outline
-        tap_action: call-service
+        tap_action:
+          action: call-service
           service: script.turn_on
           service_data:
             entity_id: script.home_all_off
+        entity: script.home_all_off
 - title: Alarm
   cards:
     - type: custom:card-modder
@@ -109,7 +111,8 @@ views:
         type: picture-entity
         name: Toggle Alarm
         entity: switch.alarm_toggle
-        tap_action: toggle
+        tap_action:
+          action: toggle
         aspect_ratio: 16:9
         state_image:
           'on': /local/lovelace/images/pictures/alarm.jpeg
@@ -122,10 +125,12 @@ views:
         type: entity-button
         name: Sirene Afzetten
         icon: mdi:alarm-off
-        tap_action: call-service
+        tap_action:
+          action: call-service
           service: script.turn_on
           service_data:
-            entity: script.alarm_siren_off
+            entity_id: script.alarm_siren_off
+        entity: script.alarm_siren_off
 - title: Living
   cards:
   - type: vertical-stack
@@ -293,19 +298,22 @@ views:
         entities:
           - entity: script.livingroom_volume_down
             icon: mdi:volume-low
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.livingroom_volume_down
           - entity: script.livingroom_volume_mute
             icon: mdi:volume-off
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.livingroom_volume_mute
           - entity: script.livingroom_volume_up
             icon: mdi:volume-high
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.livingroom_volume_up
@@ -319,13 +327,15 @@ views:
         show_name: false
         entities:
           - entity: script.livingroom_rgb_colorchanger
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.livingroom_rgb_colorchanger
             icon: mdi:palette
           - entity: script.livingroom_rgb_colorchanger_off
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.livingroom_rgb_colorchanger_off
@@ -338,7 +348,8 @@ views:
         type: entity-button
         name: Livingroom Afzetten
         icon: mdi:close-circle-outline
-        tap_action: call-service
+        tap_action:
+          action: call-service
           service: script.turn_on
           service_data:
             entity_id: script.livingroom_all_off
@@ -365,7 +376,8 @@ views:
         type: picture-entity
         name: Kerstboom
         entity: switch.plug_158d0001f2914c
-        tap_action: toggle
+        tap_action:
+          action: toggle
         aspect_ratio: 16:9
         state_image:
           "on": /local/lovelace/images/pictures/christmas.jpeg
@@ -424,19 +436,22 @@ views:
         entities:
           - entity: script.gameroom_volume_down
             icon: mdi:volume-low
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.gameroom_volume_down
           - entity: script.gameroom_volume_mute
             icon: mdi:volume-off
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.gameroom_volume_mute
           - entity: script.gameroom_volume_up
             icon: mdi:volume-high
-            tap_action: call-service
+            tap_action:
+              action: call-service
               service: script.turn_on
               service_data:
                 entity_id: script.gameroom_volume_up
@@ -497,7 +512,8 @@ views:
           type: entity-button
           name: Mancave Afzetten
           icon: mdi:close-circle-outline
-          tap_action: call-service
+          tap_action:
+            action: call-service
             service: script.turn_on
             service_date:
               entity_id: script.gameroom_all_off
@@ -513,7 +529,8 @@ views:
           name: Werk Bureautje
           entity: switch.gameroom_desk_light
           icon: mdi:lightbulb
-          tap_action: toggle
+          tap_action:
+            action: toggle
           aspect_ratio: 16:9
           state_image:
             "on": /local/lovelace/images/pictures/workdesk.jpeg
@@ -528,13 +545,15 @@ views:
           show_name: false
           entities:
             - entity: script.gameroom_rgb_colorchanger
-              tap_action: call-service
+              tap_action:
+                action: call-service
                 service: script.turn_on
                 service_data:
                   entity_id: script.gameroom_rgb_colorchanger
               icon: mdi:palette
             - entity: script.gameroom_rgb_colorchanger_off
-              tap_action: call-service
+              tap_action:
+                action: call-service
                 service: script.turn_on
                 service_data:
                   entity_id: script.gameroom_rgb_colorchanger_off
@@ -580,13 +599,15 @@ views:
       show_name: false
       entities:
         - entity: script.veranda_rgb_colorchanger
-          tap_action: call-service
+          tap_action:
+            action: call-service
             service: script.turn_on
             service_data:
               entity_id: script.veranda_rgb_colorchanger
           icon: mdi:palette
         - entity: script.veranda_rgb_colorchanger_off
-          tap_action: call-service
+          tap_action:
+            action: call-service
             service: script.turn_on
             service_data:
               entity_id: script.veranda_rgb_colorchanger_off
@@ -611,7 +632,8 @@ views:
       type: entity-button
       name: Alles Afzetten
       icon: mdi:close-circle-outline
-      tap_action: call-service
+      tap_action:
+        action: call-service
         service: script.turn_on
         service_data:
           entity_id: script.veranda_all_off
@@ -650,7 +672,8 @@ views:
         type: entity-button
         name: Alles Afzetten
         icon: mdi:close-circle-outline
-        tap_action: call-service
+        tap_action:
+          action: call-service
           service: script.turn_on
           service_data:
             entity_id: script.upstairs_all_off
@@ -691,13 +714,15 @@ views:
             show_name: false
             entities:
               - entity: script.upstairs_rgb_colorchanger
-                tap_action: call-service
+                tap_action:
+                  action: call-service
                   service: script.turn_on
                   service_data:
                     entity_id: script.upstairs_rgb_colorchanger
                 icon: mdi:palette
               - entity: script.upstairs_rgb_colorchanger_off
-                tap_action: call-service
+                tap_action:
+                  action: call-service
                   service: script.turn_on
                   service_data:
                     entity_id: script.upstairs_rgb_colorchanger_off
@@ -712,7 +737,8 @@ views:
         type: picture-entity
         name: Toggle Radio
         entity: switch.bathroom_radio
-        tap_action: toggle
+        tap_action:
+          action: toggle
         aspect_ratio: 16:9
         state_image:
           'on': /local/lovelace/images/pictures/bathroom.jpeg
@@ -725,7 +751,8 @@ views:
         type: entity-button
         name: Alles Afzetten
         icon: mdi:close-circle-outline
-        tap_action: call-service
+        tap_action:
+          action: call-service
           service: script.turn_on
           service_data:
             entity_id: script.bathroom_all_off
