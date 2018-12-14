@@ -96,8 +96,9 @@ views:
         name: Alles Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
-        service: script.turn_on
-        entity: script.home_all_off
+          service: script.turn_on
+          service_data:
+            entity_id: script.home_all_off
 - title: Alarm
   cards:
     - type: custom:card-modder
@@ -122,8 +123,9 @@ views:
         name: Sirene Afzetten
         icon: mdi:alarm-off
         tap_action: call-service
-        service: script.turn_on
-        entity: script.alarm_siren_off
+          service: script.turn_on
+          service_data:
+            entity: script.alarm_siren_off
 - title: Living
   cards:
   - type: vertical-stack
@@ -292,15 +294,21 @@ views:
           - entity: script.livingroom_volume_down
             icon: mdi:volume-low
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.livingroom_volume_down
           - entity: script.livingroom_volume_mute
             icon: mdi:volume-off
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.livingroom_volume_mute
           - entity: script.livingroom_volume_up
             icon: mdi:volume-high
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.livingroom_volume_up
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -312,11 +320,15 @@ views:
         entities:
           - entity: script.livingroom_rgb_colorchanger
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.livingroom_rgb_colorchanger
             icon: mdi:palette
           - entity: script.livingroom_rgb_colorchanger_off
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.livingroom_rgb_colorchanger_off
             icon: mdi:close-circle-outline
     - type: custom:card-modder
       style:
@@ -327,7 +339,9 @@ views:
         name: Livingroom Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
-        service: script.turn_on
+          service: script.turn_on
+          service_data:
+            entity_id: script.livingroom_all_off
         entity: script.livingroom_all_off
   - type: vertical-stack
     cards:
@@ -411,15 +425,21 @@ views:
           - entity: script.gameroom_volume_down
             icon: mdi:volume-low
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.gameroom_volume_down
           - entity: script.gameroom_volume_mute
             icon: mdi:volume-off
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.gameroom_volume_mute
           - entity: script.gameroom_volume_up
             icon: mdi:volume-high
             tap_action: call-service
-            service: script.turn_on
+              service: script.turn_on
+              service_data:
+                entity_id: script.gameroom_volume_up
     - type: custom:card-modder
       style:
         border-radius: 10px
@@ -478,7 +498,9 @@ views:
           name: Mancave Afzetten
           icon: mdi:close-circle-outline
           tap_action: call-service
-          service: script.turn_on
+            service: script.turn_on
+            service_date:
+              entity_id: script.gameroom_all_off
           entity: script.gameroom_all_off
   - type: vertical-stack
     cards:
@@ -507,11 +529,15 @@ views:
           entities:
             - entity: script.gameroom_rgb_colorchanger
               tap_action: call-service
-              service: script.turn_on
+                service: script.turn_on
+                service_data:
+                  entity_id: script.gameroom_rgb_colorchanger
               icon: mdi:palette
             - entity: script.gameroom_rgb_colorchanger_off
               tap_action: call-service
-              service: script.turn_on
+                service: script.turn_on
+                service_data:
+                  entity_id: script.gameroom_rgb_colorchanger_off
               icon: mdi:close-circle-outline
       - type: custom:card-modder
         style:
@@ -555,11 +581,15 @@ views:
       entities:
         - entity: script.veranda_rgb_colorchanger
           tap_action: call-service
-          service: script.turn_on
+            service: script.turn_on
+            service_data:
+              entity_id: script.veranda_rgb_colorchanger
           icon: mdi:palette
         - entity: script.veranda_rgb_colorchanger_off
           tap_action: call-service
-          service: script.turn_on
+            service: script.turn_on
+            service_data:
+              entity_id: script.veranda_rgb_colorchanger_off
           icon: mdi:close-circle-outline
   - type: custom:card-modder
     style:
@@ -582,7 +612,9 @@ views:
       name: Alles Afzetten
       icon: mdi:close-circle-outline
       tap_action: call-service
-      service: script.turn_on
+        service: script.turn_on
+        service_data:
+          entity_id: script.veranda_all_off
       entity: script.veranda_all_off
 - title: Inkom
   cards:
@@ -619,7 +651,9 @@ views:
         name: Alles Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
-        service: script.turn_on
+          service: script.turn_on
+          service_data:
+            entity_id: script.upstairs_all_off
         entity: script.upstairs_all_off
     - type: vertical-stack
       cards:
@@ -658,11 +692,15 @@ views:
             entities:
               - entity: script.upstairs_rgb_colorchanger
                 tap_action: call-service
-                service: script.turn_on
+                  service: script.turn_on
+                  service_data:
+                    entity_id: script.upstairs_rgb_colorchanger
                 icon: mdi:palette
               - entity: script.upstairs_rgb_colorchanger_off
                 tap_action: call-service
-                service: script.turn_on
+                  service: script.turn_on
+                  service_data:
+                    entity_id: script.upstairs_rgb_colorchanger_off
                 icon: mdi:close-circle-outline
 - title: Badkamer
   cards:
@@ -688,7 +726,9 @@ views:
         name: Alles Afzetten
         icon: mdi:close-circle-outline
         tap_action: call-service
-        service: script.turn_on
+          service: script.turn_on
+          service_data:
+            entity_id: script.bathroom_all_off
         entity: script.bathroom_all_off
 - title: Systeem
   cards:

@@ -12,7 +12,7 @@
     action:
       service: script.turn_on
       data:
-        entity_id: script.livingroom_kitchen_radio_toggle
+        entity_id: script.kitchen_radio_toggle
   - alias: Toggle sofa plug in the evening
     trigger:
       platform: event

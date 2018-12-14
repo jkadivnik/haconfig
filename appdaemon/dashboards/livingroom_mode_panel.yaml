@@ -71,7 +71,7 @@ livingroom_kitchen_radio:
   title: Keuken Radio
   icon_on: mdi-radio
   icon_off: mdi-radio
-  entity: script.livingroom_kitchen_radio_toggle
+  entity: script.kitchen_radio_toggle
 
 layout:
     - livingroom_morning, livingroom_watch_movie_kodi, livingroom_ps4, livingroom_watch_television, livingroom_chrome_audiocast, livingroom_kitchen_radio, livingroom_all_off

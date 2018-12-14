@@ -7,9 +7,9 @@ Gameroom:
     - remote.gameroom_hub
     - light.gameroom_rgb_light
     - light.gateway_light_7811dcded4dc
-    - scripts.gameroom_volume_up
-    - scripts.gameroom_volume_down
-    - scripts.gameroom_volume_mute
+    - script.gameroom_volume_up
+    - script.gameroom_volume_down
+    - script.gameroom_volume_mute
     - binary_sensor.motion_sensor_158d0001f9cdfe
     - sensor.temperature_158d000236744c
     - sensor.humidity_158d000236744c

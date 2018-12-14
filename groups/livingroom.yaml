@@ -56,14 +56,12 @@ Livingroom:
     - automation.livingroom_watch_movie__kodi
     - automation.livingroom_watch_netflix
     - automation.livingroom_watch_television
-    - automation.kitchen_music_playing
-    - automation.kitchen_music_turned_off
     - automation.livingroom_harmony_triggered
-    - scripts.livingroom_volume_up
-    - scripts.livingroom_volume_down
-    - scripts.livingroom_volume_mute
-    - scripts.livingroom_kitchen_radio_toggle
-    - script.livingroom_kitchen_radio_toggle
+    - script.livingroom_volume_up
+    - script.livingroom_volume_down
+    - script.livingroom_volume_mute
+    - script.kitchen_radio_toggle
+    - script.kitchen_radio_toggle
     - script.livingroom_all_off
     - script.livingroom_rgb_colorchanger
     - script.livingroom_rgb_colorchanger_off
@@ -71,7 +69,7 @@ Livingroom:
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
     - script.livingroom_volume_up
-    - script.livingroom_kitchen_radio_on
-    - script.livingroom_kitchen_radio_off
+    - script.kitchen_radio_on
+    - script.kitchen_radio_off
     - group.livingroom_mediaplayers
     - group.livingroom_switches

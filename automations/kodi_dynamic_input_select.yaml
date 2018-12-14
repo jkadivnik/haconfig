@@ -2,7 +2,7 @@
     initial_state: on
     trigger:
       - platform: time
-        minutes: '/1'
+        minutes: '/5'
         seconds: '00'
     action:
       - service: script.turn_on

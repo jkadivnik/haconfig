@@ -135,7 +135,7 @@
       value_template: true
       turn_on:
         service: script.turn_on
-        entity_id: script.livingroom_kitchen_radio_toggle
+        entity_id: script.kitchen_radio_toggle
       turn_off:
         service: script.turn_on
-        entity_id: script.livingroom_kitchen_radio_toggle
+        entity_id: script.kitchen_radio_toggle
