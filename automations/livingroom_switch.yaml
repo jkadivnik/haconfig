@@ -10,9 +10,9 @@
       after: '06:00:00'
       before: '10:00:00'
     action:
-      service: script.turn_on
+      service: switch.toggle
       data:
-        entity_id: script.kitchen_radio_toggle
+        entity_id: switch.kitchen_radio
   - alias: Toggle sofa plug in the evening
     trigger:
       platform: event

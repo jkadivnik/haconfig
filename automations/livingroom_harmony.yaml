@@ -12,8 +12,8 @@
       platform: template
       value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') !=  'PowerOff' }}"
     action:
-      service: script.turn_on
-      entity_id: script.kitchen_radio_off
+      service: switch.turn_off
+      entity_id: switch.kitchen_radio
   - alias: Livingroom Sync InputSelect
     trigger:
       platform: state
