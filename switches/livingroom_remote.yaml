@@ -104,19 +104,6 @@
         entity_id: input_select.livingroom_harmony
         data:
           option: "None : -1"
-    livingroom_kitchen_radio:
-      friendly_name: "Livingroom Kitchen Radio"
-      value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
-      turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "Kitchen Radio : 33452779"
-      turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
     livingroom_chromecast_audio:
       friendly_name: "Livingroom Chromecast Audio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Music') }}"
@@ -130,12 +117,3 @@
         entity_id: input_select.livingroom_harmony
         data:
           option: "None : -1"
-    livingroom_kitchen_radio_toggle:
-      friendly_name: "Livingroom Kitchen Radio Toggle"
-      value_template: true
-      turn_on:
-        service: script.turn_on
-        entity_id: script.kitchen_radio_toggle
-      turn_off:
-        service: script.turn_on
-        entity_id: script.kitchen_radio_toggle

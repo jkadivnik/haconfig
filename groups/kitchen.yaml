@@ -1,0 +1,9 @@
+Kitchen:
+  entities:
+    - sensor.kitchen_radio_power_load
+    - switch.kitchen_radio
+    - switch.kitchen_radio_toggle
+    - switch.plug_158d0002368861
+    - script.kitchen_radio_toggle
+    - script.kitchen_radio_on
+    - script.kitchen_radio_off

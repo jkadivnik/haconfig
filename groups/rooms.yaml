@@ -3,6 +3,7 @@ Rooms:
   name: Rooms
   entities:
     - group.livingroom
+    - group.kitchen
     - group.gameroom
     - group.veranda
     - group.hallway

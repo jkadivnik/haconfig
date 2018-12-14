@@ -24,11 +24,3 @@
         {% else %}
           0
         {% endif %}
-    livingroom_kitchen_radio_plug_load:
-      friendly_name: "Kitchen Radio Power Load"
-      value_template: >-
-        {% if is_state("switch.plug_158d0002368861", 'on') %}
-          {{ states.switch.plug_158d0002368861.attributes.load_power|int }}
-        {% else %}
-          0
-        {% endif %}

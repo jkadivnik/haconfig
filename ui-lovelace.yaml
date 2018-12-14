@@ -364,7 +364,7 @@ views:
         type: picture-glance
         title: Keuken
         entities:
-        - entity: switch.livingroom_kitchen_radio_toggle
+        - entity: switch.kitchen_radio_toggle
           icon: mdi:radio
         image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
         aspect_ratio: 16:9
