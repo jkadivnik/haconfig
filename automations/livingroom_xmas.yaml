@@ -7,7 +7,7 @@
         at: "06:10:00"
     condition:
       condition: template
-      value_template: "{{ now().month >= 12 and now().month <= 1 }}"
+      value_template: "{{ now().month >= 12 or now().month <= 1 }}"
     action:
       service: switch.turn_on
       entity_id: switch.plug_158d0001f2914c
@@ -23,7 +23,7 @@
         entity_id: switch.plug_158d0001f2914c
         state: 'on'
       - condition: template
-        value_template: "{{ now().month >= 12 and now().month <= 1 }}"
+        value_template: "{{ now().month >= 12 or now().month <= 1 }}"
     action:
       service: switch.turn_off
       entity_id: switch.plug_158d0001f2914c

@@ -7,9 +7,13 @@
       condition: or
       conditions:
         - condition: template
-          value_template: '{{ now().month >= 10 and now().month <= 3 }}'
+          value_template: '{{ now().month >= 10 or now().month <= 3 }}'
         - condition: time
+          after: '07:00:00'
           before: '20:00:00'
+          weekday:
+            - sat
+            - sun
     action:
       service: switch.turn_on
       entity_id: switch.plug_158d0002368a0e

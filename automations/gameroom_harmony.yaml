@@ -7,3 +7,19 @@
       entity_id: remote.gameroom_hub
       data_template:
         activity: "{{ trigger.to_state.state.split(' : ')[1] }}"
+  - alias: Gameroom Sync InputSelect
+    trigger:
+      platform: state
+      entity_id: sensor.gameroom_harmony_activity
+    action:
+      service: input_select.select_option
+      entity_id: input_select.gameroom_harmony
+      data_template:
+        option: >
+          {% if is_attr('sensor.gameroom_harmony_activity', 'No Screen Gaming') %}No Screen Gaming : 33210808
+          {% elif is_attr('sensor.gameroom_harmony_activity', 'HTPC') %}HTPC : 36518514
+          {% elif is_attr('sensor.gameroom_harmony_activity', 'PowerOff') %}None : -1
+          {% elif is_attr('sensor.gameroom_harmony_activity', 'Play PS3') %}PS3 : 33266495
+          {% elif is_attr('sensor.gameroom_harmony_activity', 'Bigscreen Gaming') %}Big Screen Gaming : 33210807
+          {% elif is_attr('sensor.gameroom_harmony_activity', 'Play PS4') %}PS4 : 35282221
+          {% endif %}
