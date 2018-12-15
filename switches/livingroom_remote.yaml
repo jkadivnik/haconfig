@@ -121,12 +121,6 @@
       friendly_name: "Livingroom Wireless Speakers Tuner"
       value_template: "{{ is_state('input_boolean.wireless_speakers_tuner_state', 'on') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "Chromecast Audio : 33452775"
+        service: script.livingroom_wireless_speaker_tuner_on
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: script.livingroom_wireless_speaker_tuner_off

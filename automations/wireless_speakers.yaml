@@ -1,0 +1,36 @@
+  - alias: Wireless Speakers On
+    trigger:
+      platform: state
+      entity_id: group.wireless_speakers
+      to: 'on'
+  #  condition:
+  #  - condition: state
+  #    entity_id: media_player.wireless_speaker_audiocast
+  #    state: 'off'
+    action:
+    - service: switch.turn_on
+      entity_id: switch.livingroom_wireless_speakers_tuner
+  - alias: Wireless Speakers Tuner Off
+    trigger:
+      platform: state
+      entity_id: group.wireless_speakers
+      to: 'off'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.livingroom_wireless_speakers_tuner
+#      - service: media_player.turn_off
+#        entity_id: media_player.wireless_speaker_audiocast
+  - alias: Wireless Speakers Audiocast Turned On
+    trigger:
+      platform: state
+      entity_id: media_player.livingroom_wireless_speakers_tuner
+      to: 'playing'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.livingroom_wireless_speakers_tuner
+      - condition:
+          - condition: state
+            entity_id: group.wireless_speakers
+            state: 'off'
+#      - service: media_player.turn_off
+#        entity_id: media_player.wireless_speaker_audiocast

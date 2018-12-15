@@ -1,0 +1,20 @@
+  livingroom_wireless_speaker_tuner_on:
+    alias: Livingroom Wireless Speaker Tuner On
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.livingroom_hub
+        data:
+          device: 59509435
+          command: PowerOn
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.wireless_speakers_tuner_state
+  livingroom_wireless_speaker_tuner_off:
+    alias: Livingroom Wireless Speaker Tuner Off
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.livingroom_hub
+        data:
+          device: 59509435
+          command: PowerOff
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.wireless_speakers_tuner_state
