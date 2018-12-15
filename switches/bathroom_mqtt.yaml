@@ -1,7 +1,7 @@
   platform: mqtt
-  name: "Bathroom Radio"
-  state_topic: "stat/bathroom/radio/POWER"
-  command_topic: "cmnd/bathroom/radio/POWER"
+  name: "Bathroom Speaker"
+  state_topic: "stat/bathroom/speaker/POWER"
+  command_topic: "cmnd/bathroom/speaker/POWER"
   payload_on: "ON"
   payload_off: "OFF"
   retain: true

@@ -117,3 +117,16 @@
         entity_id: input_select.livingroom_harmony
         data:
           option: "None : -1"
+    livingroom_wireless_speakers_tuner:
+      friendly_name: "Livingroom Wireless Speakers Tuner"
+      value_template: "{{ is_state('input_boolean.wireless_speakers_tuner_state', 'on') }}"
+      turn_on:
+        service: input_select.select_option
+        entity_id: input_select.livingroom_harmony
+        data:
+          option: "Chromecast Audio : 33452775"
+      turn_off:
+        service: input_select.select_option
+        entity_id: input_select.livingroom_harmony
+        data:
+          option: "None : -1"

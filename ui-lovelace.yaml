@@ -736,7 +736,7 @@ views:
       card:
         type: picture-entity
         name: Toggle Radio
-        entity: switch.bathroom_radio
+        entity: switch.bathroom_speaker
         tap_action:
           action: toggle
         aspect_ratio: 16:9

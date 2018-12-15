@@ -10,3 +10,7 @@
     name: Veranda Camera Movement
     icon: mdi:camcorder
     initial: off
+  wireless_speakers_tuner_state:
+    name: Wireless Speakers Tuner State
+    icon: mdi:speaker
+    initial: off

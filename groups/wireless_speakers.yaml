@@ -1,0 +1,4 @@
+Wireless Speakers:
+  entities:
+    - switch.bathroom_speaker
+    - switch.veranda.speaker
