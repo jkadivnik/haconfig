@@ -348,10 +348,10 @@ views:
               icon: mdi:close-circle-outline
               tap_action:
                 action: call-service
-                service: script.turn_on
+                service: script.scene_on
                 service_data:
-                  entity_id: script.livingroom_all_off
-              entity: script.livingroom_all_off
+                  entity_id: scene.livingroom_all_off
+              entity: scene.livingroom_all_off
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -510,10 +510,10 @@ views:
               icon: mdi:close-circle-outline
               tap_action:
                 action: call-service
-                service: script.turn_on
+                service: scene.turn_on
                 service_date:
-                  entity_id: script.gameroom_all_off
-              entity: script.gameroom_all_off
+                  entity_id: scene.gameroom_all_off
+              entity: scene.gameroom_all_off
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -638,10 +638,10 @@ views:
               icon: mdi:close-circle-outline
               tap_action:
                 action: call-service
-                service: script.turn_on
+                service: scene.turn_on
                 service_data:
-                  entity_id: script.veranda_all_off
-              entity: script.veranda_all_off
+                  entity_id: scene.veranda_all_off
+              entity: scene.veranda_all_off
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -706,10 +706,10 @@ views:
           icon: mdi:close-circle-outline
           tap_action:
             action: call-service
-            service: script.turn_on
+            service: scene.turn_on
             service_data:
-              entity_id: script.stairway_all_off
-          entity: script.stairway_all_off
+              entity_id: scene.stairway_all_off
+          entity: scene.stairway_all_off
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -788,10 +788,10 @@ views:
           icon: mdi:close-circle-outline
           tap_action:
             action: call-service
-            service: script.turn_on
+            service: scene.turn_on
             service_data:
-              entity_id: script.bathroom_all_off
-          entity: script.bathroom_all_off
+              entity_id: scene.bathroom_all_off
+          entity: scene.bathroom_all_off
   - title: Systeem
     cards:
       - type: custom:card-modder

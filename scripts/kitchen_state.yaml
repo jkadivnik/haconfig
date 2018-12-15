@@ -1,6 +1,0 @@
-  kitchen_all_off:
-    alias: Kitchen All Off
-    sequence:
-      - service: homeassistant.turn_off
-        data:
-          entity_id: group.kitchen_off

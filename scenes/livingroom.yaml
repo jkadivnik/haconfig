@@ -11,3 +11,12 @@
   - name: Livingroom Hub Off
     entities:
       remote.livingroom_hub: off
+  - name: Livingroom All Off
+    entities:
+      remote.livingroom_hub: off
+      light.livingroom_bookcase_rgb_light: off
+      light.livingroom_dressoir_rgb_light: off
+      light.livingroom_led_lights: off
+      switch.plug_158d0001f29250: off
+      switch.plug_158d0001f292c0: off
+      switch.plug_158d0001f2914c: off

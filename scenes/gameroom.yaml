@@ -8,7 +8,9 @@
       light.gameroom_rgb_light:
         state: on
         rgb_color: [255,0,0]
-  - name: Gameroom Fun Is Over
+  - name: Gameroom All Off
     entities:
-      group.gameroom_lights: off
       remote.gameroom_hub: off
+      light.gameroom_rgb_light: off
+      light.gateway_light_7811dcded4dc: off
+      switch.gameroom_desk_light: off

@@ -8,3 +8,4 @@ Kitchen:
     - switch.plug_158d0002368861
     - script.kitchen_radio_on
     - script.kitchen_radio_off
+    - scene.kitchen_all_off

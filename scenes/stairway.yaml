@@ -1,0 +1,4 @@
+  - name: Stairway All Off
+    entities:
+      light.gateway_light_7811dcb9c795: off
+      switch.bathroom_speaker: off

@@ -1,8 +1,0 @@
-  - name: House All Off
-    entities:
-      group.bathroom_off: off
-      group.gameroom_off: off
-      group.kitchen_off: off
-      group.livingroom_off: off
-      group.stairway_off: off
-      group.veranda_off: off

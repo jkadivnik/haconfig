@@ -1,0 +1,3 @@
+  - name: Kitchen All Off
+    entities:
+      switch.kitchen_radio: off

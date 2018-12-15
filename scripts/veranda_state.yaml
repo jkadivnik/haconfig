@@ -1,7 +1,0 @@
-#Veranda
-veranda_all_off:
-  alias: Veranda All Off
-  sequence:
-    - service: homeassistant.all_off
-      data:
-        entity_id: group.veranda_off

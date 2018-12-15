@@ -1,0 +1,4 @@
+  - name: Bathroom All Off
+    entities:
+      switch.bathroom_speaker: off
+      light.gateway_light_7811dcb9c795: off

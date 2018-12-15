@@ -1,4 +1,0 @@
-Bathroom Off:
-  entities:
-    - switch.bathroom_speaker
-    - light.gateway_light_7811dcb9c795

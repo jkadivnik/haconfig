@@ -1,6 +1,0 @@
-Gameroom Off:
-  entities:
-    - remote.gameroom_hub
-    - light.gameroom_rgb_light
-    - light.gateway_light_7811dcded4dc
-    - switch.gameroom_desk_light

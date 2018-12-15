@@ -16,3 +16,4 @@ Veranda:
     - script.veranda_all_off
     - script.veranda_rgb_colorchanger
     - script.veranda_rgb_colorchanger_off
+    - scene.veranda_all_off

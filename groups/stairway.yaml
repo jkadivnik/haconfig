@@ -12,3 +12,4 @@ Stairway:
     - script.stairway_all_off
     - script.stairway_rgb_colorchanger
     - script.stairway_rgb_colorchanger_off
+    - scene.stairway_all_off

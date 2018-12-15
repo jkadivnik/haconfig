@@ -1,7 +1,0 @@
-# Stairway
-stairway_all_off:
-  alias: Stairway All Off
-  sequence:
-    - service: homeassistant.turn_off
-      data:
-        entity_id: group.stairway_off

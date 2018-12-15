@@ -2,21 +2,21 @@
   home_all_off:
     alias: Home All Off
     sequence:
-      - service: script.turn_on
+      - service: scene.turn_on
         data:
-          entity_id: script.bathroom_all_off
-      - service: script.turn_on
+          entity_id: scene.bathroom_all_off
+      - service: scene.turn_on
         data:
-          entity_id: script.livingroom_all_off
-      - service: script.turn_on
+          entity_id: scene.livingroom_all_off
+      - service: scene.turn_on
         data:
-          entity_id: script.gameroom_all_off
-      - service: script.turn_on
+          entity_id: scene.gameroom_all_off
+      - service: scene.turn_on
         data:
-          entity_id: script.kitchen_all_off
-      - service: script.turn_on
+          entity_id: scene.kitchen_all_off
+      - service: scene.turn_on
         data:
-          entity_id: script.veranda_all_off
-      - service: script.turn_on
+          entity_id: scene.veranda_all_off
+      - service: scene.turn_on
         data:
-          entity_id: script.stairway_all_off
+          entity_id: scene.stairway_all_off

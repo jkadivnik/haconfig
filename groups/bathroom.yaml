@@ -2,3 +2,4 @@ Bathroom:
   view: true
   entities:
     - switch.bathroom_speaker
+    - scene.bathroom_all_off
