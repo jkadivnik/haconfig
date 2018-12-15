@@ -1,5 +1,4 @@
 Weather Darksky:
-  view: true
   entities:
   - sensor.dark_sky_apparent_temperature
   - sensor.dark_sky_daily_max_precip_intensity
