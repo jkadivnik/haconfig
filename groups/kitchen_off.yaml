@@ -1,0 +1,3 @@
+Kitchen:
+  entities:
+    - switch.kitchen_radio

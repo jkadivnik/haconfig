@@ -1,0 +1,4 @@
+Veranda Off:
+  entities:
+    - light.veranda_led_lights
+    - switch.plug_158d0002368a0e

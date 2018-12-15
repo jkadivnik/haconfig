@@ -1,4 +1,5 @@
 Livingroom:
+  view: true
   entities:
     - input_select.livingroom_harmony
     - input_select.livingroom_mode

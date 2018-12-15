@@ -1,0 +1,9 @@
+Livingroom off:
+  entities:
+    - remote.livingroom_hub
+    - light.livingroom_bookcase_rgb_light
+    - light.livingroom_dressoir_rgb_light
+    - light.livingroom_led_lights
+    - switch.plug_158d0001f29250
+    - switch.plug_158d0001f292c0
+    - switch.plug_158d0001f2914c

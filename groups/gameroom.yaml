@@ -1,4 +1,5 @@
 Gameroom:
+  view: true
   entities:
     - sensor.gameroom_harmony_activity
     - input_select.gameroom_mode

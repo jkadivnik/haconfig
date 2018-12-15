@@ -1,4 +1,5 @@
 Veranda:
+  view: true
   entities:
     - light.veranda_led_lights
     - binary_sensor.motion_sensor_158d0001f2a00f

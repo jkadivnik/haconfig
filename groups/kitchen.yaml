@@ -1,4 +1,5 @@
 Kitchen:
+  view: true
   entities:
     - sensor.kitchen_radio_power_load
     - sensor.kitchen_radio_status

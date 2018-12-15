@@ -1,0 +1,4 @@
+Upstairs Off:
+  entities:
+    - light.gateway_light_7811dcb9c795
+    - switch.bathroom_radio

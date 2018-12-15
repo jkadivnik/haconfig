@@ -1,3 +1,4 @@
 Bathroom:
+  view: true
   entities:
     - switch.bathroom_radio
