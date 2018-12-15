@@ -1,8 +1,6 @@
 Livingroom:
   view: true
   entities:
-    - input_select.livingroom_harmony
-    - input_select.livingroom_mode
     - remote.livingroom_hub
     - light.livingroom_bookcase_rgb_light
     - light.livingroom_dressoir_rgb_light

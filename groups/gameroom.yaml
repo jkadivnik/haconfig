@@ -2,8 +2,6 @@ Gameroom:
   view: true
   entities:
     - sensor.gameroom_harmony_activity
-    - input_select.gameroom_mode
-    - input_select.gameroom_harmony
     - group.gameroom_mediaplayers
     - remote.gameroom_hub
     - light.gameroom_rgb_light
@@ -30,7 +28,6 @@ Gameroom:
     - automation.gameroom_cube_sensor_battery
     - automation.gameroom_cube_volume
     - automation.gameroom_gaming
-    - automation.gameroom_harmony
     - automation.gameroom_lights_on
     - automation.gameroom_motion_sensor_battery
     - automation.gameroom_nightlight_motion

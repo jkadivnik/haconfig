@@ -1,26 +1,4 @@
   # Game Room
-  gameroom_harmony:
-    name: Gameroom Remote
-    options:
-      - "HTPC : 36518514"
-      - "No Screen Gaming : 33210808"
-      - "Big Screen Gaming : 33210807"
-      - "PS3 : 33266495"
-      - "PS4 : 35282221"
-      - "None : -1"
-    initial: "None : -1"
-  gameroom_mode:
-    name: Gameroom Mode
-    options:
-      - No Mode
-      - PC Gaming
-      - Watch Movie Kodi
-      - PS3
-      - PS4
-      - Lights On
-      - Fun Is Over
-    initial: "No Mode"
-    icon: mdi:home
   gameroom_kodi_movie_results:
     name: Gameroom Kodi Movie Results
     options:

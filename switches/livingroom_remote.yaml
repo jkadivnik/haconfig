@@ -4,119 +4,101 @@
       friendly_name: "Livingroom HTPC"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'HTPC') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "HTPC : 33452776"
+          activity: 33452776
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_telenet:
       friendly_name: "Livingroom Telenet"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Telenet') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Telenet : 33452772"
+          activity: 33452772
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_chromecast:
       friendly_name: "Livingroom Chromecast"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Chromecast') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Chromecast : 33452778"
+          activity: 33452778
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_bluray:
       friendly_name: "Livingroom Bluray"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'BD_DVD') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "BD_DVD : 33452773"
+          activity: 33452773
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_ps3:
       friendly_name: "Livingroom PS3"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Playstation 3') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "PS3 : 33452777"
+          activity: 33452777
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_ps4:
       friendly_name: "Livingroom PS4"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Play PS4') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "PS4 : 33530080"
+          activity: 33530080
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_steamlink:
       friendly_name: "Livingroom Steamlink"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Steam Link') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Steam Link : 33452780"
+          activity: 33452780
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_tuner:
       friendly_name: "Livingroom Tuner"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Radio') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Radio : 33452774"
+          activity: 33452774
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_chromecast_audio:
       friendly_name: "Livingroom Chromecast Audio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Music') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Chromecast Audio : 33452775"
+          activity: 33452775
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub
     livingroom_wireless_speakers_tuner:
       friendly_name: "Livingroom Wireless Speakers Tuner"
       value_template: "{{ is_state('input_boolean.wireless_speakers_tuner_state', 'on') }}"

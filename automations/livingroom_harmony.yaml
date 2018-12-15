@@ -1,12 +1,3 @@
-  - alias: Livingroom Harmony
-    trigger:
-      platform: state
-      entity_id: input_select.livingroom_harmony
-    action:
-      service: remote.turn_on
-      entity_id: remote.livingroom_hub
-      data_template:
-        activity: "{{ trigger.to_state.state.split(' : ')[1] }}"
   - alias: Livingroom Harmony Triggered
     trigger:
       platform: template
@@ -14,24 +5,3 @@
     action:
       service: switch.turn_off
       entity_id: switch.kitchen_radio
-  - alias: Livingroom Sync InputSelect
-    trigger:
-      platform: state
-      entity_id: sensor.livingroom_harmony_activity
-    action:
-      service: input_select.select_option
-      entity_id: input_select.livingroom_harmony
-      data_template:
-        option: >
-          {% if is_state('sensor.livingroom_harmony_activity', 'HTPC') %}HTPC : 33452776
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Telenet') %}Telenet : 33452772
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Chromecast') %}Chromecast : 33452778
-          {% elif is_state('sensor.livingroom_harmony_activity', 'BD/DVD') %}BD_DVD : 33452773
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Playstation 3') %}PS3 : 33452777
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Play PS4') %}PS4 : 33530080
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Steam Link') %}Steam Link : 33452780
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Radio') %}Radio : 33452774
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Keuken muziek luisteren') %}Kitchen Radio : 33452779
-          {% elif is_state('sensor.livingroom_harmony_activity', 'Music') %}Chromecast Audio : 33452775
-          {% elif is_state('sensor.livingroom_harmony_activity', 'PowerOff') %}None : -1
-          {% endif %}

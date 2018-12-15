@@ -1,13 +1,8 @@
   - name: House All Off
     entities:
-      light.gameroom_rgb_light: off
-      light.livingroom_dressoir_rgb_light: off
-      light.livingroom_bookcase_rgb_light: off
-      light.veranda_rgb_light: off
-      remote.livingroom_hub: off
-      remote.gameroom_hub: off
-      switch.plug_158d0001f29250: off
-      switch.plug_158d0001f292c0: off
-      light.gateway_light_7811dcb35389: off
-      light.gateway_light_7811dcded4dc: off
-      switch.plug_158d0002368a0e: off
+      group.bathroom_off: off
+      group.gameroom_off: off
+      group.kitchen_off: off
+      group.livingroom_off: off
+      group.stairway_off: off
+      group.veranda_off: off

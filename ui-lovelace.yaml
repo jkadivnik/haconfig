@@ -197,8 +197,6 @@ views:
         type: glance
         show_name: false
         entities:
-          - entity: input_select.livingroom_harmony
-            icon: mdi:arrow-down-drop-circle
           - entity: input_select.livingroom_kodi_movie_results
           - entity: input_select.livingroom_kodi_series_results
   - type: vertical-stack
@@ -463,8 +461,6 @@ views:
         type: glance
         show_name: false
         entities:
-        - entity: input_select.gameroom_harmony
-          icon: mdi:arrow-down-drop-circle
         - entity: input_select.gameroom_kodi_movie_results
         - entity: input_select.gameroom_kodi_series_results
   - type: vertical-stack

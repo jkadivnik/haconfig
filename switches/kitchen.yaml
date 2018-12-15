@@ -13,12 +13,10 @@
       friendly_name: "Kitchen Radio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
       turn_on:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
+        service: remote.turn_on
+        entity_id: remote.livingroom_hub
         data:
-          option: "Kitchen Radio : 33452779"
+          activity: 33452779
       turn_off:
-        service: input_select.select_option
-        entity_id: input_select.livingroom_harmony
-        data:
-          option: "None : -1"
+        service: remote.turn_off
+        entity_id: remote.livingroom_hub

@@ -1,33 +1,4 @@
   # Living Room
-  livingroom_harmony:
-    name: livingroom Remote
-    options:
-      - "HTPC : 33452776"
-      - "Telenet : 33452772"
-      - "Chromecast : 33452778"
-      - "BD_DVD : 33452773"
-      - "PS3 : 33452777"
-      - "PS4 : 33530080"
-      - "Steam Link : 33452780"
-      - "Radio : 33452774"
-      - "Kitchen Radio : 33452779"
-      - "Chromecast Audio : 33452775"
-      - "None : -1"
-    initial: "None : -1"
-    icon: mdi:home
-  livingroom_mode:
-    name: Livingroom Mode
-    options:
-      - No Mode
-      - Morning
-      - Watch Movie - Kodi
-      - Watch Movie - BD
-      - Watch Movie - Netflix
-      - Watch Television
-      - Livingroom Lights
-      - To Bed
-    initial: "No Mode"
-    icon: mdi:home
   livingroom_kodi_movie_results:
     name: Livingroom Kodi Movie Results
     options:
