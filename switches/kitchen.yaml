@@ -4,11 +4,9 @@
       friendly_name: "Kitchen Radio Toggle"
       value_template: "{{ is_state('sensor.kitchen_radio_status', 'on') }}"
       turn_on:
-        service: script.turn_on
-        entity_id: script.kitchen_radio_on
+        service: script.kitchen_radio_on
       turn_off:
-        service: script.turn_on
-        entity_id: script.kitchen_radio_off
+        service: script.kitchen_radio_off
     kitchen_radio_harmony:
       friendly_name: "Kitchen Radio"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"

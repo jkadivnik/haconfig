@@ -4,26 +4,20 @@
       friendly_name: "Gameroom Volume Up"
       value_template: true
       turn_on:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_up
+        service: script.gameroom_volume_up
       turn_off:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_up
+        service: script.gameroom_volume_up
     gameroom_volume_down:
       friendly_name: "Gameroom Volume Down"
       value_template: true
       turn_on:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_down
+        service: script.gameroom_volume_down
       turn_off:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_down
+        service: script.gameroom_volume_down
     gameroom_volume_mute:
       friendly_name: "Gameroom Volume Mute"
       value_template: true
       turn_on:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_mute
+        service: script.gameroom_volume_mute
       turn_off:
-        service: script.turn_on
-        entity_id: script.gameroom_volume_mute
+        service: script.gameroom_volume_mute

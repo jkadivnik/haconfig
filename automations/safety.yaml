@@ -10,12 +10,10 @@
     data:
       title: "Vuur en/of rook ontdekt!"
       message: "Er is thuis rook en/of vuur ontdekt!"
-  - service: script.turn_on
-    entity_id: script.alarm_siren_on
+  - service: script.alarm_siren_on
     data:
-      variables:
-        ringtone_id: 2
-        ringtone_vol: 85
+      ringtone_id: 2
+      ringtone_vol: 85
 # Gas detected
 - alias: Gas Detected
   trigger:
@@ -28,9 +26,7 @@
     data:
       title: "Gaslek ontdekt!"
       message: "Er is in de bureau een gaslek. Momenteel is de dichtheid van het gas {{ states.binary_sensor.natgas_sensor_158d000204ae2a.density }}%!"
-  - service: script.turn_on
-    entity_id: script.alarm_siren_on
+  - service: script.alarm_siren_on
     data:
-      variables:
-        ringtone_id: 2
-        ringtone_vol: 85
+      ringtone_id: 2
+      ringtone_vol: 85

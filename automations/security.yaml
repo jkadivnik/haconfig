@@ -38,15 +38,13 @@
         state: 'on'
     action:
       - service: script.notify_all
-        data_template:
+        data:
           title: "Het alarm is aan het afgaan."
           message: "Er is thuis beweging gedetecteerd en het alarm is aangezet!"
-      - service: script.turn_on
-        entity_id: script.alarm_siren_on
+      - service: script.alarm_siren_on
         data:
-          variables:
-            ringtone_id: 8
-            ringtone_vol: 90
+          ringtone_id: 8
+          ringtone_vol: 90
   - alias: Alarm Off
     trigger:
       platform: state
@@ -54,8 +52,7 @@
       to: 'off'
     action:
       - service: script.notify_all
-        data_template:
+        data:
           title: "Het alarm is afgegaan en wordt nu uitgezet."
           message: "Het alarm is nu afgezet!"
-      - service: script.turn_on
-        entity_id: script.alarm_siren_off
+      - service: script.alarm_siren_off

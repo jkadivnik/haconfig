@@ -1,5 +1,4 @@
 Gameroom:
-  view: true
   entities:
     - sensor.gameroom_harmony_activity
     - group.gameroom_mediaplayers

@@ -1,5 +1,4 @@
 Stairway:
-  view: true
   entities:
     - binary_sensor.motion_sensor_158d000276e199
     - light.gateway_light_7811dcb9c795

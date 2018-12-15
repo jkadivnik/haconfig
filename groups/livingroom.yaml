@@ -1,5 +1,4 @@
 Livingroom:
-  view: true
   entities:
     - remote.livingroom_hub
     - light.livingroom_bookcase_rgb_light
