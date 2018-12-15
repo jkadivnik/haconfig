@@ -21,12 +21,12 @@
         entity_id: binary_sensor.switch_158d00026bb099
         click_type: single
     condition:
-      - condition: or  # 'when dark' condition: either after sunset or before sunrise
-          conditions:
-            - condition: sun
-              after: sunset
-            - condition: sun
-              before: sunrise
+      - condition: or
+        conditions:
+          - condition: sun
+            after: sunset
+          - condition: sun
+            before: sunrise
       - condition: template
         value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' }}"
     action:
