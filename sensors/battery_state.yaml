@@ -5,8 +5,8 @@
       value_template: '{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}'
       unit_of_measurement: '%'
       device_class: battery
-    upstairs_motion_sensor_battery_state:
-      friendly_name: "Upstairs Motion Sensor Battery State"
+    stairway_motion_sensor_battery_state:
+      friendly_name: "Stairway Motion Sensor Battery State"
       value_template: "{{ states.binary_sensor.motion_sensor_158d000276e199.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery

@@ -81,7 +81,7 @@
           message: "Vervang de batterij zo snel mogelijk!"
       - service: automation.turn_off
         entity_id: automation.livingroom_motion_sensor_battery
-  - alias: Upstairs Motion Sensor Battery
+  - alias: Stairway Motion Sensor Battery
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.motion_sensor_158d000276e199
@@ -90,10 +90,10 @@
     action:
     - service: script.notify_all
       data:
-        title: "Xiaomi upstairs bewegingssensor : batterij leeg!"
+        title: "Xiaomi stairway bewegingssensor : batterij leeg!"
         message: "Vervang de batterij zo snel mogelijk!"
     - service: automation.turn_off
-      entity_id: automation.upstairs_motion_sensor_battery
+      entity_id: automation.stairway_motion_sensor_battery
 
   # Cube sensor battery checks
   - alias: Gameroom Cube Sensor Battery

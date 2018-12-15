@@ -1,11 +1,11 @@
-  upstairs_rgb_colorchanger:
-    alias: Upstairs Colorchanger
+  stairway_rgb_colorchanger:
+    alias: Stairway Colorchanger
     sequence:
       - service: script.generic_colorchanger
         data:
           entity: "light.gateway_light_7811dcb9c795"
-  upstairs_rgb_colorchanger_off:
-    alias: Upstairs Led Lights Off
+  stairway_rgb_colorchanger_off:
+    alias: Stairway Led Lights Off
     sequence:
       - service: light.turn_off
         data:

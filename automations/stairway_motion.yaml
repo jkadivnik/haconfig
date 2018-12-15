@@ -1,4 +1,4 @@
-- alias: Upstairs NightLight Motion
+- alias: Stairway NightLight Motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d000276e199
@@ -19,7 +19,7 @@
     data:
       entity_id: light.gateway_light_7811dcb9c795
       rgb_color: [0, 0, 255]
-- alias: Upstairs No Motion
+- alias: Stairway No Motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d000276e199

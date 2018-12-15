@@ -676,8 +676,8 @@ views:
           action: call-service
           service: script.turn_on
           service_data:
-            entity_id: script.upstairs_all_off
-        entity: script.upstairs_all_off
+            entity_id: script.stairway_all_off
+        entity: script.stairway_all_off
     - type: vertical-stack
       cards:
         - type: custom:card-modder
@@ -689,7 +689,7 @@ views:
             title: Traphal
             entities:
               - entity: light.gateway_light_7811dcb9c795
-            image: /local/lovelace/images/pictures/upstairs_hallway.jpeg
+            image: /local/lovelace/images/pictures/stairway_hallway.jpeg
             aspect_ratio: 16:9
         - type: custom:card-modder
           style:
@@ -713,19 +713,19 @@ views:
             show_state: false
             show_name: false
             entities:
-              - entity: script.upstairs_rgb_colorchanger
+              - entity: script.stairway_rgb_colorchanger
                 tap_action:
                   action: call-service
                   service: script.turn_on
                   service_data:
-                    entity_id: script.upstairs_rgb_colorchanger
+                    entity_id: script.stairway_rgb_colorchanger
                 icon: mdi:palette
-              - entity: script.upstairs_rgb_colorchanger_off
+              - entity: script.stairway_rgb_colorchanger_off
                 tap_action:
                   action: call-service
                   service: script.turn_on
                   service_data:
-                    entity_id: script.upstairs_rgb_colorchanger_off
+                    entity_id: script.stairway_rgb_colorchanger_off
                 icon: mdi:close-circle-outline
 - title: Badkamer
   cards:

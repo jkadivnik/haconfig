@@ -1,4 +1,4 @@
   platform: group
-  name: Upstairs Lights
+  name: Stairway Lights
   entities:
     - light.gateway_light_7811dcb9c795

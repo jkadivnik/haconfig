@@ -1,0 +1,6 @@
+  livingroom_all_off:
+    alias: Livingroom All Off
+    sequence:
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.livingroom_off

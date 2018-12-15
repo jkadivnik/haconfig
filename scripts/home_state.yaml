@@ -1,0 +1,22 @@
+  #Home
+  home_all_off:
+    alias: Home All Off
+    sequence:
+      - service: script.turn_on
+        data:
+          entity_id: script.bathroom_all_off
+      - service: script.turn_on
+        data:
+          entity_id: script.livingroom_all_off
+      - service: script.turn_on
+        data:
+          entity_id: script.gameroom_all_off
+      - service: script.turn_on
+        data:
+          entity_id: script.kitchen_all_off
+      - service: script.turn_on
+        data:
+          entity_id: script.veranda_all_off
+      - service: script.turn_on
+        data:
+          entity_id: script.stairway_all_off

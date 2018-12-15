@@ -9,5 +9,5 @@ Battery Check Automations:
     - automation.veranda_motion_sensor_battery
     - automation.livingroom_motion_sensor_battery
     - automation.gameroom_motion_sensor_battery
-    - automation.upstairs_motion_sensor_battery
+    - automation.stairway_motion_sensor_battery
     - automation.livingroom_wireless_button_sensor_battery

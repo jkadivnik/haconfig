@@ -1,0 +1,6 @@
+  gameroom_all_off:
+    alias: Gameroom All Off
+    sequence:
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.gameroom_all_off

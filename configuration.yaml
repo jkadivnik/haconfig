@@ -171,9 +171,9 @@ xiaomi_aqara:
     - key: !secret livingroom_gateway_key
       mac: !secret livingroom_gateway_mac
 #      host: !secret livingroom_gateway_host
-    - key: !secret upstairs_gateway_key
-      mac: !secret upstairs_gateway_mac
-#      host: !secret upstairs_gateway_host
+    - key: !secret stairway_gateway_key
+      mac: !secret stairway_gateway_mac
+#      host: !secret stairway_gateway_host
 
 ffmpeg:
 
