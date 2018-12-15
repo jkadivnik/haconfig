@@ -1,4 +1,4 @@
-  - alias: Toggle radio in the morning
+  - alias: Toggle radio when noting playing
     trigger:
       platform: event
       event_type: xiaomi_aqara.click
@@ -6,14 +6,14 @@
         entity_id: binary_sensor.switch_158d00026bb099
         click_type: single
     condition:
-      condition: time
-      after: '06:00:00'
-      before: '10:00:00'
+      - condition: time
+        after: '06:00:00'
+      - condition: template
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') == 'PowerOff' }}"
     action:
       service: switch.toggle
-      data:
-        entity_id: switch.kitchen_radio
-  - alias: Toggle sofa plug in the evening
+      entity_id: switch.kitchen_radio
+  - alias: Toggle sofa plug when activity
     trigger:
       platform: event
       event_type: xiaomi_aqara.click
@@ -21,13 +21,17 @@
         entity_id: binary_sensor.switch_158d00026bb099
         click_type: single
     condition:
-      condition: time
-      after: '18:00:00'
-      before: '23:00:00'
+      - condition: or  # 'when dark' condition: either after sunset or before sunrise
+          conditions:
+            - condition: sun
+              after: sunset
+            - condition: sun
+              before: sunrise
+      - condition: template
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' }}"
     action:
       service: switch.toggle
-      data:
-        entity_id: switch.plug_158d0001f29250
+      entity_id: switch.plug_158d0001f29250
   - alias: Toggle alarm status
     trigger:
       platform: event

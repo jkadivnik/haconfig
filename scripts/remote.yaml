@@ -1,0 +1,4 @@
+  harmony_sync:
+    alias: Remote Harmony Sync
+    sequence:
+      - service: remote.harmony_sync
