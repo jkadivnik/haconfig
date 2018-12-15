@@ -1,469 +1,107 @@
 resources:
-- url: /local/custom_ui/mini-media-player-bundle.js?v=1.0
-  type: module
-- url: /local/custom_ui/mini-graph-card-bundle.js?v=1.0
-  type: js
-- url: /local/custom_ui/card-modder.js?v=1.0
-  type: module
-- url: /local/custom_ui/dark-sky-weather-card.js?v=1.1
-  type: js
-- url: /local/custom_ui/custom-cards.js?v=1.0
-  type: module
-- url: /local/custom_ui/monster-card.js?v=1.0
-  type: js
-- url: /local/slider-entity-row.js?v=1.0
-  type: js
+  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0
+    type: module
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=1.0
+    type: js
+  - url: /local/custom_ui/card-modder.js?v=1.0
+    type: module
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=1.1
+    type: js
+  - url: /local/custom_ui/custom-cards.js?v=1.0
+    type: module
+  - url: /local/custom_ui/monster-card.js?v=1.0
+    type: js
+  - url: /local/slider-entity-row.js?v=1.0
+    type: js
 
 background: center / cover no-repeat url("/local/lovelace/images/pictures/background/black_gray_wall.jpeg") fixed
 
 title: Kadivnikskes
 views:
-- title: Thuis
-  cards:
-  - type: vertical-stack
+  - title: Thuis
     cards:
-    - type: horizontal-stack
-      cards:
-      - type: custom:picture-status-card
-        entity: device_tracker.papa_phone
-        image: /local/lovelace/images/pictures/Johnny.jpeg
-        font_color: white
-        card_height: 90px
-        state_image:
-          "home": /local/lovelace/images/pictures/Johnny.jpeg
-          "not_home": /local/lovelace/images/pictures_gray/Johnny.jpeg
-      - type: custom:picture-status-card
-        entity: device_tracker.thibo_phone
-        image: /local/lovelace/images/pictures/Thibo.jpeg
-        font_color: white
-        card_height: 90px
-        state_image:
-          "home": /local/lovelace/images/pictures/Thibo.jpeg
-          "not_home": /local/lovelace/images/pictures_gray/Thibo.jpeg
-      - type: custom:picture-status-card
-        entity: device_tracker.maxim_phone
-        image: /local/lovelace/images/pictures/Maxim.jpeg
-        font_color: white
-        card_height: 90px
-        state_image:
-          "home": /local/lovelace/images/pictures/Maxim.jpeg
-          "not_home": /local/lovelace/images/pictures_gray/Maxim.jpeg
-      - type: custom:picture-status-card
-        entity: device_tracker.mama_phone
-        image: /local/lovelace/images/pictures/Charlotte.jpeg
-        font_color: white
-        card_height: 90px
-        state_image:
-          "home": /local/lovelace/images/pictures/Charlotte.jpeg
-          "not_home": /local/lovelace/images/pictures_gray/Charlotte.jpeg
-        name: ' '
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: custom:dark-sky-weather-card
-        entity_sun: sun.sun
-        entity_daily_summary: sensor.dark_sky_daily_summary
-        entity_current_conditions: sensor.dark_sky_icon
-        entity_humidity: sensor.dark_sky_humidity
-        entity_pressure: sensor.dark_sky_pressure
-        entity_temperature: sensor.dark_sky_temperature
-        entity_visibility: sensor.dark_sky_visibility
-        entity_wind_bearing: sensor.dark_sky_wind_bearing
-        entity_wind_speed: sensor.dark_sky_wind_speed
-        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
-        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
-        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
-        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
-        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
-        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
-        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
-        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
-        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
-        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
-        entity_forecast_icon_1: sensor.dark_sky_icon_1
-        entity_forecast_icon_2: sensor.dark_sky_icon_2
-        entity_forecast_icon_3: sensor.dark_sky_icon_3
-        entity_forecast_icon_4: sensor.dark_sky_icon_4
-        entity_forecast_icon_5: sensor.dark_sky_icon_5
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Alles Afzetten
-        icon: mdi:close-circle-outline
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.home_all_off
-        entity: script.home_all_off
-- title: Alarm
-  cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Alarm
-        entity: switch.alarm
-        tap_action:
-          action: toggle
-        aspect_ratio: 16:9
-        state_image:
-          'on': /local/lovelace/images/pictures/alarm.jpeg
-          'off': /local/lovelace/images/pictures_gray/alarm.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Sirene Afzetten
-        icon: mdi:alarm-off
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.alarm_siren_off
-        entity: script.alarm_siren_off
-- title: Living
-  cards:
-  - type: vertical-stack
-    cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: Sofa
-        entities:
-          - entity: switch.livingroom_telenet
-            icon: mdi:television-box
-            name: Telenet
-          - entity: switch.livingroom_kodi
-            icon: mdi:movie
-            name: HTPC
-          - entity: switch.livingroom_chromecast
-            icon: mdi:cast
-            name: Chromecast
-          - entity: switch.livingroom_bluray
-            icon: mdi:filmstrip
-            name: Bluray
-          - entity: switch.livingroom_steamlink
-            icon: mdi:cellphone-link
-            name: Steam Link
-          - entity: switch.livingroom_ps4
-            icon: mdi:gamepad
-            name: PS4
-          - entity: switch.plug_158d0001f29250
-            name: Sofa Licht
-          - entity: light.livingroom_bookcase_rgb_light
-            icon: mdi:lightbulb
-            name: Boekenkast LEDs
-        image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Afstandsbediening
-        entity: sensor.livingroom_harmony_activity
-        aspect_ratio: 16:9
-        state_image:
-          "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
-          "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
-          "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
-          "HTPC": /local/lovelace/images/pictures/kodi.jpeg
-          "Telenet": /local/lovelace/images/pictures/telenet.jpeg
-          "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
-          "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
-          "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
-          "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
-          "Keuken muziek luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
-          "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-          - entity: input_select.livingroom_kodi_movie_results
-          - entity: input_select.livingroom_kodi_series_results
-  - type: vertical-stack
-    cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: Eettafel
-        entities:
-          - entity: switch.livingroom_chromecast_audio
-            icon: mdi:library-music
-            name: Audiocast
-          - entity: switch.livingroom_tuner
-            icon: mdi:radio
-            name: Tuner
-          - switch.plug_158d0001f292c0
-          - light.livingroom_dressoir_rgb_light
-        image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
-        aspect_ratio: 16:9
-    - type: conditional
-      conditions:
-        - entity: media_player.kodiliving
-          state_not: "idle"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.kodiliving
-          name: HTPC
-          artwork: cover
-          show_progress: true
-          show_source: true
-          artwork_border: true
-          icon: mdi:movie
-    - type: conditional
-      conditions:
-        - entity: media_player.living_room_video
-          state_not: "off"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_video
-          name: Chromecast
-          show_progress: true
-          show_cover: true
-          artwork_border: true
-    - type: conditional
-      conditions:
-        - entity: media_player.living_room_audio
-          state_not: "off"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_audio
-          name: Chromecast Audio
-          show_progress: true
-          show_cover: true
-          artwork_border: true
-    - type: conditional
-      conditions:
-        - entity: media_player.living_room_speaker
-          state_not: "off"
-      card:
-        type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: custom:mini-media-player
-          entity: media_player.living_room_speaker
-          name: Google Mini
-          show_progress: true
-          show_cover: true
-          artwork_border: true
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.livingroom_volume_down
-            icon: mdi:volume-low
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.livingroom_volume_down
-          - entity: script.livingroom_volume_mute
-            icon: mdi:volume-off
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.livingroom_volume_mute
-          - entity: script.livingroom_volume_up
-            icon: mdi:volume-high
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.livingroom_volume_up
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.livingroom_rgb_colorchanger
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.livingroom_rgb_colorchanger
-            icon: mdi:palette
-          - entity: script.livingroom_rgb_colorchanger_off
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.livingroom_rgb_colorchanger_off
-            icon: mdi:close-circle-outline
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Livingroom Afzetten
-        icon: mdi:close-circle-outline
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.livingroom_all_off
-        entity: script.livingroom_all_off
-  - type: vertical-stack
-    cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: Keuken
-        entities:
-        - entity: switch.kitchen_radio
-          icon: mdi:radio
-        image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Kerstboom
-        entity: switch.plug_158d0001f2914c
-        tap_action:
-          action: toggle
-        aspect_ratio: 16:9
-        state_image:
-          "on": /local/lovelace/images/pictures/christmas.jpeg
-          "off": /local/lovelace/images/pictures_gray/christmas.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-          - entity: sensor.temperature_158d0002379148
-            name: Temperatuur
-          - entity: sensor.humidity_158d0002379148
-            name: Vochtigheid
-          - entity: sensor.illumination_158d0001de7134
-            name: Lichtsterkte
-- title: Mancave
-  cards:
-  - type: vertical-stack
-    cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-glance
-        title: Bureau
-        entities:
-        - entity: switch.gameroom_pc_sound
-          icon: mdi:surround-sound
-          name: Gaming
-        - entity: switch.gameroom_kodi
-          icon: mdi:movie
-          name: HTPC
-        - entity: switch.gameroom_ps3
-          icon: mdi:gamepad
-          name: PS3
-        - entity: switch.gameroom_ps4
-          icon: mdi:gamepad
-          name: PS4
-        - entity: light.gameroom_rgb_light
-          icon: mdi:lightbulb
-          name: LED Lichten
-        image: /local/lovelace/images/pictures/gameroom.jpeg
-        aspect_ratio: 16:9
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_state: false
-        show_name: false
-        entities:
-          - entity: script.gameroom_volume_down
-            icon: mdi:volume-low
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.gameroom_volume_down
-          - entity: script.gameroom_volume_mute
-            icon: mdi:volume-off
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.gameroom_volume_mute
-          - entity: script.gameroom_volume_up
-            icon: mdi:volume-high
-            tap_action:
-              action: call-service
-              service: script.turn_on
-              service_data:
-                entity_id: script.gameroom_volume_up
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: glance
-        show_name: false
-        entities:
-        - entity: input_select.gameroom_kodi_movie_results
-        - entity: input_select.gameroom_kodi_series_results
-  - type: vertical-stack
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:picture-status-card
+                entity: device_tracker.papa_phone
+                image: /local/lovelace/images/pictures/Johnny.jpeg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/pictures/Johnny.jpeg
+                  "not_home": /local/lovelace/images/pictures_gray/Johnny.jpeg
+              - type: custom:picture-status-card
+                entity: device_tracker.thibo_phone
+                image: /local/lovelace/images/pictures/Thibo.jpeg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/pictures/Thibo.jpeg
+                  "not_home": /local/lovelace/images/pictures_gray/Thibo.jpeg
+              - type: custom:picture-status-card
+                entity: device_tracker.maxim_phone
+                image: /local/lovelace/images/pictures/Maxim.jpeg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/pictures/Maxim.jpeg
+                  "not_home": /local/lovelace/images/pictures_gray/Maxim.jpeg
+              - type: custom:picture-status-card
+                entity: device_tracker.mama_phone
+                image: /local/lovelace/images/pictures/Charlotte.jpeg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/pictures/Charlotte.jpeg
+                  "not_home": /local/lovelace/images/pictures_gray/Charlotte.jpeg
+                name: ' '
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: custom:dark-sky-weather-card
+              entity_sun: sun.sun
+              entity_daily_summary: sensor.dark_sky_daily_summary
+              entity_current_conditions: sensor.dark_sky_icon
+              entity_humidity: sensor.dark_sky_humidity
+              entity_pressure: sensor.dark_sky_pressure
+              entity_temperature: sensor.dark_sky_temperature
+              entity_visibility: sensor.dark_sky_visibility
+              entity_wind_bearing: sensor.dark_sky_wind_bearing
+              entity_wind_speed: sensor.dark_sky_wind_speed
+              entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+              entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+              entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+              entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+              entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+              entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
+              entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
+              entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
+              entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
+              entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
+              entity_forecast_icon_1: sensor.dark_sky_icon_1
+              entity_forecast_icon_2: sensor.dark_sky_icon_2
+              entity_forecast_icon_3: sensor.dark_sky_icon_3
+              entity_forecast_icon_4: sensor.dark_sky_icon_4
+              entity_forecast_icon_5: sensor.dark_sky_icon_5
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entity-button
+              name: Alles Afzetten
+              icon: mdi:close-circle-outline
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.home_all_off
+              entity: script.home_all_off
+  - title: Alarm
     cards:
       - type: custom:card-modder
         style:
@@ -471,50 +109,660 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Afstandsbediening
-          entity: sensor.gameroom_harmony_activity
+          name: Alarm
+          entity: switch.alarm
+          tap_action:
+            action: toggle
           aspect_ratio: 16:9
           state_image:
-            "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
-            "HTPC": /local/lovelace/images/pictures/kodi.jpeg
-            "Get Colder": /local/lovelace/images/pictures/wind.jpeg
-            "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
-            "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
-            "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
-            "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
-      - type: conditional
-        conditions:
-          - entity: media_player.kodibureau
-            state_not: "idle"
-        card:
-          type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: custom:mini-media-player
-            entity: media_player.kodibureau
-            name: HTPC
-            artwork: cover
-            show_progress: true
-            show_source: true
-            artwork_border: true
-            icon: mdi:movie
+            'on': /local/lovelace/images/pictures/alarm.jpeg
+            'off': /local/lovelace/images/pictures_gray/alarm.jpeg
       - type: custom:card-modder
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: entity-button
-          name: Mancave Afzetten
+          name: Sirene Afzetten
+          icon: mdi:alarm-off
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: script.alarm_siren_off
+          entity: script.alarm_siren_off
+  - title: Living
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-glance
+              title: Sofa
+              entities:
+                - entity: switch.livingroom_telenet
+                  icon: mdi:television-box
+                  name: Telenet
+                - entity: switch.livingroom_kodi
+                  icon: mdi:movie
+                  name: HTPC
+                - entity: switch.livingroom_chromecast
+                  icon: mdi:cast
+                  name: Chromecast
+                - entity: switch.livingroom_bluray
+                  icon: mdi:filmstrip
+                  name: Bluray
+                - entity: switch.livingroom_steamlink
+                  icon: mdi:cellphone-link
+                  name: Steam Link
+                - entity: switch.livingroom_ps4
+                  icon: mdi:gamepad
+                  name: PS4
+                - entity: switch.plug_158d0001f29250
+                  name: Sofa Licht
+                - entity: light.livingroom_bookcase_rgb_light
+                  icon: mdi:lightbulb
+                  name: Boekenkast LEDs
+              image: /local/lovelace/images/pictures/livingroom_tv_corner.jpeg
+              aspect_ratio: 16:9
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Afstandsbediening
+              entity: sensor.livingroom_harmony_activity
+              aspect_ratio: 16:9
+              state_image:
+                "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
+                "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+                "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
+                "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+                "Telenet": /local/lovelace/images/pictures/telenet.jpeg
+                "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
+                "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
+                "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
+                "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
+                "Keuken muziek luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
+                "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: input_select.livingroom_kodi_movie_results
+                - entity: input_select.livingroom_kodi_series_results
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-glance
+              title: Eettafel
+              entities:
+                - entity: switch.livingroom_chromecast_audio
+                  icon: mdi:library-music
+                  name: Audiocast
+                - entity: switch.livingroom_tuner
+                  icon: mdi:radio
+                  name: Tuner
+                - switch.plug_158d0001f292c0
+                - light.livingroom_dressoir_rgb_light
+              image: /local/lovelace/images/pictures/livingroom_diner_table.jpeg
+              aspect_ratio: 16:9
+          - type: conditional
+            conditions:
+              - entity: media_player.kodiliving
+                state_not: "idle"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.kodiliving
+                name: HTPC
+                artwork: cover
+                show_progress: true
+                show_source: true
+                artwork_border: true
+                icon: mdi:movie
+          - type: conditional
+            conditions:
+              - entity: media_player.living_room_video
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.living_room_video
+                name: Chromecast
+                show_progress: true
+                show_cover: true
+                artwork_border: true
+          - type: conditional
+            conditions:
+              - entity: media_player.living_room_audio
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.living_room_audio
+                name: Chromecast Audio
+                show_progress: true
+                show_cover: true
+                artwork_border: true
+          - type: conditional
+            conditions:
+              - entity: media_player.living_room_speaker
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.living_room_speaker
+                name: Google Mini
+                show_progress: true
+                show_cover: true
+                artwork_border: true
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.livingroom_volume_down
+                  icon: mdi:volume-low
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.livingroom_volume_down
+                - entity: script.livingroom_volume_mute
+                  icon: mdi:volume-off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.livingroom_volume_mute
+                - entity: script.livingroom_volume_up
+                  icon: mdi:volume-high
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.livingroom_volume_up
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.livingroom_rgb_colorchanger
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.livingroom_rgb_colorchanger
+                  icon: mdi:palette
+                - entity: script.livingroom_rgb_colorchanger_off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.livingroom_rgb_colorchanger_off
+                  icon: mdi:close-circle-outline
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entity-button
+              name: Livingroom Afzetten
+              icon: mdi:close-circle-outline
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.livingroom_all_off
+              entity: script.livingroom_all_off
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-glance
+              title: Keuken
+              entities:
+                - entity: switch.kitchen_radio
+                  icon: mdi:radio
+              image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
+              aspect_ratio: 16:9
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Kerstboom
+              entity: switch.plug_158d0001f2914c
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                "on": /local/lovelace/images/pictures/christmas.jpeg
+                "off": /local/lovelace/images/pictures_gray/christmas.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: sensor.temperature_158d0002379148
+                  name: Temperatuur
+                - entity: sensor.humidity_158d0002379148
+                  name: Vochtigheid
+                - entity: sensor.illumination_158d0001de7134
+                  name: Lichtsterkte
+  - title: Mancave
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-glance
+              title: Bureau
+              entities:
+                - entity: switch.gameroom_pc_sound
+                  icon: mdi:surround-sound
+                  name: Gaming
+                - entity: switch.gameroom_kodi
+                  icon: mdi:movie
+                  name: HTPC
+                - entity: switch.gameroom_ps3
+                  icon: mdi:gamepad
+                  name: PS3
+                - entity: switch.gameroom_ps4
+                  icon: mdi:gamepad
+                  name: PS4
+                - entity: light.gameroom_rgb_light
+                  icon: mdi:lightbulb
+                  name: LED Lichten
+              image: /local/lovelace/images/pictures/gameroom.jpeg
+              aspect_ratio: 16:9
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.gameroom_volume_down
+                  icon: mdi:volume-low
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.gameroom_volume_down
+                - entity: script.gameroom_volume_mute
+                  icon: mdi:volume-off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.gameroom_volume_mute
+                - entity: script.gameroom_volume_up
+                  icon: mdi:volume-high
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.gameroom_volume_up
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: input_select.gameroom_kodi_movie_results
+                - entity: input_select.gameroom_kodi_series_results
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Afstandsbediening
+              entity: sensor.gameroom_harmony_activity
+              aspect_ratio: 16:9
+              state_image:
+                "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+                "HTPC": /local/lovelace/images/pictures/kodi.jpeg
+                "Get Colder": /local/lovelace/images/pictures/wind.jpeg
+                "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
+                "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
+                "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+                "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
+          - type: conditional
+            conditions:
+              - entity: media_player.kodibureau
+                state_not: "idle"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.kodibureau
+                name: HTPC
+                artwork: cover
+                show_progress: true
+                show_source: true
+                artwork_border: true
+                icon: mdi:movie
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entity-button
+              name: Mancave Afzetten
+              icon: mdi:close-circle-outline
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_date:
+                  entity_id: script.gameroom_all_off
+              entity: script.gameroom_all_off
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Werk Bureautje
+              entity: switch.gameroom_desk_light
+              icon: mdi:lightbulb
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                "on": /local/lovelace/images/pictures/workdesk.jpeg
+                "off": /local/lovelace/images/pictures_gray/workdesk.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.gameroom_rgb_colorchanger
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.gameroom_rgb_colorchanger
+                  icon: mdi:palette
+                - entity: script.gameroom_rgb_colorchanger_off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.gameroom_rgb_colorchanger_off
+                  icon: mdi:close-circle-outline
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: sensor.temperature_158d000236744c
+                  name: Temperatuur
+                - entity: sensor.humidity_158d000236744c
+                  name: Vochtigheid
+                - entity: sensor.illumination_158d0001f9cdfe
+                  name: Lichtsterkte
+                - entity: binary_sensor.natgas_sensor_158d000204ae2a
+                  name: Gas
+                  icon: mdi:gas-station
+  - title: Veranda
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Led Licht
+              entity: light.veranda_rgb_light
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/pictures/ledstrip.jpeg
+                'off': /local/lovelace/images/pictures_gray/ledstrip.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.veranda_rgb_colorchanger
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.veranda_rgb_colorchanger
+                  icon: mdi:palette
+                - entity: script.veranda_rgb_colorchanger_off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.veranda_rgb_colorchanger_off
+                  icon: mdi:close-circle-outline
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Speaker
+              entity: switch.veranda_speaker
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/pictures/music.jpeg
+                'off': /local/lovelace/images/pictures_gray/music.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entity-button
+              name: Alles Afzetten
+              icon: mdi:close-circle-outline
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.veranda_all_off
+              entity: script.veranda_all_off
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Verwarming
+              entity: switch.plug_158d0002368a0e
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/pictures/heater.jpeg
+                'off': /local/lovelace/images/pictures_gray/heater.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: sensor.temperature_158d00020f4dd3
+                  name: Temperatuur
+                - entity: sensor.humidity_158d00020f4dd3
+                  name: Vochtigheid
+  - title: Inkom
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-glance
+              title: Inkom
+              entities:
+                - entity: light.gateway_light_7811dcb9c795
+              image: /local/lovelace/images/pictures/entrance.jpeg
+              aspect_ratio: 16:9
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: binary_sensor.smoke_sensor_158d000279ddbc
+                  name: Rook
+                  icon: mdi:smoke-detector
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          name: Alles Afzetten
           icon: mdi:close-circle-outline
           tap_action:
             action: call-service
             service: script.turn_on
-            service_date:
-              entity_id: script.gameroom_all_off
-          entity: script.gameroom_all_off
-  - type: vertical-stack
+            service_data:
+              entity_id: script.stairway_all_off
+          entity: script.stairway_all_off
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Traphal
+              entity: light.gateway_light_7811dcb9c795
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/pictures/upstairs_hallway.jpeg
+                'off': /local/lovelace/images/pictures_gray/upstairs_hallway.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              name: Boven
+              show_name: false
+              entities:
+                - entity: binary_sensor.motion_sensor_158d000276e199
+                  name: Beweging
+                - entity: sensor.illumination_7811dcb9c795
+                  name: Lichtsterkte
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              show_name: false
+              entities:
+                - entity: script.stairway_rgb_colorchanger
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.stairway_rgb_colorchanger
+                  icon: mdi:palette
+                - entity: script.stairway_rgb_colorchanger_off
+                  tap_action:
+                    action: call-service
+                    service: script.turn_on
+                    service_data:
+                      entity_id: script.stairway_rgb_colorchanger_off
+                  icon: mdi:close-circle-outline
+  - title: Badkamer
     cards:
       - type: custom:card-modder
         style:
@@ -522,341 +770,94 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Werk Bureautje
-          entity: switch.gameroom_desk_light
-          icon: mdi:lightbulb
+          name: Speaker
+          entity: switch.bathroom_speaker
           tap_action:
             action: toggle
           aspect_ratio: 16:9
           state_image:
-            "on": /local/lovelace/images/pictures/workdesk.jpeg
-            "off": /local/lovelace/images/pictures_gray/workdesk.jpeg
+            'on': /local/lovelace/images/pictures/music.jpeg
+            'off': /local/lovelace/images/pictures_gray/music.jpeg
       - type: custom:card-modder
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
-          type: glance
-          show_state: false
-          show_name: false
-          entities:
-            - entity: script.gameroom_rgb_colorchanger
-              tap_action:
-                action: call-service
-                service: script.turn_on
-                service_data:
-                  entity_id: script.gameroom_rgb_colorchanger
-              icon: mdi:palette
-            - entity: script.gameroom_rgb_colorchanger_off
-              tap_action:
-                action: call-service
-                service: script.turn_on
-                service_data:
-                  entity_id: script.gameroom_rgb_colorchanger_off
-              icon: mdi:close-circle-outline
+          type: entity-button
+          name: Alles Afzetten
+          icon: mdi:close-circle-outline
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: script.bathroom_all_off
+          entity: script.bathroom_all_off
+  - title: Systeem
+    cards:
       - type: custom:card-modder
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
-          type: glance
-          show_name: false
-          entities:
-          - entity: sensor.temperature_158d000236744c
-            name: Temperatuur
-          - entity: sensor.humidity_158d000236744c
-            name: Vochtigheid
-          - entity: sensor.illumination_158d0001f9cdfe
-            name: Lichtsterkte
-          - entity: binary_sensor.natgas_sensor_158d000204ae2a
-            name: Gas
-            icon: mdi:gas-station
-- title: Veranda
-  cards:
-    - type: vertical-stack
-      cards:
-        - type: horizontal-stack
-          cards:
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: picture-entity
-                name: Led Licht
-                entity: light.veranda_rgb_light
-                tap_action:
-                  action: toggle
-                aspect_ratio: 16:9
-                state_image:
-                  'on': /local/lovelace/images/pictures/ledstrip.jpeg
-                  'off': /local/lovelace/images/pictures_gray/ledstrip.jpeg
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: glance
-                show_state: false
-                show_name: false
-                entities:
-                  - entity: script.veranda_rgb_colorchanger
-                    tap_action:
-                      action: call-service
-                      service: script.turn_on
-                      service_data:
-                        entity_id: script.veranda_rgb_colorchanger
-                    icon: mdi:palette
-                  - entity: script.veranda_rgb_colorchanger_off
-                    tap_action:
-                      action: call-service
-                      service: script.turn_on
-                      service_data:
-                        entity_id: script.veranda_rgb_colorchanger_off
-                    icon: mdi:close-circle-outline
-        - type: horizontal-stack
-          cards:
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: picture-entity
-                name: Speaker
-                entity: switch.veranda_speaker
-                tap_action:
-                  action: toggle
-                aspect_ratio: 16:9
-                state_image:
-                  'on': /local/lovelace/images/pictures/music.jpeg
-                  'off': /local/lovelace/images/pictures_gray/music.jpeg
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: entity-button
-                name: Alles Afzetten
-                icon: mdi:close-circle-outline
-                tap_action:
-                  action: call-service
-                  service: script.turn_on
-                  service_data:
-                    entity_id: script.veranda_all_off
-                entity: script.veranda_all_off
-        - type: horizontal-stack
-          cards:
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: picture-entity
-                name: Verwarming
-                entity: switch.plug_158d0002368a0e
-                tap_action:
-                  action: toggle
-                aspect_ratio: 16:9
-                state_image:
-                  'on': /local/lovelace/images/pictures/heater.jpeg
-                  'off': /local/lovelace/images/pictures_gray/heater.jpeg
-            - type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: glance
-                show_name: false
-                entities:
-                - entity: sensor.temperature_158d00020f4dd3
-                  name: Temperatuur
-                - entity: sensor.humidity_158d00020f4dd3
-                  name: Vochtigheid
-- title: Inkom
-  cards:
-    - type: vertical-stack
-      cards:
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: picture-glance
-            title: Inkom
-            entities:
-            - entity: light.gateway_light_7811dcb9c795
-            image: /local/lovelace/images/pictures/entrance.jpeg
-            aspect_ratio: 16:9
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            show_name: false
-            entities:
-            - entity: binary_sensor.smoke_sensor_158d000279ddbc
-              name: Rook
-              icon: mdi:smoke-detector
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Alles Afzetten
-        icon: mdi:close-circle-outline
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.stairway_all_off
-        entity: script.stairway_all_off
-    - type: vertical-stack
-      cards:
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: picture-glance
-            title: Traphal
-            entities:
-              - entity: light.gateway_light_7811dcb9c795
-            image: /local/lovelace/images/pictures/stairway_hallway.jpeg
-            aspect_ratio: 16:9
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            name: Boven
-            show_name: false
-            entities:
-              - entity: binary_sensor.motion_sensor_158d000276e199
-                name: Beweging
-              - entity: sensor.illumination_7811dcb9c795
-                name: Lichtsterkte
-        - type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: glance
-            show_state: false
-            show_name: false
-            entities:
-              - entity: script.stairway_rgb_colorchanger
-                tap_action:
-                  action: call-service
-                  service: script.turn_on
-                  service_data:
-                    entity_id: script.stairway_rgb_colorchanger
-                icon: mdi:palette
-              - entity: script.stairway_rgb_colorchanger_off
-                tap_action:
-                  action: call-service
-                  service: script.turn_on
-                  service_data:
-                    entity_id: script.stairway_rgb_colorchanger_off
-                icon: mdi:close-circle-outline
-- title: Badkamer
-  cards:
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: picture-entity
-        name: Speaker
-        entity: switch.bathroom_speaker
-        tap_action:
-          action: toggle
-        aspect_ratio: 16:9
-        state_image:
-          'on': /local/lovelace/images/pictures/music.jpeg
-          'off': /local/lovelace/images/pictures_gray/music.jpeg
-    - type: custom:card-modder
-      style:
-        border-radius: 10px
-        box-shadow: 3px 3px rgba(0,0,0,0.4)
-      card:
-        type: entity-button
-        name: Alles Afzetten
-        icon: mdi:close-circle-outline
-        tap_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.bathroom_all_off
-        entity: script.bathroom_all_off
-- title: Systeem
-  cards:
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: picture-elements
-      aspect_ratio: 16:9
-      image: /local/lovelace/images/pictures/isp.jpeg
-      elements:
-      - type: icon
-        icon: mdi:pulse
-        style: {color: white, left: 25%, top: 85%}
-      - type: state-label
-        entity: sensor.speedtest_ping
-        prefix: 'Internet : '
-        style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
-      - type: icon
-        icon: mdi:arrow-down-bold
-        style: {color: white, left: 50%, top: 85%}
-      - type: state-label
-        entity: sensor.speedtest_download
-        style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
-      - type: icon
-        icon: mdi:arrow-up-bold
-        style: {color: white, left: 75%, top: 85%}
-      - type: state-label
-        entity: sensor.speedtest_upload
-        style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
-  - type: custom:monster-card
-    show_empty: false
-    card:
-      type: picture-glance
-      title: Batterij Status
-      image: /local/lovelace/images/pictures/battery.jpeg
-      aspect_ratio: 16:9
-    filter:
-      include:
-      - entity_id: sensor.*_battery_state
-        state: '< 25'
-  - type: custom:card-modder
-    style:
-      border-radius: 10px
-      box-shadow: 3px 3px rgba(0,0,0,0.4)
-    card:
-      type: picture-elements
-      image: /local/lovelace/images/pictures/system_settings.jpeg
-      aspect_ratio: 16:9
-      elements:
-      - type: icon
-        icon: mdi:cogs
-        style: {color: white, left: 25%, top: 85%}
-      - type: state-label
-        entity: sensor.processor_use
-        prefix: 'CPU : '
-        style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
-      - type: icon
-        icon: mdi:memory
-        style: {color: white, left: 50%, top: 85%}
-      - type: state-label
-        entity: sensor.memory_use_percent
-        style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
-      - type: icon
-        icon: mdi:disc-alert
-        style: {color: white, left: 75%, top: 85%}
-      - type: state-label
-        entity: sensor.disk_use_percent_
-        style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+          type: picture-elements
+          aspect_ratio: 16:9
+          image: /local/lovelace/images/pictures/isp.jpeg
+          elements:
+            - type: icon
+              icon: mdi:pulse
+              style: {color: white, left: 25%, top: 85%}
+            - type: state-label
+              entity: sensor.speedtest_ping
+              prefix: 'Internet : '
+              style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+            - type: icon
+              icon: mdi:arrow-down-bold
+              style: {color: white, left: 50%, top: 85%}
+            - type: state-label
+              entity: sensor.speedtest_download
+              style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+            - type: icon
+              icon: mdi:arrow-up-bold
+              style: {color: white, left: 75%, top: 85%}
+            - type: state-label
+              entity: sensor.speedtest_upload
+              style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: picture-glance
+          title: Batterij Status
+          image: /local/lovelace/images/pictures/battery.jpeg
+          aspect_ratio: 16:9
+        filter:
+          include:
+            - entity_id: sensor.*_battery_state
+              state: '< 25'
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-elements
+          image: /local/lovelace/images/pictures/system_settings.jpeg
+          aspect_ratio: 16:9
+          elements:
+            - type: icon
+              icon: mdi:cogs
+              style: {color: white, left: 25%, top: 85%}
+            - type: state-label
+              entity: sensor.processor_use
+              prefix: 'CPU : '
+              style: {color: white, left: 20%, top: 93%, font-size: 80%, font-weight: bold}
+            - type: icon
+              icon: mdi:memory
+              style: {color: white, left: 50%, top: 85%}
+            - type: state-label
+              entity: sensor.memory_use_percent
+              style: {color: white, left: 50%, top: 93%, font-size: 80%, font-weight: bold}
+            - type: icon
+              icon: mdi:disc-alert
+              style: {color: white, left: 75%, top: 85%}
+            - type: state-label
+              entity: sensor.disk_use_percent_
+              style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
