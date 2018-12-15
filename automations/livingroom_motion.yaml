@@ -43,7 +43,7 @@
         above: '4'
     condition:
       - condition: state
-        value_template: input_boolean.livingroom_nightlight_state
+        entity_id: input_boolean.livingroom_nightlight_state
         state: 'on'
     action:
       - service: light.turn_off
