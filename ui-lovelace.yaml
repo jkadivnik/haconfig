@@ -97,9 +97,7 @@ views:
               icon: mdi:close-circle-outline
               tap_action:
                 action: call-service
-                service: script.turn_on
-                service_data:
-                  entity_id: script.home_all_off
+                service: script.home_all_off
               entity: script.home_all_off
   - title: Alarm
     cards:
@@ -127,9 +125,7 @@ views:
           icon: mdi:alarm-off
           tap_action:
             action: call-service
-            service: script.turn_on
-            service_data:
-              entity_id: script.alarm_siren_off
+            service: script.alarm_siren_off
           entity: script.alarm_siren_off
   - title: Living
     cards:
@@ -298,23 +294,17 @@ views:
                   icon: mdi:volume-low
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.livingroom_volume_down
+                    service: script.livingroom_volume_down
                 - entity: script.livingroom_volume_mute
                   icon: mdi:volume-off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.livingroom_volume_mute
+                    service: script.livingroom_volume_mute
                 - entity: script.livingroom_volume_up
                   icon: mdi:volume-high
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.livingroom_volume_up
+                    service: script.livingroom_volume_up
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -327,16 +317,12 @@ views:
                 - entity: script.livingroom_rgb_colorchanger
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.livingroom_rgb_colorchanger
+                    service: script.livingroom_rgb_colorchanger
                   icon: mdi:palette
                 - entity: script.livingroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.livingroom_rgb_colorchanger_off
+                    service: script.livingroom_rgb_colorchanger_off
                   icon: mdi:close-circle-outline
           - type: custom:card-modder
             style:
@@ -436,23 +422,17 @@ views:
                   icon: mdi:volume-low
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.gameroom_volume_down
+                    service: script.gameroom_volume_down
                 - entity: script.gameroom_volume_mute
                   icon: mdi:volume-off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.gameroom_volume_mute
+                    service: script.gameroom_volume_mute
                 - entity: script.gameroom_volume_up
                   icon: mdi:volume-high
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.gameroom_volume_up
+                    service: script.gameroom_volume_up
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -543,16 +523,12 @@ views:
                 - entity: script.gameroom_rgb_colorchanger
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.gameroom_rgb_colorchanger
+                    service: script.gameroom_rgb_colorchanger
                   icon: mdi:palette
                 - entity: script.gameroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.gameroom_rgb_colorchanger_off
+                    service: script.gameroom_rgb_colorchanger_off
                   icon: mdi:close-circle-outline
           - type: custom:card-modder
             style:
@@ -601,16 +577,12 @@ views:
                 - entity: script.veranda_rgb_colorchanger
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.veranda_rgb_colorchanger
+                    service: script.veranda_rgb_colorchanger
                   icon: mdi:palette
                 - entity: script.veranda_rgb_colorchanger_off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.veranda_rgb_colorchanger_off
+                    service: script.veranda_rgb_colorchanger_off
                   icon: mdi:close-circle-outline
       - type: vertical-stack
         cards:
@@ -751,16 +723,12 @@ views:
                 - entity: script.stairway_rgb_colorchanger
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.stairway_rgb_colorchanger
+                    service: script.stairway_rgb_colorchanger
                   icon: mdi:palette
                 - entity: script.stairway_rgb_colorchanger_off
                   tap_action:
                     action: call-service
-                    service: script.turn_on
-                    service_data:
-                      entity_id: script.stairway_rgb_colorchanger_off
+                    service: script.stairway_rgb_colorchanger_off
                   icon: mdi:close-circle-outline
   - title: Badkamer
     cards:

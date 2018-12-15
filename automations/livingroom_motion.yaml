@@ -7,7 +7,7 @@
     condition:
       - condition: numeric_state
         entity_id: sensor.illumination_158d0001de7134
-        below: '1'
+        below: '3'
       - condition: template
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
     action:
