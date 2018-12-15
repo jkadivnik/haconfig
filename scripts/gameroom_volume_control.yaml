@@ -2,27 +2,24 @@
   gameroom_volume_up:
     alias: Gameroom Volume Up
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.gameroom_hub
-          command:
-            - VolumeUp
+          remote_hub: remote.gameroom_hub
           device: 58691919
+          action_value: "1"
   gameroom_volume_down:
     alias: Gameroom Volume Down
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.gameroom_hub
-          command:
-            - VolumeDown
+          remote_hub: remote.gameroom_hub
           device: 58691919
+          action_value: "-1"
   gameroom_volume_mute:
     alias: Gameroom Volume Mute
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.gameroom_hub
-          command:
-            - Mute
+          remote_hub: remote.gameroom_hub
           device: 58691919
+          action_value: "0"

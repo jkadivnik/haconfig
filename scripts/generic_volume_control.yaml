@@ -11,4 +11,6 @@
             VolumeDown
             {% elif action_value | float < 0 %}
             VolumeUp
+            {% elif action_value | float == 0 %}
+            Mute
             {% endif %}

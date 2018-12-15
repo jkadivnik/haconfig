@@ -2,45 +2,39 @@
   livingroom_volume_up:
     alias: Livingroom Volume Up
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - VolumeUp
+          remote_hub: remote.livingroom_hub
           device: 54449333
-      - service: remote.send_command
+          action_value: "1"
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - VolumeUp
+          remote_hub: remote.livingroom_hub
           device: 54449337
+          action_value: "1"
   livingroom_volume_down:
     alias: Livingroom Volume Down
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - VolumeDown
+          remote_hub: remote.livingroom_hub
           device: 54449333
-      - service: remote.send_command
+          action_value: "-1"
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - VolumeDown
+          remote_hub: remote.livingroom_hub
           device: 54449337
+          action_value: "-1"
   livingroom_volume_mute:
     alias: Livingroom Volume Mute
     sequence:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - Mute
+          remote_hub: remote.livingroom_hub
           device: 54449333
-      - service: remote.send_command
+          action_value: "0"
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          command:
-            - Mute
+          remote_hub: remote.livingroom_hub
           device: 54449337
+          action_value: "0"
