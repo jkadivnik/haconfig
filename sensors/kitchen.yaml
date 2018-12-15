@@ -3,7 +3,7 @@
     kitchen_radio_status:
       friendly_name: "Kitchen Radio Status"
       value_template: >
-        {% if state_attr('switch.plug_158d0002368861', 'load_power')|float > '1.5' %}
+        {% if state_attr('switch.plug_158d0002368861', 'load_power') > 1.5 %}
           on
         {% else %}
           off
