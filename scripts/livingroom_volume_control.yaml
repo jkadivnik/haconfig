@@ -7,11 +7,13 @@
           remote_hub: remote.livingroom_hub
           device: 54449333
           action_value: "1"
+          num_repeats: 2
       - service: script.generic_volume_control
         data:
           remote_hub: remote.livingroom_hub
           device: 54449337
           action_value: "1"
+          num_repeats: 2
   livingroom_volume_down:
     alias: Livingroom Volume Down
     sequence:
@@ -20,11 +22,13 @@
           remote_hub: remote.livingroom_hub
           device: 54449333
           action_value: "-1"
+          num_repeats: 2
       - service: script.generic_volume_control
         data:
           remote_hub: remote.livingroom_hub
           device: 54449337
           action_value: "-1"
+          num_repeats: 2
   livingroom_volume_mute:
     alias: Livingroom Volume Mute
     sequence:
@@ -33,8 +37,10 @@
           remote_hub: remote.livingroom_hub
           device: 54449333
           action_value: "0"
+          num_repeats: 1
       - service: script.generic_volume_control
         data:
           remote_hub: remote.livingroom_hub
           device: 54449337
           action_value: "0"
+          num_repeats: 1

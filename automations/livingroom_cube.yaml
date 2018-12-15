@@ -12,11 +12,13 @@
           remote_hub: remote.livingroom_hub
           device: 54449337
           action_value: "{{ trigger.event.data.action_value }}"
+          num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
       - service: script.generic_volume_control
         data_template:
           remote_hub: remote.livingroom_hub
           device: 54449333
           action_value: "{{ trigger.event.data.action_value }}"
+          num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
   - alias: Livingroom Cube Pause
     trigger:
       platform: event
@@ -25,13 +27,15 @@
         entity_id: binary_sensor.cube_158d00010fd151
         action_type: shake_air
     action:
-      - service: remote.send_command
+      - service: script.generic_volume_control
         data:
-          entity_id: remote.livingroom_hub
-          device: 54449333
-          command: Mute
-      - service: remote.send_command
-        data:
-          entity_id: remote.livingroom_hub
+          remote_hub: remote.livingroom_hub
           device: 54449337
-          command: Mute
+          action_value: "0"
+          num_repeats: 1
+      - service: script.generic_volume_control
+        data:
+          remote_hub: remote.livingroom_hub
+          device: 54449333
+          action_value: "0"
+          num_repeats: 1

@@ -12,6 +12,7 @@
         remote_hub: remote.gameroom_hub
         device: 58691919
         action_value: "{{ trigger.event.data.action_value }}"
+        num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
   - alias: Gameroom Cube Pause
     trigger:
       platform: event
