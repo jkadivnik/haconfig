@@ -30,14 +30,6 @@ influxdb:
   default_measurement: state
 
 panel_iframe:
-  bureau_router:
-    title: Bureau Router
-    url: http://!secret gameroom_router_ip
-    icon: mdi:router-wireless-settings
-  living_router:
-    title: Living Router
-    url: http://!secret livingroom_router_ip
-    icon: mdi:router-wireless-settings
   motioneye:
     title: MotionEye
     url: !secret motioneye_url
@@ -45,6 +37,7 @@ panel_iframe:
   tasmoadmin:
     title: TasmoAdmin
     url: !secret tasmoadmin_url
+    icon: mdi:basket
   grafana:
     title: Grafana
     url: !secret grafana_url
