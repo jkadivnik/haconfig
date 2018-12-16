@@ -583,6 +583,20 @@ views:
                 action: call-service
                 service: script.veranda_rgb_colorchanger_off
               icon: mdi:close-circle-outline
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          name: Alles Afzetten
+          icon: mdi:close-circle-outline
+          tap_action:
+            action: call-service
+            service: scene.turn_on
+            service_data:
+              entity_id: scene.veranda_all_off
+          entity: scene.veranda_all_off
       - type: vertical-stack
         cards:
           - type: horizontal-stack
@@ -627,20 +641,6 @@ views:
                   name: Temperatuur
                 - entity: sensor.humidity_158d00020f4dd3
                   name: Vochtigheid
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: entity-button
-              name: Alles Afzetten
-              icon: mdi:close-circle-outline
-              tap_action:
-                action: call-service
-                service: scene.turn_on
-                service_data:
-                  entity_id: scene.veranda_all_off
-              entity: scene.veranda_all_off
   - title: Inkom
     cards:
       - type: vertical-stack
