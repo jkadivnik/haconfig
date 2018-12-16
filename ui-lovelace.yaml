@@ -597,46 +597,50 @@ views:
             service_data:
               entity_id: scene.veranda_all_off
           entity: scene.veranda_all_off
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-entity
-          name: Speaker
-          entity: switch.veranda_speaker
-          tap_action:
-            action: toggle
-          aspect_ratio: 16:9
-          state_image:
-            'on': /local/lovelace/images/pictures/music.jpeg
-            'off': /local/lovelace/images/pictures_gray/music.jpeg
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-entity
-          name: Verwarming
-          entity: switch.plug_158d0002368a0e
-          tap_action:
-            action: toggle
-          aspect_ratio: 16:9
-          state_image:
-            'on': /local/lovelace/images/pictures/heater.jpeg
-            'off': /local/lovelace/images/pictures_gray/heater.jpeg
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_name: false
-          entities:
-            - entity: sensor.temperature_158d00020f4dd3
-              name: Temperatuur
-            - entity: sensor.humidity_158d00020f4dd3
-              name: Vochtigheid
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Speaker
+                  entity: switch.veranda_speaker
+                  tap_action:
+                    action: toggle
+                  aspect_ratio: 16:9
+                  state_image:
+                    'on': /local/lovelace/images/pictures/music.jpeg
+                    'off': /local/lovelace/images/pictures_gray/music.jpeg
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Verwarming
+                  entity: switch.plug_158d0002368a0e
+                  tap_action:
+                    action: toggle
+                  aspect_ratio: 16:9
+                  state_image:
+                    'on': /local/lovelace/images/pictures/heater.jpeg
+                    'off': /local/lovelace/images/pictures_gray/heater.jpeg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_name: false
+              entities:
+                - entity: sensor.temperature_158d00020f4dd3
+                  name: Temperatuur
+                - entity: sensor.humidity_158d00020f4dd3
+                  name: Vochtigheid
   - title: Inkom
     cards:
       - type: vertical-stack
