@@ -21,8 +21,8 @@ frontend:
 recorder:
 
 influxdb:
-  host: influxdb_host
-  port: influxdb_port
+  host: !secret influxdb_host
+  port: !secret influxdb_port
   database: !secret influxdb_database
   username: !secret influxdb_user
   password: !secret influxdb_password
