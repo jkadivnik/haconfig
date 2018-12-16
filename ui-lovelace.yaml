@@ -175,14 +175,14 @@ views:
               aspect_ratio: 16:9
               state_image:
                 "Chromecast": /local/lovelace/images/pictures/chromecast.jpeg
-                "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+                "Play PS4": /local/lovelace/images/pictures/ps4.jpeg
                 "Radio": /local/lovelace/images/pictures/fm_radio.jpeg
                 "HTPC": /local/lovelace/images/pictures/kodi.jpeg
                 "Telenet": /local/lovelace/images/pictures/telenet.jpeg
-                "Playstation 3": /local/lovelace/images/pictures/PS3.jpeg
+                "Playstation 3": /local/lovelace/images/pictures/ps3.jpeg
                 "Steam Link": /local/lovelace/images/pictures/steamlink.jpeg
                 "Music": /local/lovelace/images/pictures/chromecast_audio.jpeg
-                "BD/DVD": /local/lovelace/images/pictures/bluray.jpeg
+                "BD/DVD": /local/lovelace/images/pictures/movie.jpeg
                 "Keuken muziek luisteren": /local/lovelace/images/pictures/fm_radio.jpeg
                 "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
           - type: custom:card-modder
@@ -458,9 +458,9 @@ views:
                 "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpeg
                 "HTPC": /local/lovelace/images/pictures/kodi.jpeg
                 "Get Colder": /local/lovelace/images/pictures/wind.jpeg
-                "Play PS3": /local/lovelace/images/pictures/PS3.jpeg
+                "Play PS3": /local/lovelace/images/pictures/ps3.jpeg
                 "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpeg
-                "Play PS4": /local/lovelace/images/pictures/PS4.jpeg
+                "Play PS4": /local/lovelace/images/pictures/ps4.jpeg
                 "PowerOff": /local/lovelace/images/pictures_gray/power.jpeg
           - type: conditional
             conditions:
@@ -549,99 +549,94 @@ views:
                   icon: mdi:gas-station
   - title: Veranda
     cards:
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-entity
-              name: Led Licht
-              entity: light.veranda_rgb_light
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                'on': /local/lovelace/images/pictures/ledstrip.jpeg
-                'off': /local/lovelace/images/pictures_gray/ledstrip.jpeg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              show_state: false
-              show_name: false
-              entities:
-                - entity: script.veranda_rgb_colorchanger
-                  tap_action:
-                    action: call-service
-                    service: script.veranda_rgb_colorchanger
-                  icon: mdi:palette
-                - entity: script.veranda_rgb_colorchanger_off
-                  tap_action:
-                    action: call-service
-                    service: script.veranda_rgb_colorchanger_off
-                  icon: mdi:close-circle-outline
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-entity
-              name: Speaker
-              entity: switch.veranda_speaker
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                'on': /local/lovelace/images/pictures/music.jpeg
-                'off': /local/lovelace/images/pictures_gray/music.jpeg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: entity-button
-              name: Alles Afzetten
-              icon: mdi:close-circle-outline
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+          report_size: 40
+        card:
+          type: picture-entity
+          name: Led Licht
+          entity: light.veranda_rgb_light
+          tap_action:
+            action: toggle
+          aspect_ratio: 16:9
+          state_image:
+            'on': /local/lovelace/images/pictures/ledstrip.jpeg
+            'off': /local/lovelace/images/pictures_gray/ledstrip.jpeg
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_state: false
+          show_name: false
+          entities:
+            - entity: script.veranda_rgb_colorchanger
               tap_action:
                 action: call-service
-                service: scene.turn_on
-                service_data:
-                  entity_id: scene.veranda_all_off
-              entity: scene.veranda_all_off
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-entity
-              name: Verwarming
-              entity: switch.plug_158d0002368a0e
+                service: script.veranda_rgb_colorchanger
+              icon: mdi:palette
+            - entity: script.veranda_rgb_colorchanger_off
               tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                'on': /local/lovelace/images/pictures/heater.jpeg
-                'off': /local/lovelace/images/pictures_gray/heater.jpeg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              show_name: false
-              entities:
-                - entity: sensor.temperature_158d00020f4dd3
-                  name: Temperatuur
-                - entity: sensor.humidity_158d00020f4dd3
-                  name: Vochtigheid
+                action: call-service
+                service: script.veranda_rgb_colorchanger_off
+              icon: mdi:close-circle-outline
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: entity-button
+          name: Alles Afzetten
+          icon: mdi:close-circle-outline
+          tap_action:
+            action: call-service
+            service: scene.turn_on
+            service_data:
+              entity_id: scene.veranda_all_off
+          entity: scene.veranda_all_off
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-entity
+          name: Speaker
+          entity: switch.veranda_speaker
+          tap_action:
+            action: toggle
+          aspect_ratio: 16:9
+          state_image:
+            'on': /local/lovelace/images/pictures/music.jpeg
+            'off': /local/lovelace/images/pictures_gray/music.jpeg
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: picture-entity
+          name: Verwarming
+          entity: switch.plug_158d0002368a0e
+          tap_action:
+            action: toggle
+          aspect_ratio: 16:9
+          state_image:
+            'on': /local/lovelace/images/pictures/heater.jpeg
+            'off': /local/lovelace/images/pictures_gray/heater.jpeg
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          show_name: false
+          entities:
+            - entity: sensor.temperature_158d00020f4dd3
+              name: Temperatuur
+            - entity: sensor.humidity_158d00020f4dd3
+              name: Vochtigheid
   - title: Inkom
     cards:
       - type: vertical-stack
@@ -696,8 +691,8 @@ views:
                 action: toggle
               aspect_ratio: 16:9
               state_image:
-                'on': /local/lovelace/images/pictures/upstairs_hallway.jpeg
-                'off': /local/lovelace/images/pictures_gray/upstairs_hallway.jpeg
+                'on': /local/lovelace/images/pictures/upstairs.jpeg
+                'off': /local/lovelace/images/pictures_gray/upstairs.jpeg
           - type: custom:card-modder
             style:
               border-radius: 10px
