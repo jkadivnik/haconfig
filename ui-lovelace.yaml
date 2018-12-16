@@ -345,18 +345,13 @@ views:
               border-radius: 10px
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
-              type: picture-entity
-              name: Keuken Radio
-              entity: sensor.kitchen_radio_status
-              tap_action:
-                action: call-service
-                service: switch.toggle
-                service-data:
-                  entity-id: switch.kitchen_radion
+              type: picture-glance
+              title: Keuken
+              entities:
+                - entity: switch.kitchen_radio
+                  icon: mdi:radio
+              image: /local/lovelace/images/pictures/livingroom_kitchen.jpeg
               aspect_ratio: 16:9
-              state_image:
-                "on": /local/lovelace/images/pictures/livingroom_kitchen.jpeg
-                "off": /local/lovelace/images/pictures_gray/livingroom_kitchen.jpeg
           - type: custom:card-modder
             style:
               border-radius: 10px

@@ -8,7 +8,7 @@
       turn_off:
         service: script.kitchen_radio_off
     kitchen_radio_harmony:
-      friendly_name: "Kitchen Radio"
+      friendly_name: "Kitchen Radio Harmony"
       value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
       turn_on:
         service: remote.turn_on
