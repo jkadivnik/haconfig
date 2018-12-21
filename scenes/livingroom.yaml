@@ -2,10 +2,10 @@
     entities:
       light.livingroom_dressoir_rgb_light:
         state: on
-        rgb_color: [255,0,0]
+        color_name: 'blue'
       light.livingroom_bookcase_rgb_light:
         state: on
-        rgb_color: [255,0,0]
+        color_name: 'blue'
       switch.plug_158d0001f292c0: on
       switch.plug_158d0001f29250: on
   - name: Livingroom Hub Off

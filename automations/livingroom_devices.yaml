@@ -1,3 +1,4 @@
+  # Audiocast Music
   - alias: Livingroom Audiocast stopped
     trigger:
       - platform: state
@@ -23,7 +24,20 @@
     action:
       service: switch.turn_on
       entity_id: switch.livingroom_chromecast_audio
+  - alias: Livingroom Audiocast Still Playing
+    trigger:
+      platform: template
+      value_template: "{% if is_state( 'media_player.living_room_audio', 'off')%}false{% else %}true{% endif %}"
+    condition:
+      - condition: template
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'Music' }}"
+    action:
+      - service: media_player.media_stop
+        entity_id: media_player.living_room_audio
+      - service: media_player.turn_off
+        entity_id: media_player.living_room_audio
 
+  # Chromecast
   - alias: Livingroom Chromecast stopped
     trigger:
       platform: state
@@ -49,19 +63,21 @@
     action:
       service: switch.turn_on
       entity_id: switch.livingroom_chromecast
-  - alias: Livingroom Audiocast Still Playing
+
+  # Chromecast Audio Wireless Speakers
+  - alias: Wireless Speakers Turned Off
     trigger:
-      platform: template
-      value_template: "{% if is_state( 'media_player.living_room_audio', 'off')%}false{% else %}true{% endif %}"
-    condition:
-      - condition: template
-        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'Music' }}"
+      - platform: state
+        entity_id: group.wireless_speakers
+        state: 'off'
     action:
       - service: media_player.media_stop
-        entity_id: media_player.living_room_audio
+        entity_id: media_player.wireless_speakers
       - service: media_player.turn_off
-        entity_id: media_player.living_room_audio
-  - alias: Livingroom Kodi Input Selected
+        entity_id: media_player.wireless_speakers
+
+  # KODI
+  - alias: Livingroom Kodi Start Playing
     trigger:
       platform: state
       entity_id: media_player.kodiliving

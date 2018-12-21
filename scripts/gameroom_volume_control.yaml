@@ -6,7 +6,7 @@
         data:
           remote_hub: remote.gameroom_hub
           device: 58691919
-          action_value: "1"
+          action_value: "-1"
           num_repeats: 2
   gameroom_volume_down:
     alias: Gameroom Volume Down
@@ -15,7 +15,7 @@
         data:
           remote_hub: remote.gameroom_hub
           device: 58691919
-          action_value: "-1"
+          action_value: "1"
           num_repeats: 2
   gameroom_volume_mute:
     alias: Gameroom Volume Mute

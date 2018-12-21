@@ -19,7 +19,8 @@
       entity_id: light.gameroom_led_lights
       data:
         entity_id: light.gameroom_led_lights
-        rgb_color: [0, 0, 255]
+        color_name: 'blue'
+        brightness_pct: 50
   - alias: Gameroom No Motion
     initial_state: false
     trigger:

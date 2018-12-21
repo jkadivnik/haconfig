@@ -2,12 +2,12 @@
     entities:
       light.gameroom_rgb_light:
         state: on
-        rgb_color: [255,0,0]
+        color_name: 'blue'
   - name: Gameroom Lights On
     entities:
       light.gameroom_rgb_light:
         state: on
-        rgb_color: [255,0,0]
+        color_name: 'blue'
   - name: Gameroom All Off
     entities:
       remote.gameroom_hub: off
