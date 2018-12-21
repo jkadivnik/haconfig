@@ -136,11 +136,11 @@ logger:
   default: error
   logs:
     homeassistant.components.device_tracker: error
-    homeassistant.components.xiaomi_aqara: debug
+    homeassistant.components.xiaomi_aqara: error
     homeassistant.components.sensor: error
     homeassistant.components.switch: error
     homeassistant.components.automation: error
-    homeassistant.components.scripts: debug
+    homeassistant.components.scripts: error
     homeassistant.components.group: error
     homeassistant.components.remote: error
     homeassistant.components.light: error
@@ -208,12 +208,12 @@ ifttt:
 device_tracker:
 #  - platform: luci
 #    host: !secret livingroom_router_ip
-#    username: root
+#    username: !secret livingroom_router_user
 #    password: !secret livingroom_router_password
 #    track_new_devices: false
   - platform: luci
     host: !secret gameroom_router_ip
-    username: root
+    username: !secret gameroom_router_user
     password: !secret gameroom_router_password
     track_new_devices: true
 
