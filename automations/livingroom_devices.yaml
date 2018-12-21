@@ -69,7 +69,7 @@
     trigger:
       - platform: state
         entity_id: group.wireless_speakers
-        state: 'off'
+        to: 'off'
     action:
       - service: media_player.media_stop
         entity_id: media_player.wireless_speakers
