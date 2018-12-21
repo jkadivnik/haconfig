@@ -1,4 +1,5 @@
   - alias: Wireless Speakers On
+    initial_state: false
     trigger:
       platform: state
       entity_id: group.wireless_speakers
@@ -11,6 +12,7 @@
     - service: switch.turn_on
       entity_id: switch.livingroom_wireless_speakers_tuner
   - alias: Wireless Speakers Tuner Off
+    initial_state: false
     trigger:
       platform: state
       entity_id: group.wireless_speakers
@@ -21,6 +23,7 @@
 #      - service: media_player.turn_off
 #        entity_id: media_player.wireless_speaker_audiocast
   - alias: Wireless Speakers Audiocast Turned On
+    initial_state: false
     trigger:
       platform: state
       entity_id: media_player.livingroom_wireless_speakers_tuner
