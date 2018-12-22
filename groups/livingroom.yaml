@@ -54,7 +54,6 @@ Livingroom:
     - script.livingroom_volume_up
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
-    - script.livingroom_all_off
     - script.livingroom_rgb_colorchanger
     - script.livingroom_rgb_colorchanger_off
     - script.livingroom_volume_down

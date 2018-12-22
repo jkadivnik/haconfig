@@ -21,8 +21,13 @@
         entity_id: binary_sensor.switch_158d00026bb099
         click_type: single
     condition:
-      - condition: template
-        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' }}"
+      - condition: or
+        conditions:
+          - condition: template
+            value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' }}"
+          - condition: state
+            entity_id: switch.plug_158d0001f29250
+            state: 'on'
       - condition: or
         conditions:
           - condition: sun
