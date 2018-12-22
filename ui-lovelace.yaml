@@ -398,6 +398,8 @@ views:
                   name: Vochtigheid
                 - entity: sensor.illumination_158d0001de7134
                   name: Lichtsterkte
+                - entity: binary_sensor.motion_sensor_158d0001de7134
+                  name: Beweging
   - title: Mancave
     cards:
       - type: vertical-stack
@@ -520,7 +522,7 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: picture-entity
-              name: Werk Bureautje
+              name: Werk Bureau
               entity: switch.gameroom_desk_light
               icon: mdi:lightbulb
               tap_action:
@@ -659,6 +661,8 @@ views:
                   name: Temperatuur
                 - entity: sensor.humidity_158d00020f4dd3
                   name: Vochtigheid
+                - entity: binary_sensor.motion_sensor_158d0001f2a00f
+                  name: Beweging
   - title: Inkom
     cards:
       - type: vertical-stack
