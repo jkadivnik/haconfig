@@ -11,13 +11,13 @@
         data_template:
           remote_hub: remote.livingroom_hub
           device: 54449337
-          action_value: "{{ trigger.event.data.action_value }}"
+          action_value: "{{ trigger.event.data.action_value|float }}"
           num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
       - service: script.generic_volume_control
         data_template:
           remote_hub: remote.livingroom_hub
           device: 54449333
-          action_value: "{{ trigger.event.data.action_value }}"
+          action_value: "{{ trigger.event.data.action_value|float }}"
           num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
   - alias: Livingroom Cube Pause
     trigger:

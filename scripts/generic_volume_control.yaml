@@ -14,4 +14,4 @@
             {% elif action_value | float == 0 %}
             Mute
             {% endif %}
-          num_repeats: "{{ num_repeats|int }}"
+          num_repeats: "{{ num_repeats|int|abs }}"
