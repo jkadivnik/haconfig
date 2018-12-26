@@ -236,8 +236,6 @@ views:
                 - entity: switch.livingroom_tuner
                   icon: mdi:radio
                   name: Tuner
-                - switch.plug_158d0001f292c0
-                - light.livingroom_dressoir_rgb_light
               image: /local/lovelace/images/eetplaats.jpg
               aspect_ratio: 16:9
           - type: horizontal-stack
