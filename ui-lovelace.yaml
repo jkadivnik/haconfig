@@ -14,7 +14,7 @@ resources:
   - url: /local/slider-entity-row.js?v=1.0
     type: js
 
-background: center / cover no-repeat url("/local/lovelace/images/pictures/background/black_gray_wall.jpeg") fixed
+background: center / cover no-repeat url("/local/lovelace/images/background/black_gray_wall.jpeg") fixed
 
 title: Kadivnikskes
 views:
@@ -26,36 +26,36 @@ views:
             cards:
               - type: custom:picture-status-card
                 entity: device_tracker.papa_phone
-                image: /local/lovelace/images/pictures/Johnny.jpg
+                image: /local/lovelace/images/Johnny.jpg
                 font_color: white
                 card_height: 90px
                 state_image:
-                  "home": /local/lovelace/images/pictures/Johnny.jpg
-                  "not_home": /local/lovelace/images/pictures/Johnny_niet_thuis.jpg
+                  "home": /local/lovelace/images/Johnny.jpg
+                  "not_home": /local/lovelace/images/Johnny_niet_thuis.jpg
               - type: custom:picture-status-card
                 entity: device_tracker.thibo_phone
-                image: /local/lovelace/images/pictures/Thibo.jpg
+                image: /local/lovelace/images/Thibo.jpg
                 font_color: white
                 card_height: 90px
                 state_image:
-                  "home": /local/lovelace/images/pictures/Thibo.jpg
-                  "not_home": /local/lovelace/images/pictures/Thibo_niet_thuis.jpg
+                  "home": /local/lovelace/images/Thibo.jpg
+                  "not_home": /local/lovelace/images/Thibo_niet_thuis.jpg
               - type: custom:picture-status-card
                 entity: device_tracker.maxim_phone
-                image: /local/lovelace/images/pictures/Maxim.jpg
+                image: /local/lovelace/images/Maxim.jpg
                 font_color: white
                 card_height: 90px
                 state_image:
-                  "home": /local/lovelace/images/pictures/Maxim.jpg
-                  "not_home": /local/lovelace/images/pictures/Maxim_niet_thuis.jpg
+                  "home": /local/lovelace/images/Maxim.jpg
+                  "not_home": /local/lovelace/images/Maxim_niet_thuis.jpg
               - type: custom:picture-status-card
                 entity: device_tracker.mama_phone
-                image: /local/lovelace/images/pictures/Charlotte.jpg
+                image: /local/lovelace/images/Charlotte.jpg
                 font_color: white
                 card_height: 90px
                 state_image:
-                  "home": /local/lovelace/images/pictures/Charlotte.jpg
-                  "not_home": /local/lovelace/images/pictures/Charlotte_niet_thuis.jpg
+                  "home": /local/lovelace/images/Charlotte.jpg
+                  "not_home": /local/lovelace/images/Charlotte_niet_thuis.jpg
                 name: ' '
           - type: custom:card-modder
             style:
@@ -113,8 +113,8 @@ views:
             action: toggle
           aspect_ratio: 16:9
           state_image:
-            'on': /local/lovelace/images/pictures/alarm.jpg
-            'off': /local/lovelace/images/pictures/alarm_off.jpg
+            'on': /local/lovelace/images/alarm.jpg
+            'off': /local/lovelace/images/alarm_off.jpg
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -157,7 +157,7 @@ views:
                 - entity: switch.livingroom_ps4
                   icon: mdi:gamepad
                   name: PS4
-              image: /local/lovelace/images/pictures/living_tvhoek.jpg
+              image: /local/lovelace/images/living_tvhoek.jpg
               aspect_ratio: 16:9
           - type: horizontal-stack
             cards:
@@ -173,8 +173,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/pictures/sofa_licht_aan.jpg
-                    "off": /local/lovelace/images/pictures/sofa_licht_uit.jpg
+                    "on": /local/lovelace/images/sofa_licht_aan.jpg
+                    "off": /local/lovelace/images/sofa_licht_uit.jpg
               - type: custom:card-modder
                 style:
                   border-radius: 10px
@@ -187,8 +187,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/pictures/boekenkast_ledlicht_aan.jpg
-                    "off": /local/lovelace/images/pictures/boekenkast_ledlicht_uit.jpg
+                    "on": /local/lovelace/images/boekenkast_ledlicht_aan.jpg
+                    "off": /local/lovelace/images/boekenkast_ledlicht_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -199,17 +199,17 @@ views:
               entity: sensor.livingroom_harmony_activity
               aspect_ratio: 16:9
               state_image:
-                "Chromecast": /local/lovelace/images/pictures/living_chromecast.jpg
-                "Play PS4": /local/lovelace/images/pictures/ps4.jpg
-                "Radio": /local/lovelace/images/pictures/fm_radio.jpg
-                "HTPC": /local/lovelace/images/pictures/kodi.jpg
-                "Telenet": /local/lovelace/images/pictures/telenet.jpg
-                "Playstation 3": /local/lovelace/images/pictures/ps3.jpg
-                "Steam Link": /local/lovelace/images/pictures/steamlink.jpg
-                "Music": /local/lovelace/images/pictures/chromecast_audio.jpg
-                "BD/DVD": /local/lovelace/images/pictures/bluray.jpg
-                "Keuken muziek luisteren": /local/lovelace/images/pictures/fm_radio.jpg
-                "PowerOff": /local/lovelace/images/pictures/power_off.jpg
+                "Chromecast": /local/lovelace/images/living_chromecast.jpg
+                "Play PS4": /local/lovelace/images/ps4.jpg
+                "Radio": /local/lovelace/images/fm_radio.jpg
+                "HTPC": /local/lovelace/images/kodi.jpg
+                "Telenet": /local/lovelace/images/telenet.jpg
+                "Playstation 3": /local/lovelace/images/ps3.jpg
+                "Steam Link": /local/lovelace/images/steamlink.jpg
+                "Music": /local/lovelace/images/chromecast_audio.jpg
+                "BD/DVD": /local/lovelace/images/bluray.jpg
+                "Keuken muziek luisteren": /local/lovelace/images/fm_radio.jpg
+                "PowerOff": /local/lovelace/images/power_off.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -238,7 +238,7 @@ views:
                   name: Tuner
                 - switch.plug_158d0001f292c0
                 - light.livingroom_dressoir_rgb_light
-              image: /local/lovelace/images/pictures/eetplaats.jpg
+              image: /local/lovelace/images/eetplaats.jpg
               aspect_ratio: 16:9
           - type: horizontal-stack
             cards:
@@ -254,8 +254,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/pictures/dressoir_licht_aan.jpg
-                    "off": /local/lovelace/images/pictures/dressoir_licht_uit.jpg
+                    "on": /local/lovelace/images/dressoir_licht_aan.jpg
+                    "off": /local/lovelace/images/dressoir_licht_uit.jpg
               - type: custom:card-modder
                 style:
                   border-radius: 10px
@@ -268,8 +268,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/pictures/dressoir_ledlicht_aan.jpg
-                    "off": /local/lovelace/images/pictures/dressoir_ledlicht_uit.jpg
+                    "on": /local/lovelace/images/dressoir_ledlicht_aan.jpg
+                    "off": /local/lovelace/images/dressoir_ledlicht_uit.jpg
           - type: conditional
             conditions:
               - entity: media_player.kodiliving
@@ -423,7 +423,7 @@ views:
               entities:
                 - entity: switch.kitchen_radio
                   icon: mdi:radio
-              image: /local/lovelace/images/pictures/keuken.jpg
+              image: /local/lovelace/images/keuken.jpg
               aspect_ratio: 16:9
           - type: custom:card-modder
             style:
@@ -437,8 +437,8 @@ views:
                 action: toggle
               aspect_ratio: 16:9
               state_image:
-                "on": /local/lovelace/images/pictures/kerstboom_aan.jpg
-                "off": /local/lovelace/images/pictures/kerstboom_uit.jpg
+                "on": /local/lovelace/images/kerstboom_aan.jpg
+                "off": /local/lovelace/images/kerstboom_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -485,7 +485,7 @@ views:
                 - entity: light.gameroom_rgb_light
                   icon: mdi:lightbulb
                   name: LED Lichten
-              image: /local/lovelace/images/pictures/gameroom.jpg
+              image: /local/lovelace/images/gameroom.jpg
               aspect_ratio: 16:9
           - type: custom:card-modder
             style:
@@ -533,14 +533,14 @@ views:
               entity: sensor.gameroom_harmony_activity
               aspect_ratio: 16:9
               state_image:
-                "No Screen Gaming": /local/lovelace/images/pictures/gaming.jpg
-                "HTPC": /local/lovelace/images/pictures/kodi.jpg
-                "Get Colder": /local/lovelace/images/pictures/ventilator.jpg
-                "Play PS3": /local/lovelace/images/pictures/ps3.jpg
-                "Bigscreen Gaming": /local/lovelace/images/pictures/gaming.jpg
-                "Play PS4": /local/lovelace/images/pictures/ps4.jpg
-                "Chromecast": /local/lovelace/images/pictures/gameroom_chromecast.jpg
-                "PowerOff": /local/lovelace/images/pictures/power_off.jpg
+                "No Screen Gaming": /local/lovelace/images/gaming.jpg
+                "HTPC": /local/lovelace/images/kodi.jpg
+                "Get Colder": /local/lovelace/images/ventilator.jpg
+                "Play PS3": /local/lovelace/images/ps3.jpg
+                "Bigscreen Gaming": /local/lovelace/images/gaming.jpg
+                "Play PS4": /local/lovelace/images/ps4.jpg
+                "Chromecast": /local/lovelace/images/gameroom_chromecast.jpg
+                "PowerOff": /local/lovelace/images/power_off.jpg
           - type: conditional
             conditions:
               - entity: media_player.kodibureau
@@ -606,8 +606,8 @@ views:
                 action: toggle
               aspect_ratio: 16:9
               state_image:
-                "on": /local/lovelace/images/pictures/werkbureau_aan.jpg
-                "off": /local/lovelace/images/pictures/werkbureau_uit.jpg
+                "on": /local/lovelace/images/werkbureau_aan.jpg
+                "off": /local/lovelace/images/werkbureau_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -659,8 +659,8 @@ views:
             action: toggle
           aspect_ratio: 16:9
           state_image:
-            'on': /local/lovelace/images/pictures/veranda_licht_aan.jpg
-            'off': /local/lovelace/images/pictures/veranda_licht_uit.jpg
+            'on': /local/lovelace/images/veranda_licht_aan.jpg
+            'off': /local/lovelace/images/veranda_licht_uit.jpg
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -710,8 +710,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    'on': /local/lovelace/images/pictures/veranda_speaker.jpg
-                    'off': /local/lovelace/images/pictures/veranda_speaker_off.jpg
+                    'on': /local/lovelace/images/veranda_speaker.jpg
+                    'off': /local/lovelace/images/veranda_speaker_off.jpg
               - type: custom:card-modder
                 style:
                   border-radius: 10px
@@ -724,8 +724,8 @@ views:
                     action: toggle
                   aspect_ratio: 16:9
                   state_image:
-                    'on': /local/lovelace/images/pictures/heater.jpg
-                    'off': /local/lovelace/images/pictures/heater_off.jpg
+                    'on': /local/lovelace/images/heater.jpg
+                    'off': /local/lovelace/images/heater_off.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -753,7 +753,7 @@ views:
               title: Inkom
               entities:
                 - entity: light.gateway_light_7811dcb9c795
-              image: /local/lovelace/images/pictures/inkom.jpg
+              image: /local/lovelace/images/inkom.jpg
               aspect_ratio: 16:9
           - type: custom:card-modder
             style:
@@ -794,8 +794,8 @@ views:
                 action: toggle
               aspect_ratio: 16:9
               state_image:
-                'on': /local/lovelace/images/pictures/gangpad_aan.jpg
-                'off': /local/lovelace/images/pictures/gangpad.jpg
+                'on': /local/lovelace/images/gangpad_aan.jpg
+                'off': /local/lovelace/images/gangpad.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -842,8 +842,8 @@ views:
             action: toggle
           aspect_ratio: 16:9
           state_image:
-            'on': /local/lovelace/images/pictures/badkamer_speaker.jpg
-            'off': /local/lovelace/images/pictures/badkamer_speaker_uit.jpg
+            'on': /local/lovelace/images/badkamer_speaker.jpg
+            'off': /local/lovelace/images/badkamer_speaker_uit.jpg
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -867,7 +867,7 @@ views:
         card:
           type: picture-elements
           aspect_ratio: 16:9
-          image: /local/lovelace/images/pictures/isp.jpg
+          image: /local/lovelace/images/isp.jpg
           elements:
             - type: icon
               icon: mdi:pulse
@@ -893,7 +893,7 @@ views:
         card:
           type: picture-glance
           title: Batterij Status
-          image: /local/lovelace/images/pictures/battery.jpg
+          image: /local/lovelace/images/battery.jpg
           aspect_ratio: 16:9
         filter:
           include:
@@ -905,7 +905,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-elements
-          image: /local/lovelace/images/pictures/system_settings.jpg
+          image: /local/lovelace/images/system_settings.jpg
           aspect_ratio: 16:9
           elements:
             - type: icon
