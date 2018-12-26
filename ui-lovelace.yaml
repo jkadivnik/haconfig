@@ -709,7 +709,7 @@ views:
                   aspect_ratio: 16:9
                   state_image:
                     'on': /local/lovelace/images/veranda_speaker.jpg
-                    'off': /local/lovelace/images/veranda_speaker_off.jpg
+                    'off': /local/lovelace/images/veranda_speaker_uit.jpg
               - type: custom:card-modder
                 style:
                   border-radius: 10px
