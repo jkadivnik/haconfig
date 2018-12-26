@@ -43,7 +43,7 @@ livingroom_kodi:
 livingroom_audiocast:
   widget_type: media_player
   title: living_room_audio
-  entity: media_player.living_room_audio
+  entity: media_player.livingroom_audio
 
 livingroom_volup:
   widget_type: script

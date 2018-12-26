@@ -6,3 +6,30 @@
     action:
       service: switch.turn_on
       entity_id: switch.gameroom_kodi
+
+  # Chromecast
+  - alias: Gameroom Chromecast stopped
+    trigger:
+      platform: state
+      entity_id: media_player.gameroom_video
+      to: 'off'
+    condition:
+      - condition: template
+        value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Chromecast') }}"
+    action:
+      service: switch.turn_off
+      entity_id: switch.gameroom_chromecast
+  - alias: Gameroom Chromecast playing
+    trigger:
+      - platform: state
+        entity_id: media_player.gameroom_video
+        to: 'playing'
+      - platform: state
+        entity_id: media_player.gameroom_video
+        to: 'paused'
+    condition:
+      - condition: template
+        value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'PowerOff') }}"
+    action:
+      service: switch.turn_on
+      entity_id: switch.gameroom_chromecast

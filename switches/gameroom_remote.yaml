@@ -56,3 +56,14 @@
       turn_off:
         service: light.turn_off
         entity_id: light.gameroom_rgb_lights
+    gameroom_chromecast:
+      friendly_name: "Gameroom Chromecast"
+      value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Chromecast') }}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.gameroom_hub
+        data:
+          activity: 37387824
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.gameroom_hub

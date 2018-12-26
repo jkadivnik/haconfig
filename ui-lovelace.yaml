@@ -235,7 +235,7 @@ views:
                 icon: mdi:movie
           - type: conditional
             conditions:
-              - entity: media_player.living_room_video
+              - entity: media_player.livingroom_video
                 state_not: "off"
             card:
               type: custom:card-modder
@@ -244,14 +244,14 @@ views:
                 box-shadow: 3px 3px rgba(0,0,0,0.4)
               card:
                 type: custom:mini-media-player
-                entity: media_player.living_room_video
+                entity: media_player.livingroom_video
                 name: Chromecast
                 show_progress: true
                 show_cover: true
                 artwork_border: true
           - type: conditional
             conditions:
-              - entity: media_player.living_room_audio
+              - entity: media_player.livingroom_audio
                 state_not: "off"
             card:
               type: custom:card-modder
@@ -260,14 +260,14 @@ views:
                 box-shadow: 3px 3px rgba(0,0,0,0.4)
               card:
                 type: custom:mini-media-player
-                entity: media_player.living_room_audio
+                entity: media_player.livingroom_audio
                 name: Chromecast Audio
                 show_progress: true
                 show_cover: true
                 artwork_border: true
           - type: conditional
             conditions:
-              - entity: media_player.living_room_speaker
+              - entity: media_player.livingroom_speaker
                 state_not: "off"
             card:
               type: custom:card-modder
@@ -276,7 +276,7 @@ views:
                 box-shadow: 3px 3px rgba(0,0,0,0.4)
               card:
                 type: custom:mini-media-player
-                entity: media_player.living_room_speaker
+                entity: media_player.livingroom_speaker
                 name: Google Mini
                 show_progress: true
                 show_cover: true
@@ -424,6 +424,9 @@ views:
                 - entity: switch.gameroom_ps4
                   icon: mdi:gamepad
                   name: PS4
+                - entity: switch.gameroom_chromecast
+                  icon: mdi:cast
+                  name: Chromecast
                 - entity: light.gameroom_rgb_light
                   icon: mdi:lightbulb
                   name: LED Lichten
@@ -495,6 +498,24 @@ views:
                 type: custom:mini-media-player
                 entity: media_player.kodibureau
                 name: HTPC
+                artwork: cover
+                show_progress: true
+                show_source: true
+                artwork_border: true
+                icon: mdi:movie
+          - type: conditional
+            conditions:
+              - entity: media_player.gameroom_video
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.gameroom_video
+                name: Chromecast
                 artwork: cover
                 show_progress: true
                 show_source: true
