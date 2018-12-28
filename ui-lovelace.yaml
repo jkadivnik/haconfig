@@ -592,7 +592,7 @@ views:
             card:
               type: picture-entity
               name: Werk Bureau Led Light
-              entity: input_select.gameroom_led_light_colors
+              entity: input_select.gameroom_led_colors
               icon: mdi:lightbulb
               tap_action:
                 action: toggle
