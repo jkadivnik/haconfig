@@ -334,24 +334,6 @@ views:
                 show_progress: true
                 show_cover: true
                 artwork_border: true
-          - type: conditional
-            conditions:
-              - entity: media_player.wireless_speakers
-                state_not: "off"
-            card:
-              type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: custom:mini-media-player
-                entity: media_player.wireless_speakers
-                name: Google Chromecast Audio Wireless Speakers
-                artwork: cover
-                show_progress: true
-                show_source: true
-                artwork_border: true
-                icon: mdi:playlist-music
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -724,6 +706,26 @@ views:
                   state_image:
                     'on': /local/lovelace/images/heater.jpg
                     'off': /local/lovelace/images/heater_off.jpg
+          - type: conditional
+            conditions:
+              - entity: media_player.wireless_speakers
+                state_not: "off"
+              - entity: switch.veranda_speaker
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.wireless_speakers
+                name: Google Chromecast Audio Wireless Speakers
+                artwork: cover
+                show_progress: true
+                show_source: true
+                artwork_border: true
+                icon: mdi:playlist-music
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -842,6 +844,26 @@ views:
           state_image:
             'on': /local/lovelace/images/badkamer_speaker.jpg
             'off': /local/lovelace/images/badkamer_speaker_uit.jpg
+      - type: conditional
+        conditions:
+          - entity: media_player.wireless_speakers
+            state_not: "off"
+          - entity: switch.bathroom_speaker
+            state_not: "off"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: custom:mini-media-player
+            entity: media_player.wireless_speakers
+            name: Google Chromecast Audio Wireless Speakers
+            artwork: cover
+            show_progress: true
+            show_source: true
+            artwork_border: true
+            icon: mdi:playlist-music
       - type: custom:card-modder
         style:
           border-radius: 10px
