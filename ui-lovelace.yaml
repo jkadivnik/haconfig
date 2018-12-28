@@ -830,54 +830,56 @@ views:
                   icon: mdi:close-circle-outline
   - title: Badkamer
     cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: picture-entity
-          name: Speaker
-          entity: switch.bathroom_speaker
-          tap_action:
-            action: toggle
-          aspect_ratio: 16:9
-          state_image:
-            'on': /local/lovelace/images/badkamer_speaker.jpg
-            'off': /local/lovelace/images/badkamer_speaker_uit.jpg
-      - type: conditional
-        conditions:
-          - entity: media_player.wireless_speakers
-            state_not: "off"
-          - entity: switch.bathroom_speaker
-            state_not: "off"
-        card:
-          type: custom:card-modder
-          style:
-            border-radius: 10px
-            box-shadow: 3px 3px rgba(0,0,0,0.4)
-          card:
-            type: custom:mini-media-player
-            entity: media_player.wireless_speakers
-            name: Google Chromecast Audio Wireless Speakers
-            artwork: cover
-            show_progress: true
-            show_source: true
-            artwork_border: true
-            icon: mdi:playlist-music
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: entity-button
-          name: Alles Afzetten
-          icon: mdi:close-circle-outline
-          tap_action:
-            action: call-service
-            service: scene.turn_on
-            service_data:
-              entity_id: scene.bathroom_all_off
-          entity: scene.bathroom_all_off
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Speaker
+              entity: switch.bathroom_speaker
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/badkamer_speaker.jpg
+                'off': /local/lovelace/images/badkamer_speaker_uit.jpg
+          - type: conditional
+            conditions:
+              - entity: media_player.wireless_speakers
+                state_not: "off"
+              - entity: switch.bathroom_speaker
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.wireless_speakers
+                name: Google Chromecast Audio Wireless Speakers
+                artwork: cover
+                show_progress: true
+                show_source: true
+                artwork_border: true
+                icon: mdi:playlist-music
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entity-button
+              name: Alles Afzetten
+              icon: mdi:close-circle-outline
+              tap_action:
+                action: call-service
+                service: scene.turn_on
+                service_data:
+                  entity_id: scene.bathroom_all_off
+              entity: scene.bathroom_all_off
   - title: Systeem
     cards:
       - type: custom:card-modder
