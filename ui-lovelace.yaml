@@ -598,8 +598,13 @@ views:
                 action: toggle
               aspect_ratio: 16:9
               state_image:
-                "on": /local/lovelace/images/werkbureau_aan.jpg
-                "off": /local/lovelace/images/werkbureau_uit.jpg
+                "blue": /local/lovelace/images/workdesk_blue.jpg
+                "green": /local/lovelace/images/workdesk_green.jpg
+                "purple": /local/lovelace/images/workdesk_purple.jpg
+                "red": /local/lovelace/images/workdesk_red.jpg
+                "white": /local/lovelace/images/workdesk_white.jpg
+                "yellow": /local/lovelace/images/werkbureau_yellow.jpg
+                "black": /local/lovelace/images/werkbureau_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px

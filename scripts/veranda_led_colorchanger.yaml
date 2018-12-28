@@ -3,10 +3,12 @@
     sequence:
       - service: script.generic_colorchanger
         data:
-          entity: "light.veranda_led_lights"
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
   veranda_rgb_colorchanger_off:
     alias: Veranda Led Lights Off
     sequence:
-      - service: light.turn_off
+      - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gateway_light_7811dcb9c795
+          entity_id: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors

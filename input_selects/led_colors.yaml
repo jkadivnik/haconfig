@@ -22,6 +22,18 @@ livingroom_led_colors:
     - black
   initial: blue
   icon: mdi:palette
+stairway_led_colors:
+  name: Veranda Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: blue
+  icon: mdi:palette
 veranda_led_colors:
   name: Veranda Led Light Colors
   options:

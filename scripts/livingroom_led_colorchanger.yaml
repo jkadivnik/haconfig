@@ -3,10 +3,12 @@
     sequence:
       - service: script.generic_colorchanger
         data:
-          entity: "light.livingroom_led_lights"
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
   livingroom_rgb_colorchanger_off:
     alias: Livingroom Led Lights Off
     sequence:
-      - service: light.turn_off
+      - service: script.generic_colorchanger_off
         data:
           entity_id: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
