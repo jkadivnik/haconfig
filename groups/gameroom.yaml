@@ -3,7 +3,7 @@ Gameroom:
     - sensor.gameroom_harmony_activity
     - group.gameroom_mediaplayers
     - remote.gameroom_hub
-    - light.gameroom_rgb_light
+    - light.gameroom_mqtt_rgb_light
     - light.gateway_light_7811dcded4dc
     - script.gameroom_volume_up
     - script.gameroom_volume_down

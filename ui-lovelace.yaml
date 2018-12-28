@@ -462,7 +462,7 @@ views:
                 - entity: switch.gameroom_chromecast
                   icon: mdi:cast
                   name: Chromecast
-                - entity: light.gameroom_rgb_light
+                - entity: light.gameroom_mqtt_rgb_light
                   icon: mdi:lightbulb
                   name: LED Lichten
               image: /local/lovelace/images/gameroom.jpg
