@@ -10,6 +10,6 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gateway_light_7811dcb9c795
+          entity: light.gateway_light_7811dcb9c795
           inputselect: input_select.stairway_led_colors
 

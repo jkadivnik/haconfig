@@ -10,5 +10,5 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.veranda_led_lights
+          entity: light.veranda_led_lights
           inputselect: input_select.veranda_led_colors

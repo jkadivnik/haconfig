@@ -10,7 +10,7 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gameroom_led_lights
+          entity: light.gameroom_led_lights
           inputselect: input_select.gameroom_led_colors
   gameroom_rgb_colorchanger_workdesk:
     alias: Gameroom Colorchanger Workdesk
@@ -24,7 +24,7 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gameroom_led_lights
+          entity: light.gameroom_led_lights
           inputselect: input_select.gameroom_led_colors
   gameroom_rgb_colorchanger_trophycase:
     alias: Gameroom Colorchanger Trophycase
@@ -38,7 +38,7 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gameroom_mqtt_rgb_light
+          entity: light.gameroom_mqtt_rgb_light
           inputselect: input_select.gameroom_led_colors
   gameroom_rgb_colorchanger_gamedesk:
     alias: Gameroom Colorchanger Gamedesk
@@ -52,5 +52,5 @@
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity_id: light.gameroom_mqtt_rgb_light
+          entity: light.gameroom_mqtt_rgb_light
           inputselect: input_select.gameroom_led_colors
