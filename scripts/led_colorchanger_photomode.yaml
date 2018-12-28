@@ -4,24 +4,24 @@
       - delay: '00:00:10'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: group.gameroom_led_lights
+          entity: light.gameroom_led_lights
