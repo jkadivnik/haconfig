@@ -1,5 +1,5 @@
-led_colors:
-  name: Led Light Colors
+gameroom_led_colors:
+  name: Gameroom Led Light Colors
   options:
     - blue
     - red
@@ -7,5 +7,30 @@ led_colors:
     - green
     - purple
     - white
+    - black
+  initial: blue
+  icon: mdi:palette
+livingroom_led_colors:
+  name: Livingroom Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: blue
+  icon: mdi:palette
+veranda_led_colors:
+  name: Veranda Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
   initial: blue
   icon: mdi:palette

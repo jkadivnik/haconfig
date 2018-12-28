@@ -1,5 +1,5 @@
   platform: mqtt
-  name: "Gameroom Desk Light"
+  name: "Gameroom Sonoff Desklight"
   state_topic: "stat/bureau/desklight/POWER"
   command_topic: "cmnd/bureau/desklight/POWER"
   payload_on: "ON"

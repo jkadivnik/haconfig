@@ -4,7 +4,17 @@
       - service: light.turn_on
         data_template:
           entity_id: "{{ entity | string }}"
-          color_name: "{{ states.input_select.led_colors.state | string }}"
+          color_name: "{{ states(inputselect) }}"
       - service: input_select.select_next
-        data:
-          entity_id: input_select.led_colors
+        data_template:
+          entity_id: "{{ inputselect }}"
+  generic_colorchanger_off:
+    alias: Generic Colorchanger Off
+    sequence:
+      - service: light.turn_off
+        data_template:
+          entity_id: "{{ entity | string }}"
+      - service: input_select.select_option
+        data_template:
+          entity_id: "{{ inputselect }}"
+          option: "black"

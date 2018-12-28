@@ -19,7 +19,7 @@ Gameroom:
     - switch.gameroom_ps4
     - switch.gameroom_pc_sound
     - switch.gameroom_led_light
-    - switch.gameroom_desk_light
+    - switch.gameroom_sonoff_desklight
     - switch.gameroom_volume_down
     - switch.gameroom_volume_mute
     - switch.gameroom_volume_up

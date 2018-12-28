@@ -13,4 +13,4 @@
       remote.gameroom_hub: off
       light.gameroom_mqtt_rgb_light: off
       light.gateway_light_7811dcded4dc: off
-      switch.gameroom_desk_light: off
+      switch.gameroom_sonoff_desklight: off

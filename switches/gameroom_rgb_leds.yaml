@@ -1,0 +1,23 @@
+  platform: template
+  switches:
+    gameroom_volume_up:
+      friendly_name: "Gameroom Volume Up"
+      value_template: true
+      turn_on:
+        service: script.gameroom_volume_up
+      turn_off:
+        service: script.gameroom_volume_up
+    gameroom_volume_down:
+      friendly_name: "Gameroom Volume Down"
+      value_template: true
+      turn_on:
+        service: script.gameroom_volume_down
+      turn_off:
+        service: script.gameroom_volume_down
+    gameroom_volume_mute:
+      friendly_name: "Gameroom Volume Mute"
+      value_template: true
+      turn_on:
+        service: script.gameroom_volume_mute
+      turn_off:
+        service: script.gameroom_volume_mute

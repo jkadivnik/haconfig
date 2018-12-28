@@ -4,9 +4,11 @@
       - service: script.generic_colorchanger
         data:
           entity: light.gameroom_led_lights
+          inputselect: input_select.gameroom_led_colors
   gameroom_rgb_colorchanger_off:
-    alias: Gameroom Led Lights Off
+    alias: Gameroom RGB Lights Off
     sequence:
-      - service: light.turn_off
+      - service: script.generic_colorchanger_off
         data:
           entity_id: light.gameroom_led_lights
+          inputselect: input_select.gameroom_led_colors

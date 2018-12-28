@@ -457,14 +457,11 @@ views:
                   icon: mdi:gamepad
                   name: PS3
                 - entity: switch.gameroom_ps4
-                  icon: mdi:gamepad
+                  icon: mdi:google-controller
                   name: PS4
                 - entity: switch.gameroom_chromecast
                   icon: mdi:cast
                   name: Chromecast
-                - entity: light.gameroom_mqtt_rgb_light
-                  icon: mdi:lightbulb
-                  name: LED Lichten
               image: /local/lovelace/images/gameroom.jpg
               aspect_ratio: 16:9
           - type: custom:card-modder
@@ -579,8 +576,23 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: picture-entity
-              name: Werk Bureau
-              entity: switch.gameroom_desk_light
+              name: Werk Bureau Light
+              entity: switch.gameroom_sonoff_desklight
+              icon: mdi:lightbulb
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                "on": /local/lovelace/images/werkbureau_aan.jpg
+                "off": /local/lovelace/images/werkbureau_uit.jpg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Werk Bureau Led Light
+              entity: input_select.led_light_colors
               icon: mdi:lightbulb
               tap_action:
                 action: toggle
