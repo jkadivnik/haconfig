@@ -1,0 +1,8 @@
+  platform: group
+  name: Home Led Lights
+  entities:
+   - light.gameroom_mqtt_rgb_light
+   - light.gameroom_workdesk_rgb_light
+   - light.livingroom_bookcase_rgb_light
+   - light.livingroom_dressoir_rgb_light
+   - light.veranda_rgb_light

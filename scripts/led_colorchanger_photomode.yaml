@@ -1,27 +1,65 @@
   led_photomode:
     alias: Led Photomode
     sequence:
+      - service: script.generic_colorchanger_off
+        data:
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger_off
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:10'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors
       - delay: '00:00:02'
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_led_lights
+          entity: light.livingroom_led_lights
+          inputselect: input_select.livingroom_led_colors
+      - service: script.generic_colorchanger
+        data:
+          entity: light.veranda_led_lights
+          inputselect: input_select.veranda_led_colors

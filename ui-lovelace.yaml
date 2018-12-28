@@ -570,41 +570,97 @@ views:
               entity: scene.gameroom_all_off
       - type: vertical-stack
         cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-entity
-              name: Werk Bureau Light
-              entity: switch.gameroom_sonoff_desklight
-              icon: mdi:lightbulb
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                "on": /local/lovelace/images/werkbureau_aan.jpg
-                "off": /local/lovelace/images/werkbureau_uit.jpg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: picture-entity
-              name: Werk Bureau Led Light
-              entity: input_select.gameroom_led_colors
-              icon: mdi:lightbulb
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                "blue": /local/lovelace/images/workdesk_blue.jpg
-                "green": /local/lovelace/images/workdesk_green.jpg
-                "purple": /local/lovelace/images/workdesk_purple.jpg
-                "red": /local/lovelace/images/workdesk_red.jpg
-                "white": /local/lovelace/images/workdesk_white.jpg
-                "yellow": /local/lovelace/images/werkbureau_yellow.jpg
-                "black": /local/lovelace/images/werkbureau_uit.jpg
+          - type: horizontal-stack
+            cards:
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Werkbureau Licht
+                  entity: switch.gameroom_sonoff_desklight
+                  icon: mdi:lightbulb
+                  tap_action:
+                    action: toggle
+                  aspect_ratio: 16:9
+                  state_image:
+                    "on": /local/lovelace/images/werkbureau_aan.jpg
+                    "off": /local/lovelace/images/werkbureau_uit.jpg
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Werkbureau RGB Light
+                  entity: input_select.gameroom_led_colors
+                  icon: mdi:lightbulb
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_workdesk
+                  hold_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_workdesk_off
+                  aspect_ratio: 16:9
+                  state_image:
+                    "blue": /local/lovelace/images/workdesk_blue.jpg
+                    "green": /local/lovelace/images/workdesk_green.jpg
+                    "purple": /local/lovelace/images/workdesk_purple.jpg
+                    "red": /local/lovelace/images/workdesk_red.jpg
+                    "white": /local/lovelace/images/workdesk_white.jpg
+                    "yellow": /local/lovelace/images/workdesk_yellow.jpg
+                    "black": /local/lovelace/images/workdesk_uit.jpg
+          - type: horizontal-stack
+            cards:
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Gamedesk Led Light
+                  entity: input_select.gameroom_led_colors
+                  icon: mdi:lightbulb
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_gamedesk
+                  hold_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_gamedesk_off
+                  aspect_ratio: 16:9
+                  state_image:
+                    "blue": /local/lovelace/images/gamedesk_blue.jpg
+                    "green": /local/lovelace/images/gamedesk_green.jpg
+                    "purple": /local/lovelace/images/gamedesk_purple.jpg
+                    "red": /local/lovelace/images/gamedesk_red.jpg
+                    "white": /local/lovelace/images/gamedesk_white.jpg
+                    "yellow": /local/lovelace/images/gamedesk_yellow.jpg
+                    "black": /local/lovelace/images/gamedesk_uit.jpg
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Thropycase Led Light
+                  entity: input_select.gameroom_led_colors
+                  icon: mdi:lightbulb
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_trophycase
+                  hold_action:
+                    action: call-service
+                    service: script.gameroom_rgb_colorchanger_trophycase_off
+                  aspect_ratio: 16:9
+                  state_image:
+                    "blue": /local/lovelace/images/trophycase_blue.jpg
+                    "green": /local/lovelace/images/trophycase_green.jpg
+                    "purple": /local/lovelace/images/trophycase_purple.jpg
+                    "red": /local/lovelace/images/trophycase_red.jpg
+                    "white": /local/lovelace/images/trophycase_white.jpg
+                    "yellow": /local/lovelace/images/trophycase_yellow.jpg
+                    "black": /local/lovelace/images/trophycase_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
