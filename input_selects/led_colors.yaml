@@ -8,7 +8,7 @@ gameroom_led_colors:
     - purple
     - white
     - black
-  initial: blue
+  initial: black
   icon: mdi:palette
 livingroom_led_colors:
   name: Livingroom Led Light Colors
@@ -20,7 +20,7 @@ livingroom_led_colors:
     - purple
     - white
     - black
-  initial: blue
+  initial: black
   icon: mdi:palette
 stairway_led_colors:
   name: Veranda Led Light Colors
@@ -32,7 +32,7 @@ stairway_led_colors:
     - purple
     - white
     - black
-  initial: blue
+  initial: black
   icon: mdi:palette
 veranda_led_colors:
   name: Veranda Led Light Colors
@@ -44,5 +44,5 @@ veranda_led_colors:
     - purple
     - white
     - black
-  initial: blue
+  initial: black
   icon: mdi:palette
