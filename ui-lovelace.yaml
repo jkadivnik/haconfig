@@ -182,7 +182,7 @@ views:
                 card:
                   type: picture-entity
                   name: Boekenkast RGB Licht
-                  entity: input_select.livingroom_led_colors
+                  entity: input_select.livingroom_bookcase_led_colors
                   icon: mdi:lightbulb
                   tap_action:
                     action: call-service
@@ -408,7 +408,7 @@ views:
                 card:
                   type: picture-entity
                   name: Dressoir RGB Licht
-                  entity: input_select.livingroom_led_colors
+                  entity: input_select.livingroom_dressoir_led_colors
                   icon: mdi:lightbulb
                   tap_action:
                     action: call-service
@@ -614,7 +614,7 @@ views:
                 card:
                   type: picture-entity
                   name: Werkbureau RGB Licht
-                  entity: input_select.gameroom_led_colors
+                  entity: input_select.gameroom_workdesk_led_colors
                   icon: mdi:lightbulb
                   tap_action:
                     action: call-service
@@ -640,7 +640,7 @@ views:
                 card:
                   type: picture-entity
                   name: Gamedesk Led Licht
-                  entity: input_select.gameroom_led_colors
+                  entity: input_select.gameroom_mqtt_led_colors
                   icon: mdi:lightbulb
                   tap_action:
                     action: call-service
@@ -664,7 +664,7 @@ views:
                 card:
                   type: picture-entity
                   name: Thropycase Led Licht
-                  entity: input_select.gameroom_led_colors
+                  entity: input_select.gameroom_mqtt_led_colors
                   icon: mdi:lightbulb
                   tap_action:
                     action: call-service
