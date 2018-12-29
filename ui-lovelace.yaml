@@ -181,14 +181,24 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Boekenkast Licht
-                  entity: light.livingroom_bookcase_rgb_light
+                  name: Boekenkast RGB Licht
+                  entity: input_select.livingroom_led_colors
+                  icon: mdi:lightbulb
                   tap_action:
-                    action: toggle
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_bookcase
+                  hold_action:
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_bookcase_off
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/boekenkast_ledlicht_aan.jpg
-                    "off": /local/lovelace/images/boekenkast_ledlicht_uit.jpg
+                    "blue": /local/lovelace/images/bookcase_blue.jpg
+                    "green": /local/lovelace/images/bookcase_green.jpg
+                    "purple": /local/lovelace/images/bookcase_purple.jpg
+                    "red": /local/lovelace/images/bookcase_red.jpg
+                    "white": /local/lovelace/images/bookcase_white.jpg
+                    "yellow": /local/lovelace/images/bookcase_yellow.jpg
+                    "black": /local/lovelace/images/boekenkast_ledlicht_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -260,14 +270,24 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Dressoir Led Licht
-                  entity: light.livingroom_dressoir_rgb_light
+                  name: Dressoir RGB Licht
+                  entity: input_select.livingroom_led_colors
+                  icon: mdi:lightbulb
                   tap_action:
-                    action: toggle
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_dressoir
+                  hold_action:
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_dressoir_off
                   aspect_ratio: 16:9
                   state_image:
-                    "on": /local/lovelace/images/dressoir_ledlicht_aan.jpg
-                    "off": /local/lovelace/images/dressoir_ledlicht_uit.jpg
+                    "blue": /local/lovelace/images/dressoir_blue.jpg
+                    "green": /local/lovelace/images/dressoir_green.jpg
+                    "purple": /local/lovelace/images/dressoir_purple.jpg
+                    "red": /local/lovelace/images/dressoir_red.jpg
+                    "white": /local/lovelace/images/dressoir_white.jpg
+                    "yellow": /local/lovelace/images/dressoir_yellow.jpg
+                    "black": /local/lovelace/images/dressoir_ledlicht_uit.jpg
           - type: conditional
             conditions:
               - entity: media_player.kodiliving
@@ -703,17 +723,26 @@ views:
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
-          report_size: 40
         card:
           type: picture-entity
-          name: Led Licht
-          entity: light.veranda_rgb_light
+          name: Veranda Led Light
+          entity: input_select.veranda_led_colors
+          icon: mdi:lightbulb
           tap_action:
-            action: toggle
+            action: call-service
+            service: script.veranda_rgb_colorchanger
+          hold_action:
+            action: call-service
+            service: script.veranda_rgb_colorchanger_off
           aspect_ratio: 16:9
           state_image:
-            'on': /local/lovelace/images/veranda_licht_aan.jpg
-            'off': /local/lovelace/images/veranda_licht_uit.jpg
+            "blue": /local/lovelace/images/veranda_blue.jpg
+            "green": /local/lovelace/images/veranda_green.jpg
+            "purple": /local/lovelace/images/veranda_purple.jpg
+            "red": /local/lovelace/images/veranda_red.jpg
+            "white": /local/lovelace/images/veranda_white.jpg
+            "yellow": /local/lovelace/images/veranda_yellow.jpg
+            "black": /local/lovelace/images/veranda_licht_uit.jpg
       - type: custom:card-modder
         style:
           border-radius: 10px
