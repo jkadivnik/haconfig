@@ -12,7 +12,7 @@
         value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') == 'PowerOff' }}"
     action:
       service: switch.toggle
-      entity_id: switch.kitchen_radio
+      entity_id: switch.kitchen_radio_harmony
   - alias: Toggle sofa plug when activity
     trigger:
       platform: event
