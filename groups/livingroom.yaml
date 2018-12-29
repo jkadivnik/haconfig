@@ -69,5 +69,5 @@ Livingroom:
     - script.livingroom_volume_mute
     - scene.livingroom_all_off
     - scene.livingroom_hub_off
-    - scene_livingroom_lights_on
+    - scene.livingroom_lights_on
     - group.livingroom_mediaplayers
