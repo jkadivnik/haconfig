@@ -17,7 +17,10 @@
         entity_id: light.livingroom_led_lights
         data:
           entity_id: light.livingroom_led_lights
-          rgb_color: [0, 0, 255]
+          color_name: 'blue'
+      - service: script.livingroom_rgb_colorchanger_set_color
+        data:
+          color: 'blue'
   - alias: Livingroom Nightlight Off Timer
     initial_state: true
     trigger:
@@ -35,18 +38,24 @@
         entity_id: light.livingroom_led_lights
       - service: input_boolean.turn_off
         entity_id: input_boolean.livingroom_nightlight_state
-  - alias: Livingroom Nightlight Off Illumination
-    initial_state: true
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.illumination_158d0001de7134
-        above: '4'
-    condition:
-      - condition: state
-        entity_id: input_boolean.livingroom_nightlight_state
-        state: 'on'
-    action:
-      - service: light.turn_off
-        entity_id: light.livingroom_led_lights
-      - service: input_boolean.turn_off
-        entity_id: input_boolean.livingroom_nightlight_state
+      - service: script.livingroom_rgb_colorchanger_set_color
+        data:
+          color: 'black'
+#  - alias: Livingroom Nightlight Off Illumination
+#    initial_state: true
+#    trigger:
+#      - platform: numeric_state
+#        entity_id: sensor.illumination_158d0001de7134
+#        above: '4'
+#    condition:
+#      - condition: state
+#        entity_id: input_boolean.livingroom_nightlight_state
+#        state: 'on'
+#    action:
+#      - service: light.turn_off
+#        entity_id: light.livingroom_led_lights
+#      - service: input_boolean.turn_off
+#        entity_id: input_boolean.livingroom_nightlight_state
+#      - service: script.livingroom_rgb_colorchanger_set_color
+#        data:
+#          color: 'black'

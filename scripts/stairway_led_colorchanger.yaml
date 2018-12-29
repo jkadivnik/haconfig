@@ -1,3 +1,10 @@
+  stairway_rgb_colorchanger_select_color:
+    alias: Stairway Colorchanger Select Color
+    sequence:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.hallway_led_colors
+          option: "{{ color | string }}"
   stairway_rgb_colorchanger:
     alias: Stairway Colorchanger
     sequence:

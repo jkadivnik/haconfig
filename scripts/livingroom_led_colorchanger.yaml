@@ -1,25 +1,38 @@
+  livingroom_rgb_colorchanger_select_color:
+    alias: Livingroom Colorchanger Select Color
+    sequence:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.livingroom_led_colors
+          option: "{{ color | string }}"
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.livingroom_dressoir_led_colors
+          option: "{{ color | string }}"
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.livingroom_bookcase_led_colors
+          option: "{{ color | string }}"
   livingroom_rgb_colorchanger:
     alias: Livingroom Colorchanger
     sequence:
       - service: script.generic_colorchanger
         data:
           entity: light.livingroom_led_lights
-          inputselect: input_select.livingroom_bookcase_led_colors
-      - service: input_select.select_option
+          inputselect: input_select.livingroom_led_colors
+      - service: script.livingroom_rgb_colorchanger_select_color
         data_template:
-          entity_id: input_select.livingroom_dressoir_led_colors
-          option: "{{ states(input_select.livingroom_bookcase_led_colors) | string }}"
+          color: "{{ states('input_select.livingroom_led_colors') | string }}"
   livingroom_rgb_colorchanger_off:
     alias: Livingroom Led Lights Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
           entity: light.livingroom_led_lights
-          inputselect: input_select.livingroom_bookcase_led_colors
-      - service: input_select.select_option
+          inputselect: input_select.livingroom_led_colors
+      - service: script.livingroom_rgb_colorchanger_select_color
         data_template:
-          entity_id: input_select.livingroom_dressoir_led_colors
-          option: "{{ states(input_select.livingroom_bookcase_led_colors) | string }}"
+          color: "black"
   livingroom_rgb_colorchanger_bookcase:
     alias: Livingroom Colorchanger Bookcase
     sequence:

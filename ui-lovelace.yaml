@@ -167,7 +167,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Sofa Licht
+                  name: Sofa
                   entity: switch.plug_158d0001f29250
                   tap_action:
                     action: toggle
@@ -181,7 +181,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Boekenkast RGB Licht
+                  name: Boekenkast
                   entity: input_select.livingroom_bookcase_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -348,6 +348,7 @@ views:
                     action: call-service
                     service: script.livingroom_rgb_colorchanger
                   icon: mdi:palette
+                - entity: sensor.livingroom_current_led_color
                 - entity: script.livingroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
@@ -393,7 +394,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Dressoir Licht
+                  name: Dressoir
                   entity: switch.plug_158d0001f292c0
                   tap_action:
                     action: toggle
@@ -407,7 +408,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Dressoir RGB Licht
+                  name: Dressoir RGB
                   entity: input_select.livingroom_dressoir_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -598,7 +599,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Werkbureau Licht
+                  name: Werkbureau
                   entity: switch.gameroom_sonoff_desklight
                   icon: mdi:lightbulb
                   tap_action:
@@ -613,7 +614,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Werkbureau RGB Licht
+                  name: Werkbureau RGB
                   entity: input_select.gameroom_workdesk_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -639,7 +640,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Gamedesk Led Licht
+                  name: Gamedesk
                   entity: input_select.gameroom_mqtt_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -663,7 +664,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Thropycase Led Licht
+                  name: Thropycase
                   entity: input_select.gameroom_mqtt_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -695,6 +696,7 @@ views:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger
                   icon: mdi:palette
+                - entity: sensor.gameroom_current_led_color
                 - entity: script.gameroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
@@ -725,7 +727,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Veranda Led Licht
+          name: Veranda
           entity: input_select.veranda_led_colors
           icon: mdi:lightbulb
           tap_action:
@@ -757,6 +759,7 @@ views:
                 action: call-service
                 service: script.veranda_rgb_colorchanger
               icon: mdi:palette
+            - entity: sensor.veranda_current_led_color
             - entity: script.veranda_rgb_colorchanger_off
               tap_action:
                 action: call-service
@@ -925,6 +928,7 @@ views:
                     action: call-service
                     service: script.stairway_rgb_colorchanger
                   icon: mdi:palette
+                - entity: sensor.stairway_current_led_color
                 - entity: script.stairway_rgb_colorchanger_off
                   tap_action:
                     action: call-service

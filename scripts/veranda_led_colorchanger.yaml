@@ -1,3 +1,10 @@
+  veranda_rgb_colorchanger_select_color:
+    alias: Veranda Colorchanger Select Color
+    sequence:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.veranda_led_colors
+          option: "{{ color | string }}"
   veranda_rgb_colorchanger:
     alias: Veranda Colorchanger
     sequence:

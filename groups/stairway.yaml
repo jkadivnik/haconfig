@@ -6,11 +6,13 @@ Stairway:
     - switch.bathroom_speaker
     - sensor.illumination_7811dcb9c795
     - sensor.illumination_158d000276e199
+    - sensor.stairway_current_led_color
     - automation.stairway_motion_sensor_battery
     - automation.stairway_nightlight_motion
     - automation.stairway_no_motion
     - automation.smoke_detected
     - script.stairway_all_off
+    - script.stairway_rgb_colorchanger_select_color
     - script.stairway_rgb_colorchanger
     - script.stairway_rgb_colorchanger_off
     - scene.stairway_all_off

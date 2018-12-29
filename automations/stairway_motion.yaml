@@ -18,14 +18,15 @@
     entity_id: light.gateway_light_7811dcb9c795
     data:
       entity_id: light.gateway_light_7811dcb9c795
-      rgb_color: [0, 0, 255]
+      color_name: 'blue'
+      brightness_pct: 15
 - alias: Stairway No Motion
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d000276e199
     to: 'off'
     for:
-      minutes: '3'
+      minutes: '1'
   action:
   - service: light.turn_off
     entity_id: light.gateway_light_7811dcb9c795

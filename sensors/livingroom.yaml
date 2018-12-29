@@ -24,3 +24,6 @@
         {% else %}
           0
         {% endif %}
+    livingroom_current_led_color:
+      friendly_name: Livingroom Current Led Color
+      value_template: "{{ states('input_select.livingroom_led_colors') }}"

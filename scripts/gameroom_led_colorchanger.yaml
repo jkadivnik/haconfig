@@ -1,25 +1,38 @@
+  gameroom_rgb_colorchanger_select_color:
+    alias: Gameroom Colorchanger Select Color
+    sequence:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_led_colors
+          option: "{{ color | string }}"
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_mqtt_led_colors
+          option: "{{ color | string }}"
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_workdesk_led_colors
+          option: "{{ color | string }}"
   gameroom_rgb_colorchanger:
     alias: Gameroom Colorchanger
     sequence:
       - service: script.generic_colorchanger
         data:
           entity: light.gameroom_led_lights
-          inputselect: input_select.gameroom_mqtt_led_colors
-      - service: input_select.select_option
+          inputselect: input_select.gameroom_led_colors
+      - service: script.gameroom_rgb_colorchanger_select_color
         data_template:
-          entity_id: input_select.gameroom_workdesk_led_colors
-          option: "{{ states(input_select.gameroom_mqtt_led_colors) | string }}"
+          color: "{{ states('input_select.gameroom_led_colors') | string }}"
   gameroom_rgb_colorchanger_off:
     alias: Gameroom RGB Lights Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
           entity: light.gameroom_led_lights
-          inputselect: input_select.gameroom_mqtt_led_colors
-      - service: input_select.select_option
+          inputselect: input_select.gameroom_led_colors
+      - service: script.gameroom_rgb_colorchanger_select_color
         data_template:
-          entity_id: input_select.gameroom_workdesk_led_colors
-          option: "{{ states(input_select.gameroom_mqtt_led_colors) | string }}"
+          color: "black"
   gameroom_rgb_colorchanger_workdesk:
     alias: Gameroom Colorchanger Workdesk
     sequence:

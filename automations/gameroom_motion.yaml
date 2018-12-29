@@ -20,15 +20,18 @@
       data:
         entity_id: light.gameroom_led_lights
         color_name: 'blue'
-        brightness_pct: 10
+    - service: script.gameroom_rgb_colorchanger_set_color
+      data:
+        color: 'blue'
   - alias: Gameroom No Motion
     initial_state: false
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
       to: 'off'
-#      for:
-#        minutes: 1
     action:
     - service: light.turn_off
       entity_id: light.gameroom_led_lights
+    - service: script.gameroom_rgb_colorchanger_set_color
+      data:
+        color: 'black'

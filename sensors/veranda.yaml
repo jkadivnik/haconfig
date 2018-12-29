@@ -8,3 +8,6 @@
         {% else %}
           0
         {% endif %}
+    veranda_current_led_color:
+      friendly_name: Veranda Current Led Color
+      value_template: "{{ states('input_select.veranda_led_colors') }}"

@@ -12,6 +12,7 @@ Livingroom:
     - sensor.livingroom_harmony_activity
     - sensor.livingroom_dressoir_plug_load
     - sensor.livingroom_sofa_plug_load
+    - sensor.livingroom_current_led_color
     - binary_sensor.motion_sensor_158d0001de7134
     - binary_sensor.cube_158d00010fd151
     - switch.livingroom_motion_light_variable_switch
@@ -64,6 +65,7 @@ Livingroom:
     - script.livingroom_rgb_colorchanger_bookcase_off
     - script.livingroom_rgb_colorchanger_dressoir
     - script.livingroom_rgb_colorchanger_dressoir_off
+    - script.livingroom_rgb_colorchanger_select_color
     - script.livingroom_volume_up
     - script.livingroom_volume_down
     - script.livingroom_volume_mute

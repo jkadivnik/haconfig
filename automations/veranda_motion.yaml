@@ -15,7 +15,10 @@
         entity_id: light.veranda_rgb_light
         data:
           entity_id: light.veranda_rgb_light
-          rgb_color: [0, 0, 255]
+          color_name: 'blue'
+      - service: script.veranda_rgb_colorchanger_set_color
+        data:
+          color: 'blue'
   - alias: Veranda No Motion
     trigger:
       platform: state
@@ -26,3 +29,6 @@
     action:
       - service: light.turn_off
         entity_id: light.veranda_rgb_light
+      - service: script.veranda_rgb_colorchanger_set_color
+        data:
+          color: 'black'
