@@ -3,8 +3,13 @@ Gameroom:
     - sensor.gameroom_harmony_activity
     - group.gameroom_mediaplayers
     - remote.gameroom_hub
+    - input_select.gameroom_led_colors
+    - input_select.gameroom_mqtt_led_colors
+    - input_select.gameroom_workdesk_led_colors
     - light.gameroom_mqtt_rgb_light
+    - light.gameroom_workdesk_rgb_light
     - light.gateway_light_7811dcded4dc
+    - light.gameroom_lights
     - script.gameroom_volume_up
     - script.gameroom_volume_down
     - script.gameroom_volume_mute
@@ -17,6 +22,7 @@ Gameroom:
     - switch.gameroom_kodi
     - switch.gameroom_ps3
     - switch.gameroom_ps4
+    - switch.gameroom_chromecast
     - switch.gameroom_pc_sound
     - switch.gameroom_led_light
     - switch.gameroom_sonoff_desklight
@@ -35,12 +41,21 @@ Gameroom:
     - automation.gameroom_playstation_4
     - automation.gameroom_temperature_sensor_battery
     - automation.gameroom_watch_movie_kodi
+    - automation.gameroom_chromecast_playing
+    - automation.gameroom_chromecast_stopped
+    - automation.gameroom_kodi_started_playing
     - scene.gameroom_gaming
     - scene.gameroom_lights_on
     - scene.gameroom_all_off
     - automation.gas_detected
     - script.gameroom_rgb_colorchanger
     - script.gameroom_rgb_colorchanger_off
+    - script.gameroom_rgb_colorchanger_workdesk
+    - script.gameroom_rgb_colorchanger_workdesk_off
+    - script.gameroom_rgb_colorchanger_trophycase
+    - script.gameroom_rgb_colorchanger_trophycase_off
+    - script.gameroom_rgb_colorchanger_gamedesk
+    - script.gameroom_rgb_colorchanger_gamedesk_off
     - script.gameroom_volume_down
     - script.gameroom_volume_mute
     - script.gameroom_volume_up

@@ -4,39 +4,47 @@
       - service: script.generic_colorchanger
         data:
           entity: light.livingroom_led_lights
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_bookcase_led_colors
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.livingroom_dressoir_led_colors
+          option: "{{ states(input_select.livingroom_bookcase_led_colors) | string }}"
   livingroom_rgb_colorchanger_off:
     alias: Livingroom Led Lights Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
           entity: light.livingroom_led_lights
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_bookcase_led_colors
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.livingroom_dressoir_led_colors
+          option: "{{ states(input_select.livingroom_bookcase_led_colors) | string }}"
   livingroom_rgb_colorchanger_bookcase:
     alias: Livingroom Colorchanger Bookcase
     sequence:
       - service: script.generic_colorchanger
         data:
           entity: light.livingroom_bookcase_rgb_light
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_bookcase_led_colors
   livingroom_rgb_colorchanger_bookcase_off:
     alias: Livingroom Led Lights Bookcase Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
           entity: light.livingroom_bookcase_rgb_light
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_bookcase_led_colors
   livingroom_rgb_colorchanger_dressoir:
     alias: Livingroom Colorchanger Dressoir
     sequence:
       - service: script.generic_colorchanger
         data:
           entity: light.livingroom_dressoir_rgb_light
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_dressoir_led_colors
   livingroom_rgb_colorchanger_dressoir_off:
     alias: Livingroom Led Lights Dressoir Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
           entity: light.livingroom_dressoir_rgb_light
-          inputselect: input_select.livingroom_led_colors
+          inputselect: input_select.livingroom_dressoir_led_colors

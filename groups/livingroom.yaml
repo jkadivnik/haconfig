@@ -4,6 +4,7 @@ Livingroom:
     - light.livingroom_bookcase_rgb_light
     - light.livingroom_dressoir_rgb_light
     - light.livingroom_led_lights
+    - light.gateway_light_7811dcb35389
     - sensor.humidity_158d0002379148
     - sensor.temperature_158d0002379148
     - sensor.illumination_7811dcb35389
@@ -23,6 +24,7 @@ Livingroom:
     - switch.livingroom_chromecast
     - switch.livingroom_telenet
     - switch.livingroom_kodi
+    - switch.livingroom_wireless_speakers_tuner
     - switch.livingroom_volume_down
     - switch.livingroom_volume_mute
     - switch.livingroom_volume_up
@@ -51,13 +53,21 @@ Livingroom:
     - automation.livingroom_watch_netflix
     - automation.livingroom_watch_television
     - automation.livingroom_harmony_triggered
-    - script.livingroom_volume_up
-    - script.livingroom_volume_down
-    - script.livingroom_volume_mute
+    - automation.livingroom_christmas_turn_on
+    - automation.livingroom_christmas_turn_off
+    - automation.livingroom_kodi_start_playing
+    - automation.toggle_sofa_plug_when_activity
+    - automation.toggle_radio_when_nothing_playing
     - script.livingroom_rgb_colorchanger
     - script.livingroom_rgb_colorchanger_off
+    - script.livingroom_rgb_colorchanger_bookcase
+    - script.livingroom_rgb_colorchanger_bookcase_off
+    - script.livingroom_rgb_colorchanger_dressoir
+    - script.livingroom_rgb_colorchanger_dressoir_off
+    - script.livingroom_volume_up
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
-    - script.livingroom_volume_up
+    - scene.livingroom_all_off
+    - scene.livingroom_hub_off
+    - scene_livingroom_lights_on
     - group.livingroom_mediaplayers
-    - group.livingroom_switches

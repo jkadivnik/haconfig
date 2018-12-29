@@ -1,4 +1,4 @@
-  - alias: Toggle radio when noting playing
+  - alias: Toggle radio when nothing playing
     trigger:
       platform: event
       event_type: xiaomi_aqara.click

@@ -1,3 +1,4 @@
+# gameroom
 gameroom_led_colors:
   name: Gameroom Led Light Colors
   options:
@@ -10,6 +11,32 @@ gameroom_led_colors:
     - black
   initial: black
   icon: mdi:palette
+gameroom_mqtt_led_colors:
+  name: Gameroom MQTT Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: black
+  icon: mdi:palette
+gameroom_workdesk_led_colors:
+  name: Gameroom Workdesk Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: black
+  icon: mdi:palette
+
+# livingroom
 livingroom_led_colors:
   name: Livingroom Led Light Colors
   options:
@@ -22,8 +49,8 @@ livingroom_led_colors:
     - black
   initial: black
   icon: mdi:palette
-stairway_led_colors:
-  name: Veranda Led Light Colors
+livingroom_bookcase_led_colors:
+  name: Livingroom Led Light Colors
   options:
     - blue
     - red
@@ -34,6 +61,34 @@ stairway_led_colors:
     - black
   initial: black
   icon: mdi:palette
+livingroom_dressoir_led_colors:
+  name: Livingroom Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: black
+  icon: mdi:palette
+
+# hallway
+hallway_led_colors:
+  name: Hallway Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: black
+  icon: mdi:palette
+
+# veranda
 veranda_led_colors:
   name: Veranda Led Light Colors
   options:
