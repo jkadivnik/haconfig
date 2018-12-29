@@ -238,56 +238,12 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: picture-glance
-              title: Eettafel
+              title: Keuken
               entities:
-                - entity: switch.livingroom_chromecast_audio
-                  icon: mdi:library-music
-                  name: Audiocast
-                - entity: switch.livingroom_tuner
+                - entity: switch.kitchen_radio_harmony
                   icon: mdi:radio
-                  name: Tuner
-              image: /local/lovelace/images/eetplaats.jpg
+              image: /local/lovelace/images/keuken.jpg
               aspect_ratio: 16:9
-          - type: horizontal-stack
-            cards:
-              - type: custom:card-modder
-                style:
-                  border-radius: 10px
-                  box-shadow: 3px 3px rgba(0,0,0,0.4)
-                card:
-                  type: picture-entity
-                  name: Dressoir Licht
-                  entity: switch.plug_158d0001f292c0
-                  tap_action:
-                    action: toggle
-                  aspect_ratio: 16:9
-                  state_image:
-                    "on": /local/lovelace/images/dressoir_licht_aan.jpg
-                    "off": /local/lovelace/images/dressoir_licht_uit.jpg
-              - type: custom:card-modder
-                style:
-                  border-radius: 10px
-                  box-shadow: 3px 3px rgba(0,0,0,0.4)
-                card:
-                  type: picture-entity
-                  name: Dressoir RGB Licht
-                  entity: input_select.livingroom_led_colors
-                  icon: mdi:lightbulb
-                  tap_action:
-                    action: call-service
-                    service: script.livingroom_rgb_colorchanger_dressoir
-                  hold_action:
-                    action: call-service
-                    service: script.livingroom_rgb_colorchanger_dressoir_off
-                  aspect_ratio: 16:9
-                  state_image:
-                    "blue": /local/lovelace/images/dressoir_blue.jpg
-                    "green": /local/lovelace/images/dressoir_green.jpg
-                    "purple": /local/lovelace/images/dressoir_purple.jpg
-                    "red": /local/lovelace/images/dressoir_red.jpg
-                    "white": /local/lovelace/images/dressoir_white.jpg
-                    "yellow": /local/lovelace/images/dressoir_yellow.jpg
-                    "black": /local/lovelace/images/dressoir_ledlicht_uit.jpg
           - type: conditional
             conditions:
               - entity: media_player.kodiliving
@@ -419,12 +375,56 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: picture-glance
-              title: Keuken
+              title: Eettafel
               entities:
-                - entity: switch.kitchen_radio_harmony
+                - entity: switch.livingroom_chromecast_audio
+                  icon: mdi:library-music
+                  name: Audiocast
+                - entity: switch.livingroom_tuner
                   icon: mdi:radio
-              image: /local/lovelace/images/keuken.jpg
+                  name: Tuner
+              image: /local/lovelace/images/eetplaats.jpg
               aspect_ratio: 16:9
+          - type: horizontal-stack
+            cards:
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Dressoir Licht
+                  entity: switch.plug_158d0001f292c0
+                  tap_action:
+                    action: toggle
+                  aspect_ratio: 16:9
+                  state_image:
+                    "on": /local/lovelace/images/dressoir_licht_aan.jpg
+                    "off": /local/lovelace/images/dressoir_licht_uit.jpg
+              - type: custom:card-modder
+                style:
+                  border-radius: 10px
+                  box-shadow: 3px 3px rgba(0,0,0,0.4)
+                card:
+                  type: picture-entity
+                  name: Dressoir RGB Licht
+                  entity: input_select.livingroom_led_colors
+                  icon: mdi:lightbulb
+                  tap_action:
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_dressoir
+                  hold_action:
+                    action: call-service
+                    service: script.livingroom_rgb_colorchanger_dressoir_off
+                  aspect_ratio: 16:9
+                  state_image:
+                    "blue": /local/lovelace/images/dressoir_blue.jpg
+                    "green": /local/lovelace/images/dressoir_green.jpg
+                    "purple": /local/lovelace/images/dressoir_purple.jpg
+                    "red": /local/lovelace/images/dressoir_red.jpg
+                    "white": /local/lovelace/images/dressoir_white.jpg
+                    "yellow": /local/lovelace/images/dressoir_yellow.jpg
+                    "black": /local/lovelace/images/dressoir_ledlicht_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
@@ -613,7 +613,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Werkbureau RGB Light
+                  name: Werkbureau RGB Licht
                   entity: input_select.gameroom_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -639,7 +639,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Gamedesk Led Light
+                  name: Gamedesk Led Licht
                   entity: input_select.gameroom_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -663,7 +663,7 @@ views:
                   box-shadow: 3px 3px rgba(0,0,0,0.4)
                 card:
                   type: picture-entity
-                  name: Thropycase Led Light
+                  name: Thropycase Led Licht
                   entity: input_select.gameroom_led_colors
                   icon: mdi:lightbulb
                   tap_action:
@@ -725,7 +725,7 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: picture-entity
-          name: Veranda Led Light
+          name: Veranda Led Licht
           entity: input_select.veranda_led_colors
           icon: mdi:lightbulb
           tap_action:
