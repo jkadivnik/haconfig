@@ -348,7 +348,6 @@ views:
                     action: call-service
                     service: script.livingroom_rgb_colorchanger
                   icon: mdi:palette
-                - entity: sensor.livingroom_current_led_color
                 - entity: script.livingroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
@@ -696,7 +695,6 @@ views:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger
                   icon: mdi:palette
-                - entity: sensor.gameroom_current_led_color
                 - entity: script.gameroom_rgb_colorchanger_off
                   tap_action:
                     action: call-service
@@ -759,7 +757,6 @@ views:
                 action: call-service
                 service: script.veranda_rgb_colorchanger
               icon: mdi:palette
-            - entity: sensor.veranda_current_led_color
             - entity: script.veranda_rgb_colorchanger_off
               tap_action:
                 action: call-service
@@ -928,7 +925,6 @@ views:
                     action: call-service
                     service: script.stairway_rgb_colorchanger
                   icon: mdi:palette
-                - entity: sensor.stairway_current_led_color
                 - entity: script.stairway_rgb_colorchanger_off
                   tap_action:
                     action: call-service
