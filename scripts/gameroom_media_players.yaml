@@ -32,10 +32,9 @@
             {% elif states('media_player.kodibureau') != 'idle' %}
             media_player.kodibureau
             {% endif %}
-      - condition:
-          condition: state
-          entity_id: media_player.kodibureau
-          state: 'idle'
+      - condition: state
+        entity_id: media_player.kodibureau
+        state: 'idle'
       - service: media_player.turn_off
         data_template:
           entity_id: >

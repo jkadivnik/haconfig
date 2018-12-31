@@ -44,10 +44,9 @@
             {% elif states('media_player.kodiliving') != 'idle' %}
             media_player.kodiliving
             {% endif %}
-      - condition:
-          condition: state
-          entity_id: media_player.kodiliving
-          state: 'idle'
+      - condition: state
+        entity_id: media_player.kodiliving
+        state: 'idle'
       - service: media_player.turn_off
         data_template:
           entity_id: >
