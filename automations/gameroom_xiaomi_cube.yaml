@@ -1,5 +1,5 @@
   # Change volume depending on rotation
-  - alias: Gameroom Cube Volume
+  - alias: Gameroom Cube Rotate
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -13,16 +13,52 @@
         device: 58691919
         action_value: "{{ trigger.event.data.action_value|float }}"
         num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
-  - alias: Gameroom Cube Pause
+  - alias: Gameroom Cube Move
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
       event_data:
         entity_id: binary_sensor.cube_158d000118421f
-        action_type: shake_air
+        action_type: move
     action:
       service: remote.send_command
       data:
         entity_id: remote.gameroom_hub
         device: 58691919
         command: Mute
+  - alias: Gameroom Cube Shake
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151
+        action_type: shake_air
+    action:
+      - service: script.gameroom_play_pause_media
+  - alias: Gameroom Cube Flip90
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151
+        action_type: flip90
+    action:
+      - service: script.gameroom_next_media
+  - alias: Gameroom Cube Flip180
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151
+        action_type: flip180
+    action:
+      - service: script.gameroom_play_pause_media
+  - alias: Gameroom Cube Tap Twice
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.cube_action
+      event_data:
+        entity_id: binary_sensor.cube_158d00010fd151
+        action_type: tap_twice
+    action:
+      - service: script.gameroom_stop_turn_off_media

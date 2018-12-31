@@ -37,9 +37,12 @@ Livingroom:
     - automation.livingroom_audiocast_stopped
     - automation.livingroom_chromecast_playing
     - automation.livingroom_chromecast_stopped
-    - automation.livingroom_cube_pause
+    - automation.livingroom_cube_shake
+    - automation.livingroom_cube_flip90
+    - automation.livingroom_cube_flip180
+    - automation.livingroom_cube_tap_twice
+    - automation.livingroom_cube_rotate
     - automation.livingroom_cube_sensor_battery
-    - automation.livingroom_cube_volume
     - automation.livingroom_harmony
     - automation.livingroom_lights
     - automation.livingroom_morning
@@ -69,6 +72,9 @@ Livingroom:
     - script.livingroom_volume_up
     - script.livingroom_volume_down
     - script.livingroom_volume_mute
+    - script.livingroom_next_media
+    - script.livingroom_play_pause_media
+    - script.livingroom_stop_turn_off_media
     - scene.livingroom_all_off
     - scene.livingroom_hub_off
     - scene.livingroom_lights_on

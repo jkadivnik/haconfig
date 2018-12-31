@@ -27,9 +27,12 @@ Gameroom:
     - switch.gameroom_volume_down
     - switch.gameroom_volume_mute
     - switch.gameroom_volume_up
-    - automation.gameroom_cube_pause
+    - automation.gameroom_cube_shake
+    - automation.gameroom_cube_flip90
+    - automation.gameroom_cube_flip180
+    - automation.gameroom_cube_tap_twice
+    - automation.gameroom_cube_rotate
     - automation.gameroom_cube_sensor_battery
-    - automation.gameroom_cube_volume
     - automation.gameroom_gaming
     - automation.gameroom_lights_on
     - automation.gameroom_motion_sensor_battery
@@ -58,3 +61,6 @@ Gameroom:
     - script.gameroom_volume_up
     - script.gameroom_volume_down
     - script.gameroom_volume_mute
+    - script.gameroom_next_media
+    - script.gameroom_play_pause_media
+    - script.gameroom_stop_turn_off_media

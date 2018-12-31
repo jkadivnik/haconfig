@@ -5,42 +5,40 @@
       entity_id: binary_sensor.motion_sensor_158d0001de7134
       to: 'on'
     condition:
+      - condition: state
+        entity_id: light.livingroom_led_lights
+        state: 'off'
       - condition: numeric_state
         entity_id: sensor.illumination_158d0001de7134
         below: '3'
       - condition: template
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
     action:
-      - service: input_boolean.turn_on
-        entity_id: input_boolean.livingroom_nightlight_state
       - service: light.turn_on
-        entity_id: light.livingroom_led_lights
         data:
           entity_id: light.livingroom_led_lights
           color_name: 'blue'
       - service: script.livingroom_rgb_colorchanger_set_color
         data:
           color: 'blue'
+      - service: automation.turn_on
+        entity_id: automation.livingroom_nightlight_off_timer
   - alias: Livingroom Nightlight Off Timer
-    initial_state: true
+    initial_state: false
     trigger:
       - platform: state
         entity_id: binary_sensor.motion_sensor_158d0001de7134
         to: 'off'
         for:
           minutes: 2
-    condition:
-      - condition: state
-        entity_id: input_boolean.livingroom_nightlight_state
-        state: 'on'
     action:
       - service: light.turn_off
         entity_id: light.livingroom_led_lights
-      - service: input_boolean.turn_off
-        entity_id: input_boolean.livingroom_nightlight_state
       - service: script.livingroom_rgb_colorchanger_set_color
         data:
           color: 'black'
+      - service: automation.turn_off
+        entity_id: automation.livingroom_nightlight_off_timer
 #  - alias: Livingroom Nightlight Off Illumination
 #    initial_state: true
 #    trigger:

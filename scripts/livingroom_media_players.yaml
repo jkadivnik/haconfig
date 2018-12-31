@@ -1,0 +1,60 @@
+  #Livingroom Media Player Settings
+  livingroom_next_media:
+    alias: Livingroom Next Media
+    sequence:
+      - service: media_player.media_next_track
+        data_template:
+          entity_id: >
+            {% if states('media_player.livingroom_audio') != 'off' %}
+            media_player.livingroom_audio
+            {% elif states('media_player.livingroom_video') != 'off' %}
+            media_player.livingroom_video
+            {% elif states('media_player.livingroom_speaker') != 'off' %}
+            media_player.livingroom_speaker
+            {% elif states('media_player.kodiliving') != 'idle' %}
+            media_player.kodiliving
+            {% endif %}
+  livingroom_play_pause_media:
+    alias: Livingroom Play Pause Media
+    sequence:
+      - service: media_player.media_play_pause
+        data_template:
+          entity_id: >
+            {% if states('media_player.livingroom_audio') != 'off' %}
+            media_player.livingroom_audio
+            {% elif states('media_player.livingroom_video') != 'off' %}
+            media_player.livingroom_video
+            {% elif states('media_player.livingroom_speaker') != 'off' %}
+            media_player.livingroom_speaker
+            {% elif states('media_player.kodiliving') != 'idle' %}
+            media_player.kodiliving
+            {% endif %}
+  livingroom_stop_turn_off_media:
+    alias: Livingroom Stop Turn Off Media
+    sequence:
+      - service: media_player.media_stop
+        data_template:
+          entity_id: >
+            {% if states('media_player.livingroom_audio') != 'off' %}
+            media_player.livingroom_audio
+            {% elif states('media_player.livingroom_video') != 'off' %}
+            media_player.livingroom_video
+            {% elif states('media_player.livingroom_speaker') != 'off' %}
+            media_player.livingroom_speaker
+            {% elif states('media_player.kodiliving') != 'idle' %}
+            media_player.kodiliving
+            {% endif %}
+      - condition:
+          condition: state
+          entity_id: media_player.kodiliving
+          state: 'idle'
+      - service: media_player.turn_off
+        data_template:
+          entity_id: >
+            {% if states('media_player.livingroom_audio') != 'off' %}
+            media_player.livingroom_audio
+            {% elif states('media_player.livingroom_video') != 'off' %}
+            media_player.livingroom_video
+            {% elif states('media_player.livingroom_speaker') != 'off' %}
+            media_player.livingroom_speaker
+            {% endif %}

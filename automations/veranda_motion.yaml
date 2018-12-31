@@ -4,12 +4,15 @@
       entity_id: binary_sensor.motion_sensor_158d0001f2a00f
       to: 'on'
     condition:
-    - condition: or
-      conditions:
-      - condition: sun
-        after: sunset
-      - condition: sun
-        before: sunrise
+      - condition: state
+        entity_id: light.veranda_rgb_light
+        state: 'off'
+      - condition: or
+        conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
     action:
       - service: light.turn_on
         entity_id: light.veranda_rgb_light
@@ -19,7 +22,10 @@
       - service: script.veranda_rgb_colorchanger_set_color
         data:
           color: 'blue'
+      - service: automation.turn_on
+        entity_id: automation.veranda_no_motion
   - alias: Veranda No Motion
+    initial_state: false
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f2a00f
@@ -32,3 +38,5 @@
       - service: script.veranda_rgb_colorchanger_set_color
         data:
           color: 'black'
+      - service: automation.turn_off
+        entity_id: automation.veranda_no_motion

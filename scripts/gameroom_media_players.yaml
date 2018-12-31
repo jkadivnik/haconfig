@@ -1,0 +1,44 @@
+  #Gameroom Media Player Settings
+  gameroom_next_media:
+    alias: Gameroom Next Media
+    sequence:
+      - service: media_player.media_next_track
+        data_template:
+          entity_id: >
+            {% if states('media_player.gameroom_video') != 'off' %}
+            media_player.gameroom_video
+            {% elif states('media_player.kodibureau') != 'idle' %}
+            media_player.kodibureau
+            {% endif %}
+  gameroom_play_pause_media:
+    alias: Gameroom Play Pause Media
+    sequence:
+      - service: media_player.media_play_pause
+        data_template:
+          entity_id: >
+            {% if states('media_player.gameroom_video') != 'off' %}
+            media_player.gameroom_video
+            {% elif states('media_player.kodibureau') != 'idle' %}
+            media_player.kodibureau
+            {% endif %}
+  gameroom_stop_turn_off_media:
+    alias: Gameroom Stop Turn Off Media
+    sequence:
+      - service: media_player.media_stop
+        data_template:
+          entity_id: >
+            {% if states('media_player.gameroom_video') != 'off' %}
+            media_player.gameroom_video
+            {% elif states('media_player.kodibureau') != 'idle' %}
+            media_player.kodibureau
+            {% endif %}
+      - condition:
+          condition: state
+          entity_id: media_player.kodibureau
+          state: 'idle'
+      - service: media_player.turn_off
+        data_template:
+          entity_id: >
+            {% if states('media_player.gameroom_video') != 'off' %}
+            media_player.gameroom_video
+            {% endif %}
