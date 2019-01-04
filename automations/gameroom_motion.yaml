@@ -18,16 +18,16 @@
         - condition: sun
           before: sunrise
     action:
+      - service: automation.turn_on
+        entity_id: automation.gameroom_no_motion
       - service: light.turn_on
         entity_id: light.gameroom_led_lights
         data:
           entity_id: light.gameroom_led_lights
           color_name: 'blue'
-      - service: script.gameroom_rgb_colorchanger_set_color
+      - service: script.gameroom_rgb_colorchanger_select_color
         data:
           color: 'blue'
-      - service: automation.turn_on
-        entity_id: automation.gameroom_no_motion
   - alias: Gameroom No Motion
     initial_state: false
     trigger:
@@ -35,11 +35,11 @@
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
       to: 'off'
     action:
-      - service: light.turn_off
-        entity_id: light.gameroom_led_lights
-      - service: script.gameroom_rgb_colorchanger_set_color
-        data:
-          color: 'black'
       - service: automation.turn_off
         entity_id: automation.gameroom_no_motion
+      - service: light.turn_off
+        entity_id: light.gameroom_led_lights
+      - service: script.gameroom_rgb_colorchanger_select_color
+        data:
+          color: 'black'
 

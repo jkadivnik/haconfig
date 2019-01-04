@@ -4,7 +4,7 @@
       - service: input_select.select_option
         data_template:
           entity_id: input_select.veranda_led_colors
-          option: "{{ color | string }}"
+          option: '{{ color | string }}'
   veranda_rgb_colorchanger:
     alias: Veranda Colorchanger
     sequence:

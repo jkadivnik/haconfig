@@ -1,18 +1,3 @@
-  gameroom_rgb_colorchanger_select_color:
-    alias: Gameroom Colorchanger Select Color
-    sequence:
-      - service: input_select.select_option
-        data_template:
-          entity_id: input_select.gameroom_led_colors
-          option: "{{ color | string }}"
-      - service: input_select.select_option
-        data_template:
-          entity_id: input_select.gameroom_mqtt_led_colors
-          option: "{{ color | string }}"
-      - service: input_select.select_option
-        data_template:
-          entity_id: input_select.gameroom_workdesk_led_colors
-          option: "{{ color | string }}"
   gameroom_rgb_colorchanger:
     alias: Gameroom Colorchanger
     sequence:
@@ -22,7 +7,7 @@
           inputselect: input_select.gameroom_led_colors
       - service: script.gameroom_rgb_colorchanger_select_color
         data_template:
-          color: "{{ states('input_select.gameroom_led_colors') | string }}"
+          color: '{{ states("input_select.gameroom_led_colors") }}'
   gameroom_rgb_colorchanger_off:
     alias: Gameroom RGB Lights Off
     sequence:
@@ -31,8 +16,8 @@
           entity: light.gameroom_led_lights
           inputselect: input_select.gameroom_led_colors
       - service: script.gameroom_rgb_colorchanger_select_color
-        data_template:
-          color: "black"
+        data:
+          color: 'black'
   gameroom_rgb_colorchanger_workdesk:
     alias: Gameroom Colorchanger Workdesk
     sequence:
@@ -75,3 +60,18 @@
         data:
           entity: light.gameroom_mqtt_rgb_light
           inputselect: input_select.gameroom_mqtt_led_colors
+  gameroom_rgb_colorchanger_select_color:
+    alias: Gameroom Colorchanger Select Color
+    sequence:
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_led_colors
+          option: '{{ color }}'
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_mqtt_led_colors
+          option: '{{ color }}'
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_workdesk_led_colors
+          option: '{{ color }}'

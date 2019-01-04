@@ -19,7 +19,7 @@
         data:
           entity_id: light.veranda_rgb_light
           color_name: 'blue'
-      - service: script.veranda_rgb_colorchanger_set_color
+      - service: script.veranda_rgb_colorchanger_select_color
         data:
           color: 'blue'
       - service: automation.turn_on
@@ -35,7 +35,7 @@
     action:
       - service: light.turn_off
         entity_id: light.veranda_rgb_light
-      - service: script.veranda_rgb_colorchanger_set_color
+      - service: script.veranda_rgb_colorchanger_select_color
         data:
           color: 'black'
       - service: automation.turn_off
