@@ -3,3 +3,4 @@ sensors:
   christmas_period:
     friendly_name: Christmas Period
     value_template: "{{ (now().month~now().day)|int > 1220 or (now().month~now().day)|int < 15 }}"
+    entity_id: sensor.date
