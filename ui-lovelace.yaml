@@ -425,20 +425,25 @@ views:
                     "white": /local/lovelace/images/dressoir_white.jpg
                     "yellow": /local/lovelace/images/dressoir_yellow.jpg
                     "black": /local/lovelace/images/dressoir_ledlicht_uit.jpg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
+          - type: conditional
+            conditions:
+              - entity: sensor.christmas_period
+                state_not: "False"
             card:
-              type: picture-entity
-              name: Kerstboom
-              entity: switch.plug_158d0001f2914c
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                "on": /local/lovelace/images/kerstboom_aan.jpg
-                "off": /local/lovelace/images/kerstboom_uit.jpg
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: picture-entity
+                name: Kerstboom
+                entity: switch.plug_158d0001f2914c
+                tap_action:
+                  action: toggle
+                aspect_ratio: 16:9
+                state_image:
+                  "on": /local/lovelace/images/kerstboom_aan.jpg
+                  "off": /local/lovelace/images/kerstboom_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
