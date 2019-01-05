@@ -10,7 +10,7 @@
         state: 'off'
       - condition: numeric_state
         entity_id: sensor.illumination_158d0001de7134
-        below: '3'
+        below: '5'
       - condition: template
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
       - condition: or
@@ -23,7 +23,7 @@
       - service: light.turn_on
         data:
           entity_id: light.livingroom_led_lights
-          color_name: 'blue'
+          color_name: "blue"
       - service: script.livingroom_rgb_colorchanger_select_color
         data:
           color: 'blue'
