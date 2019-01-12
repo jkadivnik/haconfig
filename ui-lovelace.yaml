@@ -1,17 +1,19 @@
 resources:
-  - url: /local/custom_ui/mini-media-player-bundle.js?v=1.0
-    type: module
-  - url: /local/custom_ui/mini-graph-card-bundle.js?v=1.0
+  - url: /local/custom_ui/card-tools.js
     type: js
-  - url: /local/custom_ui/card-modder.js?v=1.0
+  - url: /local/custom_ui/mini-media-player-bundle.js
     type: module
-  - url: /local/custom_ui/dark-sky-weather-card.js?v=1.1
+  - url: /local/custom_ui/mini-graph-card-bundle.js
     type: js
-  - url: /local/custom_ui/custom-cards.js?v=1.0
+  - url: /local/custom_ui/card-modder.js
     type: module
-  - url: /local/custom_ui/monster-card.js?v=1.0
+  - url: /local/custom_ui/dark-sky-weather-card.js
     type: js
-  - url: /local/slider-entity-row.js?v=1.0
+  - url: /local/custom_ui/custom-cards.js
+    type: module
+  - url: /local/custom_ui/monster-card.js
+    type: js
+  - url: /local/custom_ui/slider-entity-row.js
     type: js
 
 background: center / cover no-repeat url("/local/lovelace/images/background/black_gray_wall.jpeg") fixed
@@ -425,20 +427,25 @@ views:
                     "white": /local/lovelace/images/dressoir_white.jpg
                     "yellow": /local/lovelace/images/dressoir_yellow.jpg
                     "black": /local/lovelace/images/dressoir_ledlicht_uit.jpg
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
+          - type: conditional
+            conditions:
+              - entity: sensor.christmas_period
+                state_not: "False"
             card:
-              type: picture-entity
-              name: Kerstboom
-              entity: switch.plug_158d0001f2914c
-              tap_action:
-                action: toggle
-              aspect_ratio: 16:9
-              state_image:
-                "on": /local/lovelace/images/kerstboom_aan.jpg
-                "off": /local/lovelace/images/kerstboom_uit.jpg
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: picture-entity
+                name: Kerstboom
+                entity: switch.plug_158d0001f2914c
+                tap_action:
+                  action: toggle
+                aspect_ratio: 16:9
+                state_image:
+                  "on": /local/lovelace/images/kerstboom_aan.jpg
+                  "off": /local/lovelace/images/kerstboom_uit.jpg
           - type: custom:card-modder
             style:
               border-radius: 10px
