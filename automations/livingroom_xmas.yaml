@@ -6,8 +6,9 @@
       - platform: time
         at: "06:10:00"
     condition:
-      condition: template
-      value_template: "{{ now().month >= 12 or now().month <= 1 }}"
+      condition: state
+      entity_id: sensor.christmas_period
+      state: 'True'
     action:
       service: switch.turn_on
       entity_id: switch.plug_158d0001f2914c
@@ -22,8 +23,9 @@
       - condition: state
         entity_id: switch.plug_158d0001f2914c
         state: 'on'
-      - condition: template
-        value_template: "{{ now().month >= 12 or now().month <= 1 }}"
+      - condition: state
+        entity_id: sensor.christmas_period
+        state: 'True'
     action:
       service: switch.turn_off
       entity_id: switch.plug_158d0001f2914c

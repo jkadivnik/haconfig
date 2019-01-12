@@ -4,6 +4,8 @@
       - service: input_select.select_next
         data_template:
           entity_id: "{{ inputselect }}"
+      - delay:
+          seconds: 1
       - service: light.turn_on
         data_template:
           entity_id: "{{ entity | string }}"

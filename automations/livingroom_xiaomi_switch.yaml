@@ -9,7 +9,7 @@
       - condition: time
         after: '06:00:00'
       - condition: template
-        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') == 'PowerOff' }}"
+        value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') or is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
     action:
       service: switch.toggle
       entity_id: switch.kitchen_radio_harmony
@@ -24,7 +24,7 @@
       - condition: or
         conditions:
           - condition: template
-            value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' }}"
+            value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' and state_attr('remote.livingroom_hub', 'current_activity') != 'Keuken muziek luisteren' }}"
           - condition: state
             entity_id: switch.plug_158d0001f29250
             state: 'on'
