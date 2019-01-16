@@ -15,7 +15,7 @@ resources:
     type: js
   - url: /local/custom_ui/slider-entity-row.js
     type: js
-  - url: https://unpkg.com/moment@2.22.2/moment.js
+  - url: /local/custom_ui/moment.js
     type: js
   - url: /local/custom_ui/calendar-card.js
     type: module
@@ -115,16 +115,17 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: custom:calendar-card
-              showProgressBar: true
-              numberOfDays: 1
-              entities:
-                - calendar.johnny_kadivnik
-                - calendar.thibo
-                - calendar.maxim
-                - calendar.charlotte_vandewiele
-                - calendar.family
-                - calendar.holidays_in_belgium
-  - title: Alarm
+                name: Overview
+                showProgressBar: true
+                numberOfDays: 1
+                entities:
+                  - calendar.johnny_kadivnik
+                  - calendar.thibo
+                  - calendar.maxim
+                  - calendar.charlotte_vandewiele
+                  - calendar.family
+                  - calendar.holidays_in_belgium
+    - title: Alarm
     cards:
       - type: custom:card-modder
         style:
