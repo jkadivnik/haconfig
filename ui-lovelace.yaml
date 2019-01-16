@@ -125,7 +125,7 @@ views:
                 - calendar.charlotte_vandewiele
                 - calendar.family
                 - calendar.holidays_in_belgium
-    - title: Alarm
+  - title: Alarm
     cards:
       - type: custom:card-modder
         style:
