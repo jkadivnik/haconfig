@@ -115,16 +115,16 @@ views:
               box-shadow: 3px 3px rgba(0,0,0,0.4)
             card:
               type: custom:calendar-card
-                name: Overview
-                showProgressBar: true
-                numberOfDays: 1
-                entities:
-                  - calendar.johnny_kadivnik
-                  - calendar.thibo
-                  - calendar.maxim
-                  - calendar.charlotte_vandewiele
-                  - calendar.family
-                  - calendar.holidays_in_belgium
+              name: Overview
+              showProgressBar: true
+              numberOfDays: 1
+              entities:
+                - calendar.johnny_kadivnik
+                - calendar.thibo
+                - calendar.maxim
+                - calendar.charlotte_vandewiele
+                - calendar.family
+                - calendar.holidays_in_belgium
     - title: Alarm
     cards:
       - type: custom:card-modder
