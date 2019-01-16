@@ -15,6 +15,7 @@ resources:
     type: js
   - url: /local/custom_ui/slider-entity-row.js
     type: js
+  - url: /local/custom-ui/calendar-card.js
 
 background: center / cover no-repeat url("/local/lovelace/images/background/black_gray_wall.jpeg") fixed
 
@@ -34,22 +35,6 @@ views:
                 state_image:
                   "home": /local/lovelace/images/Johnny.jpg
                   "not_home": /local/lovelace/images/Johnny_niet_thuis.jpg
-              - type: custom:picture-status-card
-                entity: device_tracker.thibo_phone
-                image: /local/lovelace/images/Thibo.jpg
-                font_color: white
-                card_height: 90px
-                state_image:
-                  "home": /local/lovelace/images/Thibo.jpg
-                  "not_home": /local/lovelace/images/Thibo_niet_thuis.jpg
-              - type: custom:picture-status-card
-                entity: device_tracker.maxim_phone
-                image: /local/lovelace/images/Maxim.jpg
-                font_color: white
-                card_height: 90px
-                state_image:
-                  "home": /local/lovelace/images/Maxim.jpg
-                  "not_home": /local/lovelace/images/Maxim_niet_thuis.jpg
               - type: custom:picture-status-card
                 entity: device_tracker.mama_phone
                 image: /local/lovelace/images/Charlotte.jpg
@@ -101,6 +86,41 @@ views:
                 action: call-service
                 service: script.home_all_off
               entity: script.home_all_off
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:picture-status-card
+                entity: device_tracker.thibo_phone
+                image: /local/lovelace/images/Thibo.jpg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/Thibo.jpg
+                  "not_home": /local/lovelace/images/Thibo_niet_thuis.jpg
+              - type: custom:picture-status-card
+                entity: device_tracker.maxim_phone
+                image: /local/lovelace/images/Maxim.jpg
+                font_color: white
+                card_height: 90px
+                state_image:
+                  "home": /local/lovelace/images/Maxim.jpg
+                  "not_home": /local/lovelace/images/Maxim_niet_thuis.jpg
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: custom:calendar-card
+              showProgressBar: true
+              numberOfDays: 1
+              entities:
+                - calendar.johnny_kadivnik
+                - calendar.thibo
+                - calendar.maxim
+                - calendar.charlotte_vandewiele
+                - calendar.family
+                - calendar.holidays_in_belgium
   - title: Alarm
     cards:
       - type: custom:card-modder
