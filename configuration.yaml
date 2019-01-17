@@ -229,6 +229,7 @@ sabnzbd:
 
 emulated_hue:
   listen_port: 8125
+  expose_by_default: false
   exposed_domains:
     - switch
     - light
