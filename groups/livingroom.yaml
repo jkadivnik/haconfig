@@ -75,6 +75,8 @@ Livingroom:
     - script.livingroom_next_media
     - script.livingroom_play_pause_media
     - script.livingroom_stop_turn_off_media
+    - script.livingroom_wireless_speaker_tuner_on
+    - script.livingroom_wireless_speaker_tuner_off
     - scene.livingroom_all_off
     - scene.livingroom_hub_off
     - scene.livingroom_lights_on
