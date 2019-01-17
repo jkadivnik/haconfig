@@ -234,10 +234,17 @@ emulated_hue:
     - light
     - scripts
   entities:
-    - script.livingroom_rgb_colorchanger_off
-    - script.livingroom_rgb_colorchanger
-    - switch.plug_158d0001f29250
-    - switch.plug_158d0001f292c0
-    - script.gameroom_rgb_colorchanger_off
-    - script.gameroom_rgb_colorchanger
-    - switch.gameroom_sonoff_desklight
+    script.livingroom_rgb_colorchanger_off:
+      name: Livingroom RGB Off
+    script.livingroom_rgb_colorchanger:
+      name: Livingroom RGB Color Changer
+    switch.plug_158d0001f29250:
+      name: Livingroom Sofa Plug
+    switch.plug_158d0001f292c0:
+      name: Livingroom Dressoir Plug
+    script.gameroom_rgb_colorchanger_off:
+      name: Gameroom RGB Off
+    script.gameroom_rgb_colorchanger:
+      name: Gameroom RGB Color Changer
+    switch.gameroom_sonoff_desklight:
+      name: Gameroom Desk Light
