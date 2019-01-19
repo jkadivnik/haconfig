@@ -1,4 +1,45 @@
-  - alias: Gameroom Kodi Started Playing
+  # Audiocast Music
+  - alias: Gameroom Audiocast stopped
+    trigger:
+      - platform: state
+        entity_id: media_player.gameroom_audio
+        to: 'off'
+    condition:
+      - condition: template
+        value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Music') }}"
+    action:
+      service: switch.turn_off
+      entity_id: switch.gameroom_chromecast_audio
+  - alias: Gameroom Audiocast playing
+    trigger:
+      - platform: state
+        entity_id: media_player.gameroom_audio
+        to: 'playing'
+      - platform: state
+        entity_id: media_player.gameroom_audio
+        to: 'paused'
+    condition:
+      - condition: template
+        value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'PowerOff') }}"
+    action:
+      service: switch.turn_on
+      entity_id: switch.gameroom_chromecast_audio
+  - alias: Gameroom Audiocast Still Playing
+    trigger:
+      platform: state
+      entity_id: remote.gameroom_hub
+    condition:
+      - condition: template
+        value_template: "{{ states('media_player.gameroom_audio') != 'off' }}"
+      - condition: template
+        value_template: "{{ state_attr('remote.gameroom_hub', 'current_activity') != 'Music' }}"
+    action:
+      - service: media_player.media_stop
+        entity_id: media_player.gameroom_audio
+      - service: media_player.turn_off
+        entity_id: media_player.gameroom_audio
+
+- alias: Gameroom Kodi Started Playing
     trigger:
       platform: state
       entity_id: media_player.kodibureau
