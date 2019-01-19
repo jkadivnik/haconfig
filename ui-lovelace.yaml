@@ -513,6 +513,9 @@ views:
                 - entity: switch.gameroom_chromecast
                   icon: mdi:cast
                   name: Chromecast
+                - entity: switch.gameroom_chromecast_audio
+                  icon: mdi:library-audio
+                  name: Chromecast
               image: /local/lovelace/images/gameroom.jpg
               aspect_ratio: 16:9
           - type: custom:card-modder
@@ -568,6 +571,7 @@ views:
                 "Bigscreen Gaming": /local/lovelace/images/gaming.jpg
                 "Play PS4": /local/lovelace/images/ps4.jpg
                 "Chromecast": /local/lovelace/images/gameroom_chromecast.jpg
+                "Music": /local/lovelace/images/chromecast_audio.jpg
                 "PowerOff": /local/lovelace/images/power_off.jpg
           - type: conditional
             conditions:
@@ -605,6 +609,22 @@ views:
                 show_source: true
                 artwork_border: true
                 icon: mdi:movie
+          - type: conditional
+            conditions:
+              - entity: media_player.gameroom_audio
+                state_not: "off"
+            card:
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: custom:mini-media-player
+                entity: media_player.gameroom_audio
+                name: Chromecast Audio
+                show_progress: true
+                show_cover: true
+                artwork_border: true
           - type: custom:card-modder
             style:
               border-radius: 10px
