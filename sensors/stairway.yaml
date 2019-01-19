@@ -1,5 +1,0 @@
-  platform: template
-  sensors:
-    stairway_current_led_color:
-      friendly_name: Stairway Current Led Color
-      value_template: "{{ states('input_select.stairway_led_colors') }}"
