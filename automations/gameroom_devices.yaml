@@ -40,13 +40,13 @@
         entity_id: media_player.gameroom_audio
 
   - alias: Gameroom Kodi Started Playing
-      trigger:
-        platform: state
-        entity_id: media_player.kodibureau
-        to: 'playing'
-      action:
-        service: switch.turn_on
-        entity_id: switch.gameroom_kodi
+    trigger:
+      platform: state
+      entity_id: media_player.kodibureau
+      to: 'playing'
+    action:
+      service: switch.turn_on
+      entity_id: switch.gameroom_kodi
 
   # Chromecast
   - alias: Gameroom Chromecast stopped
