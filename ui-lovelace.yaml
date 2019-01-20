@@ -763,8 +763,8 @@ views:
                   name: Temperatuur
                 - entity: sensor.humidity_158d000236744c
                   name: Vochtigheid
-                - entity: sensor.illumination_158d0001f9cdfe
-                  name: Lichtsterkte
+                - entity: binary_sensor.motion_sensor_158d0001f9cdfe
+                  name: Beweging
                 - entity: binary_sensor.natgas_sensor_158d000204ae2a
                   name: Gas
                   icon: mdi:gas-station
