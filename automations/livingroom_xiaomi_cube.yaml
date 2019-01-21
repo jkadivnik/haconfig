@@ -1,4 +1,5 @@
   - alias: Livingroom Cube Rotate
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -19,6 +20,7 @@
           action_value: "{{ trigger.event.data.action_value | float }}"
           num_repeats: "{{ trigger.event.data.action_value | float // 5 }}"
   - alias: Livingroom Cube Move
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -39,6 +41,7 @@
           action_value: "0"
           num_repeats: 1
   - alias: Livingroom Cube Shake
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -70,6 +73,7 @@
       - service: input_boolean.toggle
         entity_id: input_boolean.livingroom_paused
   - alias: Livingroom Cube Flip90
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -79,6 +83,7 @@
     action:
       - service: script.livingroom_next_media
   - alias: Livingroom Cube Flip180
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -88,6 +93,7 @@
     action:
       - service: script.livingroom_play_pause_media
   - alias: Livingroom Cube Tap Twice
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action

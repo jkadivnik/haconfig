@@ -1,4 +1,5 @@
   - alias: Toggle radio when nothing playing
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.click
@@ -14,6 +15,7 @@
       service: switch.toggle
       entity_id: switch.kitchen_radio_harmony
   - alias: Toggle sofa plug when activity
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.click
@@ -38,6 +40,7 @@
       service: switch.toggle
       entity_id: switch.plug_158d0001f29250
   - alias: Toggle alarm status
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.click

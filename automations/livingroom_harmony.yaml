@@ -1,4 +1,5 @@
   - alias: Livingroom Harmony Triggered
+    initial_state: 'on'
     trigger:
       platform: template
       value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') !=  'PowerOff' }}"

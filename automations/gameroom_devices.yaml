@@ -1,5 +1,6 @@
   # Audiocast Music
   - alias: Gameroom Audiocast stopped
+    initial_state: 'on'
     trigger:
       - platform: state
         entity_id: media_player.gameroom_audio
@@ -11,6 +12,7 @@
       service: switch.turn_off
       entity_id: switch.gameroom_chromecast_audio
   - alias: Gameroom Audiocast playing
+    initial_state: 'on'
     trigger:
       - platform: state
         entity_id: media_player.gameroom_audio
@@ -25,6 +27,7 @@
       service: switch.turn_on
       entity_id: switch.gameroom_chromecast_audio
   - alias: Gameroom Audiocast Still Playing
+    initial_state: 'on'
     trigger:
       platform: state
       entity_id: remote.gameroom_hub
@@ -40,6 +43,7 @@
         entity_id: media_player.gameroom_audio
 
   - alias: Gameroom Kodi Started Playing
+    initial_state: 'on'
     trigger:
       platform: state
       entity_id: media_player.kodibureau
@@ -50,6 +54,7 @@
 
   # Chromecast
   - alias: Gameroom Chromecast stopped
+    initial_state: 'on'
     trigger:
       platform: state
       entity_id: media_player.gameroom_video
@@ -61,6 +66,7 @@
       service: switch.turn_off
       entity_id: switch.gameroom_chromecast
   - alias: Gameroom Chromecast playing
+    initial_state: 'on'
     trigger:
       - platform: state
         entity_id: media_player.gameroom_video

@@ -1,4 +1,5 @@
   - alias: Veranda Heater On
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sensor.temperature_158d00020f4dd3
@@ -18,6 +19,7 @@
       service: switch.turn_on
       entity_id: switch.plug_158d0002368a0e
   - alias: Veranda Heater Off
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sensor.temperature_158d00020f4dd3

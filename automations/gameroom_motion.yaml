@@ -1,5 +1,5 @@
   - alias: Gameroom NightLight Motion
-    initial_state: false
+    initial_state: 'off'
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
@@ -29,7 +29,7 @@
         data:
           color: 'blue'
   - alias: Gameroom No Motion
-    initial_state: false
+    initial_state: 'off'
     trigger:
       platform: state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe

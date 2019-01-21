@@ -1,5 +1,6 @@
   # Change volume depending on rotation
   - alias: Gameroom Cube Rotate
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -14,6 +15,7 @@
         action_value: "{{ trigger.event.data.action_value|float }}"
         num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
   - alias: Gameroom Cube Move
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -27,6 +29,7 @@
         device: 58691919
         command: Mute
   - alias: Gameroom Cube Shake
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -36,6 +39,7 @@
     action:
       - service: script.gameroom_play_pause_media
   - alias: Gameroom Cube Flip90
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -45,6 +49,7 @@
     action:
       - service: script.gameroom_next_media
   - alias: Gameroom Cube Flip180
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action
@@ -54,6 +59,7 @@
     action:
       - service: script.gameroom_play_pause_media
   - alias: Gameroom Cube Tap Twice
+    initial_state: 'on'
     trigger:
       platform: event
       event_type: xiaomi_aqara.cube_action

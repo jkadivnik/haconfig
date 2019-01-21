@@ -1,4 +1,5 @@
   - alias: Livingroom Christmas Turn on
+    initial_state: 'on'
     trigger:
       - platform: sun
         event: sunset
@@ -13,6 +14,7 @@
       service: switch.turn_on
       entity_id: switch.plug_158d0001f2914c
   - alias: Livingroom Christmas Turn Off
+    initial_state: 'on'
     trigger:
       - platform: sun
         event: sunrise

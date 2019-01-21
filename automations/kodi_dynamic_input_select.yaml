@@ -1,5 +1,5 @@
   - alias: Kodi InputSelect Update Movies On Startup
-    initial_state: on
+    initial_state: 'on'
     trigger:
       - platform: time
         minutes: '/5'
@@ -9,7 +9,7 @@
       - service: automation.turn_off
         entity_id: automation.kodi_inputselect_update_movies_on_startup
   - alias: Kodi InputSelect Update Series On Startup
-    initial_state: on
+    initial_state: 'on'
     trigger:
       - platform: time
         minutes: '/6'
@@ -19,7 +19,7 @@
       - service: automation.turn_off
         entity_id: automation.kodi_inputselect_update_series_on_startup
   - alias: Kodi InputSelect Update Periodically
-    initial_state: off
+    initial_state:'off'
     trigger:
       - platform: time
         hours: /1

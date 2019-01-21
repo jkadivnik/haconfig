@@ -2,6 +2,7 @@
 
   # Temperature sensor battery checks
   - alias: Veranda Temperature Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sensor.temperature_158d00020f4dd3
@@ -15,6 +16,7 @@
       - service: automation.turn_off
         entity_id: automation.veranda_temperature_sensor_battery
   - alias: Gameroom Temperature Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sensor.temperature_158d000236744c
@@ -28,6 +30,7 @@
       - service: automation.turn_off
         entity_id: automation.gameroom_temperature_sensor_battery
   - alias: Livingroom Temperature Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: sensor.temperature_158d0002379148
@@ -43,6 +46,7 @@
 
   # Motion sensor battery checks
   - alias: Veranda Motion Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.motion_sensor_158d0001f2a00f
@@ -56,6 +60,7 @@
       - service: automation.turn_off
         entity_id: automation.veranda_motion_sensor_battery
   - alias: Gameroom Motion Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
@@ -69,6 +74,7 @@
     - service: automation.turn_off
       entity_id: automation.gameroom_motion_sensor_battery
   - alias: Livingroom Motion Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.motion_sensor_158d0001de7134
@@ -82,6 +88,7 @@
       - service: automation.turn_off
         entity_id: automation.livingroom_motion_sensor_battery
   - alias: Stairway Motion Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.motion_sensor_158d000276e199
@@ -97,6 +104,7 @@
 
   # Cube sensor battery checks
   - alias: Gameroom Cube Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.cube_158d000118421f
@@ -110,6 +118,7 @@
       - service: automation.turn_off
         entity_id: automation.gameroom_cube_sensor_battery
   - alias: Livingroom Cube Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.cube_158d00010fd151
@@ -125,6 +134,7 @@
 
   # Smoke sensor battery check
   - alias: Hallway Smoke Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.smoke_sensor_158d000279ddbc
@@ -140,6 +150,7 @@
 
   # Wireless button battery check
   - alias: Livingroom Wireless Button Sensor Battery
+    initial_state: 'on'
     trigger:
       platform: numeric_state
       entity_id: binary_sensor.switch_158d00026bb099
@@ -155,6 +166,7 @@
 
   # Turn on all automations
   - alias: Battery Automation Turn On
+    initial_state: 'on'
     trigger:
       platform: time
       at: '20:00:00'
