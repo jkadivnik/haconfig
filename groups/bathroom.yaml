@@ -2,5 +2,6 @@ Bathroom:
   entities:
     - script.play_radio_on_wireless_speakers_audiocast
     - script.turn_off_wireless_speakers_audiocast
+    - binary_sensor.switch_158d0002b0318d
     - switch.bathroom_speaker
     - scene.bathroom_all_off
