@@ -1,0 +1,9 @@
+  platform: template
+  switches:
+    bathroom_radio:
+      friendly_name: "Bathroom Radio Toggle"
+      value_template: "{{ is_state('media_player.wireless_speakers', 'playing') }}"
+      turn_on:
+        service: script.play_radio_on_wireless_speakers_audiocast
+      turn_off:
+        service: script.turn_off_wireless_speakers_audiocast

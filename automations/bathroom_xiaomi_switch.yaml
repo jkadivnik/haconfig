@@ -1,0 +1,11 @@
+  - alias: Toggle radio when nothing playing
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.switch_158d00026bb099
+        click_type: single
+    action:
+      service: switch.toggle
+      entity_id: switch.kitchen_radio_harmony

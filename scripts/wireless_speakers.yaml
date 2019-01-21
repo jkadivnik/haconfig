@@ -1,20 +1,21 @@
-  livingroom_wireless_speaker_tuner_on:
-    alias: Livingroom Wireless Speaker Tuner On
+  play_radio_on_wireless_speakers_audiocast:
+    alias: Play Radio On Wireless Speakers Audiocast
     sequence:
-      - service: remote.send_command
-        entity_id: remote.livingroom_hub
+      - service: media_player.volume_set
         data:
-          device: 59509435
-          command: PowerOn
-      - service: input_boolean.turn_on
-        entity_id: input_boolean.wireless_speakers_tuner_state
-  livingroom_wireless_speaker_tuner_off:
-    alias: Livingroom Wireless Speaker Tuner Off
+          entity_id: media_player.wireless_speakers
+          volume_level: '0.30'
+      -  service: media_player.play_media
+         data:
+           entity_id: media_player.wireless_speakers
+           media_content_id: http://icecast.vrtcdn.be/stubru-high.mp3
+           media_content_type: 'audio/mp4'
+  turn_off_wireless_speakers_audiocast:
+    alias: Turn Off Wireless Speakers Audiocast
     sequence:
-      - service: remote.send_command
-        entity_id: remote.livingroom_hub
+      - service: media_player.media_stop
         data:
-          device: 59509435
-          command: PowerOff
-      - service: input_boolean.turn_off
-        entity_id: input_boolean.wireless_speakers_tuner_state
+          entity_id: media_player.wireless_speakers
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.wireless.speakers
