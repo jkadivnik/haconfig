@@ -8,4 +8,4 @@
         click_type: single
     action:
       service: switch.toggle
-      entity_id: switch.kitchen_radio_harmony
+      entity_id: switch.bathroom_radio_toggle
