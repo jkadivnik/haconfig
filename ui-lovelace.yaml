@@ -1100,5 +1100,5 @@ views:
               icon: mdi:disc-alert
               style: {color: white, left: 75%, top: 85%}
             - type: state-label
-              entity: sensor.disk_use_percent_
+              entity: sensor.disk_use_percent
               style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}

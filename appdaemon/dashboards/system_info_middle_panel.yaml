@@ -18,7 +18,7 @@ system_processor_usage:
 system_disk_usage:
   widget_type: gauge
   title: System Disk Usage
-  entity: sensor.disk_use_percent_
+  entity: sensor.disk_use_percent
   min: 0
   max: 100
   units: '%'

@@ -1,7 +1,7 @@
   - alias: Kodi InputSelect Update Movies On Startup
     initial_state: 'on'
     trigger:
-      - platform: time
+      - platform: time_pattern
         minutes: '/5'
         seconds: '00'
     action:
@@ -11,7 +11,7 @@
   - alias: Kodi InputSelect Update Series On Startup
     initial_state: 'on'
     trigger:
-      - platform: time
+      - platform: time_pattern
         minutes: '/6'
         seconds: '00'
     action:
@@ -21,10 +21,10 @@
   - alias: Kodi InputSelect Update Periodically
     initial_state: 'off'
     trigger:
-      - platform: time
-        hours: /1
-        minutes: 00
-        seconds: 00
+      - platform: time_pattern
+        hours: '/1'
+        minutes: '00'
+        seconds: '00'
     action:
       - service: script.get_recent_movies
       - service: script.get_recent_episodes

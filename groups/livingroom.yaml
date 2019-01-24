@@ -52,8 +52,8 @@ Livingroom:
     - automation.livingroom_nightlight_off_timer
     - automation.livingroom_temperature_sensor_battery
     - automation.livingroom_to_bed
-    - automation.livingroom_watch_movie__bd
-    - automation.livingroom_watch_movie__kodi
+    - automation.livingroom_watch_movie_bd
+    - automation.livingroom_watch_movie_kodi
     - automation.livingroom_watch_netflix
     - automation.livingroom_watch_television
     - automation.livingroom_harmony_triggered
