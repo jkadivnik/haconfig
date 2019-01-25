@@ -27,6 +27,7 @@ Gameroom:
     - switch.gameroom_volume_down
     - switch.gameroom_volume_mute
     - switch.gameroom_volume_up
+    - switch.gameroom_chromecast_audio
     - automation.gameroom_cube_shake
     - automation.gameroom_cube_flip90
     - automation.gameroom_cube_flip180
