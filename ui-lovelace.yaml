@@ -2,7 +2,7 @@ resources:
   - url: /local/custom_ui/card-tools.js
     type: js
   - url: /local/custom_ui/mini-media-player-bundle.js
-    type: module
+    type: js
   - url: /local/custom_ui/mini-graph-card-bundle.js
     type: js
   - url: /local/custom_ui/card-modder.js
@@ -18,7 +18,7 @@ resources:
   - url: /local/custom_ui/moment.js
     type: js
   - url: /local/custom_ui/calendar-card.js
-    type: module
+    type: js
 
 background: center / cover no-repeat url("/local/lovelace/images/background/black_gray_wall.jpeg") fixed
 
