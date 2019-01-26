@@ -48,6 +48,9 @@
       platform: state
       entity_id: media_player.kodibureau
       to: 'playing'
+    condition:
+      - condition: template
+        value_template: "{{ state_attr('remote.gameroom_hub', 'current_activity') != 'HTPC' }}"
     action:
       service: switch.turn_on
       entity_id: switch.gameroom_kodi
