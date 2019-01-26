@@ -514,7 +514,7 @@ views:
                   icon: mdi:cast
                   name: Chromecast
                 - entity: switch.gameroom_chromecast_audio
-                  icon: mdi:library-audio
+                  icon: mdi:library-music
                   name: Chromecast
               image: /local/lovelace/images/gameroom.jpg
               aspect_ratio: 16:9
