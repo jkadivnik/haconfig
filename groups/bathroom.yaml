@@ -4,4 +4,5 @@ Bathroom:
     - script.turn_off_wireless_speakers_audiocast
     - binary_sensor.switch_158d0002b0318d
     - switch.bathroom_speaker
+    - switch.bathroom_radio
     - scene.bathroom_all_off
