@@ -768,6 +768,24 @@ views:
                 - entity: binary_sensor.natgas_sensor_158d000204ae2a
                   name: Gas
                   icon: mdi:gas-station
+  - title: Bergkot
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: picture-entity
+              name: Strijk Licht
+              entity: switch.storeroom_ironing_light
+              tap_action:
+                action: toggle
+              aspect_ratio: 16:9
+              state_image:
+                'on': /local/lovelace/images/strijk_licht_aan.jpg
+                'off': /local/lovelace/images/strijk_licht_uit.jpg
   - title: Veranda
     cards:
       - type: custom:card-modder

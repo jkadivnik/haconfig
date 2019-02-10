@@ -26,7 +26,7 @@ influxdb:
   database: !secret influxdb_database
   username: !secret influxdb_user
   password: !secret influxdb_password
-  max_retries: 3
+  max_retries: 10
   default_measurement: state
 
 panel_iframe:

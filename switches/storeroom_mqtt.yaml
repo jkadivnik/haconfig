@@ -1,0 +1,7 @@
+  platform: mqtt
+  name: "Storeroom Ironing Light"
+  state_topic: "stat/storeroom/ironing/light/POWER"
+  command_topic: "cmnd/storeroom/ironing/light/POWER"
+  payload_on: "ON"
+  payload_off: "OFF"
+  retain: true
