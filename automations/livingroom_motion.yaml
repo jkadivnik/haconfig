@@ -63,3 +63,14 @@
 #      - service: script.livingroom_rgb_colorchanger_select_color
 #        data:
 #          color: 'black'
+  - alias: Livingroom Tablet On
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: "wallpanel/livingroomwallpanel/command"
+          payload: '{"wake": true}'
