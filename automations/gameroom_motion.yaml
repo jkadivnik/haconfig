@@ -49,7 +49,4 @@
       entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
       to: 'on'
     action:
-      - service: mqtt.publish
-        data:
-          topic: "wallpanel/livingroomwallpanel/command"
-          payload: '{"wake": true}'
+        - service: script.gameroom_tablet_screen_on

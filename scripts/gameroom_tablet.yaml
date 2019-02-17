@@ -1,0 +1,19 @@
+  gameroom_tablet_screen_on:
+    alias: 'Gameroom Tablet Screen on'
+    sequence:
+      - condition: state
+        entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+        to: 'off'
+      - service: mqtt.publish
+        data:
+          topic: "wallpanel/livingroomwallpanel/command"
+          payload: '{"wake": true}'
+      - delay: 00:00:50
+      - service: script.gameroom_tablet_screen_on_delay
+
+  gameroom_tablet_screen_on_delay:
+    alias: 'Gameroom Tablet Screen On Delay'
+    sequence:
+      - delay:
+          milliseconds: 1
+      - service: script.gameroom_tablet_screen_on

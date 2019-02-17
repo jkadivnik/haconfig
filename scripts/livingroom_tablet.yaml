@@ -1,0 +1,19 @@
+  livingroom_tablet_screen_on:
+    alias: 'Livingroom Tablet Screen on'
+    sequence:
+      - condition: state
+        entity_id: binary_sensor.motion_sensor_158d0001de7134
+        to: 'off'
+      - service: mqtt.publish
+        data:
+          topic: "wallpanel/livingroomwallpanel/command"
+          payload: '{"wake": true}'
+      - delay: 00:00:50
+      - service: script.livingroom_tablet_screen_on_delay
+
+  livingroom_tablet_screen_on_delay:
+    alias: 'Livingroom Tablet Screen On Delay'
+    sequence:
+      - delay:
+          milliseconds: 1
+      - service: script.livingroom_tablet_screen_on
