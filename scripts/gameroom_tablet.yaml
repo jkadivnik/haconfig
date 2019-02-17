@@ -3,7 +3,7 @@
     sequence:
       - condition: state
         entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
-        to: 'off'
+        state: 'off'
       - service: mqtt.publish
         data:
           topic: "wallpanel/livingroomwallpanel/command"
