@@ -6,11 +6,10 @@
         state: 'on'
       - service: mqtt.publish
         data:
-          topic: "wallpanel/livingroomwallpanel/command"
+          topic: "wallpanel/gameroomwallpanel/command"
           payload: '{"wake": true}'
-      - delay: 00:00:50
+      - delay: 00:00:25
       - service: script.gameroom_tablet_screen_on_delay
-
   gameroom_tablet_screen_on_delay:
     alias: 'Gameroom Tablet Screen On Delay'
     sequence:
