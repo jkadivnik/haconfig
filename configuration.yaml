@@ -97,7 +97,7 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-speedtesdotnet:
+speedtestdotnet:
   scan_interval:
     minutes: 60
   monitored_conditions:
