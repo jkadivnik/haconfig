@@ -19,6 +19,8 @@ frontend:
 
 system_health:
 
+custom_updater:
+
 # Enables the recorder
 recorder:
 
