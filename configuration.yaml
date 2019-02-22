@@ -97,6 +97,14 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
+speedtesdotnet:
+  scan_interval:
+    minutes: 60
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
 # Enables support for tracking state changes over time
 history:
 
