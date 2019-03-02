@@ -1,23 +1,25 @@
 resources:
-  - url: /local/custom_ui/card-tools.js
-    type: js
-  - url: /local/custom_ui/mini-media-player-bundle.js
-    type: js
-  - url: /local/custom_ui/mini-graph-card-bundle.js
-    type: js
-  - url: /local/custom_ui/card-modder.js
+  - url: /customcards/custom_ui/tracker-card.js?track=true
     type: module
-  - url: /local/custom_ui/dark-sky-weather-card.js
+  - url: /customcards/custom_ui/card-tools.js
     type: js
-  - url: /local/custom_ui/custom-cards.js
+  - url: /customcards/custom_ui/mini-media-player-bundle.js
+    type: js
+  - url: /customcards/custom_ui/mini-graph-card-bundle.js
+    type: js
+  - url: /customcards/custom_ui/card-modder.js
     type: module
-  - url: /local/custom_ui/monster-card.js
+  - url: /customcards/custom_ui/dark-sky-weather-card.js
     type: js
-  - url: /local/custom_ui/slider-entity-row.js
+  - url: /customcards/custom_ui/custom-cards.js
+    type: module
+  - url: /customcards/custom_ui/monster-card.js
     type: js
-  - url: /local/custom_ui/moment.js
+  - url: /customcards/custom_ui/slider-entity-row.js
     type: js
-  - url: /local/custom_ui/calendar-card.js
+  - url: /customcards/custom_ui/moment.js
+    type: js
+  - url: /customcards/custom_ui/calendar-card.js
     type: js
 
 background: center / cover no-repeat url("/local/lovelace/images/background/black_gray_wall.jpeg") fixed
@@ -1120,3 +1122,9 @@ views:
             - type: state-label
               entity: sensor.disk_use_percent
               style: {color: white, left: 75%, top: 93%, font-size: 80%, font-weight: bold}
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: custom:tracker-card

@@ -1,6 +1,5 @@
   # CPU Temp
   platform: command_line
-  icon: mdi:thermostat
   name: CPU Temp
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   unit_of_measurement: '°C'

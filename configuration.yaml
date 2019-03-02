@@ -19,6 +19,8 @@ frontend:
 
 system_health:
 
+custom_updater:
+
 # Enables the recorder
 recorder:
 
@@ -91,6 +93,14 @@ notify:
 
 # Discover some devices automatically
 discovery:
+
+speedtestdotnet:
+  scan_interval:
+    hours: 4
+  monitored_conditions:
+    - ping
+    - download
+    - upload
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
