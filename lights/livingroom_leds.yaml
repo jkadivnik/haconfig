@@ -1,6 +1,6 @@
   platform: flux_led
   devices:
-    192.168.1.239:
+    192.168.1.118:
       name: Livingroom Bookcase RGB light
-    192.168.1.139:
+    192.168.1.120:
       name: Livingroom Dressoir RGB light

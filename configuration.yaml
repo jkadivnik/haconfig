@@ -23,6 +23,7 @@ custom_updater:
 
 # Enables the recorder
 recorder:
+  purge_days: 5
 
 influxdb:
   host: !secret influxdb_host
@@ -34,22 +35,10 @@ influxdb:
   default_measurement: state
 
 panel_iframe:
-  motioneye:
-    title: MotionEye
-    url: !secret motioneye_url
-    icon: mdi:eye
   tasmoadmin:
     title: TasmoAdmin
     url: !secret tasmoadmin_url
     icon: mdi:basket
-  grafana:
-    title: Grafana
-    url: !secret grafana_url
-    icon: mdi:chart-multiline
-  influxdb:
-    title: InfluxDB
-    url: !secret influxdb_url
-    icon: mdi:chart-line-variant
 
 # Enables configuration UI
 config:
