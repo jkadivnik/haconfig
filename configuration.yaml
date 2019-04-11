@@ -27,11 +27,6 @@ recorder:
 
 influxdb:
   host: !secret influxdb_host
-  port: !secret influxdb_port
-  database: !secret influxdb_database
-  username: !secret influxdb_user
-  password: !secret influxdb_password
-  max_retries: 10
   default_measurement: state
 
 panel_iframe:
@@ -202,16 +197,6 @@ ifttt:
   key: !secret ifttt_key
 
 device_tracker:
-#  - platform: luci
-#    host: !secret livingroom_router_ip
-#    username: !secret livingroom_router_user
-#    password: !secret livingroom_router_password
-#    track_new_devices: false
-  - platform: luci
-    host: !secret gameroom_router_ip
-    username: !secret gameroom_router_user
-    password: !secret gameroom_router_password
-    track_new_devices: true
 
 sabnzbd:
   api_key: !secret sabnzbd_api_key
