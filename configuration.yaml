@@ -23,7 +23,7 @@ custom_updater:
 
 # Enables the recorder
 recorder:
-  purge_days: 5
+  purge_keep_days: 5
 
 influxdb:
   host: !secret influxdb_host
