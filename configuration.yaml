@@ -12,221 +12,220 @@ homeassistant:
   time_zone: !secret home_time_zone
   # Customization file
   customize: !include customize.yaml
-
-  # Enables the frontend
-  frontend:
-    themes: !include_dir_merge_named themes/
-
-  system_health:
-
-  custom_updater:
-
-  # Enables the recorder
-  recorder:
-    purge_keep_days: 5
-
-  influxdb:
-    host: !secret influxdb_host
-    default_measurement: state
-
-  panel_iframe:
-    tasmoadmin:
-      title: TasmoAdmin
-      url: !secret tasmoadmin_url
-      icon: mdi:basket
-
-  # Enables configuration UI
-  config:
-
   auth_providers:
     trusted_networks:
       - 192.168.1.0/24
       allow_bypass_login: true
-    base_url: !secret http_base_url
+  base_url: !secret http_base_url
 
-  # Checks for available updates
-  # Note: This component will send some information about your system to
-  # the developers to assist with development of Home Assistant.
-  # For more information, please see:
-  # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-  updater:
-    # Optional, allows Home Assistant developers to focus on popular components.
-    # include_used_components: true
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes/
 
-  lovelace:
-    mode: yaml
+system_health:
 
-  notify:
-    - name: homemail
-      platform: smtp
-      server: smtp.gmail.com
-      port: 587
-      timeout: 15
-      sender: !secret mail_sender
-      encryption: starttls
-      username:  !secret mail_main
-      password: !secret google_app_key
-      recipient:
-      - !secret mail_main
-      - !secret mail_secundary
-      - !secret mail_1
-      - !secret mail_2
-      sender_name: My Home Assistant
-    - name: pushbullet
-      platform: pushbullet
-      api_key: !secret pushbullet_apikey
+custom_updater:
 
-  # Discover some devices automatically
-  discovery:
+# Enables the recorder
+recorder:
+  purge_keep_days: 5
 
-  speedtestdotnet:
-    scan_interval:
-      hours: 4
-    monitored_conditions:
-      - ping
-      - download
-      - upload
+influxdb:
+  host: !secret influxdb_host
+  default_measurement: state
 
-  # Allows you to issue voice commands from the frontend in enabled browsers
-  conversation:
+panel_iframe:
+  tasmoadmin:
+    title: TasmoAdmin
+    url: !secret tasmoadmin_url
+    icon: mdi:basket
 
-  # Enables support for tracking state changes over time
-  history:
+# Enables configuration UI
+config:
 
-  history_graph:
-    livingroom:
-      name: Livingroom Climate
-      entities:
-        - sensor.humidity_158d0002379148
-        - sensor.temperature_158d0002379148
-        - sensor.illumination_158d0001de7134
-      hours_to_show: 240
-      refresh: 300
-    gameroom:
-      name: Gameroom Climate
-      entities:
-        - sensor.temperature_158d000236744c
-        - sensor.humidity_158d000236744c
-        - sensor.illumination_158d0001f9cdfe
-      hours_to_show: 240
-      refresh: 300
-    veranda:
-      name: Veranda Climate
-      entities:
-        - sensor.humidity_158d00020f4dd3
-        - sensor.temperature_158d00020f4dd3
-      hours_to_show: 240
-      refresh: 300
-    internet:
-      name: Internet Graph
-      entities:
-      - sensor.speedtest_ping
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      hours_to_show: 240
-      refresh: 300
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
 
-  # View all events in a logbook
-  logbook:
+lovelace:
+  mode: yaml
 
-  logger:
-    default: error
-    logs:
-      homeassistant.components: error
+notify:
+  - name: homemail
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret mail_sender
+    encryption: starttls
+    username:  !secret mail_main
+    password: !secret google_app_key
+    recipient:
+    - !secret mail_main
+    - !secret mail_secundary
+    - !secret mail_1
+    - !secret mail_2
+    sender_name: My Home Assistant
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_apikey
 
-  # Enables a map showing the location of tracked devices
-  map:
+# Discover some devices automatically
+discovery:
 
-  # Track the sun
-  sun:
+speedtestdotnet:
+  scan_interval:
+    hours: 4
+  monitored_conditions:
+    - ping
+    - download
+    - upload
 
-  google:
-    client_id: !secret google_client_id
-    client_secret: !secret google_secret
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
 
-  # Text to speech
-  tts:
-    - platform: google
+# Enables support for tracking state changes over time
+history:
 
-  # Cloud
-  cloud:
-
-  group: !include_dir_merge_named groups/
-  automation: !include_dir_merge_list automations/
-  script: !include_dir_merge_named scripts/
-  sensor: !include_dir_list sensors/
-  light: !include_dir_list lights/
-  remote: !include remotes.yaml
-  switch: !include_dir_list switches/
-  input_select: !include_dir_merge_named input_selects/
-  input_boolean: !include booleans.yaml
-  #camera: !include cameras.yaml
-  scene: !include_dir_merge_list scenes/
-  #variable: !include variables.yaml
-
-  # Mqtt
-  mqtt:
-    broker : !secret mqtt_broker_ip
-    client_id: mqttbroker
-
-  # Devices
-  media_player:
-    - platform: kodi
-      host: !secret livingroom_kodi_ip
-      name: kodiliving
-    - platform: kodi
-      host: !secret gameroom_kodi_ip
-      name: kodibureau
-
-  # Xiaomi
-  xiaomi_aqara:
-    discovery_retry: 10
-    gateways:
-      - key: !secret gameroom_gateway_key
-        mac: !secret gameroom_gateway_mac
-  #      host: !secret gameroom_gateway_host
-      - key: !secret livingroom_gateway_key
-        mac: !secret livingroom_gateway_mac
-  #      host: !secret livingroom_gateway_host
-      - key: !secret stairway_gateway_key
-        mac: !secret stairway_gateway_mac
-  #      host: !secret stairway_gateway_host
-
-  ffmpeg:
-
-  ifttt:
-    key: !secret ifttt_key
-
-  device_tracker:
-
-  sabnzbd:
-    api_key: !secret sabnzbd_api_key
-    host: !secret sabnzbd_host
-    port: !secret sabnzbd_port
-    name: Sabnzbd Downloader
-
-  emulated_hue:
-    listen_port: 8125
-    expose_by_default: false
+history_graph:
+  livingroom:
+    name: Livingroom Climate
     entities:
-      script.livingroom_rgb_colorchanger_off:
-        name: Livingroom RGB Off
-        hidden: false
-      script.livingroom_rgb_colorchanger:
-        name: Livingroom RGB Color Changer
-        hidden: false
-      switch.plug_158d0001f29250:
-        name: Livingroom Sofa Plug
-        hidden: false
-      switch.plug_158d0001f292c0:
-        name: Livingroom Dressoir Plug
-        hidden: false
-      script.gameroom_rgb_colorchanger_off:
-        name: Gameroom RGB Off
-        hidden: false
-      script.gameroom_rgb_colorchanger:
-        name: Gameroom RGB Color Changer
-        hidden: false
-      switch.gameroom_sonoff_desklight:
-        name: Gameroom Desk Light
-        hidden: false
+      - sensor.humidity_158d0002379148
+      - sensor.temperature_158d0002379148
+      - sensor.illumination_158d0001de7134
+    hours_to_show: 240
+    refresh: 300
+  gameroom:
+    name: Gameroom Climate
+    entities:
+      - sensor.temperature_158d000236744c
+      - sensor.humidity_158d000236744c
+      - sensor.illumination_158d0001f9cdfe
+    hours_to_show: 240
+    refresh: 300
+  veranda:
+    name: Veranda Climate
+    entities:
+      - sensor.humidity_158d00020f4dd3
+      - sensor.temperature_158d00020f4dd3
+    hours_to_show: 240
+    refresh: 300
+  internet:
+    name: Internet Graph
+    entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    hours_to_show: 240
+    refresh: 300
+
+# View all events in a logbook
+logbook:
+
+logger:
+  default: error
+  logs:
+    homeassistant.components: error
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_secret
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include_dir_merge_named groups/
+automation: !include_dir_merge_list automations/
+script: !include_dir_merge_named scripts/
+sensor: !include_dir_list sensors/
+light: !include_dir_list lights/
+remote: !include remotes.yaml
+switch: !include_dir_list switches/
+input_select: !include_dir_merge_named input_selects/
+input_boolean: !include booleans.yaml
+#camera: !include cameras.yaml
+scene: !include_dir_merge_list scenes/
+#variable: !include variables.yaml
+
+# Mqtt
+mqtt:
+  broker : !secret mqtt_broker_ip
+  client_id: mqttbroker
+
+# Devices
+media_player:
+  - platform: kodi
+    host: !secret livingroom_kodi_ip
+    name: kodiliving
+  - platform: kodi
+    host: !secret gameroom_kodi_ip
+    name: kodibureau
+
+# Xiaomi
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - key: !secret gameroom_gateway_key
+      mac: !secret gameroom_gateway_mac
+#      host: !secret gameroom_gateway_host
+    - key: !secret livingroom_gateway_key
+      mac: !secret livingroom_gateway_mac
+#      host: !secret livingroom_gateway_host
+    - key: !secret stairway_gateway_key
+      mac: !secret stairway_gateway_mac
+#      host: !secret stairway_gateway_host
+
+ffmpeg:
+
+ifttt:
+  key: !secret ifttt_key
+
+device_tracker:
+
+sabnzbd:
+  api_key: !secret sabnzbd_api_key
+  host: !secret sabnzbd_host
+  port: !secret sabnzbd_port
+  name: Sabnzbd Downloader
+
+emulated_hue:
+  listen_port: 8125
+  expose_by_default: false
+  entities:
+    script.livingroom_rgb_colorchanger_off:
+      name: Livingroom RGB Off
+      hidden: false
+    script.livingroom_rgb_colorchanger:
+      name: Livingroom RGB Color Changer
+      hidden: false
+    switch.plug_158d0001f29250:
+      name: Livingroom Sofa Plug
+      hidden: false
+    switch.plug_158d0001f292c0:
+      name: Livingroom Dressoir Plug
+      hidden: false
+    script.gameroom_rgb_colorchanger_off:
+      name: Gameroom RGB Off
+      hidden: false
+    script.gameroom_rgb_colorchanger:
+      name: Gameroom RGB Color Changer
+      hidden: false
+    switch.gameroom_sonoff_desklight:
+      name: Gameroom Desk Light
+      hidden: false
