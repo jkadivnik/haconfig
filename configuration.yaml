@@ -13,10 +13,9 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
   auth_providers:
-    trusted_networks:
-      - 192.168.1.0/24
-      allow_bypass_login: true
-  base_url: !secret http_base_url
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
 
 # Enables the frontend
 frontend:
