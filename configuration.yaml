@@ -23,7 +23,13 @@ frontend:
 
 system_health:
 
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
 custom_updater:
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
 
 # Enables the recorder
 recorder:
@@ -48,8 +54,6 @@ config:
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
 lovelace:
   mode: yaml
