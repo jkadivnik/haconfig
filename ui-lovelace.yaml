@@ -165,7 +165,6 @@ views:
             show_source: true
             artwork_border: true
             icon: mdi:playlist-music
-
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -194,7 +193,6 @@ views:
               name: Living
             - entity: binary_sensor.motion_sensor_158d000276e199
               name: Boven
-
   - title: Living
     icon: mdi:seat-outline
     cards:
@@ -210,24 +208,38 @@ views:
             - entity: switch.livingroom_telenet
               icon: mdi:television-box
               name: Telenet
+              tap_action:
+                action: toggle
             - entity: switch.livingroom_kodi
               icon: mdi:movie
               name: HTPC
+              tap_action:
+                action: toggle
             - entity: switch.livingroom_chromecast
               icon: mdi:cast
               name: Chromecast
+              tap_action:
+                action: toggle
             - entity: switch.livingroom_bluray
               icon: mdi:filmstrip
               name: Bluray
+              tap_action:
+                action: toggle
             - entity: switch.livingroom_steamlink
               icon: mdi:cellphone-link
               name: Steam Link
+              tap_action:
+                action: toggle
             - entity: switch.livingroom_ps4
               icon: mdi:gamepad
               name: PS4
+              tap_action:
+                action: toggle
             - entity: switch.plug_158d0001f29250
               icon: mdi:white-balance-incandescent
               name: Zetel
+              tap_action:
+                action: toggle
       - type: conditional
         conditions:
           - entity: media_player.kodiliving
@@ -343,6 +355,8 @@ views:
           entities:
             - entity: switch.kitchen_radio_harmony
               icon: mdi:radio
+              tap_action:
+                action: toggle
       - type: conditional
         conditions:
           - entity: sensor.christmas_period
@@ -372,21 +386,33 @@ views:
             - entity: switch.gameroom_pc_sound
               icon: mdi:surround-sound
               name: Gaming
+              tap_action:
+                action: toggle
             - entity: switch.gameroom_kodi
               icon: mdi:movie
               name: HTPC
+              tap_action:
+                action: toggle
             - entity: switch.gameroom_ps3
               icon: mdi:gamepad
               name: PS3
+              tap_action:
+                action: toggle
             - entity: switch.gameroom_ps4
               icon: mdi:google-controller
               name: PS4
+              tap_action:
+                action: toggle
             - entity: switch.gameroom_chromecast
               icon: mdi:cast
               name: Chromecast
+              tap_action:
+                action: toggle
             - entity: switch.gameroom_chromecast_audio
               icon: mdi:library-music
               name: Muziek
+              tap_action:
+                action: toggle
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -536,9 +562,6 @@ views:
             - sensor.processor_use
             - sensor.memory_use_percent
             - sensor.disk_use_percent
-            - sensor.speedtest_ping
-            - sensor.speedtest_download
-            - sensor.speedtest_upload
       - type: custom:monster-card
         show_empty: false
         card:
