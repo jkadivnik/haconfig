@@ -1,47 +1,47 @@
-  - alias: Gameroom NightLight Motion
-    initial_state: 'off'
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
-      to: 'on'
-    condition:
-      - condition: state
-        entity_id: light.gameroom_led_lights
-        state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.illumination_7811dcded4dc
-        below: '10'
-      - condition: or
-        conditions:
-        - condition: sun
-          after: sunset
-        - condition: sun
-          before: sunrise
-    action:
-      - service: automation.turn_on
-        entity_id: automation.gameroom_no_motion
-      - service: light.turn_on
-        entity_id: light.gameroom_led_lights
-        data:
-          entity_id: light.gameroom_led_lights
-          color_name: 'blue'
-      - service: script.gameroom_rgb_colorchanger_select_color
-        data:
-          color: 'blue'
-  - alias: Gameroom No Motion
-    initial_state: 'off'
-    trigger:
-      platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
-      to: 'off'
-    action:
-      - service: automation.turn_off
-        entity_id: automation.gameroom_no_motion
-      - service: light.turn_off
-        entity_id: light.gameroom_led_lights
-      - service: script.gameroom_rgb_colorchanger_select_color
-        data:
-          color: 'black'
+#  - alias: Gameroom NightLight Motion
+#    initial_state: 'off'
+#    trigger:
+#      platform: state
+#      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+#      to: 'on'
+#    condition:
+#      - condition: state
+#        entity_id: light.gameroom_led_lights
+#        state: 'off'
+#      - condition: numeric_state
+#        entity_id: sensor.illumination_7811dcded4dc
+#        below: '10'
+#      - condition: or
+#        conditions:
+#        - condition: sun
+#          after: sunset
+#        - condition: sun
+#          before: sunrise
+#    action:
+#      - service: automation.turn_on
+#        entity_id: automation.gameroom_no_motion
+#      - service: light.turn_on
+#        entity_id: light.gameroom_led_lights
+#        data:
+#          entity_id: light.gameroom_led_lights
+#          color_name: 'blue'
+#      - service: script.gameroom_rgb_colorchanger_select_color
+#        data:
+#          color: 'blue'
+#  - alias: Gameroom No Motion
+#    initial_state: 'off'
+#    trigger:
+#      platform: state
+#      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+#      to: 'off'
+#    action:
+#      - service: automation.turn_off
+#        entity_id: automation.gameroom_no_motion
+#      - service: light.turn_off
+#        entity_id: light.gameroom_led_lights
+#      - service: script.gameroom_rgb_colorchanger_select_color
+#        data:
+#          color: 'black'
   - alias: Gameroom Tablet On
     initial_state: 'on'
     trigger:

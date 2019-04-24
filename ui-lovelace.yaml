@@ -260,7 +260,7 @@ views:
             icon: mdi:movie
       - type: conditional
         conditions:
-          - entity: media_player.livingroom_video
+          - entity: media_player.livingroom_videocast
             state_not: "off"
         card:
           type: custom:card-modder
@@ -269,7 +269,7 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: custom:mini-media-player
-            entity: media_player.livingroom_video
+            entity: media_player.livingroom_videocast
             name: Chromecast
             show_progress: true
             show_cover: true
@@ -330,7 +330,7 @@ views:
                 service: script.livingroom_volume_up
       - type: conditional
         conditions:
-          - entity: media_player.livingroom_audio
+          - entity: media_player.livingroom_music
             state_not: "off"
         card:
           type: custom:card-modder
@@ -339,7 +339,7 @@ views:
             box-shadow: 3px 3px rgba(0,0,0,0.4)
           card:
             type: custom:mini-media-player
-            entity: media_player.livingroom_audio
+            entity: media_player.livingroom_music
             name: Chromecast Audio
             show_progress: true
             show_cover: true
@@ -375,70 +375,72 @@ views:
   - title: Mancave
     icon: mdi:monitor
     cards:
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          title: Bureau
-          entities:
-            - entity: switch.gameroom_pc_sound
-              icon: mdi:surround-sound
-              name: Gaming
-              tap_action:
-                action: toggle
-            - entity: switch.gameroom_kodi
-              icon: mdi:movie
-              name: HTPC
-              tap_action:
-                action: toggle
-            - entity: switch.gameroom_ps3
-              icon: mdi:gamepad
-              name: PS3
-              tap_action:
-                action: toggle
-            - entity: switch.gameroom_ps4
-              icon: mdi:google-controller
-              name: PS4
-              tap_action:
-                action: toggle
-            - entity: switch.gameroom_chromecast
-              icon: mdi:cast
-              name: Chromecast
-              tap_action:
-                action: toggle
-            - entity: switch.gameroom_chromecast_audio
-              icon: mdi:library-music
-              name: Muziek
-              tap_action:
-                action: toggle
-      - type: custom:card-modder
-        style:
-          border-radius: 10px
-          box-shadow: 3px 3px rgba(0,0,0,0.4)
-        card:
-          type: glance
-          show_state: false
-          entities:
-            - entity: script.gameroom_volume_down
-              icon: mdi:volume-low
-              name: Stiller
-              tap_action:
-                action: call-service
-                service: script.gameroom_volume_down
-            - entity: script.gameroom_volume_mute
-              icon: mdi:volume-off
-              name: Uit
-              tap_action:
-                action: call-service
-                service: script.gameroom_volume_mute
-            - entity: script.gameroom_volume_up
-              icon: mdi:volume-high
-              name: Luider
-              tap_action:
-                action: call-service
-                service: script.gameroom_volume_up
+      - type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              title: Bureau
+              entities:
+                - entity: switch.gameroom_pc_sound
+                  icon: mdi:surround-sound
+                  name: Gaming
+                  tap_action:
+                    action: toggle
+                - entity: switch.gameroom_kodi
+                  icon: mdi:movie
+                  name: HTPC
+                  tap_action:
+                    action: toggle
+                - entity: switch.gameroom_ps3
+                  icon: mdi:gamepad
+                  name: PS3
+                  tap_action:
+                    action: toggle
+                - entity: switch.gameroom_ps4
+                  icon: mdi:google-controller
+                  name: PS4
+                  tap_action:
+                    action: toggle
+                - entity: switch.gameroom_chromecast
+                  icon: mdi:cast
+                  name: Chromecast
+                  tap_action:
+                    action: toggle
+                - entity: switch.gameroom_chromecast_audio
+                  icon: mdi:library-music
+                  name: Muziek
+                  tap_action:
+                    action: toggle
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              show_state: false
+              entities:
+                - entity: script.gameroom_volume_down
+                  icon: mdi:volume-low
+                  name: Stiller
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_volume_down
+                - entity: script.gameroom_volume_mute
+                  icon: mdi:volume-off
+                  name: Uit
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_volume_mute
+                - entity: script.gameroom_volume_up
+                  icon: mdi:volume-high
+                  name: Luider
+                  tap_action:
+                    action: call-service
+                    service: script.gameroom_volume_up
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -481,7 +483,7 @@ views:
                   hold_action:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_trophycase_off
-                - entity: script.gameroom_rgb_colorchanger
+                - entity: input_select.gameroom_led_colors
                   name: Led kleur
                   tap_action:
                     action: call-service
@@ -510,7 +512,7 @@ views:
                 icon: mdi:movie
           - type: conditional
             conditions:
-              - entity: media_player.gameroom_video
+              - entity: media_player.gameroom_tv
                 state_not: "off"
             card:
               type: custom:card-modder
@@ -519,7 +521,7 @@ views:
                 box-shadow: 3px 3px rgba(0,0,0,0.4)
               card:
                 type: custom:mini-media-player
-                entity: media_player.gameroom_video
+                entity: media_player.gameroom_tv
                 name: Chromecast
                 artwork: cover
                 show_progress: true
@@ -528,7 +530,7 @@ views:
                 icon: mdi:cast
           - type: conditional
             conditions:
-              - entity: media_player.gameroom_audio
+              - entity: media_player.gameroom_speaker
                 state_not: "off"
             card:
               type: custom:card-modder
@@ -537,7 +539,7 @@ views:
                 box-shadow: 3px 3px rgba(0,0,0,0.4)
               card:
                 type: custom:mini-media-player
-                entity: media_player.gameroom_audio
+                entity: media_player.gameroom_speaker
                 name: Chromecast Audio
                 show_progress: true
                 show_cover: true

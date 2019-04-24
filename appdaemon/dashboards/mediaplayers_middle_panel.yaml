@@ -6,12 +6,12 @@ livingroom_kodi:
 livingroom_audiocast:
   widget_type: media_player
   title: living_room_audio
-  entity: media_player.livingroom_audio
+  entity: media_player.livingroom_music
 
 livingroom_chromecast:
   widget_type: media_player
   title: living_room_audio
-  entity: media_player.livingroom_video
+  entity: media_player.livingroom_videocast
 
 layout:
   - livingroom_chromecast(2x2), livingroom_kodi(3x2), livingroom_audiocast(2x2)

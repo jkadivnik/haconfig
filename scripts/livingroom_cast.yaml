@@ -5,12 +5,12 @@
       - service: media_player.media_next_track
         data_template:
           entity_id: >
-            {% if states('media_player.livingroom_audio') != 'off' %}
-            media_player.livingroom_audio
-            {% elif states('media_player.livingroom_video') != 'off' %}
-            media_player.livingroom_video
-            {% elif states('media_player.livingroom_speaker') != 'off' %}
-            media_player.livingroom_speaker
+            {% if states('media_player.livingroom_music') != 'off' %}
+            media_player.livingroom_music
+            {% elif states('media_player.livingroom_videocast') != 'off' %}
+            media_player.livingroom_videocast
+            {% elif states('media_player.livingroom_mini') != 'off' %}
+            media_player.livingroom_mini
             {% elif states('media_player.kodiliving') != 'idle' %}
             media_player.kodiliving
             {% endif %}
@@ -20,12 +20,12 @@
       - service: media_player.media_play_pause
         data_template:
           entity_id: >
-            {% if states('media_player.livingroom_audio') != 'off' %}
-            media_player.livingroom_audio
-            {% elif states('media_player.livingroom_video') != 'off' %}
-            media_player.livingroom_video
-            {% elif states('media_player.livingroom_speaker') != 'off' %}
-            media_player.livingroom_speaker
+            {% if states('media_player.livingroom_music') != 'off' %}
+            media_player.livingroom_music
+            {% elif states('media_player.livingroom_videocast') != 'off' %}
+            media_player.livingroom_videocast
+            {% elif states('media_player.livingroom_mini') != 'off' %}
+            media_player.livingroom_mini
             {% elif states('media_player.kodiliving') != 'idle' %}
             media_player.kodiliving
             {% endif %}
@@ -35,12 +35,12 @@
       - service: media_player.media_stop
         data_template:
           entity_id: >
-            {% if states('media_player.livingroom_audio') != 'off' %}
-            media_player.livingroom_audio
-            {% elif states('media_player.livingroom_video') != 'off' %}
-            media_player.livingroom_video
-            {% elif states('media_player.livingroom_speaker') != 'off' %}
-            media_player.livingroom_speaker
+            {% if states('media_player.livingroom_music') != 'off' %}
+            media_player.livingroom_music
+            {% elif states('media_player.livingroom_videocast') != 'off' %}
+            media_player.livingroom_videocast
+            {% elif states('media_player.livingroom_mini') != 'off' %}
+            media_player.livingroom_mini
             {% elif states('media_player.kodiliving') != 'idle' %}
             media_player.kodiliving
             {% endif %}
@@ -50,10 +50,10 @@
       - service: media_player.turn_off
         data_template:
           entity_id: >
-            {% if states('media_player.livingroom_audio') != 'off' %}
-            media_player.livingroom_audio
-            {% elif states('media_player.livingroom_video') != 'off' %}
-            media_player.livingroom_video
-            {% elif states('media_player.livingroom_speaker') != 'off' %}
-            media_player.livingroom_speaker
+            {% if states('media_player.livingroom_music') != 'off' %}
+            media_player.livingroom_music
+            {% elif states('media_player.livingroom_videocast') != 'off' %}
+            media_player.livingroom_videocast
+            {% elif states('media_player.livingroom_mini') != 'off' %}
+            media_player.livingroom_mini
             {% endif %}

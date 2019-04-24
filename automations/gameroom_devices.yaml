@@ -3,7 +3,7 @@
     initial_state: 'on'
     trigger:
       - platform: state
-        entity_id: media_player.gameroom_audio
+        entity_id: media_player.gameroom_speaker
         to: 'off'
     condition:
       - condition: template
@@ -15,10 +15,10 @@
     initial_state: 'on'
     trigger:
       - platform: state
-        entity_id: media_player.gameroom_audio
+        entity_id: media_player.gameroom_speaker
         to: 'playing'
       - platform: state
-        entity_id: media_player.gameroom_audio
+        entity_id: media_player.gameroom_speaker
         to: 'paused'
     condition:
       - condition: template
@@ -33,14 +33,14 @@
       entity_id: remote.gameroom_hub
     condition:
       - condition: template
-        value_template: "{{ states('media_player.gameroom_audio') != 'off' }}"
+        value_template: "{{ states('media_player.gameroom_speaker') != 'off' }}"
       - condition: template
         value_template: "{{ state_attr('remote.gameroom_hub', 'current_activity') != 'Music' }}"
     action:
       - service: media_player.media_stop
-        entity_id: media_player.gameroom_audio
+        entity_id: media_player.gameroom_speaker
       - service: media_player.turn_off
-        entity_id: media_player.gameroom_audio
+        entity_id: media_player.gameroom_speaker
 
   - alias: Gameroom Kodi Started Playing
     initial_state: 'on'
@@ -60,7 +60,7 @@
     initial_state: 'on'
     trigger:
       platform: state
-      entity_id: media_player.gameroom_video
+      entity_id: media_player.gameroom_tv
       to: 'off'
     condition:
       - condition: template
@@ -72,10 +72,10 @@
     initial_state: 'on'
     trigger:
       - platform: state
-        entity_id: media_player.gameroom_video
+        entity_id: media_player.gameroom_tv
         to: 'playing'
       - platform: state
-        entity_id: media_player.gameroom_video
+        entity_id: media_player.gameroom_tv
         to: 'paused'
     condition:
       - condition: template

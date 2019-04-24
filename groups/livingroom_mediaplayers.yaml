@@ -1,7 +1,7 @@
 Livingroom mediaplayers:
   entities:
     - media_player.kodiliving
-    - media_player.livingroom_audio
-    - media_player.livingroom_video
-    - media_player.livingroom_speaker
+    - media_player.livingroom_music
+    - media_player.livingroom_videocast
+    - media_player.livingroom_mini
     - media_player.wireless_speakers

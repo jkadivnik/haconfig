@@ -5,8 +5,8 @@
       - service: media_player.media_next_track
         data_template:
           entity_id: >
-            {% if states('media_player.gameroom_video') != 'off' %}
-            media_player.gameroom_video
+            {% if states('media_player.gameroom_tv') != 'off' %}
+            media_player.gameroom_tv
             {% elif states('media_player.kodibureau') != 'idle' %}
             media_player.kodibureau
             {% endif %}
@@ -16,8 +16,8 @@
       - service: media_player.media_play_pause
         data_template:
           entity_id: >
-            {% if states('media_player.gameroom_video') != 'off' %}
-            media_player.gameroom_video
+            {% if states('media_player.gameroom_tv') != 'off' %}
+            media_player.gameroom_tv
             {% elif states('media_player.kodibureau') != 'idle' %}
             media_player.kodibureau
             {% endif %}
@@ -27,8 +27,8 @@
       - service: media_player.media_stop
         data_template:
           entity_id: >
-            {% if states('media_player.gameroom_video') != 'off' %}
-            media_player.gameroom_video
+            {% if states('media_player.gameroom_tv') != 'off' %}
+            media_player.gameroom_tv
             {% elif states('media_player.kodibureau') != 'idle' %}
             media_player.kodibureau
             {% endif %}
@@ -38,6 +38,6 @@
       - service: media_player.turn_off
         data_template:
           entity_id: >
-            {% if states('media_player.gameroom_video') != 'off' %}
-            media_player.gameroom_video
+            {% if states('media_player.gameroom_tv') != 'off' %}
+            media_player.gameroom_tv
             {% endif %}
