@@ -6,12 +6,8 @@
         state: 'on'
       - condition: template
         value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') !=  'Keuken muziek luisteren' }}"
-      - service: remote.send_command
-        data:
-          entity_id: remote.livingroom_hub
-          command:
-            - PowerToggle
-          device: 54449337
+      - service: remote.turn_off
+        entity_id: remote.livingroom_hub
   kitchen_radio_on:
     alias: Kitchen Radio On
     sequence:
