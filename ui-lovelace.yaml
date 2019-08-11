@@ -465,16 +465,16 @@ views:
                   hold_action:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_workdesk_off
-                - entity: input_select.gameroom_mqtt_led_colors
+                - entity: input_select.gameroom_desk_led_colors
                   icon: mdi:white-balance-iridescent
-                  name: Led bureau
+                  name: Led desk
                   tap_action:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_gamedesk
                   hold_action:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_gamedesk_off
-                - entity: input_select.gameroom_mqtt_led_colors
+                - entity: input_select.gameroom_throphy_case
                   icon: mdi:white-balance-iridescent
                   name: Led vitrine
                   tap_action:

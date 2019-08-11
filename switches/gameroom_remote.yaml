@@ -46,16 +46,16 @@
         entity_id: remote.gameroom_hub
     gameroom_led_light:
       friendly_name: "Gameroom Led Light"
-      value_template: "{{ is_state('light.gameroom_mqtt_rgb_lights', 'on') }}"
+      value_template: "{{ is_state('light.gameroom_led_lights', 'on')  }}"
       turn_on:
         service: light.turn_on
-        entity_id: light.gameroom_mqtt_rgb_lights
+        entity_id: light.gameroom_led_lights
         data:
-          entity_id: light.gameroom_mqtt_rgb_lights
+          entity_id: light.gameroom_led_lights
           rgb_color: [0,0,255]
       turn_off:
         service: light.turn_off
-        entity_id: light.gameroom_mqtt_rgb_lights
+        entity_id: light.gameroom_led_lights
     gameroom_chromecast:
       friendly_name: "Gameroom Chromecast"
       value_template: "{{ is_state_attr('remote.gameroom_hub', 'current_activity', 'Chromecast') }}"

@@ -2,3 +2,7 @@
   devices:
     192.168.1.113:
       name: Gameroom Workdesk RGB light
+    192.168.1.147:
+      name: Gameroom Display Case light
+    192.168.1.102:
+      name: Gameroom Desk light

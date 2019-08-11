@@ -37,29 +37,29 @@
     sequence:
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_mqtt_rgb_light
-          inputselect: input_select.gameroom_mqtt_led_colors
+          entity: light.gameroom_display_case
+          inputselect: input_select.gameroom_display_case_led_colors
   gameroom_rgb_colorchanger_trophycase_off:
     alias: Gameroom RGB Lights Trophycase Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity: light.gameroom_mqtt_rgb_light
-          inputselect: input_select.gameroom_mqtt_led_colors
+          entity: light.gameroom_display_case_light
+          inputselect: input_select.gameroom_display_case_led_colors
   gameroom_rgb_colorchanger_gamedesk:
     alias: Gameroom Colorchanger Gamedesk
     sequence:
       - service: script.generic_colorchanger
         data:
-          entity: light.gameroom_mqtt_rgb_light
-          inputselect: input_select.gameroom_mqtt_led_colors
+          entity: light.gameroom_desk_light
+          inputselect: input_select.gameroom_desk_led_colors
   gameroom_rgb_colorchanger_gamedesk_off:
     alias: Gameroom RGB Lights Gamedesk Off
     sequence:
       - service: script.generic_colorchanger_off
         data:
-          entity: light.gameroom_mqtt_rgb_light
-          inputselect: input_select.gameroom_mqtt_led_colors
+          entity: light.gameroom_desk_light
+          inputselect: input_select.gameroom_desk_led_colors
   gameroom_rgb_colorchanger_select_color:
     alias: Gameroom Colorchanger Select Color
     sequence:
@@ -69,7 +69,11 @@
           option: '{{ color }}'
       - service: input_select.select_option
         data_template:
-          entity_id: input_select.gameroom_mqtt_led_colors
+          entity_id: input_select.gameroom_desk_led_colors
+          option: '{{ color }}'
+      - service: input_select.select_option
+        data_template:
+          entity_id: input_select.gameroom_display_case_led_colors
           option: '{{ color }}'
       - service: input_select.select_option
         data_template:

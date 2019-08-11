@@ -11,8 +11,20 @@ gameroom_led_colors:
     - black
   initial: black
   icon: mdi:palette
-gameroom_mqtt_led_colors:
-  name: Gameroom MQTT Led Light Colors
+gameroom_trophy_case:
+  name: Gameroom TrophyCase Led Light Colors
+  options:
+    - blue
+    - red
+    - yellow
+    - green
+    - purple
+    - white
+    - black
+  initial: black
+  icon: mdi:palette
+gameroom_desk_led_colors:
+  name: Gameroom Desk Led Light Colors
   options:
     - blue
     - red
