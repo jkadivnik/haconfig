@@ -474,7 +474,7 @@ views:
                   hold_action:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_gamedesk_off
-                - entity: input_select.gameroom_throphy_case
+                - entity: input_select.gameroom_trophy_case
                   icon: mdi:white-balance-iridescent
                   name: Led vitrine
                   tap_action:
