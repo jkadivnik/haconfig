@@ -14,4 +14,6 @@ livingroom_kodi_dynamic_inputselect:
   series_inputselect: input_select.livingroom_kodi_series_results
   series_max_entries: 20
   kodi_entity: media_player.kodiliving
-
+deconz_helper:
+  module: deconz_helper
+  class: DeconzHelper
