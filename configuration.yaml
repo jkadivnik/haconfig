@@ -27,6 +27,7 @@ system_health:
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
+    mode: daily
 
 custom_updater:
   card_urls:
@@ -150,7 +151,8 @@ google:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 # Cloud
 cloud:

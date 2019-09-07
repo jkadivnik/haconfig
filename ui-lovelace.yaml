@@ -183,6 +183,20 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: glance
+          title: Binnen temperatuur
+          entities:
+            - entity: sensor.temperature_158d00020f4dd3
+              name: Veranda
+            - entity: sensor.temperature_158d0002379148
+              name: Living
+            - entity: sensor.temperature_158d000236744c
+              name: Gameroom
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
           title: Beweging
           entities:
             - entity: binary_sensor.motion_sensor_158d0001f9cdfe
@@ -298,36 +312,53 @@ views:
                 service: script.livingroom_rgb_colorchanger_off
               icon: mdi:palette
             - entity: switch.plug_158d0001f292c0
+              icon: mdi:white-balance-incandescent
               type: picture-entity
               name: Dressoir
-              icon: mdi:white-balance-incandescent
+              tap_action:
+                action: toggle
       - type: custom:card-modder
         style:
           border-radius: 10px
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: glance
-          show_state: false
-          title: Volume
+          title: Temperatuur
           entities:
-            - entity: script.livingroom_volume_down
-              name: Stiller
-              icon: mdi:volume-low
-              tap_action:
-                action: call-service
-                service: script.livingroom_volume_down
-            - entity: script.livingroom_volume_mute
-              icon: mdi:volume-off
-              name: Uit
-              tap_action:
-                action: call-service
-                service: script.livingroom_volume_mute
-            - entity: script.livingroom_volume_up
-              icon: mdi:volume-high
-              name: Luider
-              tap_action:
-                action: call-service
-                service: script.livingroom_volume_up
+            - entity: sensor.temperature_158d0002379148
+              name: Living
+      - type: conditional
+        conditions:
+          - entity: remote.livingroom_hub
+            state_not: "off"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            show_state: false
+            title: Volume
+            entities:
+              - entity: script.livingroom_volume_down
+                name: Stiller
+                icon: mdi:volume-low
+                tap_action:
+                  action: call-service
+                  service: script.livingroom_volume_down
+              - entity: script.livingroom_volume_mute
+                icon: mdi:volume-off
+                name: Uit
+                tap_action:
+                  action: call-service
+                  service: script.livingroom_volume_mute
+              - entity: script.livingroom_volume_up
+                icon: mdi:volume-high
+                name: Luider
+                tap_action:
+                  action: call-service
+                  service: script.livingroom_volume_up
       - type: conditional
         conditions:
           - entity: media_player.livingroom_music
@@ -415,32 +446,37 @@ views:
                   name: Muziek
                   tap_action:
                     action: toggle
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
+          - type: conditional
+            conditions:
+              - entity: remote.gameroom_hub
+                state_not: "off"
             card:
-              type: glance
-              show_state: false
-              entities:
-                - entity: script.gameroom_volume_down
-                  icon: mdi:volume-low
-                  name: Stiller
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_volume_down
-                - entity: script.gameroom_volume_mute
-                  icon: mdi:volume-off
-                  name: Uit
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_volume_mute
-                - entity: script.gameroom_volume_up
-                  icon: mdi:volume-high
-                  name: Luider
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_volume_up
+              type: custom:card-modder
+              style:
+                border-radius: 10px
+                box-shadow: 3px 3px rgba(0,0,0,0.4)
+              card:
+                type: glance
+                show_state: false
+                entities:
+                  - entity: script.gameroom_volume_down
+                    icon: mdi:volume-low
+                    name: Stiller
+                    tap_action:
+                      action: call-service
+                      service: script.gameroom_volume_down
+                  - entity: script.gameroom_volume_mute
+                    icon: mdi:volume-off
+                    name: Uit
+                    tap_action:
+                      action: call-service
+                      service: script.gameroom_volume_mute
+                  - entity: script.gameroom_volume_up
+                    icon: mdi:volume-high
+                    name: Luider
+                    tap_action:
+                      action: call-service
+                      service: script.gameroom_volume_up
       - type: vertical-stack
         cards:
           - type: custom:card-modder
@@ -492,6 +528,16 @@ views:
                     action: call-service
                     service: script.gameroom_rgb_colorchanger_off
                   icon: mdi:palette
+          - type: custom:card-modder
+            style:
+              border-radius: 10px
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: glance
+              title: Temperatuur
+              entities:
+                - entity: sensor.temperature_158d000236744c
+                  name: Gameroom
           - type: conditional
             conditions:
               - entity: media_player.kodibureau
