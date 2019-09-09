@@ -1,7 +1,7 @@
 Switchable Switches:
   entities:
-    - switch.plug_158d0001f29250
-    - switch.plug_158d0001f292c0
-    - switch.plug_158d0002368a0e
+    - switch.livingroom_sofa_plug
+    - switch.livingroom_dressoir_plug
+    - switch.veranda_plug
     - switch.bathroom_speaker
-    - switch.plug_158d0001f2914c
+    - switch.kerstlicht_plug

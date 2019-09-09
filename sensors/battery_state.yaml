@@ -2,47 +2,57 @@
   sensors:
     livingroom_motion_sensor_battery_state:
       friendly_name: "Livingroom Motion Sensor Battery State"
-      value_template: '{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}'
+      value_template: '{{ states.binary_sensor.veranda_motion_sensor.attributes.battery_level }}'
       unit_of_measurement: '%'
       device_class: battery
     stairway_motion_sensor_battery_state:
       friendly_name: "Stairway Motion Sensor Battery State"
-      value_template: "{{ states.binary_sensor.motion_sensor_158d000276e199.attributes.battery_level }}"
+      value_template: "{{ states.binary_sensor.landing_motion_sensor.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     gameroom_motion_sensor_battery_state:
       friendly_name: "Gameroom Motion Sensor Battery State"
-      value_template: "{{ states.binary_sensor.motion_sensor_158d0001f9cdfe.attributes.battery_level }}"
+      value_template: "{{ states.binary_sensor.gameroom_motion.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     veranda_motion_sensor_battery_state:
       friendly_name: "Veranda Motion Sensor Battery State"
-      value_template: "{{ states.binary_sensor.motion_sensor_158d0001f2a00f.attributes.battery_level }}"
+      value_template: "{{ states.binary_sensor.veranda_motion_sensor.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     livingroom_temperature_sensor_battery_state:
       friendly_name: "Livingroom Temperature Sensor Battery State"
-      value_template: "{{ states.sensor.temperature_158d0002379148.attributes.battery_level }}"
+      value_template: "{{ states.sensor.livingroom_temperature_sensor.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     gameroom_temperature_sensor_battery_state:
       friendly_name: "Gameroom Temperature Sensor Battery State"
-      value_template: "{{ states.sensor.temperature_158d000236744c.attributes.battery_level }}"
+      value_template: "{{ states.sensor.gameroom_temperature.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     veranda_temperature_sensor_battery_state:
       friendly_name: "Veranda Temperature Sensor Battery State"
-      value_template: "{{ states.sensor.temperature_158d00020f4dd3.attributes.battery_level }}"
+      value_template: "{{ states.sensor.veranda_temperature_sensor.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     livingroom_cube_battery_state:
       friendly_name: "Livingroom Cube Battery State"
-      value_template: '{{ states.binary_sensor.cube_158d00010fd151.attributes.battery_level }}'
+      value_template: '{{ states(sensor.livingroom_cube_battery) }}'
       unit_of_measurement: '%'
       device_class: battery
     gameroom_cube_battery_state:
       friendly_name: "Gameroom Cube Battery State"
-      value_template: "{{ states.binary_sensor.cube_158d000118421f.attributes.battery_level }}"
+      value_template: "{{ states(sensor.gameroom_cube_battery) }}"
+      unit_of_measurement: '%'
+      device_class: battery
+    livingroom_radio_switch_battery:
+      friendly_name: "LivingRoom Radio Switch Battery"
+      value_template: "{{ states(sensor.bathroom_radio_switch_battery) }}"
+      unit_of_measurement: '%'
+      device_class: battery
+    bathroom_radio_switch_battery:
+      friendly_name: "LivingRoom Radio Switch Battery"
+      value_template: "{{ states(sensor.bathroom_radio_switch_battery) }}"
       unit_of_measurement: '%'
       device_class: battery
     hallway_smoke_detector_battery_state:
@@ -50,6 +60,8 @@
       value_template: "{{ states.binary_sensor.smoke_sensor_158d000279ddbc.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
-
-
-
+    storeroom_motion_battery_state:
+      friendly_name: "Storeroom Motion Battery State"
+      value_template: "{{ states.binary_sensor.storeroom_motion_sensor.attributes.battery_level }}"
+      unit_of_measurement: '%'
+      device_class: battery

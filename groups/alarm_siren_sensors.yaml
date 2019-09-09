@@ -1,5 +1,5 @@
 Alarm Siren Sensors:
   entities:
-    - binary_sensor.motion_sensor_158d0001f9cdfe
-    - binary_sensor.motion_sensor_158d0001de7134
-    - binary_sensor.motion_sensor_158d000276e199
+    - binary_sensor.gameroom_motion
+    - binary_sensor.livingroom_motion_sensor
+    - binary_sensor.landing_motion_sensor

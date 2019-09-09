@@ -103,23 +103,23 @@ history_graph:
     name: Livingroom Climate
     entities:
       - sensor.humidity_158d0002379148
-      - sensor.temperature_158d0002379148
-      - sensor.illumination_158d0001de7134
+      - sensor.livingroom_temperature_sensor
+      - sensor.livingroom_lightlevel
     hours_to_show: 240
     refresh: 300
   gameroom:
     name: Gameroom Climate
     entities:
-      - sensor.temperature_158d000236744c
-      - sensor.humidity_158d000236744c
+      - sensor.gameroom_temperature
+      - sensor.gameroom_humidity
       - sensor.illumination_158d0001f9cdfe
     hours_to_show: 240
     refresh: 300
   veranda:
     name: Veranda Climate
     entities:
-      - sensor.humidity_158d00020f4dd3
-      - sensor.temperature_158d00020f4dd3
+      - sensor.veranda_humidity_sensor
+      - sensor.veranda_temperature_sensor
     hours_to_show: 240
     refresh: 300
   internet:
@@ -138,6 +138,8 @@ logger:
   default: error
   logs:
     homeassistant.components: error
+    pydeconz: debug
+    homeassistant.components.deconz: debug
 
 # Enables a map showing the location of tracked devices
 map:
@@ -221,10 +223,10 @@ emulated_hue:
     script.livingroom_rgb_colorchanger:
       name: Livingroom RGB Color Changer
       hidden: false
-    switch.plug_158d0001f29250:
+    switch.livingroom_sofa_plug:
       name: Livingroom Sofa Plug
       hidden: false
-    switch.plug_158d0001f292c0:
+    switch.livingroom_dressoir_plug:
       name: Livingroom Dressoir Plug
       hidden: false
     script.gameroom_rgb_colorchanger_off:

@@ -1,0 +1,30 @@
+  - alias: Storeroom Motion
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.storeroom_motion
+      to: 'on'
+    condition:
+      - condition: state
+        entity_id: light.storeroom_light
+        state: 'off'
+      - condition: state
+        entity_id: switch.storeroom_ironing_light
+        state: 'off'
+    action:
+      - service: script.storeroom_light_on_white
+      - service: automation.turn_on
+        entity_id: automation.storeroom_no_motion
+  - alias: Storeroom No Motion
+    initial_state: 'off'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.storeroom_motion
+      to: 'off'
+      for:
+        seconds: 1
+    action:
+      - service: light.turn_off
+        entity_id: light.storeroom_light
+      - service: automation.turn_off
+        entity_id: automation.storeroom_no_motion

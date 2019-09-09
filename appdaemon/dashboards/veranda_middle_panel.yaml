@@ -3,14 +3,14 @@ veranda_temperature:
     title: Veranda Temperature
     units: "&deg;C"
     precision: 0
-    entity: sensor.temperature_158d00020f4dd3
+    entity: sensor.veranda_temperature_sensor
 
 veranda_humidity:
     widget_type: sensor
     title: Veranda Humidity
     units: "%"
     precision: 0
-    entity: sensor.humidity_158d00020f4dd3
+    entity: sensor.veranda_humidity_sensor
 
 veranda_rgb:
   widget_type: light_with_colorpicker
@@ -23,7 +23,7 @@ veranda_rgb:
 veranda_heater:
   widget_type: switch
   title: Heater
-  entity: switch.plug_158d0002368a0e
+  entity: switch.veranda_plug
 
 veranda_all_off:
   widget_type: script

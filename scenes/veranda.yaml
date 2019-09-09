@@ -1,4 +1,4 @@
   - name: Veranda All Off
     entities:
       light.veranda_led_lights: off
-      switch.plug_158d0002368a0e: off
+      switch.veranda_plug: off

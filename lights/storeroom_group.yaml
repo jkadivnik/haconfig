@@ -1,0 +1,4 @@
+  platform: group
+  name: Storeroom Lights
+  entities:
+    - light.storeroom_light

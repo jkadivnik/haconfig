@@ -1,0 +1,18 @@
+  storeroom_light_on_white:
+    alias: Storeroom Light On White
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.storeroom_light
+          color_temp: 500
+          brightness: 255
+          transition: 0
+  storeroom_light_on_blue:
+    alias: Storeroom Light On Blue
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.storeroom_light
+          color_temp: 500
+          brightness: 255
+          transition: 0

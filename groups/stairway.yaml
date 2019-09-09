@@ -1,11 +1,11 @@
 Stairway:
   entities:
-    - binary_sensor.motion_sensor_158d000276e199
+    - binary_sensor.landing_motion_sensor
     - light.gateway_light_7811dcb9c795
     - light.stairway_lights
     - switch.bathroom_speaker
     - sensor.illumination_7811dcb9c795
-    - sensor.illumination_158d000276e199
+    - sensor.landing_lightlevel
     - sensor.stairway_current_led_color
     - automation.stairway_motion_sensor_battery
     - automation.stairway_nightlight_motion

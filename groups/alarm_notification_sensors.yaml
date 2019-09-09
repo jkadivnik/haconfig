@@ -1,4 +1,4 @@
 Alarm Notification Sensors:
   entities:
     - group.alarm_notification_sensors
-    - binary_sensor.motion_sensor_158d0001f2a00f
+    - binary_sensor.veranda_motion_sensor

@@ -5,7 +5,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: sensor.temperature_158d00020f4dd3
+      entity_id: sensor.veranda_temperature_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -19,7 +19,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: sensor.temperature_158d000236744c
+      entity_id: sensor.gameroom_temperature
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -33,7 +33,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: sensor.temperature_158d0002379148
+      entity_id: sensor.livingroom_temperature_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -49,7 +49,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.motion_sensor_158d0001f2a00f
+      entity_id: binary_sensor.veranda_motion_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -63,7 +63,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+      entity_id: binary_sensor.gameroom_motion
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -77,7 +77,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      entity_id: binary_sensor.livingroom_motion_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -91,7 +91,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.motion_sensor_158d000276e199
+      entity_id: binary_sensor.landing_motion_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:
@@ -101,14 +101,28 @@
         message: "Vervang de batterij zo snel mogelijk!"
     - service: automation.turn_off
       entity_id: automation.stairway_motion_sensor_battery
+  - alias: Storeroom Motion Sensor Battery
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: binary_sensor.storeroom_motion
+      value_template: '{{ state.attributes.battery_level }}'
+      below: 10
+    action:
+      - service: script.notify_all
+        data:
+          title: "Xiaomi storeroom bewegingssensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+        entity_id: automation.storeroom_motion_sensor_battery
 
   # Cube sensor battery checks
   - alias: Gameroom Cube Sensor Battery
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.cube_158d000118421f
-      value_template: '{{ state.attributes.battery_level }}'
+      entity_id: sensor.gameroom_cube
+      value_template: '{{ states(battery) }}'
       below: 10
     action:
       - service: script.notify_all
@@ -121,8 +135,8 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.cube_158d00010fd151
-      value_template: '{{ state.attributes.battery_level }}'
+      entity_id: sensor.livingroom_cube_battery
+      value_template: '{{ states(battery) }}'
       below: 10
     action:
       - service: script.notify_all
@@ -153,8 +167,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.switch_158d00026bb099
-      value_template: '{{ state.attributes.battery_level }}'
+      entity_id: sensor.livingroom_radio_switch_battery
       below: 10
     action:
       - service: script.notify_all
@@ -163,6 +176,19 @@
           message: "Vervang de batterij zo snel mogelijk!"
       - service: automation.turn_off
         entity_id: automation.livingroom_wireless_button_sensor_battery
+  - alias: Bathroom Wireless Button Sensor Battery
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.bathroom_radio_switch_battery
+      below: 10
+    action:
+      - service: script.notify_all
+        data:
+          title: "Bathroom wireless sensor : batterij leeg!"
+          message: "Vervang de batterij zo snel mogelijk!"
+      - service: automation.turn_off
+        entity_id: automation.bathroom_wireless_button_sensor_battery
 
   # Turn on all automations
   - alias: Battery Automation Turn On

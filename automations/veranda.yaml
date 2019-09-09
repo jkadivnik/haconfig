@@ -2,7 +2,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: sensor.temperature_158d00020f4dd3
+      entity_id: sensor.veranda_temperature_sensor
       below: 6
     condition:
       condition: or
@@ -17,13 +17,13 @@
             - sun
     action:
       service: switch.turn_on
-      entity_id: switch.plug_158d0002368a0e
+      entity_id: switch.veranda_plug
   - alias: Veranda Heater Off
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: sensor.temperature_158d00020f4dd3
+      entity_id: sensor.veranda_temperature_sensor
       above: 16
     action:
       service: switch.turn_off
-      entity_id: switch.plug_158d0002368a0e
+      entity_id: switch.veranda_plug

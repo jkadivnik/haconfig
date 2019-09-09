@@ -6,8 +6,8 @@
       light.livingroom_bookcase_rgb_light:
         state: on
         color_name: 'blue'
-      switch.plug_158d0001f292c0: on
-      switch.plug_158d0001f29250: on
+      switch.livingroom_dressoir_plug: on
+      switch.livingroom_sofa_plug: on
   - name: Livingroom Hub Off
     entities:
       remote.livingroom_hub: off
@@ -17,6 +17,6 @@
       light.livingroom_bookcase_rgb_light: off
       light.livingroom_dressoir_rgb_light: off
       light.livingroom_led_lights: off
-      switch.plug_158d0001f29250: off
-      switch.plug_158d0001f292c0: off
-      switch.plug_158d0001f2914c: off
+      switch.livingroom_sofa_plug: off
+      switch.livingroom_dressoir_plug: off
+      switch.kerstlicht_plug: off

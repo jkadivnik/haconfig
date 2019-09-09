@@ -7,3 +7,10 @@
         service: script.play_radio_on_wireless_speakers_audiocast
       turn_off:
         service: script.turn_off_wireless_speakers_audiocast
+    bathroom_speaker:
+      friendly_name: "Bathroom Speaker Toggle"
+      value_template: "{{ is_state('switch.bathroom_speaker', 'on') }}"
+      turn_on:
+        service: script.turn_on_bathroom_speaker
+      turn_off:
+        service: script.turn_off_bathroom_speaker

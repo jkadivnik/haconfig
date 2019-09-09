@@ -55,19 +55,19 @@ livingroom_gateway_illumination:
   widget_type: sensor
   title: Livingroom GW
   title2: Illumination
-  entity: sensor.illumination_7811dcb35389
+  entity: sensor.livingroom_lightlevel
 
 livingroom_movement_sensor_illumination:
   widget_type: sensor
   title: Livingroom
   title2: Motion Illum.
-  entity: sensor.illumination_158d0001de7134
+  entity: sensor.livingroom_lightlevel
 
 gameroom_gateway_illumination:
   widget_type: sensor
   title: Gameroom GW
   title2: Illumination
-  entity: sensor.illumination_7811dcded4dc
+  entity: sensor.gameroom_lightlevel
 
 gameroom_movement_sensor_illumination:
   widget_type: sensor

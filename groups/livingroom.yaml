@@ -5,15 +5,14 @@ Livingroom:
     - light.livingroom_dressoir_rgb_light
     - light.livingroom_led_lights
     - light.gateway_light_7811dcb35389
-    - sensor.humidity_158d0002379148
-    - sensor.temperature_158d0002379148
-    - sensor.illumination_7811dcb35389
-    - sensor.illumination_158d0001de7134
+#    - sensor.humidity_158d0002379148
+    - sensor.livingroom_temperature_sensor
+    - sensor.livingroom_lightlevel
     - sensor.livingroom_harmony_activity
     - sensor.livingroom_dressoir_plug_load
     - sensor.livingroom_sofa_plug_load
     - sensor.livingroom_current_led_color
-    - binary_sensor.motion_sensor_158d0001de7134
+    - binary_sensor.livingroom_motion_sensor
     - binary_sensor.cube_158d00010fd151
     - switch.livingroom_motion_light_variable_switch
     - switch.livingroom_chromecast_audio
@@ -29,9 +28,9 @@ Livingroom:
     - switch.livingroom_volume_down
     - switch.livingroom_volume_mute
     - switch.livingroom_volume_up
-    - switch.plug_158d0001f29250
-    - switch.plug_158d0001f292c0
-    - switch.plug_158d0001f2914c
+    - switch.livingroom_sofa_plug
+    - switch.livingroom_dressoir_plug
+    - switch.kerstlicht_plug
     - automation.livingroom_audiocast_playing
     - automation.livingroom_audiocast_still_playing
     - automation.livingroom_audiocast_stopped

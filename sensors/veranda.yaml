@@ -3,8 +3,8 @@
     veranda_heater_plug_load:
       friendly_name: "Veranda Heater Power Load"
       value_template: >-
-        {% if is_state("switch.plug_158d0002368a0e", 'on') %}
-          {{ states.switch.plug_158d0002368a0e.attributes.load_power|int }}
+        {% if is_state("switch.veranda_plug", 'on') %}
+          {{ states.switch.veranda_plug.attributes.load_power|int }}
         {% else %}
           0
         {% endif %}

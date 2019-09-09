@@ -1,4 +1,4 @@
 Livingroom Plugs:
   entities:
-    - switch.plug_158d0001f29250
-    - switch.plug_158d0001f292c0
+    - switch.livingroom_sofa_plug
+    - switch.livingroom_dressoir_plug

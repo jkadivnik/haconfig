@@ -37,12 +37,12 @@ views:
           type: glance
           title: Licht
           entities:
-            - entity: switch.plug_158d0001f29250
+            - entity: switch.livingroom_sofa_plug
               icon: mdi:white-balance-incandescent
               name: Zetel
               tap_action:
                 action: toggle
-            - entity: switch.plug_158d0001f292c0
+            - entity: switch.livingroom_dressoir_plug
               icon: mdi:white-balance-incandescent
               type: picture-entity
               name: Dressoir
@@ -173,7 +173,7 @@ views:
           type: glance
           title: Controle
           entities:
-            - entity: switch.plug_158d0002368a0e
+            - entity: switch.veranda_plug
               name: Veranda verwarming
               tap_action:
                 action: toggle
@@ -185,11 +185,11 @@ views:
           type: glance
           title: Binnen temperatuur
           entities:
-            - entity: sensor.temperature_158d00020f4dd3
+            - entity: sensor.veranda_temperature_sensor
               name: Veranda
-            - entity: sensor.temperature_158d0002379148
+            - entity: sensor.livingroom_temperature_sensor
               name: Living
-            - entity: sensor.temperature_158d000236744c
+            - entity: sensor.gameroom_temperature
               name: Gameroom
       - type: custom:card-modder
         style:
@@ -199,13 +199,15 @@ views:
           type: glance
           title: Beweging
           entities:
-            - entity: binary_sensor.motion_sensor_158d0001f9cdfe
-              name: Bureau
-            - entity: binary_sensor.motion_sensor_158d0001f2a00f
-              name: Veranda
-            - entity: binary_sensor.motion_sensor_158d0001de7134
+            - entity: binary_sensor.livingroom_motion_sensor
               name: Living
-            - entity: binary_sensor.motion_sensor_158d000276e199
+            - entity: binary_sensor.storeroom_motion
+              name: Strijkkot
+            - entity: binary_sensor.gameroom_motion
+              name: Bureau
+            - entity: binary_sensor.veranda_motion_sensor
+              name: Veranda
+            - entity: binary_sensor.landing_motion_sensor
               name: Boven
   - title: Living
     icon: mdi:seat-outline
@@ -249,7 +251,7 @@ views:
               name: PS4
               tap_action:
                 action: toggle
-            - entity: switch.plug_158d0001f29250
+            - entity: switch.livingroom_sofa_plug
               icon: mdi:white-balance-incandescent
               name: Zetel
               tap_action:
@@ -311,7 +313,7 @@ views:
                 action: call-service
                 service: script.livingroom_rgb_colorchanger_off
               icon: mdi:palette
-            - entity: switch.plug_158d0001f292c0
+            - entity: switch.livingroom_dressoir_plug
               icon: mdi:white-balance-incandescent
               type: picture-entity
               name: Dressoir
@@ -325,7 +327,7 @@ views:
           type: glance
           title: Temperatuur
           entities:
-            - entity: sensor.temperature_158d0002379148
+            - entity: sensor.livingroom_temperature_sensor
               name: Living
       - type: conditional
         conditions:
@@ -400,7 +402,7 @@ views:
           card:
             type: entity
             name: Kerstboom
-            entity: switch.plug_158d0001f2914c
+            entity: switch.kerstlicht_plug
             tap_action:
               action: toggle
   - title: Mancave
@@ -536,7 +538,7 @@ views:
               type: glance
               title: Temperatuur
               entities:
-                - entity: sensor.temperature_158d000236744c
+                - entity: sensor.gameroom_temperature
                   name: Gameroom
           - type: conditional
             conditions:
@@ -591,6 +593,39 @@ views:
                 show_cover: true
                 artwork_border: true
                 icon: mdi:library-music
+  - title: Thuis
+    icon: mdi:store
+    cards:
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Licht
+          entities:
+            - entity: light.storeroom_light
+              type: picture-entity
+              icon: mdi:white-balance-incandescent
+              name: Kamer
+              tap_action:
+                action: toggle
+            - entity: switch.storeroom_ironing_light
+              type: picture-entity
+              icon: mdi:white-balance-incandescent
+              name: Strijkkot
+              tap_action:
+                action: toggle
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Beweging
+          entities:
+            - entity: binary_sensor.storeroom_motion
+              name: Strijkkot
   - title: Status
     icon: mdi:wrench-outline
     cards:
@@ -644,13 +679,15 @@ views:
           type: glance
           title: Beweging
           entities:
-            - entity: binary_sensor.motion_sensor_158d0001f9cdfe
-              name: Bureau
-            - entity: binary_sensor.motion_sensor_158d0001f2a00f
-              name: Veranda
-            - entity: binary_sensor.motion_sensor_158d0001de7134
+            - entity: binary_sensor.livingroom_motion_sensor
               name: Living
-            - entity: binary_sensor.motion_sensor_158d000276e199
+            - entity: binary_sensor.storeroom_motion
+              name: Strijkkot
+            - entity: binary_sensor.gameroom_motion
+              name: Bureau
+            - entity: binary_sensor.veranda_motion_sensor
+              name: Veranda
+            - entity: binary_sensor.landing_motion_sensor
               name: Boven
       - type: custom:card-modder
         style:
@@ -660,11 +697,11 @@ views:
           type: history-graph
           title: Temperatuur
           entities:
-            - entity: sensor.temperature_158d0002379148
+            - entity: sensor.livingroom_temperature_sensor
               name: Living
-            - entity: sensor.temperature_158d000236744c
+            - entity: sensor.gameroom_temperature
               name: Bureau
-            - entity: sensor.temperature_158d00020f4dd3
+            - entity: sensor.veranda_temperature_sensor
               name: Veranda
       - type: custom:card-modder
         style:
@@ -676,9 +713,9 @@ views:
           entities:
             - entity: sensor.humidity_158d0002379148
               name: Living
-            - entity: sensor.humidity_158d000236744c
+            - entity: sensor.gameroom_humidity
               name: Bureau
-            - entity: sensor.humidity_158d00020f4dd3
+            - entity: sensor.veranda_humidity_sensor
               name: Veranda
       - type: custom:card-modder
         style:
@@ -688,11 +725,11 @@ views:
           type: history-graph
           title: Lichtsterkte
           entities:
-            - entity: sensor.illumination_158d0001de7134
+            - entity: sensor.livingroom_lightlevel
               name: Living
-            - entity: sensor.illumination_7811dcded4dc
+            - entity: sensor.gameroom_lightlevel
               name: Bureau
-            - entity: sensor.illumination_158d000276e199
+            - entity: sensor.landing_lightlevel
               name: Boven
       - type: custom:card-modder
         style:

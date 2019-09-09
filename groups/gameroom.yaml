@@ -9,14 +9,18 @@ Gameroom:
     - light.gameroom_workdesk_rgb_light
     - light.gateway_light_7811dcded4dc
     - light.gameroom_lights
-    - binary_sensor.motion_sensor_158d0001f9cdfe
-    - sensor.temperature_158d000236744c
-    - sensor.humidity_158d000236744c
-    - sensor.illumination_7811dcded4dc
-    - sensor.illumination_158d0001f9cdfe
+#    - sensor.temperature_158d000236744c
+    - sensor.gameroom_temperature
+    - sensor.gameroom_humidity
+#    - sensor.gameroom_humidity
+#    - sensor.illumination_7811dcded4dc
+    - binary_sensor.gameroom_motion
+    - sensor.gameroom_lightlevel
+#    - binary_sensor.motion_sensor_158d0001f9cdfe
+#    - sensor.illumination_158d0001f9cdfe
     - sensor.gameroom_current_led_color
     - sensor.gameroom_harmony_activity
-    - binary_sensor.cube_158d000118421f
+#    - binary_sensor.cube_158d000118421f
     - switch.gameroom_kodi
     - switch.gameroom_ps3
     - switch.gameroom_ps4

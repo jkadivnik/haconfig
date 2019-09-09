@@ -3,14 +3,14 @@ gameroom_temperature:
   title: Temperature
   units: "&deg;C"
   precision: 0
-  entity: sensor.temperature_158d000236744c
+  entity: sensor.gameroom_temperature
 
 gameroom_humidity:
   widget_type: sensor
   title: Humidity
   units: "%"
   precision: 0
-  entity: sensor.humidity_158d000236744c
+  entity: sensor.gameroom_humidity
 
 gameroom_harmony_status:
   widget_type: sensor

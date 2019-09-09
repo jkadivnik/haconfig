@@ -1,9 +1,7 @@
   play_radio_on_wireless_speakers_audiocast:
     alias: Play Radio On Wireless Speakers Audiocast
     sequence:
-      - service: switch.turn_on
-        data:
-          entity_id: switch.bathroom_speaker
+      - service: script.turn_on_bathroom_speaker
       - service: media_player.volume_set
         data:
           entity_id: media_player.wireless_speakers
@@ -22,6 +20,4 @@
       - service: media_player.turn_off
         data:
           entity_id: media_player.wireless_speakers
-      - service: switch.turn_off
-        data:
-          entity_id: switch.bathroom_speaker
+      - service: script.turn_off_bathroom_speaker

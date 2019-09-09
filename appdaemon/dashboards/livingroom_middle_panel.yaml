@@ -3,7 +3,7 @@ livingroom_temperature:
   title: Temperature
   units: "&deg;C"
   precision: 0
-  entity: sensor.temperature_158d0002379148
+  entity: sensor.livingroom_temperature_sensor
 
 livingroom_humidity:
   widget_type: sensor
@@ -28,12 +28,12 @@ livingroom_rgb:
 livingroom_dressoir_light:
   widget_type: switch
   title: Dressoir Light
-  entity: switch.plug_158d0001f292c0
+  entity: switch.livingroom_dressoir_plug
 
 livingroom_sofa_light:
   widget_type: switch
   title: Sofa Light
-  entity: switch.plug_158d0001f29250
+  entity: switch.livingroom_sofa_plug
 
 livingroom_kodi:
   widget_type: media_player

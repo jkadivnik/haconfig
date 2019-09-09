@@ -1,0 +1,64 @@
+  - alias: Gameroom Leds
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        entity_id: tradfri_remote_control
+        event: 2002
+    action:
+      service: script.gameroom_rgb_colorchanger
+  - alias: Livingroom Leds
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        entity_id: tradfri_remote_control
+        event: 3002
+    action:
+      service: script.livingroom_rgb_colorchanger
+  - alias: Storeroom Light
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        entity_id: tradfri_remote_control
+        event: 4002
+    action:
+      - service: light.turn_on
+        data:
+          entity_id: light.storeroom_light
+      - service: automation.turn_off
+        data:
+          entity_id: automation.storeroom_motion
+  - alias: Storeroom Light
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        entity_id: tradfri_remote_control
+        event: 4002
+    action:
+      service: light.turn_on
+      data:
+        entity_id: light.storeroom_light
+  - alias: Ikea Turn Off
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        entity_id: tradfri_remote_control
+        event: 1002
+    action:
+      - service: light.turn_off
+        data:
+          entity_id: light.storeroom_light
+      - service: automation.turn_on
+        data:
+          entity_id: automation.storeroom_motion
+      - service: script.livingroom_rgb_colorchanger_off
+      - service: script.gameroom_rgb_colorchanger_off

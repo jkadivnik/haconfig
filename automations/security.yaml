@@ -24,10 +24,10 @@
         title: "Er is beweging in het huis."
         message: >
           Er is beweging gedetecteerd in het huis. De volgende sensors hebben beweging gezien :
-          {% if is_state(binary_sensor.motion_sensor_158d0001de7134, 'on') %} - Living sensor{% endif %}
-          {% if is_state(binary_sensor.motion_sensor_158d0001f2a00f, 'on') %} - Veranda sensor{% endif %}
-          {% if is_state(binary_sensor.motion_sensor_158d0001f9cdfe, 'on') %} - Mancave sensor{% endif %}
-          {% if is_state(binary_sensor.motion_sensor_158d000276e199, 'on') %} - Gang boven sensor{% endif %}
+          {% if is_state(binary_sensor.livingroom_motion_sensor, 'on') %} - Living sensor{% endif %}
+          {% if is_state(binary_sensor.veranda_motion_sensor, 'on') %} - Veranda sensor{% endif %}
+          {% if is_state(binary_sensor.gameroom_motion, 'on') %} - Mancave sensor{% endif %}
+          {% if is_state(binary_sensor.landing_motion_sensor, 'on') %} - Gang boven sensor{% endif %}
   - alias: Alarm Siren
     initial_state: 'on'
     trigger:

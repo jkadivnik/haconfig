@@ -2,15 +2,12 @@
     initial_state: 'on'
     trigger:
       platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      entity_id: binary_sensor.livingroom_motion_sensor
       to: 'on'
     condition:
       - condition: state
         entity_id: light.livingroom_led_lights
         state: 'off'
-      - condition: numeric_state
-        entity_id: sensor.illumination_158d0001de7134
-        below: '5'
       - condition: template
         value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'PowerOff') }}"
       - condition: or
@@ -33,7 +30,7 @@
     initial_state: 'off'
     trigger:
       - platform: state
-        entity_id: binary_sensor.motion_sensor_158d0001de7134
+        entity_id: binary_sensor.livingroom_motion_sensor
         to: 'off'
         for:
           minutes: 2
@@ -49,7 +46,7 @@
 #    initial_state: 'on'
 #    trigger:
 #      - platform: numeric_state
-#        entity_id: sensor.illumination_158d0001de7134
+#        entity_id: sensor.livingroom_lightlevel
 #        above: '4'
 #    condition:
 #      - condition: state
@@ -67,7 +64,7 @@
     initial_state: 'on'
     trigger:
       platform: state
-      entity_id: binary_sensor.motion_sensor_158d0001de7134
+      entity_id: binary_sensor.livingroom_motion_sensor
       to: 'on'
     action:
       - service: script.livingroom_tablet_screen_on

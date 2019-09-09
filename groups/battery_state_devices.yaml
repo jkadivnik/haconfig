@@ -1,12 +1,15 @@
 Battery State Devices:
   entities:
+    - sensor.bathroom_radio_switch_battery
     - sensor.livingroom_motion_sensor_battery_state
     - sensor.stairway_motion_sensor_battery_state
     - sensor.livingroom_temperature_sensor_battery_state
     - sensor.livingroom_cube_battery_state
+    - sensor.livingroom_radio_switch_battery
     - sensor.gameroom_motion_sensor_battery_state
     - sensor.gameroom_temperature_sensor_battery_state
     - sensor.gameroom_cube_battery_state
     - sensor.veranda_motion_sensor_battery_state
     - sensor.veranda_temperature_sensor_battery_state
     - sensor.hallway_smoke_detector_battery_state
+    - sensor.storeroom_motion_battery_state

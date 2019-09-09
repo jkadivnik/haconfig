@@ -2,10 +2,10 @@
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.click
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.switch_158d00026bb099
-        click_type: single
+        entity_id: livingroom_radio_switch
+        event: 1002
     condition:
       - condition: time
         after: '06:00:00'
@@ -18,17 +18,17 @@
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.click
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.switch_158d00026bb099
-        click_type: single
+        entity_id: livingroom_radio_switch
+        event: 1002
     condition:
       - condition: or
         conditions:
           - condition: template
             value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'PowerOff' and state_attr('remote.livingroom_hub', 'current_activity') != 'Keuken muziek luisteren' }}"
           - condition: state
-            entity_id: switch.plug_158d0001f29250
+            entity_id: switch.livingroom_sofa_plug
             state: 'on'
       - condition: or
         conditions:
@@ -38,15 +38,15 @@
             before: sunrise
     action:
       service: switch.toggle
-      entity_id: switch.plug_158d0001f29250
-  - alias: Toggle alarm status
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-        entity_id: binary_sensor.switch_158d00026bb099
-        click_type: long_click_press
-    action:
-      service: input_boolean.toggle
-      entity_id: input_boolean.alarm_armed
+      entity_id: switch.livingroom_sofa_plug
+#  - alias: Toggle alarm status
+#            initial_state: 'on'
+#    trigger:
+#      platform: event
+#      event_type: xiaomi_aqara.click
+#        event_data:
+#          entity_id: binary_sensor.switch_158d00026bb099
+#          click_type: long_click_press
+#    action:
+#      service: input_boolean.toggle
+#      entity_id: input_boolean.alarm_armed

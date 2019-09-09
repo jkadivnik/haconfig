@@ -1,45 +1,3 @@
-  - alias: Livingroom Cube Rotate
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: rotate
-    action:
-      - service: script.generic_volume_control
-        data_template:
-          remote_hub: remote.livingroom_hub
-          device: 54449337
-          action_value: "{{ trigger.event.data.action_value | float }}"
-          num_repeats: "{{ trigger.event.data.action_value | float // 5 }}"
-      - service: script.generic_volume_control
-        data_template:
-          remote_hub: remote.livingroom_hub
-          device: 54449333
-          action_value: "{{ trigger.event.data.action_value | float }}"
-          num_repeats: "{{ trigger.event.data.action_value | float // 5 }}"
-  - alias: Livingroom Cube Move
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: move
-    action:
-      - service: script.generic_volume_control
-        data:
-          remote_hub: remote.livingroom_hub
-          device: 54449337
-          action_value: "0"
-          num_repeats: 1
-      - service: script.generic_volume_control
-        data:
-          remote_hub: remote.livingroom_hub
-          device: 54449333
-          action_value: "0"
-          num_repeats: 1
   - alias: Livingroom Cube Shake
     initial_state: 'on'
     trigger:
@@ -60,38 +18,13 @@
             {% else %}
             Pause
             {% endif %}
-      - service: remote.send_command
-        data_template:
-          entity_id: remote.livingroom_hub
-          device: 33452772
-          command: >
-            {% if is_state('input_boolean.livingroom_paused', 'on') %}
-            Play
-            {% else %}
-            Pause
-            {% endif %}
       - service: input_boolean.toggle
         entity_id: input_boolean.livingroom_paused
-  - alias: Livingroom Cube Flip90
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: flip90
-    action:
-      - service: script.livingroom_next_media
-  - alias: Livingroom Cube Flip180
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: flip180
-    action:
-      - service: script.livingroom_play_pause_media
+      - service: remote.send_command
+        data:
+          entity_id: remote.livingroom_hub
+          device: 54449333
+          command: Mute
   - alias: Livingroom Cube Tap Twice
     initial_state: 'on'
     trigger:

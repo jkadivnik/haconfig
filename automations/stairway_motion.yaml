@@ -2,14 +2,14 @@
     initial_state: 'on'
     trigger:
       platform: state
-      entity_id: binary_sensor.motion_sensor_158d000276e199
+      entity_id: binary_sensor.landing_motion_sensor
       to: 'on'
     condition:
       - condition: state
         entity_id: light.gateway_light_7811dcb9c795
         state: 'off'
       - condition: numeric_state
-        entity_id: sensor.illumination_7811dcded4dc
+        entity_id: sensor.gameroom_lightlevel
         below: '30'
       - condition: or
         conditions:
@@ -30,7 +30,7 @@
     initial_state: 'off'
     trigger:
       platform: state
-      entity_id: binary_sensor.motion_sensor_158d000276e199
+      entity_id: binary_sensor.landing_motion_sensor
       to: 'off'
       for:
         minutes: '1'

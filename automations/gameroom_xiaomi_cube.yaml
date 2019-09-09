@@ -5,7 +5,7 @@
       platform: event
       event_type: xiaomi_aqara.cube_action
       event_data:
-        entity_id: binary_sensor.cube_158d000118421f
+        entity_id: sensor.gameroom_cube
         action_type: rotate
     action:
       service: script.generic_volume_control
@@ -14,57 +14,28 @@
         device: 58691919
         action_value: "{{ trigger.event.data.action_value|float }}"
         num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
-  - alias: Gameroom Cube Move
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d000118421f
-        action_type: move
-    action:
-      service: remote.send_command
-      data:
-        entity_id: remote.gameroom_hub
-        device: 58691919
-        command: Mute
   - alias: Gameroom Cube Shake
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.cube_action
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: shake_air
+        entity_id: switch_14
+        event: 7007
     action:
+      - service: remote.send_command
+        data:
+          entity_id: remote.gameroom_hub
+          device: 58691919
+          command: Mute
       - service: script.gameroom_play_pause_media
-  - alias: Gameroom Cube Flip90
+  - alias: Gameroom Cube Double Tap
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.cube_action
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: flip90
-    action:
-      - service: script.gameroom_next_media
-  - alias: Gameroom Cube Flip180
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: flip180
-    action:
-      - service: script.gameroom_play_pause_media
-  - alias: Gameroom Cube Tap Twice
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: tap_twice
+        entity_id: switch_14
+        event: 3003
     action:
       - service: script.gameroom_stop_turn_off_media

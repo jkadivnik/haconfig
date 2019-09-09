@@ -2,10 +2,10 @@ Veranda:
   entities:
     - light.veranda_led_lights
     - light.veranda_rgb_light
-    - binary_sensor.motion_sensor_158d0001f2a00f
-    - sensor.humidity_158d00020f4dd3
-    - sensor.temperature_158d00020f4dd3
-    - switch.plug_158d0002368a0e
+    - binary_sensor.veranda_motion_sensor
+    - sensor.veranda_humidity_sensor
+    - sensor.veranda_temperature_sensor
+    - switch.veranda_plug
     - sensor.veranda_heater_plug_load
     - sensor.veranda_current_led_color
     - automation.veranda_heater_off

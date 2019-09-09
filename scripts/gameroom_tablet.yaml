@@ -2,7 +2,7 @@
     alias: 'Gameroom Tablet Screen on'
     sequence:
       - condition: state
-        entity_id: binary_sensor.motion_sensor_158d0001f9cdfe
+        entity_id: binary_sensor.gameroom_motion
         state: 'on'
       - service: mqtt.publish
         data:
