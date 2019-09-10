@@ -190,11 +190,11 @@ media_player:
 xiaomi_aqara:
   discovery_retry: 10
   gateways:
-    - key: !secret gameroom_gateway_key
-      mac: !secret gameroom_gateway_mac
+#    - key: !secret gameroom_gateway_key
+#      mac: !secret gameroom_gateway_mac
 #      host: !secret gameroom_gateway_host
-    - key: !secret livingroom_gateway_key
-      mac: !secret livingroom_gateway_mac
+#    - key: !secret livingroom_gateway_key
+#      mac: !secret livingroom_gateway_mac
 #      host: !secret livingroom_gateway_host
     - key: !secret stairway_gateway_key
       mac: !secret stairway_gateway_mac
@@ -210,8 +210,21 @@ device_tracker:
 sabnzbd:
   api_key: !secret sabnzbd_api_key
   host: !secret sabnzbd_host
+  path: /sabnzbd
+  name: sab
   port: !secret sabnzbd_port
-  name: Sabnzbd Downloader
+  sensors:
+    - current_status
+    - speed
+    - queue_size
+    - queue_remaining
+    - disk_size
+    - disk_free
+    - queue_count
+    - day_size
+    - week_size
+    - month_size
+    - total_size
 
 emulated_hue:
   listen_port: 8125

@@ -1,26 +1,26 @@
   # Change volume depending on rotation
-  - alias: Gameroom Cube Rotate
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: xiaomi_aqara.cube_action
-      event_data:
-        entity_id: sensor.gameroom_cube
-        action_type: rotate
-    action:
-      service: script.generic_volume_control
-      data_template:
-        remote_hub: remote.gameroom_hub
-        device: 58691919
-        action_value: "{{ trigger.event.data.action_value|float }}"
-        num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
+#  - alias: Gameroom Cube Rotate
+#    initial_state: 'on'
+#    trigger:
+#      platform: event
+#      event_type: deconz_event
+#      event_data:
+#        entity_id: sensor.gameroom_cube
+#        action_type: rotate
+#    action:
+#      service: script.generic_volume_control
+#      data_template:
+#        remote_hub: remote.gameroom_hub
+#        device: 58691919
+#        action_value: "{{ trigger.event.data.action_value|float }}"
+#        num_repeats: "{{ trigger.event.data.action_value|float // 5 }}"
   - alias: Gameroom Cube Shake
     initial_state: 'on'
     trigger:
       platform: event
       event_type: deconz_event
       event_data:
-        entity_id: switch_14
+        id: switch_14
         event: 7007
     action:
       - service: remote.send_command
@@ -35,7 +35,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        entity_id: switch_14
+        id: switch_14
         event: 3003
     action:
       - service: script.gameroom_stop_turn_off_media

@@ -49,4 +49,4 @@
       entity_id: binary_sensor.gameroom_motion
       to: 'on'
     action:
-        - service: script.gameroom_tablet_screen_on
+        service: script.gameroom_tablet_screen_on

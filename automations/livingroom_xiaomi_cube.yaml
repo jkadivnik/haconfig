@@ -2,10 +2,10 @@
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.cube_action
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: shake_air
+        id: livingroom_cube
+        event: 7007
     action:
       - service: script.livingroom_play_pause_media
       - service: remote.send_command
@@ -29,10 +29,10 @@
     initial_state: 'on'
     trigger:
       platform: event
-      event_type: xiaomi_aqara.cube_action
+      event_type: deconz_event
       event_data:
-        entity_id: binary_sensor.cube_158d00010fd151
-        action_type: tap_twice
+        id: livingroom_cube
+        event: 3003
     action:
       - service: script.livingroom_stop_turn_off_media
       - service: remote.send_command

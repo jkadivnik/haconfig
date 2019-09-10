@@ -73,7 +73,7 @@
           option: '{{ color }}'
       - service: input_select.select_option
         data_template:
-          entity_id: input_select.gameroom_display_case_led_colors
+          entity_id: input_select.gameroom_trophy_case
           option: '{{ color }}'
       - service: input_select.select_option
         data_template:

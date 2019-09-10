@@ -4,8 +4,19 @@
       platform: event
       event_type: deconz_event
       event_data:
-        entity_id: bathroom_radio_switch
+        id: bathroom_radio_switch
         event: 1002
     action:
       service: switch.toggle
       entity_id: switch.bathroom_radio
+  - alias: Toggle bathroom speaker
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: bathroom_radio_switch
+        event: 1004
+    action:
+      service: switch.toggle
+      entity_id: switch.bathroom_speaker

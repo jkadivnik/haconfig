@@ -4,7 +4,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        entity_id: livingroom_radio_switch
+        id: livingroom_radio_switch
         event: 1002
     condition:
       - condition: time
@@ -20,7 +20,7 @@
       platform: event
       event_type: deconz_event
       event_data:
-        entity_id: livingroom_radio_switch
+        id: livingroom_radio_switch
         event: 1002
     condition:
       - condition: or
