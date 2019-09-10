@@ -1,4 +1,4 @@
 Safety Devices:
   entities:
-    - binary_sensor.smoke_sensor_158d000279ddbc
+    - binary_sensor.hallway_smoke_sensor
     - binary_sensor.natgas_sensor_158d000204ae2a

@@ -42,22 +42,22 @@
       device_class: battery
     gameroom_cube_battery_state:
       friendly_name: "Gameroom Cube Battery State"
-      value_template: "{{ states("sensor.gameroom_cube_battery") }}"
+      value_template: '{{ states("sensor.gameroom_cube_battery") }}'
       unit_of_measurement: '%'
       device_class: battery
     livingroom_radio_switch_battery:
       friendly_name: "LivingRoom Radio Switch Battery"
-      value_template: "{{ states("sensor.bathroom_radio_switch_battery") }}"
+      value_template: '{{ states("sensor.bathroom_radio_switch_battery") }}'
       unit_of_measurement: '%'
       device_class: battery
     bathroom_radio_switch_battery:
       friendly_name: "Bathroom Radio Switch Battery"
-      value_template: "{{ states("sensor.bathroom_radio_switch_battery") }}"
+      value_template: '{{ states("sensor.bathroom_radio_switch_battery") }}'
       unit_of_measurement: '%'
       device_class: battery
     hallway_smoke_detector_battery_state:
       friendly_name: "Hallway Smoke Detector Battery State"
-      value_template: "{{ states.binary_sensor.smoke_sensor_158d000279ddbc.attributes.battery_level }}"
+      value_template: "{{ states.binary_sensor.hallway_smoke_sensor.attributes.battery_level }}"
       unit_of_measurement: '%'
       device_class: battery
     storeroom_motion_battery_state:

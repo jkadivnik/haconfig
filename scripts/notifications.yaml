@@ -1,7 +1,7 @@
   notify_mail:
     alias: Notification Via Mail
     sequence:
-      - service: script.notify_all
+      - service: notify.homemail
         data_template:
           title: "{{ title }}"
           message: "{{ message }}"

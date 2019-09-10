@@ -1,0 +1,13 @@
+  # KODI
+  - alias: Livingroom Kodi Start Playing
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: media_player.kodiliving
+      to: 'playing'
+    condition:
+      - condition: template
+        value_template: "{{ state_attr('remote.livingroom_hub', 'current_activity') != 'HTPC' }}"
+    action:
+      service: switch.turn_on
+      entity_id: switch.livingroom_kodi

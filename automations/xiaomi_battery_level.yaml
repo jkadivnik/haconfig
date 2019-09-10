@@ -151,7 +151,7 @@
     initial_state: 'on'
     trigger:
       platform: numeric_state
-      entity_id: binary_sensor.smoke_sensor_158d000279ddbc
+      entity_id: binary_sensor.hallway_smoke_sensor
       value_template: '{{ state.attributes.battery_level }}'
       below: 10
     action:

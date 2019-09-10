@@ -1,0 +1,37 @@
+  - alias: Window Open When Hot
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: weather.dark_sky
+      value_template: '{{ state.attributes.temperature }}'
+      above: 25
+    condition:
+      condition: state
+      entity_id: binary_sensor.gameroom_window
+      state: 'on'
+    action:
+      service: script.notify_mail
+      data_template:
+        title: "Het raam in de bureau staat nog open!"
+        message: >
+          Het raam in de bureau staat nog open terwijl de temperatuur {{ states.weather.dark_sky.attributes.temperature }} is.
+  - alias: Window Open When Cold
+    initial_state: 'on'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.gameroom_temperature
+      above: 25
+    condition:
+      - condition: state
+        entity_id: binary_sensor.gameroom_window
+        state: 'off'
+      - condition: numeric_state
+        entity_id: weather.dark_sky
+        value_template: '{{ state.attributes.temperature }}'
+        below: 20
+    action:
+      service: script.notify_mail
+      data_template:
+        title: "Het raam in de bureau kan open!"
+        message: >
+          Het raam in de bureau is dicht terwijl de temperatuur buiten {{ states.weather.dark_sky.attributes.temperature }} is, en de temperatuur in de bureau {{ states("sensor.gameroom_temperature") }} is.

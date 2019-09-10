@@ -177,6 +177,8 @@ views:
               name: Veranda verwarming
               tap_action:
                 action: toggle
+            - entity: binary_sensor.gameroom_window
+              name: Gameroom raam
       - type: custom:card-modder
         style:
           border-radius: 10px
@@ -405,194 +407,194 @@ views:
             entity: switch.kerstlicht_plug
             tap_action:
               action: toggle
-  - title: Mancave
+  - title: Gameroom
     icon: mdi:monitor
     cards:
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              title: Bureau
-              entities:
-                - entity: switch.gameroom_pc_sound
-                  icon: mdi:surround-sound
-                  name: Gaming
-                  tap_action:
-                    action: toggle
-                - entity: switch.gameroom_kodi
-                  icon: mdi:movie
-                  name: HTPC
-                  tap_action:
-                    action: toggle
-                - entity: switch.gameroom_ps3
-                  icon: mdi:gamepad
-                  name: PS3
-                  tap_action:
-                    action: toggle
-                - entity: switch.gameroom_ps4
-                  icon: mdi:google-controller
-                  name: PS4
-                  tap_action:
-                    action: toggle
-                - entity: switch.gameroom_chromecast
-                  icon: mdi:cast
-                  name: Chromecast
-                  tap_action:
-                    action: toggle
-                - entity: switch.gameroom_chromecast_audio
-                  icon: mdi:library-music
-                  name: Muziek
-                  tap_action:
-                    action: toggle
-          - type: conditional
-            conditions:
-              - entity: remote.gameroom_hub
-                state_not: "off"
-            card:
-              type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: glance
-                show_state: false
-                entities:
-                  - entity: script.gameroom_volume_down
-                    icon: mdi:volume-low
-                    name: Stiller
-                    tap_action:
-                      action: call-service
-                      service: script.gameroom_volume_down
-                  - entity: script.gameroom_volume_mute
-                    icon: mdi:volume-off
-                    name: Uit
-                    tap_action:
-                      action: call-service
-                      service: script.gameroom_volume_mute
-                  - entity: script.gameroom_volume_up
-                    icon: mdi:volume-high
-                    name: Luider
-                    tap_action:
-                      action: call-service
-                      service: script.gameroom_volume_up
-      - type: vertical-stack
-        cards:
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              title: Licht
-              entities:
-                - entity: switch.gameroom_sonoff_desklight
-                  icon: mdi:lightbulb
-                  name: Werk licht
-                  tap_action:
-                    action: toggle
-                - entity: input_select.gameroom_workdesk_led_colors
-                  icon: mdi:white-balance-incandescent
-                  name: Led werk
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_workdesk
-                  hold_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_workdesk_off
-                - entity: input_select.gameroom_desk_led_colors
-                  icon: mdi:white-balance-iridescent
-                  name: Led desk
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_gamedesk
-                  hold_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_gamedesk_off
-                - entity: input_select.gameroom_trophy_case
-                  icon: mdi:white-balance-iridescent
-                  name: Led vitrine
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_trophycase
-                  hold_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_trophycase_off
-                - entity: input_select.gameroom_led_colors
-                  name: Led kleur
-                  tap_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger
-                  hold_action:
-                    action: call-service
-                    service: script.gameroom_rgb_colorchanger_off
-                  icon: mdi:palette
-          - type: custom:card-modder
-            style:
-              border-radius: 10px
-              box-shadow: 3px 3px rgba(0,0,0,0.4)
-            card:
-              type: glance
-              title: Temperatuur
-              entities:
-                - entity: sensor.gameroom_temperature
-                  name: Gameroom
-          - type: conditional
-            conditions:
-              - entity: media_player.kodibureau
-                state_not: "idle"
-            card:
-              type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: custom:mini-media-player
-                entity: media_player.kodibureau
-                name: HTPC
-                artwork: cover
-                show_progress: true
-                show_source: true
-                artwork_border: true
-                icon: mdi:movie
-          - type: conditional
-            conditions:
-              - entity: media_player.gameroom_tv
-                state_not: "off"
-            card:
-              type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: custom:mini-media-player
-                entity: media_player.gameroom_tv
-                name: Chromecast
-                artwork: cover
-                show_progress: true
-                show_source: true
-                artwork_border: true
-                icon: mdi:cast
-          - type: conditional
-            conditions:
-              - entity: media_player.gameroom_speaker
-                state_not: "off"
-            card:
-              type: custom:card-modder
-              style:
-                border-radius: 10px
-                box-shadow: 3px 3px rgba(0,0,0,0.4)
-              card:
-                type: custom:mini-media-player
-                entity: media_player.gameroom_speaker
-                name: Chromecast Audio
-                show_progress: true
-                show_cover: true
-                artwork_border: true
-                icon: mdi:library-music
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Bureau
+          entities:
+            - entity: switch.gameroom_pc_sound
+              icon: mdi:surround-sound
+              name: Gaming
+              tap_action:
+                action: toggle
+            - entity: switch.gameroom_kodi
+              icon: mdi:movie
+              name: HTPC
+              tap_action:
+                action: toggle
+            - entity: switch.gameroom_ps3
+              icon: mdi:gamepad
+              name: PS3
+              tap_action:
+                action: toggle
+            - entity: switch.gameroom_ps4
+              icon: mdi:google-controller
+              name: PS4
+              tap_action:
+                action: toggle
+            - entity: switch.gameroom_chromecast
+              icon: mdi:cast
+              name: Chromecast
+              tap_action:
+                action: toggle
+            - entity: switch.gameroom_chromecast_audio
+              icon: mdi:library-music
+              name: Muziek
+              tap_action:
+                action: toggle
+      - type: conditional
+        conditions:
+          - entity: remote.gameroom_hub
+            state_not: "off"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: glance
+            show_state: false
+            entities:
+              - entity: script.gameroom_volume_down
+                icon: mdi:volume-low
+                name: Stiller
+                tap_action:
+                  action: call-service
+                  service: script.gameroom_volume_down
+              - entity: script.gameroom_volume_mute
+                icon: mdi:volume-off
+                name: Uit
+                tap_action:
+                  action: call-service
+                  service: script.gameroom_volume_mute
+              - entity: script.gameroom_volume_up
+                icon: mdi:volume-high
+                name: Luider
+                tap_action:
+                  action: call-service
+                  service: script.gameroom_volume_up
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Licht
+          entities:
+            - entity: switch.gameroom_sonoff_desklight
+              icon: mdi:lightbulb
+              name: Werk licht
+              tap_action:
+                action: toggle
+            - entity: input_select.gameroom_workdesk_led_colors
+              icon: mdi:white-balance-incandescent
+              name: Led werk
+              tap_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_workdesk
+              hold_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_workdesk_off
+            - entity: input_select.gameroom_desk_led_colors
+              icon: mdi:white-balance-iridescent
+              name: Led desk
+              tap_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_gamedesk
+              hold_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_gamedesk_off
+            - entity: input_select.gameroom_trophy_case
+              icon: mdi:white-balance-iridescent
+              name: Led vitrine
+              tap_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_trophycase
+              hold_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_trophycase_off
+            - entity: input_select.gameroom_led_colors
+              name: Led kleur
+              tap_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger
+              hold_action:
+                action: call-service
+                service: script.gameroom_rgb_colorchanger_off
+              icon: mdi:palette
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Status
+          entities:
+            - entity: sensor.gameroom_temperature
+              name: Temperatuur
+            - entity: sensor.gameroom_humidity
+              name: Vochtigheid
+            - entity: binary_sensor.gameroom_window
+              name: Raam
+      - type: conditional
+        conditions:
+          - entity: media_player.kodibureau
+            state_not: "idle"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: custom:mini-media-player
+            entity: media_player.kodibureau
+            name: HTPC
+            artwork: cover
+            show_progress: true
+            show_source: true
+            artwork_border: true
+            icon: mdi:movie
+      - type: conditional
+        conditions:
+          - entity: media_player.gameroom_tv
+            state_not: "off"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: custom:mini-media-player
+            entity: media_player.gameroom_tv
+            name: Chromecast
+            artwork: cover
+            show_progress: true
+            show_source: true
+            artwork_border: true
+            icon: mdi:cast
+      - type: conditional
+        conditions:
+          - entity: media_player.gameroom_speaker
+            state_not: "off"
+        card:
+          type: custom:card-modder
+          style:
+            border-radius: 10px
+            box-shadow: 3px 3px rgba(0,0,0,0.4)
+          card:
+            type: custom:mini-media-player
+            entity: media_player.gameroom_speaker
+            name: Chromecast Audio
+            show_progress: true
+            show_cover: true
+            artwork_border: true
+            icon: mdi:library-music
   - title: Thuis
     icon: mdi:store
     cards:
@@ -668,7 +670,7 @@ views:
             - entity: binary_sensor.natgas_sensor_158d000204ae2a
               name: Gas
               icon: mdi:gas-station
-            - entity: binary_sensor.smoke_sensor_158d000279ddbc
+            - entity: binary_sensor.hallway_smoke_sensor
               name: Rook
               icon: mdi:smoke-detector
       - type: custom:card-modder

@@ -45,6 +45,18 @@
       service: light.turn_on
       data:
         entity_id: light.storeroom_light
+  - alias: Ikea Gameroom Workspace Light
+    initial_state: 'on'
+    trigger:
+      platform: event
+      event_type: deconz_event
+      event_data:
+        id: gameroom_ikea_remote
+        event: 5002
+    action:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.gameroom_sonoff_desklight
   - alias: Ikea Turn Off
     initial_state: 'on'
     trigger:
@@ -62,3 +74,6 @@
           entity_id: automation.storeroom_motion
       - service: script.livingroom_rgb_colorchanger_off
       - service: script.gameroom_rgb_colorchanger_off
+      - service: switch.turn_off
+        data:
+          entity_id: switch.gameroom_sonoff_desklight
