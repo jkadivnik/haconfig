@@ -1,0 +1,9 @@
+  platform: template
+  switches:
+    sabnzbd_toggle:
+      friendly_name: "Sabnzbd Toggle"
+      value_template: "{{ is_state('sensor.sab_status', 'Paused') }}"
+      turn_on:
+        service: sabnzbd.pause
+      turn_off:
+        service: sabnzbd.resume

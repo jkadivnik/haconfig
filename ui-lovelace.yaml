@@ -534,6 +534,23 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: glance
+          title: Sabnzbd
+          entities:
+            - entity: sensor.sab_queue_count
+              name: Queue count
+            - entity: sensor.sab_status
+              name: Status
+              tap_action:
+                action: call-service
+                service: switch.toggle
+                service_data:
+                  entity_id: switch.sabnzbd_toggle
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
           title: Status
           entities:
             - entity: sensor.gameroom_temperature
