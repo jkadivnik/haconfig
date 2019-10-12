@@ -1,4 +1,4 @@
-  - alias: Toggle radio when nothing playing
+  - alias: Toggle bathroom radio when nothing playing
     initial_state: 'on'
     trigger:
       platform: event
@@ -8,7 +8,7 @@
         event: 1002
     action:
       service: switch.toggle
-      entity_id: switch.bathroom_radio
+      entity_id: switch.bathroom_radio_toggle
   - alias: Toggle bathroom speaker
     initial_state: 'on'
     trigger:
@@ -19,4 +19,4 @@
         event: 1004
     action:
       service: switch.toggle
-      entity_id: switch.bathroom_speaker
+      entity_id: switch.bathroom_speaker_toggle

@@ -185,6 +185,20 @@ views:
           box-shadow: 3px 3px rgba(0,0,0,0.4)
         card:
           type: glance
+          title: BMW
+          entities:
+            - entity: switch.veranda_plug
+              name: Veranda verwarming
+              tap_action:
+                action: toggle
+            - entity: binary_sensor.gameroom_window
+              name: Gameroom raam
+      - type: custom:card-modder
+        style:
+          border-radius: 10px
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
           title: Binnen temperatuur
           entities:
             - entity: sensor.veranda_temperature_sensor
@@ -612,7 +626,7 @@ views:
             show_cover: true
             artwork_border: true
             icon: mdi:library-music
-  - title: Thuis
+  - title: Strijkkot
     icon: mdi:store
     cards:
       - type: custom:card-modder

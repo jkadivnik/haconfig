@@ -1,0 +1,29 @@
+  - alias: Livingroom Music On In The Morning
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.livingroom_motion_sensor
+        to: 'on'
+    condition:
+      condition: or
+      conditions:
+        - condition: time
+          after: '06:00:00'
+          before: '08:00:00'
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+        - condition: time
+          after: '06:00:00'
+          before: '10:00:00'
+          weekday:
+            - sat
+            - sun
+    action:
+      service: switch.toggle
+      entity_id: switch.kitchen_radio_harmony

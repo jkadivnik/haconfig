@@ -7,8 +7,8 @@
       - service: light.turn_on
         data:
           entity_id: light.storeroom_light
-          color_temp: 500
-          brightness: 200
+          color_temp: 150
+          brightness: 240
   storeroom_light_on_blue:
     alias: Storeroom Light On Blue
     sequence:
@@ -18,5 +18,5 @@
       - service: light.turn_on
         data:
           entity_id: light.storeroom_light
-          color_temp: 300
-          brightness: 200
+          color_temp: 50
+          brightness: 240

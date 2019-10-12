@@ -9,9 +9,6 @@
       - service: light.turn_on
         data_template:
           entity_id: "{{ entity | string }}"
-      - service: light.turn_on
-        data_template:
-          entity_id: "{{ entity | string }}"
           color_name: "{{ states(inputselect) }}"
   generic_colorchanger_off:
     alias: Generic Colorchanger Off

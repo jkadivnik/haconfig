@@ -33,18 +33,6 @@
       - service: automation.turn_off
         data:
           entity_id: automation.storeroom_motion
-  - alias: Storeroom Light
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 4002
-    action:
-      service: light.turn_on
-      data:
-        entity_id: light.storeroom_light
   - alias: Ikea Gameroom Workspace Light
     initial_state: 'on'
     trigger:

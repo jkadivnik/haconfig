@@ -1,4 +1,4 @@
-  - alias: Toggle radio when nothing playing
+  - alias: Toggle kitchen radio when nothing playing
     initial_state: 'on'
     trigger:
       platform: event

@@ -138,8 +138,8 @@ logger:
   default: error
   logs:
     homeassistant.components: error
-    pydeconz: debug
-    homeassistant.components.deconz: debug
+    pydeconz: error
+    homeassistant.components.deconz: error
 
 # Enables a map showing the location of tracked devices
 map:
@@ -199,6 +199,12 @@ xiaomi_aqara:
     - key: !secret stairway_gateway_key
       mac: !secret stairway_gateway_mac
 #      host: !secret stairway_gateway_host
+
+bmw_connected_drive:
+  name:
+    username: !secret bmw_connected_username
+    password: !secret bmw_connected_password
+    region: rest_of_world
 
 ffmpeg:
 

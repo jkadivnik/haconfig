@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  kitchen_radio_status:
+    friendly_name: "Kitchen Radio Status"
+    value_template: "{{ is_state_attr('remote.livingroom_hub', 'current_activity', 'Keuken muziek luisteren') }}"
