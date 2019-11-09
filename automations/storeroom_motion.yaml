@@ -13,8 +13,6 @@
         state: 'off'
     action:
       - service: script.storeroom_light_on_white
-      - service: automation.turn_on
-        entity_id: automation.storeroom_no_motion
   - alias: Storeroom No Motion
     initial_state: 'off'
     trigger:
@@ -27,4 +25,13 @@
       - service: light.turn_off
         entity_id: light.storeroom_light
       - service: automation.turn_off
+        entity_id: automation.storeroom_no_motion
+  - alias: Storeroom Light On
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: light.storeroom_light
+      to: 'on'
+    action:
+      - service: automation.turn_on
         entity_id: automation.storeroom_no_motion

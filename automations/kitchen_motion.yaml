@@ -1,29 +1,45 @@
-  - alias: Livingroom Music On In The Morning
+  - alias: Kitchen Music On In The Morning
     initial_state: 'on'
     trigger:
       - platform: state
         entity_id: binary_sensor.livingroom_motion_sensor
         to: 'on'
     condition:
-      condition: or
+      condition: and
       conditions:
-        - condition: time
-          after: '06:00:00'
-          before: '08:00:00'
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
-            - sat
-            - sun
-        - condition: time
-          after: '06:00:00'
-          before: '10:00:00'
-          weekday:
-            - sat
-            - sun
+        - condition: state
+          entity_id: input_boolean.kitchen_music_triggered
+          state: 'off'
+        - condition: or
+          conditions:
+            - condition: time
+              after: '06:00:00'
+              before: '08:00:00'
+              weekday:
+                - mon
+                - tue
+                - wed
+                - thu
+                - fri
+                - sat
+                - sun
+            - condition: time
+              after: '06:00:00'
+              before: '10:00:00'
+              weekday:
+                - sat
+                - sun
     action:
-      service: switch.toggle
-      entity_id: switch.kitchen_radio_harmony
+      - service: switch.turn_on
+        entity_id: switch.kitchen_radio_harmony
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.kitchen_music_triggered
+
+  - alias: Kitchen Music Motion In The Morning Boolean Reset
+    initial_state: 'on'
+    trigger:
+      platform: time
+      at: "12:00:00"
+    action:
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.kitchen_music_triggered

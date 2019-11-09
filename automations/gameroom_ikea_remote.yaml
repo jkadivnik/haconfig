@@ -1,67 +1,67 @@
-  - alias: Gameroom Leds
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 2002
-    action:
-      service: script.gameroom_rgb_colorchanger
-  - alias: Livingroom Leds
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 3002
-    action:
-      service: script.livingroom_rgb_colorchanger
-  - alias: Storeroom Light
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 4002
-    action:
-      - service: light.turn_on
-        data:
-          entity_id: light.storeroom_light
-      - service: automation.turn_off
-        data:
-          entity_id: automation.storeroom_motion
-  - alias: Ikea Gameroom Workspace Light
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 5002
-    action:
-      - service: switch.turn_on
-        data:
-          entity_id: switch.gameroom_sonoff_desklight
-  - alias: Ikea Turn Off
-    initial_state: 'on'
-    trigger:
-      platform: event
-      event_type: deconz_event
-      event_data:
-        id: gameroom_ikea_remote
-        event: 1002
-    action:
-      - service: light.turn_off
-        data:
-          entity_id: light.storeroom_light
-      - service: automation.turn_on
-        data:
-          entity_id: automation.storeroom_motion
-      - service: script.livingroom_rgb_colorchanger_off
-      - service: script.gameroom_rgb_colorchanger_off
-      - service: switch.turn_off
-        data:
-          entity_id: switch.gameroom_sonoff_desklight
+- alias: Gameroom Leds
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: gameroom_ikea_remote
+      event: 2002
+  action:
+    service: switch.toggle
+    entity_id: switch.gameroom_led_light
+- alias: Gameroom Led Colorchange
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: gameroom_ikea_remote
+      event: 3002
+  action:
+    service: script.gameroom_rgb_colorchanger
+- alias: Storeroom Light
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: gameroom_ikea_remote
+      event: 4002
+  action:
+    - service: switch.toggle
+      data:
+        entity_id: switch.storeroom_light_switch
+    - service: switch.toggle
+      data:
+        entity_id: switch.storeroom_automation_motion
+- alias: Ikea Gameroom Workspace Light
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: gameroom_ikea_remote
+      event: 5002
+  action:
+    - service: switch.toggle
+      entity_id: switch.gameroom_sonoff_desklight
+- alias: Ikea Turn Off
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: gameroom_ikea_remote
+      event: 1002
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.storeroom_light
+    - service: automation.turn_on
+      data:
+        entity_id: automation.storeroom_motion
+    - service: script.livingroom_rgb_colorchanger_off
+    - service: script.gameroom_rgb_colorchanger_off
+    - service: switch.turn_off
+      data:
+        entity_id: switch.gameroom_sonoff_desklight

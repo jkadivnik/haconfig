@@ -19,6 +19,10 @@
     icon: mdi:pause
     initial: off
   gameroom_paused:
-      name: Gameroom Mediaplayers Paused State
-      icon: mdi:pause
-      initial: off
+    name: Gameroom Mediaplayers Paused State
+    icon: mdi:pause
+    initial: off
+  kitchen_music_triggered:
+    name: Gameroom Music Triggered
+    icon: mdi:clock-outline
+    initial: off
